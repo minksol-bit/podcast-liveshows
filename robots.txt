@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://podcast-liveshows.nl/sitemap.xml

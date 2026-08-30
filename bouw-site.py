@@ -566,6 +566,7 @@ def bouw_sitemap(podcasts):
                       % (SITE_URL.rstrip("/"), pad, vandaag))
     regels.append("</urlset>")
     schrijf("sitemap.xml", "\n".join(regels) + "\n")
+    schrijf("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE_URL.rstrip("/"))
     return len(paden)
 
 def main():
