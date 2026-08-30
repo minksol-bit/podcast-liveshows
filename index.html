@@ -5,40 +5,93 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Podcast Liveshows in Nederland</title>
 <meta name="description" content="Welke Nederlandse podcasts spelen een liveshow, wanneer en waar. Met agenda, kaart en directe link naar de kaartverkoop.">
+<link rel="icon" type="image/png" href="logo/favicon.png">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
 
 <style>
   :root {
-    --inkt: #1c1a17;
-    --grijs: #6b665f;
-    --lijn: #e2ded7;
-    --papier: #faf8f5;
+    --inkt: #241d1d;
+    --grijs: #6d645f;
+    --lijn: #e2ddd6;
+    --papier: #f4f2ef;
     --vlak: #ffffff;
-    --accent: #b4451f;
-    --accent-donker: #8f3617;
+    --wijn: #8e212e;
+    --wijn-donker: #6d1823;
+    --pin: #b6111b;
+    --balk: 58px;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
+  html { scroll-behavior: smooth; }
   body {
     font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--inkt);
-    background: var(--papier);
-    -webkit-font-smoothing: antialiased;
+    color: var(--inkt); background: var(--papier); -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
 
-  /* ---------- kop en introductie ---------- */
-  header { max-width: 620px; }
-  header h1 { font-size: 32px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
-  header .intro { margin: 0; color: #46423c; }
-  header .cijfers { margin: 12px 0 0; color: var(--grijs); font-size: 14px; }
+  /* ---------- bovenbalk ---------- */
+  .balk {
+    position: sticky; top: 0; z-index: 900; height: var(--balk);
+    background: rgba(244,242,239,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--lijn);
+  }
+  .balk .wrap { height: 100%; display: flex; align-items: center; gap: 16px; }
+  .merk { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--inkt); }
+  .merk img { height: 34px; width: auto; display: block; }
+  .merk span { font-weight: 700; letter-spacing: -0.01em; font-size: 17px; }
+  .balk .rechts { margin-left: auto; font-size: 13px; color: var(--grijs); }
+
+  /* ---------- hero ---------- */
+  .hero {
+    position: relative; overflow: hidden; margin: 24px 0 0;
+    border: 1px solid var(--lijn); border-radius: 16px;
+    background: var(--vlak); min-height: 360px;
+    display: flex; align-items: center;
+  }
+  .hero-beeld {
+    position: absolute; top: -70px; right: -60px; width: 620px; height: 620px;
+    background: url("logo/banner-achtergrond.jpg") center/contain no-repeat;
+    mix-blend-mode: multiply; opacity: .85; will-change: transform; pointer-events: none;
+  }
+  .hero-glow {
+    position: absolute; top: 40px; right: 80px; width: 460px; height: 460px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(182,17,27,.13) 0%, rgba(182,17,27,0) 68%);
+    pointer-events: none; will-change: transform;
+  }
+  .ring {
+    position: absolute; border: 1px solid rgba(142,33,46,.30); border-radius: 50%;
+    top: 50%; right: 250px; width: 240px; height: 240px; margin: -120px -120px 0 0;
+    opacity: 0; pointer-events: none;
+    animation: puls 7s ease-out infinite;
+  }
+  .ring.r2 { animation-delay: 3.5s; }
+  @keyframes puls {
+    0%   { transform: scale(.35); opacity: 0; }
+    18%  { opacity: .75; }
+    100% { transform: scale(1.7); opacity: 0; }
+  }
+  .hero-fade {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(100deg, var(--vlak) 30%, rgba(255,255,255,.72) 52%, rgba(255,255,255,0) 78%);
+  }
+  .hero-tekst { position: relative; padding: 44px 40px; max-width: 560px; }
+  .hero h1 { font-size: 40px; line-height: 1.08; margin: 0 0 14px; letter-spacing: -0.025em; }
+  .hero h1 .accent { color: var(--wijn); }
+  .hero .intro { margin: 0; color: #423b38; font-size: 17px; }
+  .hero .cijfers { margin: 16px 0 0; color: var(--grijs); font-size: 14px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ring { animation: none; display: none; }
+    .hero-beeld, .hero-glow { transform: none !important; }
+  }
 
   /* ---------- filters ---------- */
   .filters {
     display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end;
-    margin: 28px 0 24px; padding: 14px 16px; background: var(--vlak);
+    margin: 24px 0; padding: 14px 16px; background: var(--vlak);
     border: 1px solid var(--lijn); border-radius: 10px;
   }
   .filter { display: flex; flex-direction: column; gap: 4px; }
@@ -57,11 +110,11 @@
   /* ---------- twee kolommen ---------- */
   .kolommen {
     display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 36px; align-items: start;
+    gap: 36px; align-items: start; padding-bottom: 60px;
   }
-  .kaartkolom { position: sticky; top: 24px; }
+  .kaartkolom { position: sticky; top: calc(var(--balk) + 20px); }
   #kaart {
-    height: calc(100vh - 210px); min-height: 460px;
+    height: calc(100vh - var(--balk) - 80px); min-height: 440px;
     border: 1px solid var(--lijn); border-radius: 10px; background: var(--vlak);
   }
   .kaart-melding {
@@ -73,16 +126,15 @@
   /* ---------- agenda ---------- */
   h2.maand {
     font-size: 12px; text-transform: uppercase; letter-spacing: .09em;
-    color: var(--grijs); margin: 26px 0 6px; padding-bottom: 6px;
-    border-bottom: 1px solid var(--lijn);
+    color: var(--grijs); margin: 26px 0 6px; padding-bottom: 6px; border-bottom: 1px solid var(--lijn);
   }
   h2.maand:first-child { margin-top: 0; }
   .event {
     display: flex; gap: 14px; padding: 13px 8px 13px 6px; border-bottom: 1px solid var(--lijn);
     cursor: pointer; border-radius: 6px; transition: background .12s;
   }
-  .event:hover { background: #f2eee8; }
-  .event.actief { background: #f6e7df; }
+  .event:hover { background: #ece7e1; }
+  .event.actief { background: #f3e3e3; }
   .event.zonder-kaart { cursor: default; }
   .event.zonder-kaart:hover { background: transparent; }
   .datum { flex: 0 0 52px; text-align: center; padding-top: 2px; }
@@ -95,23 +147,22 @@
   .kaartje { flex: 0 0 auto; align-self: center; }
   .kaartje a {
     display: inline-block; padding: 6px 12px; border-radius: 6px;
-    background: var(--accent); color: #fff; text-decoration: none; font-size: 14px; white-space: nowrap;
+    background: var(--wijn); color: #fff; text-decoration: none; font-size: 14px; white-space: nowrap;
   }
-  .kaartje a:hover { background: var(--accent-donker); }
+  .kaartje a:hover { background: var(--wijn-donker); }
   .kaartje .geen { font-size: 13px; color: var(--grijs); }
   .leeg { padding: 40px 0; color: var(--grijs); text-align: center; }
 
-  /* ---------- bolletjes op de kaart ---------- */
+  /* ---------- bolletjes ---------- */
   .bol {
-    width: 42px; height: 42px; border-radius: 50%; background: var(--accent);
+    width: 42px; height: 42px; border-radius: 50%; background: var(--wijn);
     color: #fff; display: flex; align-items: center; justify-content: center;
     font: 600 13px/1 -apple-system, Helvetica, Arial, sans-serif;
     border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.35); overflow: hidden;
   }
   .bol img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .tros {
-    width: 42px; height: 42px; border-radius: 50%;
-    background: var(--accent); color: #fff;
+    width: 42px; height: 42px; border-radius: 50%; background: var(--wijn); color: #fff;
     display: flex; align-items: center; justify-content: center;
     font: 600 14px/1 -apple-system, Helvetica, Arial, sans-serif;
     border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.35);
@@ -120,12 +171,15 @@
   .popup-zaal { font-weight: 600; margin-bottom: 5px; }
   .popup-regel { font-size: 13px; margin: 3px 0; }
 
-  footer { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--lijn);
-           font-size: 13px; color: var(--grijs); }
+  footer { border-top: 1px solid var(--lijn); padding: 18px 0 40px; font-size: 13px; color: var(--grijs); }
 
   @media (max-width: 900px) {
-    .wrap { padding: 28px 18px 60px; }
-    header h1 { font-size: 27px; }
+    .hero { min-height: 0; }
+    .hero-tekst { padding: 28px 22px; max-width: none; }
+    .hero h1 { font-size: 28px; }
+    .hero-beeld { width: 300px; height: 300px; top: auto; bottom: -70px; right: -70px; opacity: .5; }
+    .hero-glow, .ring { display: none; }
+    .hero-fade { background: linear-gradient(180deg, var(--vlak) 55%, rgba(255,255,255,.6) 100%); }
     .kolommen { grid-template-columns: 1fr; gap: 24px; }
     .kaartkolom { position: static; order: -1; }
     #kaart { height: 340px; min-height: 0; }
@@ -134,17 +188,35 @@
 </style>
 </head>
 <body>
+
+<div class="balk">
+  <div class="wrap">
+    <a class="merk" href="index.html">
+      <img src="logo/logo-mark.png" alt="Podcast Liveshows">
+      <span>Podcast Liveshows</span>
+    </a>
+    <div class="rechts" id="balk-rechts"></div>
+  </div>
+</div>
+
 <div class="wrap">
 
-  <header>
-    <h1>Podcast Liveshows in Nederland</h1>
-    <p class="intro">
-      Steeds meer podcasts stappen het theater in. Deze site verzamelt welke Nederlandse
-      podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link naar de
-      kaartverkoop. Filter op maand of provincie om te zien wat er bij jou in de buurt te doen is.
-    </p>
-    <p class="cijfers" id="cijfers">&nbsp;</p>
-  </header>
+  <div class="hero">
+    <div class="hero-beeld" id="hero-beeld"></div>
+    <div class="hero-glow" id="hero-glow"></div>
+    <div class="ring r1"></div>
+    <div class="ring r2"></div>
+    <div class="hero-fade"></div>
+    <div class="hero-tekst">
+      <h1>Welke podcast staat er<br><span class="accent">bij jou in het theater?</span></h1>
+      <p class="intro">
+        Steeds meer podcasts stappen het theater in. Deze site verzamelt welke Nederlandse
+        podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link naar de
+        kaartverkoop.
+      </p>
+      <p class="cijfers" id="cijfers">&nbsp;</p>
+    </div>
+  </div>
 
   <div class="filters">
     <div class="filter">
@@ -163,9 +235,7 @@
   </div>
 
   <div class="kolommen">
-    <div class="lijstkolom">
-      <div id="lijst"></div>
-    </div>
+    <div class="lijstkolom"><div id="lijst"></div></div>
     <div class="kaartkolom">
       <div id="kaart"></div>
       <div class="kaart-melding" id="kaart-melding" hidden></div>
@@ -187,6 +257,26 @@
                  "juli","augustus","september","oktober","november","december"];
   var MAAND_KORT = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
 
+  // ---------- parallax: achtergrond schuift trager mee dan de pagina ----------
+  var rustig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!rustig) {
+    var beeld = document.getElementById("hero-beeld");
+    var glow  = document.getElementById("hero-glow");
+    var bezig = false;
+    window.addEventListener("scroll", function () {
+      if (bezig) return;
+      bezig = true;
+      window.requestAnimationFrame(function () {
+        var y = window.pageYOffset || 0;
+        if (y < 900) {
+          if (beeld) beeld.style.transform = "translate3d(0," + (y * 0.22) + "px,0)";
+          if (glow)  glow.style.transform  = "translate3d(0," + (y * 0.10) + "px,0)";
+        }
+        bezig = false;
+      });
+    }, { passive: true });
+  }
+
   if (!window.DATA) {
     document.getElementById("lijst").innerHTML =
       '<p class="leeg">De data is niet geladen. Draai <code>python3 maak-site-data.py</code> en ververs deze pagina.</p>';
@@ -201,7 +291,6 @@
   function escapeAttr(s) { return escapeHtml(s).replace(/'/g, "&#39;"); }
 
   // ---------- data aan elkaar knopen ----------
-
   var podcasts = {}, shows = {}, venues = {};
   DATA.podcasts.forEach(function (p) { podcasts[p.id] = p; });
   DATA.shows.forEach(function (s) { shows[s.id] = s; });
@@ -215,13 +304,10 @@
   function ontleedDatum(waarde) {
     var m = String(waarde).match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?/);
     if (!m) return null;
-    return {
-      jaar: +m[1], maand: +m[2] - 1, dag: +m[3],
-      tijd: m[4] ? m[4] + ":" + m[5] : null,
-      sorteer: m[1] + m[2] + m[3] + (m[4] ? m[4] + m[5] : "0000")
-    };
+    return { jaar: +m[1], maand: +m[2] - 1, dag: +m[3],
+             tijd: m[4] ? m[4] + ":" + m[5] : null,
+             sorteer: m[1] + m[2] + m[3] + (m[4] ? m[4] + m[5] : "0000") };
   }
-
   function heeftCoordinaten(zaal) {
     return zaal && String(zaal.lat).trim() !== "" && String(zaal.lon).trim() !== "" &&
            !isNaN(parseFloat(zaal.lat)) && !isNaN(parseFloat(zaal.lon));
@@ -233,8 +319,7 @@
     var show = shows[e.show_id], zaal = venues[e.venue_id];
     if (!d || !show || !zaal) return;
     events.push({
-      sleutel: "ev" + (e.id || i),
-      d: d, show: show, zaal: zaal,
+      sleutel: "ev" + (e.id || i), d: d, show: show, zaal: zaal,
       podcasts: (podcastsBijShow[e.show_id] || []).filter(Boolean),
       ticket: String(e.ticket_url || "").trim(),
       opKaart: heeftCoordinaten(zaal),
@@ -245,7 +330,6 @@
   events.sort(function (a, b) { return a.d.sorteer < b.d.sorteer ? -1 : 1; });
 
   // ---------- filters vullen ----------
-
   var selMaand = document.getElementById("f-maand");
   var selProv  = document.getElementById("f-provincie");
 
@@ -254,8 +338,7 @@
   maanden.sort().forEach(function (sleutel) {
     var d = sleutel.split("-");
     var o = document.createElement("option");
-    o.value = sleutel;
-    o.textContent = MAANDEN[+d[1] - 1] + " " + d[0];
+    o.value = sleutel; o.textContent = MAANDEN[+d[1] - 1] + " " + d[0];
     selMaand.appendChild(o);
   });
 
@@ -263,12 +346,10 @@
   events.forEach(function (e) { if (e.provincie && provincies.indexOf(e.provincie) === -1) provincies.push(e.provincie); });
   provincies.sort().forEach(function (p) {
     var o = document.createElement("option");
-    o.value = p; o.textContent = p;
-    selProv.appendChild(o);
+    o.value = p; o.textContent = p; selProv.appendChild(o);
   });
 
   // ---------- kaart ----------
-
   var kaart = L.map("kaart", { scrollWheelZoom: false }).setView([52.15, 5.4], 7);
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 18,
@@ -276,44 +357,32 @@
   }).addTo(kaart);
 
   var clusters = L.markerClusterGroup({
-    maxClusterRadius: 45,
-    showCoverageOnHover: false,
+    maxClusterRadius: 45, showCoverageOnHover: false,
     iconCreateFunction: function (cluster) {
-      return L.divIcon({
-        html: '<div class="tros">' + cluster.getChildCount() + "</div>",
-        className: "", iconSize: [42, 42], iconAnchor: [21, 21]
-      });
+      return L.divIcon({ html: '<div class="tros">' + cluster.getChildCount() + "</div>",
+                         className: "", iconSize: [42, 42], iconAnchor: [21, 21] });
     }
   });
   kaart.addLayer(clusters);
 
-  function bolIcoon(podcast) {
-    var binnenin;
-    var cover = podcast ? String(podcast.cover_url || "").trim() : "";
-    var initialen = escapeHtml(String((podcast && podcast.naam) || "?").trim().slice(0, 2).toUpperCase());
-    if (cover) {
-      binnenin = '<img src="' + escapeAttr(cover) + '" alt="" loading="lazy" ' +
-                 'onerror="window.__coverFout(this)" data-initialen="' + initialen + '">';
-    } else {
-      var naam = podcast ? String(podcast.naam || "?") : "?";
-      binnenin = escapeHtml(naam.trim().slice(0, 2).toUpperCase());
-    }
-    return L.divIcon({
-      html: '<div class="bol">' + binnenin + "</div>",
-      className: "", iconSize: [42, 42], iconAnchor: [21, 21], popupAnchor: [0, -22]
-    });
-  }
-
-  // Laadt een cover niet (link kapot of offline)? Dan tonen we de initialen.
   window.__coverFout = function (img) {
     var bol = img.parentNode;
     if (bol) bol.textContent = img.getAttribute("data-initialen") || "?";
   };
 
+  function bolIcoon(podcast) {
+    var cover = podcast ? String(podcast.cover_url || "").trim() : "";
+    var initialen = escapeHtml(String((podcast && podcast.naam) || "?").trim().slice(0, 2).toUpperCase());
+    var binnenin = cover
+      ? '<img src="' + escapeAttr(cover) + '" alt="" loading="lazy" onerror="window.__coverFout(this)" data-initialen="' + initialen + '">'
+      : initialen;
+    return L.divIcon({ html: '<div class="bol">' + binnenin + "</div>",
+                       className: "", iconSize: [42, 42], iconAnchor: [21, 21], popupAnchor: [0, -22] });
+  }
+
   var markerPerZaal = {};
 
   // ---------- weergeven ----------
-
   function huidigeSelectie() {
     return events.filter(function (e) {
       if (selMaand.value && e.maandsleutel !== selMaand.value) return false;
@@ -325,12 +394,10 @@
   function tekenLijst(selectie) {
     var lijst = document.getElementById("lijst");
     lijst.innerHTML = "";
-
     if (!selectie.length) {
       lijst.innerHTML = '<p class="leeg">Geen shows gevonden met deze filters.</p>';
       return;
     }
-
     var vorigeMaand = null;
     selectie.forEach(function (e) {
       if (e.maandsleutel !== vorigeMaand) {
@@ -340,11 +407,9 @@
         h.textContent = MAANDEN[e.d.maand] + " " + e.d.jaar;
         lijst.appendChild(h);
       }
-
       var namen = e.podcasts.map(function (p) { return p.naam; }).filter(Boolean).join(", ");
       var rij = document.createElement("div");
       rij.className = "event" + (e.opKaart ? "" : " zonder-kaart");
-      rij.dataset.zaal = e.zaal.id;
       rij.title = e.opKaart ? "Klik om deze zaal op de kaart te zien" : "";
       rij.innerHTML =
         '<div class="datum"><div class="dag">' + e.d.dag + '</div>' +
@@ -357,21 +422,17 @@
           (namen ? '<div class="pods">' + escapeHtml(namen) + '</div>' : '') +
         '</div>' +
         '<div class="kaartje">' +
-          (e.ticket
-            ? '<a href="' + escapeAttr(e.ticket) + '" target="_blank" rel="noopener">Tickets</a>'
-            : '<span class="geen">geen link</span>') +
+          (e.ticket ? '<a href="' + escapeAttr(e.ticket) + '" target="_blank" rel="noopener">Tickets</a>'
+                    : '<span class="geen">geen link</span>') +
         '</div>';
-
       if (e.opKaart) {
         rij.addEventListener("click", function (klik) {
-          if (klik.target.closest("a")) return;   // ticketknop gewoon laten werken
+          if (klik.target.closest("a")) return;
           Array.prototype.forEach.call(document.querySelectorAll(".event.actief"),
             function (r) { r.classList.remove("actief"); });
           rij.classList.add("actief");
           var marker = markerPerZaal[e.zaal.id];
-          if (marker) {
-            clusters.zoomToShowLayer(marker, function () { marker.openPopup(); });
-          }
+          if (marker) clusters.zoomToShowLayer(marker, function () { marker.openPopup(); });
         });
       }
       lijst.appendChild(rij);
@@ -381,19 +442,16 @@
   function tekenKaart(selectie) {
     clusters.clearLayers();
     markerPerZaal = {};
-
     var perZaal = {};
     selectie.forEach(function (e) {
       if (!e.opKaart) return;
       (perZaal[e.zaal.id] = perZaal[e.zaal.id] || []).push(e);
     });
-
     var punten = [];
     Object.keys(perZaal).forEach(function (zaalId) {
       var groep = perZaal[zaalId], zaal = groep[0].zaal;
       var positie = [parseFloat(zaal.lat), parseFloat(zaal.lon)];
       var marker = L.marker(positie, { icon: bolIcoon(groep[0].podcasts[0]) });
-
       var html = '<div class="popup-zaal">' + escapeHtml(zaal.naam) + ", " + escapeHtml(zaal.stad) + "</div>";
       groep.slice(0, 8).forEach(function (e) {
         html += '<div class="popup-regel">' + e.d.dag + " " + MAAND_KORT[e.d.maand] + " " + e.d.jaar +
@@ -401,12 +459,10 @@
       });
       if (groep.length > 8) html += '<div class="popup-regel">en nog ' + (groep.length - 8) + " andere</div>";
       marker.bindPopup(html);
-
       clusters.addLayer(marker);
       markerPerZaal[zaalId] = marker;
       punten.push(positie);
     });
-
     if (punten.length) kaart.fitBounds(L.latLngBounds(punten).pad(0.25));
     return punten.length;
   }
@@ -414,13 +470,11 @@
   function ververs() {
     var selectie = huidigeSelectie();
     tekenLijst(selectie);
-    var opKaart = tekenKaart(selectie);
-
+    tekenKaart(selectie);
     var zonderCoord = selectie.filter(function (e) { return !e.opKaart; }).length;
     document.getElementById("telling").textContent =
       selectie.length + (selectie.length === 1 ? " show" : " shows") +
       (zonderCoord ? " · " + zonderCoord + " nog niet op de kaart" : "");
-
     var missend = DATA.venues.filter(function (v) { return !heeftCoordinaten(v); }).length;
     var melding = document.getElementById("kaart-melding");
     if (missend) {
@@ -428,10 +482,7 @@
       melding.innerHTML = "Van de " + DATA.venues.length + " zalen hebben er <strong>" + missend +
         "</strong> nog geen <code>lat</code> en <code>lon</code>. Vul die in op het tabblad " +
         "<code>venues</code> en draai daarna <code>python3 maak-site-data.py</code>.";
-    } else {
-      melding.hidden = true;
-    }
-    return opKaart;
+    } else { melding.hidden = true; }
   }
 
   selMaand.addEventListener("change", ververs);
@@ -446,9 +497,11 @@
 
   var gecheckt = DATA.events.map(function (e) { return String(e.laatst_gecheckt || ""); })
                             .filter(Boolean).sort();
+  var laatste = gecheckt.length ? gecheckt[gecheckt.length - 1] : "";
+  document.getElementById("balk-rechts").textContent =
+    events.length + " shows" + (laatste ? " · bijgewerkt " + laatste : "");
   document.getElementById("voetnoot").textContent =
-    "Kaartgegevens van OpenStreetMap." +
-    (gecheckt.length ? " Agenda voor het laatst gecontroleerd op " + gecheckt[gecheckt.length - 1] + "." : "");
+    "Kaartgegevens van OpenStreetMap." + (laatste ? " Agenda voor het laatst gecontroleerd op " + laatste + "." : "");
 
   ververs();
   window.addEventListener("resize", function () { kaart.invalidateSize(); });
