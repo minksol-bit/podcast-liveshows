@@ -1,0 +1,11 @@
+
+
+
+{
+ "resultCount":1,
+ "results": [
+{"wrapperType":"track", "kind":"podcast", "collectionId":1591011702, "trackId":1591011702, "artistName":"Wouter Laumans, Christian Flokstra", "collectionName":"Napleiten", "trackName":"Napleiten", "collectionCensoredName":"Napleiten", "trackCensoredName":"Napleiten", "collectionViewUrl":"https://podcasts.apple.com/nl/podcast/napleiten/id1591011702?uo=4", 
+"feedUrl":"https://www.omnycontent.com/d/playlist/8257a063-6be9-42fa-b892-acd4013b1255/90df5b0c-5e99-4080-be99-b06c008edeb8/63b9b779-5f8d-4a2d-83ab-b06c008edee2/podcast.rss", "trackViewUrl":"https://podcasts.apple.com/nl/podcast/napleiten/id1591011702?uo=4", "artworkUrl30":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/30x30bb.jpg", "artworkUrl60":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/60x60bb.jpg", "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/100x100bb.jpg", "collectionPrice":0.00, "trackPrice":0.00, "collectionHdPrice":0, "releaseDate":"2026-08-28T03:00:00Z", "collectionExplicitness":"notExplicit", "trackExplicitness":"cleaned", "trackCount":203, "trackTimeMillis":2565, "country":"NLD", "currency":"EUR", "primaryGenreName":"Waargebeurde misdaad", "contentAdvisoryRating":"Clean", "artworkUrl600":"https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.jpg", "genreIds":["1488", "26"], "genres":["Waargebeurde misdaad", "Podcasts"]}]
+}
+
+
