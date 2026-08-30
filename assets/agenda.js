@@ -208,7 +208,12 @@
                           zaal: ev.zaal.naam, stad: ev.zaal.stad, ticket: ev.ticket });
       });
       rechts.appendChild(kal);
-      if (ev.ticket) {
+      if (String(ev.status || "").toLowerCase() === "uitverkocht") {
+        var uit = document.createElement("span");
+        uit.className = "geen";
+        uit.textContent = "Uitverkocht";
+        rechts.appendChild(uit);
+      } else if (ev.ticket) {
         var a = document.createElement("a");
         a.className = "knop"; a.href = ev.ticket; a.target = "_blank"; a.rel = "noopener";
         a.textContent = "Tickets";

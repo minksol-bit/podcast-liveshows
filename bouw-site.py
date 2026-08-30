@@ -304,7 +304,7 @@ def data_voor_agenda(podcasts, venues, events):
             "id": ev["id"], "iso": ev["iso"], "dag": ev["d"]["dag"],
             "maandnr": ev["d"]["maand"], "jaar": ev["d"]["jaar"], "maand": ev["maand"],
             "tijd": ev["tijd"], "titel": ev["show"]["titel"],
-            "prijs": ev["prijs"], "ticket": ev["ticket"],
+            "prijs": ev["prijs"], "ticket": ev["ticket"], "status": ev["status"],
             "provincie": ev["provincie"], "themas": ev["themas"],
             "zaal": {"id": ev["zaal"]["id"], "naam": ev["zaal"]["naam"], "stad": ev["zaal"]["stad"],
                      "opkaart": ev["zaal"]["opkaart"], "lat": ev["zaal"]["lat"], "lon": ev["zaal"]["lon"]},
@@ -496,8 +496,12 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                                   "stad": ev["zaal"]["stad"], "ticket": ev["ticket"]}, ensure_ascii=False)
             prijs = ('<span class="prijs">vanaf &euro;%s</span>'
                      % ("%.2f" % ev["prijs"]).replace(".", ",").replace(",00", ",-")) if ev["prijs"] is not None else ""
-            knop = ('<a class="knop" href="%s" target="_blank" rel="noopener">Tickets</a>' % e(ev["ticket"])
-                    if ev["ticket"] else '<span class="geen">geen link</span>')
+            if ev["status"].lower() == "uitverkocht":
+                knop = '<span class="geen">Uitverkocht</span>'
+            elif ev["ticket"]:
+                knop = '<a class="knop" href="%s" target="_blank" rel="noopener">Tickets</a>' % e(ev["ticket"])
+            else:
+                knop = '<span class="geen">geen link</span>'
             rijen.append(
                 '    <div class="event" data-ev="%s" data-json="%s">\n'
                 '      <div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>\n'

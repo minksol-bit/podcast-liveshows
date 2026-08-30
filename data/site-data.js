@@ -8,10 +8,11 @@ window.DATA = {
    "maandnr": 9,
    "jaar": 2026,
    "maand": "2026-09",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 24.5,
    "ticket": "https://stadsschouwburghaarlem.nl/en/agenda/theatercollege-napleiten-live-wouter-laumans-en-christian-flokstra",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "True crime"
@@ -20,9 +21,9 @@ window.DATA = {
     "id": 2,
     "naam": "Stadsschouwburg",
     "stad": "Haarlem",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 52.3779947,
+    "lon": 4.625426
    },
    "podcasts": [
     {
@@ -39,10 +40,11 @@ window.DATA = {
    "maandnr": 9,
    "jaar": 2026,
    "maand": "2026-09",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 27.0,
    "ticket": "https://www.musisenstadstheater.nl/nl/agenda/wouter-laumans-christian-flokstra-napleiten-live-2026/10204",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "True crime"
@@ -70,10 +72,11 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": null,
+   "prijs": 15.0,
    "ticket": "https://www.lievekamp.nl/programma/met-kluun-yvanka-van-der-zwaan-the-best-of-help-ik-heb-een-puber-07-okt-20-15/",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Kind & gezin"
@@ -82,9 +85,9 @@ window.DATA = {
     "id": 20,
     "naam": "Theater De Lievekamp",
     "stad": "Oss",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.7633501,
+    "lon": 5.5213587
    },
    "podcasts": [
     {
@@ -101,10 +104,11 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 16.0,
    "ticket": "https://www.plt.nl/programma/napleiten-live/08-10-2026-20-00",
+   "status": "in verkoop",
    "provincie": "Limburg",
    "themas": [
     "True crime"
@@ -132,10 +136,11 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 22.5,
    "ticket": "https://meervaart.nl/agenda/napleiten-live",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "True crime"
@@ -163,10 +168,11 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 26.5,
    "ticket": "https://luxortheater.nl/agenda/napleiten-live-56647",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "True crime"
@@ -194,10 +200,11 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:30",
    "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": null,
+   "prijs": 19.5,
    "ticket": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "Kind & gezin"
@@ -225,21 +232,22 @@ window.DATA = {
    "maandnr": 10,
    "jaar": 2026,
    "maand": "2026-10",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": null,
+   "prijs": 15.0,
    "ticket": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/",
+   "status": "in verkoop",
    "provincie": "Groningen",
    "themas": [
     "Kind & gezin"
    ],
    "zaal": {
     "id": 21,
-    "naam": "SPOT Groningen",
+    "naam": "SPOT Stadsschouwburg",
     "stad": "Groningen",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 53.2208535,
+    "lon": 6.5720279
    },
    "podcasts": [
     {
@@ -256,10 +264,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
    "prijs": null,
    "ticket": "https://www.theaterdeveste.nl/programma/boekestijn-en-de-wijk-omarmen-de-ondergang-h9ks",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "Nieuws & politiek"
@@ -268,9 +277,9 @@ window.DATA = {
     "id": 22,
     "naam": "Theater De Veste",
     "stad": "Delft",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
    },
    "podcasts": [
     {
@@ -289,8 +298,9 @@ window.DATA = {
    "maand": "2026-11",
    "tijd": "20:30",
    "titel": "Hagelslag de Podcast",
-   "prijs": null,
+   "prijs": 26.5,
    "ticket": "https://ticket.tivolivredenburg.nl/nl/buyingflow/tickets/60072/122508",
+   "status": "in verkoop",
    "provincie": "Utrecht",
    "themas": [
     "Comedy"
@@ -318,10 +328,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 24.5,
    "ticket": "https://www.schouwburghengelo.nl/napleiten-live-wouter-laumans-en-christian-flokstra/04-11-2026-20-00",
+   "status": "in verkoop",
    "provincie": "Overijssel",
    "themas": [
     "True crime"
@@ -349,10 +360,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 40.5,
    "ticket": "https://www.markantmaashorst.nl/nl/agenda/boekestijn-de-wijk-live-f7k3",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Nieuws & politiek"
@@ -361,9 +373,9 @@ window.DATA = {
     "id": 23,
     "naam": "Markant Theater Maashorst",
     "stad": "Uden",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.6571579,
+    "lon": 5.6174239
    },
    "podcasts": [
     {
@@ -380,10 +392,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 32.5,
    "ticket": "https://www.kampanje.nl/voorstellingen/napleiten-live-sp5r",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "True crime"
@@ -392,9 +405,9 @@ window.DATA = {
     "id": 8,
     "naam": "De Kampanje",
     "stad": "Den Helder",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 52.9585736,
+    "lon": 4.7690842
    },
    "podcasts": [
     {
@@ -411,10 +424,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "19:30",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 34.5,
    "ticket": "https://www.dekringroosendaal.nl/agenda/boekestijn-de-wijk-live-eindejaars-26-nrz5",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Nieuws & politiek"
@@ -423,9 +437,9 @@ window.DATA = {
     "id": 24,
     "naam": "De Kring",
     "stad": "Roosendaal",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.5333416,
+    "lon": 4.4586306
    },
    "podcasts": [
     {
@@ -442,10 +456,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 36.0,
    "ticket": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/wouter-laumans-christian-flokstra-e-a-napleiten-live/",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "True crime"
@@ -473,10 +488,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 24.0,
    "ticket": "https://www.plt.nl/programma/boekestijn-de-wijk-live/19-11-2026-20-00",
+   "status": "in verkoop",
    "provincie": "Limburg",
    "themas": [
     "Nieuws & politiek"
@@ -485,9 +501,9 @@ window.DATA = {
     "id": 25,
     "naam": "Toon Hermans Theater",
     "stad": "Sittard",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 50.9987922,
+    "lon": 5.8612019
    },
    "podcasts": [
     {
@@ -508,6 +524,7 @@ window.DATA = {
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
    "prijs": null,
    "ticket": "",
+   "status": "in verkoop",
    "provincie": "Friesland",
    "themas": [
     "Nieuws & politiek"
@@ -535,10 +552,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": null,
+   "prijs": 24.5,
    "ticket": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/kluun-help-ik-heb-een-puber",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Kind & gezin"
@@ -566,10 +584,11 @@ window.DATA = {
    "maandnr": 11,
    "jaar": 2026,
    "maand": "2026-11",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 32.5,
    "ticket": "https://kunstlinie.nl/programma/napleiten-live/",
+   "status": "in verkoop",
    "provincie": "Flevoland",
    "themas": [
     "True crime"
@@ -578,9 +597,9 @@ window.DATA = {
     "id": 10,
     "naam": "Kunstlinie",
     "stad": "Almere",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 52.3669292,
+    "lon": 5.2191822
    },
    "podcasts": [
     {
@@ -601,6 +620,7 @@ window.DATA = {
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
    "prijs": null,
    "ticket": "https://www.zwolsetheaters.nl/programma/2026-2027/boekestijn-de-wijk-live",
+   "status": "in verkoop",
    "provincie": "Overijssel",
    "themas": [
     "Nieuws & politiek"
@@ -628,10 +648,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 32.0,
    "ticket": "https://www.agnietenhof.nl/agenda/boekestijn-de-wijk-live-8kbs",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "Nieuws & politiek"
@@ -659,10 +680,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": null,
+   "prijs": 13.5,
    "ticket": "https://www.theateraandeparade.nl/nl/programma/the-best-of-help-ik-heb-een-p-kluun",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Kind & gezin"
@@ -690,10 +712,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 34.0,
    "ticket": "https://www.amphion.nl/theater/boekestijn-de-wijk-live-eindejaars-26/",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "Nieuws & politiek"
@@ -721,10 +744,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 27.0,
    "ticket": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/boekestijn-de-wijk-live-eindejaarsshow-2026/",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "Nieuws & politiek"
@@ -752,10 +776,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 34.0,
    "ticket": "https://www.junushoff.nl/programma/boekestijn-en-de-wijk-skgp",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "Nieuws & politiek"
@@ -764,9 +789,9 @@ window.DATA = {
     "id": 26,
     "naam": "Junushoff",
     "stad": "Wageningen",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.9667769,
+    "lon": 5.6614496
    },
    "podcasts": [
     {
@@ -783,21 +808,22 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 21.0,
    "ticket": "https://www.chasse.nl/nl/programma/boekestijn-de-wijk-live-eindejaars-26-cpbk",
+   "status": "uitverkocht",
    "provincie": "Noord-Brabant",
    "themas": [
     "Nieuws & politiek"
    ],
    "zaal": {
     "id": 27,
-    "naam": "Chasse Theater",
+    "naam": "Chassé Theater",
     "stad": "Breda",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.5874733,
+    "lon": 4.7821816
    },
    "podcasts": [
     {
@@ -814,10 +840,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 21.75,
    "ticket": "https://goudseschouwburg.nl/agenda/boekestijn-de-wijk-live-eindejaars-26-10025643/",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "Nieuws & politiek"
@@ -845,10 +872,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 24.0,
    "ticket": "https://meervaart.nl/agenda/boekestijn-de-wijk",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "Nieuws & politiek"
@@ -876,10 +904,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 31.5,
    "ticket": "https://luxortheater.nl/agenda/boekestijn-de-wijk-live-58804",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "Nieuws & politiek"
@@ -907,10 +936,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:30",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 10.0,
    "ticket": "https://www.musisenstadstheater.nl/nl/agenda/boekestijn-de-wijk-live-eindejaarsshow-2026/10155",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "Nieuws & politiek"
@@ -938,10 +968,11 @@ window.DATA = {
    "maandnr": 12,
    "jaar": 2026,
    "maand": "2026-12",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
+   "prijs": 26.5,
    "ticket": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/boekestijn-de-wijk-live-eindejaars-26",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "Nieuws & politiek"
@@ -969,10 +1000,11 @@ window.DATA = {
    "maandnr": 1,
    "jaar": 2027,
    "maand": "2027-01",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 37.5,
    "ticket": "https://www.parktheater.nl/programma/napleiten-live-mjbw",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "True crime"
@@ -981,9 +1013,9 @@ window.DATA = {
     "id": 11,
     "naam": "Parktheater",
     "stad": "Eindhoven",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 51.4288468,
+    "lon": 5.4847037
    },
    "podcasts": [
     {
@@ -1004,6 +1036,7 @@ window.DATA = {
    "titel": "Napleiten Live",
    "prijs": null,
    "ticket": "https://www.zwolsetheaters.nl/programma/2026-2027/napleiten-live",
+   "status": "in verkoop",
    "provincie": "Overijssel",
    "themas": [
     "True crime"
@@ -1031,10 +1064,11 @@ window.DATA = {
    "maandnr": 2,
    "jaar": 2027,
    "maand": "2027-02",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 32.0,
    "ticket": "https://www.agnietenhof.nl/agenda/napleiten-live-6sjb",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "True crime"
@@ -1062,10 +1096,11 @@ window.DATA = {
    "maandnr": 2,
    "jaar": 2027,
    "maand": "2027-02",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 19.5,
    "ticket": "https://delamar.nl/voorstellingen/napleiten-live/",
+   "status": "in verkoop",
    "provincie": "Noord-Holland",
    "themas": [
     "True crime"
@@ -1093,10 +1128,11 @@ window.DATA = {
    "maandnr": 2,
    "jaar": 2027,
    "maand": "2027-02",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 37.0,
    "ticket": "https://harmonie.nl/agenda/napleiten-live/53059",
+   "status": "in verkoop",
    "provincie": "Friesland",
    "themas": [
     "True crime"
@@ -1124,10 +1160,11 @@ window.DATA = {
    "maandnr": 3,
    "jaar": 2027,
    "maand": "2027-03",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 24.5,
    "ticket": "https://www.schouwburghengelo.nl/napleiten-live-wouter-laumans-en-christian-flokstra-2/04-03-2027-20-00",
+   "status": "in verkoop",
    "provincie": "Overijssel",
    "themas": [
     "True crime"
@@ -1155,10 +1192,11 @@ window.DATA = {
    "maandnr": 3,
    "jaar": 2027,
    "maand": "2027-03",
-   "tijd": null,
+   "tijd": "20:15",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 26.5,
    "ticket": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/napleiten-live-wouter-laumans-christian-flokstra",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "True crime"
@@ -1186,10 +1224,11 @@ window.DATA = {
    "maandnr": 3,
    "jaar": 2027,
    "maand": "2027-03",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 10.0,
    "ticket": "https://www.musisenstadstheater.nl/nl/agenda/wouter-laumans-christian-flokstra-napleiten-live-voorjaar-2027/10205",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "True crime"
@@ -1221,6 +1260,7 @@ window.DATA = {
    "titel": "Napleiten Live",
    "prijs": null,
    "ticket": "",
+   "status": "in verkoop",
    "provincie": "Limburg",
    "themas": [
     "True crime"
@@ -1248,10 +1288,11 @@ window.DATA = {
    "maandnr": 3,
    "jaar": 2027,
    "maand": "2027-03",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 21.75,
    "ticket": "https://goudseschouwburg.nl/agenda/napleiten-live-10025644/",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "True crime"
@@ -1279,10 +1320,11 @@ window.DATA = {
    "maandnr": 4,
    "jaar": 2027,
    "maand": "2027-04",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 35.0,
    "ticket": "https://www.amphion.nl/theater/napleiten-live-naar-de-gelijknamige-podcast/",
+   "status": "in verkoop",
    "provincie": "Gelderland",
    "themas": [
     "True crime"
@@ -1310,10 +1352,11 @@ window.DATA = {
    "maandnr": 4,
    "jaar": 2027,
    "maand": "2027-04",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 26.5,
    "ticket": "https://luxortheater.nl/agenda/napleiten-live-56647",
+   "status": "in verkoop",
    "provincie": "Zuid-Holland",
    "themas": [
     "True crime"
@@ -1341,10 +1384,11 @@ window.DATA = {
    "maandnr": 5,
    "jaar": 2027,
    "maand": "2027-05",
-   "tijd": null,
+   "tijd": "20:00",
    "titel": "Napleiten Live",
-   "prijs": null,
+   "prijs": 13.5,
    "ticket": "https://www.theateraandeparade.nl/nl/programma/napleiten-live-met-oa-wouter-laumans-christian-flokstra",
+   "status": "in verkoop",
    "provincie": "Noord-Brabant",
    "themas": [
     "True crime"
@@ -1367,5 +1411,5 @@ window.DATA = {
   }
  ],
  "venues_totaal": 27,
- "venues_zonder_coordinaten": 12
+ "venues_zonder_coordinaten": 0
 };
