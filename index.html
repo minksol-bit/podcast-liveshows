@@ -4,198 +4,1501 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Podcast Liveshows in Nederland</title>
-<meta name="description" content="Welke Nederlandse podcasts spelen een liveshow, wanneer en waar. Met agenda, kaart en directe link naar de kaartverkoop.">
-<link rel="icon" type="image/png" href="logo/favicon.png">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css">
-
-<style>
-  :root {
-    --inkt: #241d1d;
-    --grijs: #6d645f;
-    --lijn: #e2ddd6;
-    --papier: #f4f2ef;
-    --vlak: #ffffff;
-    --wijn: #8e212e;
-    --wijn-donker: #6d1823;
-    --pin: #b6111b;
-    --balk: 58px;
+<meta name="description" content="Welke Nederlandse podcasts spelen een liveshow, wanneer en waar. Agenda en kaart met directe link naar de kaartverkoop.">
+<link rel="canonical" href="https://podcast-liveshows.nl/index.html">
+<meta property="og:title" content="Podcast Liveshows in Nederland">
+<meta property="og:description" content="Welke Nederlandse podcasts spelen een liveshow, wanneer en waar. Agenda en kaart met directe link naar de kaartverkoop.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/stijl.css">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/leaflet/MarkerCluster.css">
+<script type="application/ld+json">[
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-09-26",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Stadsschouwburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Haarlem",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://stadsschouwburghaarlem.nl/en/agenda/theatercollege-napleiten-live-wouter-laumans-en-christian-flokstra",
+   "availability": "https://schema.org/InStock"
   }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--inkt); background: var(--papier); -webkit-font-smoothing: antialiased;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-09-29",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Musis",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arnhem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.982704,
+    "longitude": 5.9137995
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.musisenstadstheater.nl/nl/agenda/wouter-laumans-christian-flokstra-napleiten-live-2026/10204",
+   "availability": "https://schema.org/InStock"
   }
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-
-  /* ---------- bovenbalk ---------- */
-  .balk {
-    position: sticky; top: 0; z-index: 900; height: var(--balk);
-    background: rgba(244,242,239,.92); backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--lijn);
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Best of 'Help, ik heb een puber!' LIVE",
+  "startDate": "2026-10-07",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater De Lievekamp",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oss",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Help, ik heb een puber!"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.lievekamp.nl/programma/met-kluun-yvanka-van-der-zwaan-the-best-of-help-ik-heb-een-puber-07-okt-20-15/",
+   "availability": "https://schema.org/InStock"
   }
-  .balk .wrap { height: 100%; display: flex; align-items: center; gap: 16px; }
-  .merk { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--inkt); }
-  .merk img { height: 34px; width: auto; display: block; }
-  .merk span { font-weight: 700; letter-spacing: -0.01em; font-size: 17px; }
-  .balk .rechts { margin-left: auto; font-size: 13px; color: var(--grijs); }
-
-  /* ---------- hero ---------- */
-  .hero {
-    position: relative; overflow: hidden; margin: 24px 0 0;
-    border: 1px solid var(--lijn); border-radius: 16px;
-    background: var(--vlak); min-height: 360px;
-    display: flex; align-items: center;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-10-08",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "PLT Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Heerlen",
+    "addressRegion": "Limburg",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.8867099,
+    "longitude": 5.9727811
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.plt.nl/programma/napleiten-live/08-10-2026-20-00",
+   "availability": "https://schema.org/InStock"
   }
-  .hero-beeld {
-    position: absolute; top: -70px; right: -60px; width: 620px; height: 620px;
-    background: url("logo/banner-achtergrond.jpg") center/contain no-repeat;
-    mix-blend-mode: multiply; opacity: .85; will-change: transform; pointer-events: none;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-10-13",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Meervaart",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3589481,
+    "longitude": 4.8073957
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://meervaart.nl/agenda/napleiten-live",
+   "availability": "https://schema.org/InStock"
   }
-  .hero-glow {
-    position: absolute; top: 40px; right: 80px; width: 460px; height: 460px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(182,17,27,.13) 0%, rgba(182,17,27,0) 68%);
-    pointer-events: none; will-change: transform;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-10-22",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Nieuwe Luxor Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rotterdam",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9067814,
+    "longitude": 4.4911848
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://luxortheater.nl/agenda/napleiten-live-56647",
+   "availability": "https://schema.org/InStock"
   }
-  .ring {
-    position: absolute; border: 1px solid rgba(142,33,46,.30); border-radius: 50%;
-    top: 50%; right: 250px; width: 240px; height: 240px; margin: -120px -120px 0 0;
-    opacity: 0; pointer-events: none;
-    animation: puls 7s ease-out infinite;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Best of 'Help, ik heb een puber!' LIVE",
+  "startDate": "2026-10-28",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "DeLaMar",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3644194,
+    "longitude": 4.8806878
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Help, ik heb een puber!"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/",
+   "availability": "https://schema.org/InStock"
   }
-  .ring.r2 { animation-delay: 3.5s; }
-  @keyframes puls {
-    0%   { transform: scale(.35); opacity: 0; }
-    18%  { opacity: .75; }
-    100% { transform: scale(1.7); opacity: 0; }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Best of 'Help, ik heb een puber!' LIVE",
+  "startDate": "2026-10-30",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "SPOT Groningen",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Groningen",
+    "addressRegion": "Groningen",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Help, ik heb een puber!"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/",
+   "availability": "https://schema.org/InStock"
   }
-  .hero-fade {
-    position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(100deg, var(--vlak) 30%, rgba(255,255,255,.72) 52%, rgba(255,255,255,0) 78%);
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-03",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater De Veste",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Delft",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.theaterdeveste.nl/programma/boekestijn-en-de-wijk-omarmen-de-ondergang-h9ks",
+   "availability": "https://schema.org/InStock"
   }
-  .hero-tekst { position: relative; padding: 44px 40px; max-width: 560px; }
-  .hero h1 { font-size: 40px; line-height: 1.08; margin: 0 0 14px; letter-spacing: -0.025em; }
-  .hero h1 .accent { color: var(--wijn); }
-  .hero .intro { margin: 0; color: #423b38; font-size: 17px; }
-  .hero .cijfers { margin: 16px 0 0; color: var(--grijs); font-size: 14px; }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .ring { animation: none; display: none; }
-    .hero-beeld, .hero-glow { transform: none !important; }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Hagelslag de Podcast",
+  "startDate": "2026-11-03T20:30:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "TivoliVredenburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Utrecht",
+    "addressRegion": "Utrecht",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.0924542,
+    "longitude": 5.1127685
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Hagelslag"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://ticket.tivolivredenburg.nl/nl/buyingflow/tickets/60072/122508",
+   "availability": "https://schema.org/InStock"
   }
-
-  /* ---------- filters ---------- */
-  .filters {
-    display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end;
-    margin: 24px 0; padding: 14px 16px; background: var(--vlak);
-    border: 1px solid var(--lijn); border-radius: 10px;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-11-04",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hengelo",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.2629142,
+    "longitude": 6.7952206
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.schouwburghengelo.nl/napleiten-live-wouter-laumans-en-christian-flokstra/04-11-2026-20-00",
+   "availability": "https://schema.org/InStock"
   }
-  .filter { display: flex; flex-direction: column; gap: 4px; }
-  .filter label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--grijs); }
-  select {
-    font: inherit; padding: 7px 10px; border: 1px solid var(--lijn);
-    border-radius: 6px; background: var(--papier); color: var(--inkt); min-width: 168px;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-09",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Markant Theater Maashorst",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Uden",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.markantmaashorst.nl/nl/agenda/boekestijn-de-wijk-live-f7k3",
+   "availability": "https://schema.org/InStock"
   }
-  button {
-    font: inherit; padding: 8px 14px; border: 1px solid var(--lijn);
-    border-radius: 6px; background: var(--papier); color: var(--inkt); cursor: pointer;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-11-12",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "De Kampanje",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Den Helder",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.kampanje.nl/voorstellingen/napleiten-live-sp5r",
+   "availability": "https://schema.org/InStock"
   }
-  button:hover { border-color: var(--grijs); }
-  .telling { margin-left: auto; color: var(--grijs); font-size: 14px; }
-
-  /* ---------- twee kolommen ---------- */
-  .kolommen {
-    display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 36px; align-items: start; padding-bottom: 60px;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-16",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "De Kring",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Roosendaal",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.dekringroosendaal.nl/agenda/boekestijn-de-wijk-live-eindejaars-26-nrz5",
+   "availability": "https://schema.org/InStock"
   }
-  .kaartkolom { position: sticky; top: calc(var(--balk) + 20px); }
-  #kaart {
-    height: calc(100vh - var(--balk) - 80px); min-height: 440px;
-    border: 1px solid var(--lijn); border-radius: 10px; background: var(--vlak);
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-11-17",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Stadsgehoorzaal",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leiden",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.1596903,
+    "longitude": 4.4890446
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/wouter-laumans-christian-flokstra-e-a-napleiten-live/",
+   "availability": "https://schema.org/InStock"
   }
-  .kaart-melding {
-    font-size: 13px; line-height: 1.5; color: #6a5a3a; background: #fdf6e8;
-    border: 1px solid #ecdcb8; border-radius: 8px; padding: 9px 11px; margin-top: 10px;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-19",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Toon Hermans Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sittard",
+    "addressRegion": "Limburg",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.plt.nl/programma/boekestijn-de-wijk-live/19-11-2026-20-00",
+   "availability": "https://schema.org/InStock"
   }
-  .kaart-melding code { background: #f3e8cf; padding: 1px 5px; border-radius: 3px; }
-
-  /* ---------- agenda ---------- */
-  h2.maand {
-    font-size: 12px; text-transform: uppercase; letter-spacing: .09em;
-    color: var(--grijs); margin: 26px 0 6px; padding-bottom: 6px; border-bottom: 1px solid var(--lijn);
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-21",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Stadsschouwburg De Harmonie",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leeuwarden",
+    "addressRegion": "Friesland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.2001284,
+    "longitude": 5.7900791
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Best of 'Help, ik heb een puber!' LIVE",
+  "startDate": "2026-11-25",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg en Concertzaal Tilburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tilburg",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5542257,
+    "longitude": 5.082737
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Help, ik heb een puber!"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/kluun-help-ik-heb-een-puber",
+   "availability": "https://schema.org/InStock"
   }
-  h2.maand:first-child { margin-top: 0; }
-  .event {
-    display: flex; gap: 14px; padding: 13px 8px 13px 6px; border-bottom: 1px solid var(--lijn);
-    cursor: pointer; border-radius: 6px; transition: background .12s;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2026-11-26",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Kunstlinie",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Almere",
+    "addressRegion": "Flevoland",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://kunstlinie.nl/programma/napleiten-live/",
+   "availability": "https://schema.org/InStock"
   }
-  .event:hover { background: #ece7e1; }
-  .event.actief { background: #f3e3e3; }
-  .event.zonder-kaart { cursor: default; }
-  .event.zonder-kaart:hover { background: transparent; }
-  .datum { flex: 0 0 52px; text-align: center; padding-top: 2px; }
-  .datum .dag { font-size: 21px; font-weight: 600; line-height: 1.05; }
-  .datum .mnd { font-size: 11px; text-transform: uppercase; color: var(--grijs); letter-spacing: .05em; }
-  .info { flex: 1; min-width: 0; }
-  .info .titel { font-weight: 600; }
-  .info .zaal { color: var(--grijs); font-size: 14px; }
-  .info .tijd, .info .pods { color: var(--grijs); font-size: 13px; }
-  .kaartje { flex: 0 0 auto; align-self: center; }
-  .kaartje a {
-    display: inline-block; padding: 6px 12px; border-radius: 6px;
-    background: var(--wijn); color: #fff; text-decoration: none; font-size: 14px; white-space: nowrap;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-11-29",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater De Spiegel",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Zwolle",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.515985,
+    "longitude": 6.0976158
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.zwolsetheaters.nl/programma/2026-2027/boekestijn-de-wijk-live",
+   "availability": "https://schema.org/InStock"
   }
-  .kaartje a:hover { background: var(--wijn-donker); }
-  .kaartje .geen { font-size: 13px; color: var(--grijs); }
-  .leeg { padding: 40px 0; color: var(--grijs); text-align: center; }
-
-  /* ---------- bolletjes ---------- */
-  .bol {
-    width: 42px; height: 42px; border-radius: 50%; background: var(--wijn);
-    color: #fff; display: flex; align-items: center; justify-content: center;
-    font: 600 13px/1 -apple-system, Helvetica, Arial, sans-serif;
-    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.35); overflow: hidden;
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-01",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg Agnietenhof",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tiel",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.8856443,
+    "longitude": 5.436108
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.agnietenhof.nl/agenda/boekestijn-de-wijk-live-8kbs",
+   "availability": "https://schema.org/InStock"
   }
-  .bol img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .tros {
-    width: 42px; height: 42px; border-radius: 50%; background: var(--wijn); color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font: 600 14px/1 -apple-system, Helvetica, Arial, sans-serif;
-    border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,.35);
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Best of 'Help, ik heb een puber!' LIVE",
+  "startDate": "2026-12-02",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater aan de Parade",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Den Bosch",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.6869348,
+    "longitude": 5.3086679
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Help, ik heb een puber!"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.theateraandeparade.nl/nl/programma/the-best-of-help-ik-heb-een-p-kluun",
+   "availability": "https://schema.org/InStock"
   }
-  .leaflet-popup-content { margin: 12px 14px; }
-  .popup-zaal { font-weight: 600; margin-bottom: 5px; }
-  .popup-regel { font-size: 13px; margin: 3px 0; }
-
-  footer { border-top: 1px solid var(--lijn); padding: 18px 0 40px; font-size: 13px; color: var(--grijs); }
-
-  @media (max-width: 900px) {
-    .hero { min-height: 0; }
-    .hero-tekst { padding: 28px 22px; max-width: none; }
-    .hero h1 { font-size: 28px; }
-    .hero-beeld { width: 300px; height: 300px; top: auto; bottom: -70px; right: -70px; opacity: .5; }
-    .hero-glow, .ring { display: none; }
-    .hero-fade { background: linear-gradient(180deg, var(--vlak) 55%, rgba(255,255,255,.6) 100%); }
-    .kolommen { grid-template-columns: 1fr; gap: 24px; }
-    .kaartkolom { position: static; order: -1; }
-    #kaart { height: 340px; min-height: 0; }
-    .telling { margin-left: 0; width: 100%; }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-03",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Amphion",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Doetinchem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9685969,
+    "longitude": 6.2878967
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.amphion.nl/theater/boekestijn-de-wijk-live-eindejaars-26/",
+   "availability": "https://schema.org/InStock"
   }
-</style>
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-08",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Stadsgehoorzaal",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leiden",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.1596903,
+    "longitude": 4.4890446
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/boekestijn-de-wijk-live-eindejaarsshow-2026/",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-10",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Junushoff",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wageningen",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.junushoff.nl/programma/boekestijn-en-de-wijk-skgp",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-12",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Chasse Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Breda",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.chasse.nl/nl/programma/boekestijn-de-wijk-live-eindejaars-26-cpbk",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-14",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Goudse Schouwburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gouda",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.0157848,
+    "longitude": 4.7124332
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://goudseschouwburg.nl/agenda/boekestijn-de-wijk-live-eindejaars-26-10025643/",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-16",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Meervaart",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3589481,
+    "longitude": 4.8073957
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://meervaart.nl/agenda/boekestijn-de-wijk",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-17",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Nieuwe Luxor Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rotterdam",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9067814,
+    "longitude": 4.4911848
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://luxortheater.nl/agenda/boekestijn-de-wijk-live-58804",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-21",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Musis",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arnhem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.982704,
+    "longitude": 5.9137995
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.musisenstadstheater.nl/nl/agenda/boekestijn-de-wijk-live-eindejaarsshow-2026/10155",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+  "startDate": "2026-12-22",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg en Concertzaal Tilburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tilburg",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5542257,
+    "longitude": 5.082737
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Boekestijn en De Wijk"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/boekestijn-de-wijk-live-eindejaars-26",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-01-08",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Parktheater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Eindhoven",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.parktheater.nl/programma/napleiten-live-mjbw",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-01-11",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater De Spiegel",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Zwolle",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.515985,
+    "longitude": 6.0976158
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.zwolsetheaters.nl/programma/2026-2027/napleiten-live",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-02-04",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg Agnietenhof",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tiel",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.8856443,
+    "longitude": 5.436108
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.agnietenhof.nl/agenda/napleiten-live-6sjb",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-02-10",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "DeLaMar",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3644194,
+    "longitude": 4.8806878
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://delamar.nl/voorstellingen/napleiten-live/",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-02-18",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Stadsschouwburg De Harmonie",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Leeuwarden",
+    "addressRegion": "Friesland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.2001284,
+    "longitude": 5.7900791
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://harmonie.nl/agenda/napleiten-live/53059",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-03-04",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hengelo",
+    "addressRegion": "Overijssel",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.2629142,
+    "longitude": 6.7952206
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.schouwburghengelo.nl/napleiten-live-wouter-laumans-en-christian-flokstra-2/04-03-2027-20-00",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-03-10",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Schouwburg en Concertzaal Tilburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Tilburg",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.5542257,
+    "longitude": 5.082737
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/napleiten-live-wouter-laumans-christian-flokstra",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-03-17",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Musis",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Arnhem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.982704,
+    "longitude": 5.9137995
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.musisenstadstheater.nl/nl/agenda/wouter-laumans-christian-flokstra-napleiten-live-voorjaar-2027/10205",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-03-25",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "PLT Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Heerlen",
+    "addressRegion": "Limburg",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.8867099,
+    "longitude": 5.9727811
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ]
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-03-30",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Goudse Schouwburg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Gouda",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.0157848,
+    "longitude": 4.7124332
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://goudseschouwburg.nl/agenda/napleiten-live-10025644/",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-04-07",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Amphion",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Doetinchem",
+    "addressRegion": "Gelderland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9685969,
+    "longitude": 6.2878967
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.amphion.nl/theater/napleiten-live-naar-de-gelijknamige-podcast/",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-04-21",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Nieuwe Luxor Theater",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rotterdam",
+    "addressRegion": "Zuid-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.9067814,
+    "longitude": 4.4911848
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://luxortheater.nl/agenda/napleiten-live-56647",
+   "availability": "https://schema.org/InStock"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Napleiten Live",
+  "startDate": "2027-05-21",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "url": "https://podcast-liveshows.nl/index.html",
+  "location": {
+   "@type": "Place",
+   "name": "Theater aan de Parade",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Den Bosch",
+    "addressRegion": "Noord-Brabant",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.6869348,
+    "longitude": 5.3086679
+   }
+  },
+  "performer": [
+   {
+    "@type": "PerformingGroup",
+    "name": "Napleiten"
+   }
+  ],
+  "offers": {
+   "@type": "Offer",
+   "url": "https://www.theateraandeparade.nl/nl/programma/napleiten-live-met-oa-wouter-laumans-christian-flokstra",
+   "availability": "https://schema.org/InStock"
+  }
+ }
+]</script>
 </head>
 <body>
 
 <div class="balk">
   <div class="wrap">
     <a class="merk" href="index.html">
-      <img src="logo/logo-mark.png" alt="Podcast Liveshows">
+      <img src="assets/logo-mark.png" alt="Podcast Liveshows">
       <span>Podcast Liveshows</span>
     </a>
-    <div class="rechts" id="balk-rechts"></div>
+    <nav class="menu">
+      <a href="index.html" class="hier">Agenda</a>
+      <a href="catalogus.html" class="">Podcasts</a>
+      <a href="toplijst.html" class="">Toplijst</a>
+    </nav>
   </div>
 </div>
 
@@ -209,303 +1512,72 @@
     <div class="hero-fade"></div>
     <div class="hero-tekst">
       <h1>Welke podcast staat er<br><span class="accent">bij jou in het theater?</span></h1>
-      <p class="intro">
-        Steeds meer podcasts stappen het theater in. Deze site verzamelt welke Nederlandse
-        podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link naar de
-        kaartverkoop.
-      </p>
-      <p class="cijfers" id="cijfers">&nbsp;</p>
+      <p class="intro">Steeds meer podcasts stappen het theater in. Deze site verzamelt welke Nederlandse podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link naar de kaartverkoop. Filter op maand, provincie of thema om te zien wat er bij jou in de buurt te doen is.</p><p class="cijfers">44 liveshows van 4 podcasts in 27 zalen.</p>
     </div>
   </div>
 
   <div class="filters">
-    <div class="filter">
-      <label for="f-maand">Maand</label>
-      <select id="f-maand"><option value="">Alle maanden</option></select>
-    </div>
-    <div class="filter">
-      <label for="f-provincie">Provincie</label>
-      <select id="f-provincie"><option value="">Alle provincies</option></select>
-    </div>
-    <div class="filter">
-      <label>&nbsp;</label>
-      <button id="wis">Wis filters</button>
-    </div>
+    <div class="filter"><label for="f-maand">Maand</label>
+      <select id="f-maand"><option value="">Alle maanden</option></select></div>
+    <div class="filter"><label for="f-provincie">Provincie</label>
+      <select id="f-provincie"><option value="">Alle provincies</option></select></div>
+    <div class="filter"><label for="f-thema">Thema</label>
+      <select id="f-thema"><option value="">Alle thema's</option></select></div>
+    <div class="filter"><label for="f-prijs">Prijs</label>
+      <select id="f-prijs">
+        <option value="">Alle prijzen</option>
+        <option value="20">tot &euro;20</option>
+        <option value="30">tot &euro;30</option>
+        <option value="40">tot &euro;40</option>
+        <option value="50">tot &euro;50</option>
+      </select></div>
+    <div class="filter"><label>Snel</label>
+      <div class="snel">
+        <button type="button" id="snel-vandaag">Vanavond</button>
+        <button type="button" id="snel-weekend">Dit weekend</button>
+        <button type="button" id="snel-fav">Favorieten</button>
+      </div></div>
+    <div class="filter"><label>&nbsp;</label><button type="button" id="wis">Wis filters</button></div>
     <div class="telling" id="telling"></div>
   </div>
 
   <div class="kolommen">
     <div class="lijstkolom"><div id="lijst"></div></div>
     <div class="kaartkolom">
-      <div id="kaart"></div>
-      <div class="kaart-melding" id="kaart-melding" hidden></div>
+      <div class="kaart" id="kaart"></div>
+      <div class="melding" id="melding" hidden></div>
     </div>
   </div>
 
-  <footer id="voetnoot"></footer>
-
+  <footer>
+    Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
+    Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-08-30.
+  </footer>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script src="assets/leaflet/leaflet.js"></script>
+<script src="assets/leaflet/leaflet.markercluster.js"></script>
+<script src="assets/favorieten.js"></script>
 <script src="data/site-data.js"></script>
+<script src="assets/agenda.js"></script>
 <script>
 (function () {
-  "use strict";
-
-  var MAANDEN = ["januari","februari","maart","april","mei","juni",
-                 "juli","augustus","september","oktober","november","december"];
-  var MAAND_KORT = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
-
-  // ---------- parallax: achtergrond schuift trager mee dan de pagina ----------
-  var rustig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (!rustig) {
-    var beeld = document.getElementById("hero-beeld");
-    var glow  = document.getElementById("hero-glow");
-    var bezig = false;
-    window.addEventListener("scroll", function () {
-      if (bezig) return;
-      bezig = true;
-      window.requestAnimationFrame(function () {
-        var y = window.pageYOffset || 0;
-        if (y < 900) {
-          if (beeld) beeld.style.transform = "translate3d(0," + (y * 0.22) + "px,0)";
-          if (glow)  glow.style.transform  = "translate3d(0," + (y * 0.10) + "px,0)";
-        }
-        bezig = false;
-      });
-    }, { passive: true });
-  }
-
-  if (!window.DATA) {
-    document.getElementById("lijst").innerHTML =
-      '<p class="leeg">De data is niet geladen. Draai <code>python3 maak-site-data.py</code> en ververs deze pagina.</p>';
-    return;
-  }
-
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"]/g, function (c) {
-      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
-    });
-  }
-  function escapeAttr(s) { return escapeHtml(s).replace(/'/g, "&#39;"); }
-
-  // ---------- data aan elkaar knopen ----------
-  var podcasts = {}, shows = {}, venues = {};
-  DATA.podcasts.forEach(function (p) { podcasts[p.id] = p; });
-  DATA.shows.forEach(function (s) { shows[s.id] = s; });
-  DATA.venues.forEach(function (v) { venues[v.id] = v; });
-
-  var podcastsBijShow = {};
-  DATA.show_podcasts.forEach(function (k) {
-    (podcastsBijShow[k.show_id] = podcastsBijShow[k.show_id] || []).push(podcasts[k.podcast_id]);
-  });
-
-  function ontleedDatum(waarde) {
-    var m = String(waarde).match(/^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?/);
-    if (!m) return null;
-    return { jaar: +m[1], maand: +m[2] - 1, dag: +m[3],
-             tijd: m[4] ? m[4] + ":" + m[5] : null,
-             sorteer: m[1] + m[2] + m[3] + (m[4] ? m[4] + m[5] : "0000") };
-  }
-  function heeftCoordinaten(zaal) {
-    return zaal && String(zaal.lat).trim() !== "" && String(zaal.lon).trim() !== "" &&
-           !isNaN(parseFloat(zaal.lat)) && !isNaN(parseFloat(zaal.lon));
-  }
-
-  var events = [];
-  DATA.events.forEach(function (e, i) {
-    var d = ontleedDatum(e.aanvang);
-    var show = shows[e.show_id], zaal = venues[e.venue_id];
-    if (!d || !show || !zaal) return;
-    events.push({
-      sleutel: "ev" + (e.id || i), d: d, show: show, zaal: zaal,
-      podcasts: (podcastsBijShow[e.show_id] || []).filter(Boolean),
-      ticket: String(e.ticket_url || "").trim(),
-      opKaart: heeftCoordinaten(zaal),
-      maandsleutel: d.jaar + "-" + String(d.maand + 1).padStart(2, "0"),
-      provincie: String(zaal.provincie || "").trim()
-    });
-  });
-  events.sort(function (a, b) { return a.d.sorteer < b.d.sorteer ? -1 : 1; });
-
-  // ---------- filters vullen ----------
-  var selMaand = document.getElementById("f-maand");
-  var selProv  = document.getElementById("f-provincie");
-
-  var maanden = [];
-  events.forEach(function (e) { if (maanden.indexOf(e.maandsleutel) === -1) maanden.push(e.maandsleutel); });
-  maanden.sort().forEach(function (sleutel) {
-    var d = sleutel.split("-");
-    var o = document.createElement("option");
-    o.value = sleutel; o.textContent = MAANDEN[+d[1] - 1] + " " + d[0];
-    selMaand.appendChild(o);
-  });
-
-  var provincies = [];
-  events.forEach(function (e) { if (e.provincie && provincies.indexOf(e.provincie) === -1) provincies.push(e.provincie); });
-  provincies.sort().forEach(function (p) {
-    var o = document.createElement("option");
-    o.value = p; o.textContent = p; selProv.appendChild(o);
-  });
-
-  // ---------- kaart ----------
-  var kaart = L.map("kaart", { scrollWheelZoom: false }).setView([52.15, 5.4], 7);
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(kaart);
-
-  var clusters = L.markerClusterGroup({
-    maxClusterRadius: 45, showCoverageOnHover: false,
-    iconCreateFunction: function (cluster) {
-      return L.divIcon({ html: '<div class="tros">' + cluster.getChildCount() + "</div>",
-                         className: "", iconSize: [42, 42], iconAnchor: [21, 21] });
-    }
-  });
-  kaart.addLayer(clusters);
-
-  window.__coverFout = function (img) {
-    var bol = img.parentNode;
-    if (bol) bol.textContent = img.getAttribute("data-initialen") || "?";
-  };
-
-  function bolIcoon(podcast) {
-    var cover = podcast ? String(podcast.cover_url || "").trim() : "";
-    var initialen = escapeHtml(String((podcast && podcast.naam) || "?").trim().slice(0, 2).toUpperCase());
-    var binnenin = cover
-      ? '<img src="' + escapeAttr(cover) + '" alt="" loading="lazy" onerror="window.__coverFout(this)" data-initialen="' + initialen + '">'
-      : initialen;
-    return L.divIcon({ html: '<div class="bol">' + binnenin + "</div>",
-                       className: "", iconSize: [42, 42], iconAnchor: [21, 21], popupAnchor: [0, -22] });
-  }
-
-  var markerPerZaal = {};
-
-  // ---------- weergeven ----------
-  function huidigeSelectie() {
-    return events.filter(function (e) {
-      if (selMaand.value && e.maandsleutel !== selMaand.value) return false;
-      if (selProv.value && e.provincie !== selProv.value) return false;
-      return true;
-    });
-  }
-
-  function tekenLijst(selectie) {
-    var lijst = document.getElementById("lijst");
-    lijst.innerHTML = "";
-    if (!selectie.length) {
-      lijst.innerHTML = '<p class="leeg">Geen shows gevonden met deze filters.</p>';
-      return;
-    }
-    var vorigeMaand = null;
-    selectie.forEach(function (e) {
-      if (e.maandsleutel !== vorigeMaand) {
-        vorigeMaand = e.maandsleutel;
-        var h = document.createElement("h2");
-        h.className = "maand";
-        h.textContent = MAANDEN[e.d.maand] + " " + e.d.jaar;
-        lijst.appendChild(h);
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var beeld = document.getElementById("hero-beeld"), glow = document.getElementById("hero-glow"), bezig = false;
+  if (!beeld) return;
+  window.addEventListener("scroll", function () {
+    if (bezig) return;
+    bezig = true;
+    window.requestAnimationFrame(function () {
+      var y = window.pageYOffset || 0;
+      if (y < 900) {
+        beeld.style.transform = "translate3d(0," + (y * 0.22) + "px,0)";
+        if (glow) glow.style.transform = "translate3d(0," + (y * 0.10) + "px,0)";
       }
-      var namen = e.podcasts.map(function (p) { return p.naam; }).filter(Boolean).join(", ");
-      var rij = document.createElement("div");
-      rij.className = "event" + (e.opKaart ? "" : " zonder-kaart");
-      rij.title = e.opKaart ? "Klik om deze zaal op de kaart te zien" : "";
-      rij.innerHTML =
-        '<div class="datum"><div class="dag">' + e.d.dag + '</div>' +
-          '<div class="mnd">' + MAAND_KORT[e.d.maand] + '</div></div>' +
-        '<div class="info">' +
-          '<div class="titel">' + escapeHtml(e.show.titel) + '</div>' +
-          '<div class="zaal">' + escapeHtml(e.zaal.naam) + ', ' + escapeHtml(e.zaal.stad) +
-            (e.provincie ? ' <span style="opacity:.7">(' + escapeHtml(e.provincie) + ')</span>' : '') + '</div>' +
-          (e.d.tijd ? '<div class="tijd">Aanvang ' + e.d.tijd + '</div>' : '') +
-          (namen ? '<div class="pods">' + escapeHtml(namen) + '</div>' : '') +
-        '</div>' +
-        '<div class="kaartje">' +
-          (e.ticket ? '<a href="' + escapeAttr(e.ticket) + '" target="_blank" rel="noopener">Tickets</a>'
-                    : '<span class="geen">geen link</span>') +
-        '</div>';
-      if (e.opKaart) {
-        rij.addEventListener("click", function (klik) {
-          if (klik.target.closest("a")) return;
-          Array.prototype.forEach.call(document.querySelectorAll(".event.actief"),
-            function (r) { r.classList.remove("actief"); });
-          rij.classList.add("actief");
-          var marker = markerPerZaal[e.zaal.id];
-          if (marker) clusters.zoomToShowLayer(marker, function () { marker.openPopup(); });
-        });
-      }
-      lijst.appendChild(rij);
+      bezig = false;
     });
-  }
-
-  function tekenKaart(selectie) {
-    clusters.clearLayers();
-    markerPerZaal = {};
-    var perZaal = {};
-    selectie.forEach(function (e) {
-      if (!e.opKaart) return;
-      (perZaal[e.zaal.id] = perZaal[e.zaal.id] || []).push(e);
-    });
-    var punten = [];
-    Object.keys(perZaal).forEach(function (zaalId) {
-      var groep = perZaal[zaalId], zaal = groep[0].zaal;
-      var positie = [parseFloat(zaal.lat), parseFloat(zaal.lon)];
-      var marker = L.marker(positie, { icon: bolIcoon(groep[0].podcasts[0]) });
-      var html = '<div class="popup-zaal">' + escapeHtml(zaal.naam) + ", " + escapeHtml(zaal.stad) + "</div>";
-      groep.slice(0, 8).forEach(function (e) {
-        html += '<div class="popup-regel">' + e.d.dag + " " + MAAND_KORT[e.d.maand] + " " + e.d.jaar +
-                " &middot; " + escapeHtml(e.show.titel) + "</div>";
-      });
-      if (groep.length > 8) html += '<div class="popup-regel">en nog ' + (groep.length - 8) + " andere</div>";
-      marker.bindPopup(html);
-      clusters.addLayer(marker);
-      markerPerZaal[zaalId] = marker;
-      punten.push(positie);
-    });
-    if (punten.length) kaart.fitBounds(L.latLngBounds(punten).pad(0.25));
-    return punten.length;
-  }
-
-  function ververs() {
-    var selectie = huidigeSelectie();
-    tekenLijst(selectie);
-    tekenKaart(selectie);
-    var zonderCoord = selectie.filter(function (e) { return !e.opKaart; }).length;
-    document.getElementById("telling").textContent =
-      selectie.length + (selectie.length === 1 ? " show" : " shows") +
-      (zonderCoord ? " · " + zonderCoord + " nog niet op de kaart" : "");
-    var missend = DATA.venues.filter(function (v) { return !heeftCoordinaten(v); }).length;
-    var melding = document.getElementById("kaart-melding");
-    if (missend) {
-      melding.hidden = false;
-      melding.innerHTML = "Van de " + DATA.venues.length + " zalen hebben er <strong>" + missend +
-        "</strong> nog geen <code>lat</code> en <code>lon</code>. Vul die in op het tabblad " +
-        "<code>venues</code> en draai daarna <code>python3 maak-site-data.py</code>.";
-    } else { melding.hidden = true; }
-  }
-
-  selMaand.addEventListener("change", ververs);
-  selProv.addEventListener("change", ververs);
-  document.getElementById("wis").addEventListener("click", function () {
-    selMaand.value = ""; selProv.value = ""; ververs();
-  });
-
-  document.getElementById("cijfers").textContent =
-    events.length + " liveshows van " + DATA.podcasts.length + " podcasts in " +
-    DATA.venues.length + " zalen.";
-
-  var gecheckt = DATA.events.map(function (e) { return String(e.laatst_gecheckt || ""); })
-                            .filter(Boolean).sort();
-  var laatste = gecheckt.length ? gecheckt[gecheckt.length - 1] : "";
-  document.getElementById("balk-rechts").textContent =
-    events.length + " shows" + (laatste ? " · bijgewerkt " + laatste : "");
-  document.getElementById("voetnoot").textContent =
-    "Kaartgegevens van OpenStreetMap." + (laatste ? " Agenda voor het laatst gecontroleerd op " + laatste + "." : "");
-
-  ververs();
-  window.addEventListener("resize", function () { kaart.invalidateSize(); });
+  }, { passive: true });
 })();
 </script>
+
 </body>
 </html>
