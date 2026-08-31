@@ -105,10 +105,20 @@ keer inlezen levert geen dubbelingen op. Een zaal wordt herkend aan zijn naam of
 aan een alias in de kolom `aliassen`; komt er een nieuwe schrijfwijze langs, zet
 die er dan bij in plaats van een tweede zaalrij te laten ontstaan.
 
+## Bekende beperking: twee voorstellingen op een dag
+
+Een event wordt herkend aan show + zaal + datum. Speelt een voorstelling twee keer
+op dezelfde dag in dezelfde zaal - een matinee en een avondvoorstelling - dan past
+alleen de tweede erin. Dat gebeurt bijvoorbeeld bij Over de liefde in DeLaMar op
+12 september 2026. Wil je die allebei kunnen tonen, dan moet de tijd deel worden
+van de sleutel. Dat is een bewuste openstaande keuze, geen vergeten detail.
+
 ## Afspraak over verrijken
 
 Aanvangstijd en beginprijs staan niet bij de producent, die moeten per event bij
-het theater opgehaald worden. Dat doen we alleen voor shows die binnen negentig
+het theater opgehaald worden. Vraag daarbij expliciet naar het gewone tarief:
+theaters tonen vaak een jongeren- of studentenprijs als laagste bedrag, en
+"vanaf 10 euro" terwijl volwassenen 31 euro betalen is misleidend. Dat doen we alleen voor shows die binnen negentig
 dagen spelen, en die verversen we maandelijks. Alles daarna krijgt voorlopig
 alleen datum, zaal en ticketlink. Reden: één ophaalactie per event schaalt niet
 naar honderden shows, en een prijs van over een jaar klopt straks toch niet meer.
