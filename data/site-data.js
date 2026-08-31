@@ -2,6 +2,294 @@
 window.DATA = {
  "events": [
   {
+   "id": 45,
+   "iso": "2026-09-08",
+   "dag": 8,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.hnt.nl/nl/voorstellingen/9665/over-de-liefde/aaf-lies",
+   "status": "uitverkocht",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 28,
+    "naam": "Koninklijke Schouwburg",
+    "stad": "Den Haag",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "iso": "2026-09-11",
+   "dag": 11,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://delamar.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 14,
+    "naam": "DeLaMar",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3644194,
+    "lon": 4.8806878
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "iso": "2026-09-12",
+   "dag": 12,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://delamar.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 14,
+    "naam": "DeLaMar",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3644194,
+    "lon": 4.8806878
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "iso": "2026-09-13",
+   "dag": 13,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://delamar.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 14,
+    "naam": "DeLaMar",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3644194,
+    "lon": 4.8806878
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "iso": "2026-09-17",
+   "dag": 17,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://caprera.nu/programma/aaf-brandt-corstius-en-lies-visschedijk/",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 29,
+    "naam": "OLT Caprera",
+    "stad": "Bloemendaal",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "iso": "2026-09-19",
+   "dag": 19,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://theaterdevest.nl/tickets/seizoen-26-27/aaf-brandt-corstius-lies-visschedijk-over-de-liefde-reprise",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 30,
+    "naam": "Theater De Vest",
+    "stad": "Alkmaar",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "iso": "2026-09-22",
+   "dag": 22,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.zwolsetheaters.nl/programma/2025-2026/aaf-brandt-corstius-lies-visschedijk",
+   "status": "in verkoop",
+   "provincie": "Overijssel",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 12,
+    "naam": "Theater De Spiegel",
+    "stad": "Zwolle",
+    "opkaart": true,
+    "lat": 52.515985,
+    "lon": 6.0976158
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "iso": "2026-09-23",
+   "dag": 23,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/lies-visschedijk-aaf-brandt-corstius-over-de-liefde-reprise/",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 31,
+    "naam": "Leidse Schouwburg",
+    "stad": "Leiden",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 53,
+   "iso": "2026-09-25",
+   "dag": 25,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 22,
+    "naam": "Theater De Veste",
+    "stad": "Delft",
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 2,
    "iso": "2026-09-26",
    "dag": 26,
@@ -30,6 +318,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 54,
+   "iso": "2026-09-27",
+   "dag": 27,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.theateraandeparade.nl/nl/programma/over-de-liefde-aaf-brandt-corstius-lies-visschedijk",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 19,
+    "naam": "Theater aan de Parade",
+    "stad": "Den Bosch",
+    "opkaart": true,
+    "lat": 51.6869348,
+    "lon": 5.3086679
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -66,6 +386,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 55,
+   "iso": "2026-10-04",
+   "dag": 4,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.spotgroningen.nl/programma/aaf-en-lies/",
+   "status": "in verkoop",
+   "provincie": "Groningen",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 21,
+    "naam": "SPOT Stadsschouwburg",
+    "stad": "Groningen",
+    "opkaart": true,
+    "lat": 53.2208535,
+    "lon": 6.5720279
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 56,
+   "iso": "2026-10-07",
+   "dag": 7,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.dekom.nl/agenda/over-de-liefde-b87t",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 32,
+    "naam": "DE KOM",
+    "stad": "Nieuwegein",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 24,
    "iso": "2026-10-07",
    "dag": 7,
@@ -94,6 +478,38 @@ window.DATA = {
      "naam": "Help, ik heb een puber!",
      "slug": "help-ik-heb-een-puber",
      "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
+    }
+   ]
+  },
+  {
+   "id": 57,
+   "iso": "2026-10-08",
+   "dag": 8,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.kunstmin.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk-over-de-liefde/",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 33,
+    "naam": "Kunstmin",
+    "stad": "Dordrecht",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -162,6 +578,166 @@ window.DATA = {
    ]
   },
   {
+   "id": 58,
+   "iso": "2026-10-15",
+   "dag": 15,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.musisenstadstheater.nl/nl/agenda/aaf-brandt-corstius-lies-visschedijk-over-de-liefde/10183",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 3,
+    "naam": "Musis",
+    "stad": "Arnhem",
+    "opkaart": true,
+    "lat": 51.982704,
+    "lon": 5.9137995
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 59,
+   "iso": "2026-10-16",
+   "dag": 16,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/aaf-lies-over-de-liefde",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 16,
+    "naam": "Schouwburg en Concertzaal Tilburg",
+    "stad": "Tilburg",
+    "opkaart": true,
+    "lat": 51.5542257,
+    "lon": 5.082737
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 60,
+   "iso": "2026-10-17",
+   "dag": 17,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.maaspoort.nl/programma/over-de-liefde-aaf-brandt-corstius-lies-visschedijk/17-10-2026-20-15/",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 34,
+    "naam": "Maaspoort",
+    "stad": "Venlo",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 61,
+   "iso": "2026-10-20",
+   "dag": 20,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.stadsschouwburgendevereeniging.nl/programma/aaf-brandt-corstius-lies-visschedijk-r342",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 35,
+    "naam": "De Vereeniging",
+    "stad": "Nijmegen",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 62,
+   "iso": "2026-10-22",
+   "dag": 22,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://ontdekpoort.nl/programma/2865/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Friesland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 36,
+    "naam": "Poort",
+    "stad": "Sneek",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 6,
    "iso": "2026-10-22",
    "dag": 22,
@@ -194,6 +770,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 63,
+   "iso": "2026-10-27",
+   "dag": 27,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.orpheus.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk-ns39",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 37,
+    "naam": "Orpheus",
+    "stad": "Apeldoorn",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 25,
    "iso": "2026-10-28",
    "dag": 28,
@@ -222,6 +830,38 @@ window.DATA = {
      "naam": "Help, ik heb een puber!",
      "slug": "help-ik-heb-een-puber",
      "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
+    }
+   ]
+  },
+  {
+   "id": 64,
+   "iso": "2026-10-30",
+   "dag": 30,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.chasse.nl/nl/programma/aaf-en-lies-dy3s",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 27,
+    "naam": "Chassé Theater",
+    "stad": "Breda",
+    "opkaart": true,
+    "lat": 51.5874733,
+    "lon": 4.7821816
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -322,6 +962,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 65,
+   "iso": "2026-11-04",
+   "dag": 4,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://luxortheater.nl/agenda/aaf-lies-56439",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 38,
+    "naam": "Oude Luxor",
+    "stad": "Rotterdam",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 7,
    "iso": "2026-11-04",
    "dag": 4,
@@ -386,6 +1058,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 66,
+   "iso": "2026-11-11",
+   "dag": 11,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://hanzehof.nl/nl/voorstelling/aaf-brandt-corstius--lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 39,
+    "naam": "Hanzehof",
+    "stad": "Zutphen",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 67,
+   "iso": "2026-11-12",
+   "dag": 12,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.junushoff.nl/programma/aaf-brandt-corstius-lies-visschedijk-l6w1",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 26,
+    "naam": "Junushoff",
+    "stad": "Wageningen",
+    "opkaart": true,
+    "lat": 51.9667769,
+    "lon": 5.6614496
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 8,
    "iso": "2026-11-12",
    "dag": 12,
@@ -414,6 +1150,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 68,
+   "iso": "2026-11-14",
+   "dag": 14,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://flint.nl/agenda/aaf-brandt-corstius-lies-visschedijk-over-de-liefde/",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 40,
+    "naam": "Flint",
+    "stad": "Amersfoort",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -450,6 +1218,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 69,
+   "iso": "2026-11-17",
+   "dag": 17,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://stadstheater.nl/voorstelling/lies-en-aaf/",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 41,
+    "naam": "Stadstheater",
+    "stad": "Zoetermeer",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 9,
    "iso": "2026-11-17",
    "dag": 17,
@@ -478,6 +1278,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 70,
+   "iso": "2026-11-19",
+   "dag": 19,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.agnietenhof.nl/agenda/aaf-brandt-corstius-lies-visschedijk-13gr",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 13,
+    "naam": "Schouwburg Agnietenhof",
+    "stad": "Tiel",
+    "opkaart": true,
+    "lat": 51.8856443,
+    "lon": 5.436108
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -546,6 +1378,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 71,
+   "iso": "2026-11-25",
+   "dag": 25,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.amphion.nl/theater/aaf-brandt-corstius-lies-visschedijk-over-de-liefde/25-11-2026-20-00/",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 18,
+    "naam": "Amphion",
+    "stad": "Doetinchem",
+    "opkaart": true,
+    "lat": 51.9685969,
+    "lon": 6.2878967
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 27,
    "iso": "2026-11-25",
    "dag": 25,
@@ -606,6 +1470,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "iso": "2026-11-28",
+   "dag": 28,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.spant.org/voorstellingen/over-de-liefde",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 42,
+    "naam": "Spant!",
+    "stad": "Bussum",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -674,6 +1570,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 73,
+   "iso": "2026-12-02",
+   "dag": 2,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://kunstlinie.nl/programma/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Flevoland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 10,
+    "naam": "Kunstlinie",
+    "stad": "Almere",
+    "opkaart": true,
+    "lat": 52.3669292,
+    "lon": 5.2191822
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 28,
    "iso": "2026-12-02",
    "dag": 2,
@@ -738,6 +1666,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 74,
+   "iso": "2026-12-07",
+   "dag": 7,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.dekleinekomedie.nl/agenda/aaf-brandt-corstius-lies-visschedijk-nrc4",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 43,
+    "naam": "De Kleine Komedie",
+    "stad": "Amsterdam",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "iso": "2026-12-08",
+   "dag": 8,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.dekleinekomedie.nl/agenda/aaf-brandt-corstius-lies-visschedijk-nrc4",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 43,
+    "naam": "De Kleine Komedie",
+    "stad": "Amsterdam",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 37,
    "iso": "2026-12-08",
    "dag": 8,
@@ -766,6 +1758,38 @@ window.DATA = {
      "naam": "Boekestijn en De Wijk",
      "slug": "boekestijn-en-de-wijk",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 76,
+   "iso": "2026-12-09",
+   "dag": 9,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Over de liefde",
+   "prijs": null,
+   "ticket": "https://www.dekleinekomedie.nl/agenda/aaf-brandt-corstius-lies-visschedijk-nrc4",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 43,
+    "naam": "De Kleine Komedie",
+    "stad": "Amsterdam",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
@@ -1410,6 +2434,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 27,
- "venues_zonder_coordinaten": 0
+ "venues_totaal": 43,
+ "venues_zonder_coordinaten": 16
 };

@@ -39,7 +39,11 @@ TOP100 = os.path.join(HIER, "data", "apple-top100.json")
 def sleutel(s):
     s = unicodedata.normalize("NFKD", str(s or "")).encode("ascii", "ignore").decode().lower()
     s = s.replace("&", " en ")
-    s = re.sub(r"\b(de|het|een|the|en|and|theater|schouwburg)\b", " ", s)
+    # Alleen lidwoorden weghalen. Woorden als "theater" en "schouwburg" laten we
+    # staan: die weghalen maakt "Stadsschouwburg" tot "stads" en dan gaan namen
+    # ten onrechte op elkaar lijken. Verschillen in schrijfwijze horen in de
+    # kolom aliassen, niet in een steeds slimmere normalisatie.
+    s = re.sub(r"\b(de|het|een|the|en|and)\b", " ", s)
     return re.sub(r"[^a-z0-9]+", "", s)
 
 def leeg(v):
