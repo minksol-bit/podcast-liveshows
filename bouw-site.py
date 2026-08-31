@@ -617,5 +617,23 @@ def main():
     print("  events met aanvangstijd:  %d van %d" % (met_tijd, len(events)))
     print("  events met prijs:         %d van %d" % (met_prijs, len(events)))
 
+    # Werklijst: alleen wat binnenkort speelt hoeft een tijd en prijs te hebben.
+    # Alles verrijken schaalt niet; over een jaar is de prijs toch veranderd.
+    from datetime import timedelta
+    grens = (date.today() + timedelta(days=90)).isoformat()
+    vandaag = date.today().isoformat()
+    werk = [ev for ev in events if vandaag <= ev["iso"] <= grens
+            and (not ev["tijd"] or ev["prijs"] is None)]
+    if werk:
+        print("\n  Nog aan te vullen (speelt binnen 90 dagen):")
+        for ev in werk[:15]:
+            mist = ", ".join(x for x, y in [("tijd", ev["tijd"]), ("prijs", ev["prijs"])] if not y)
+            print("    %s  %-34s %-22s mist %s"
+                  % (ev["iso"], ev["show"]["titel"][:34], ev["zaal"]["stad"], mist))
+        if len(werk) > 15:
+            print("    ... en nog %d" % (len(werk) - 15))
+    else:
+        print("\n  Alles wat binnen 90 dagen speelt heeft een tijd en een prijs.")
+
 if __name__ == "__main__":
     main()

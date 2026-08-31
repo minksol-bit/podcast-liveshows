@@ -91,6 +91,30 @@ shows zijn.
 
 Bouw niets van fase 2 of 3 voordat fase 1 draait.
 
+## Data toevoegen
+
+Nieuwe bronnen gaan via een JSON-bestand in `data/bronnen/`, niet met de hand in
+het Excel-bestand. Daarna:
+
+    python3 importeer.py data/bronnen/<bestand>.json            # laat zien wat er zou gebeuren
+    python3 importeer.py data/bronnen/<bestand>.json --schrijf  # voert het door
+    python3 bouw-site.py
+
+De inleesroutine herkent een event aan show + zaal + datum, dus dezelfde bron twee
+keer inlezen levert geen dubbelingen op. Een zaal wordt herkend aan zijn naam of
+aan een alias in de kolom `aliassen`; komt er een nieuwe schrijfwijze langs, zet
+die er dan bij in plaats van een tweede zaalrij te laten ontstaan.
+
+## Afspraak over verrijken
+
+Aanvangstijd en beginprijs staan niet bij de producent, die moeten per event bij
+het theater opgehaald worden. Dat doen we alleen voor shows die binnen negentig
+dagen spelen, en die verversen we maandelijks. Alles daarna krijgt voorlopig
+alleen datum, zaal en ticketlink. Reden: één ophaalactie per event schaalt niet
+naar honderden shows, en een prijs van over een jaar klopt straks toch niet meer.
+`bouw-site.py` toont onderaan welke shows binnen die negentig dagen nog een tijd
+of prijs missen.
+
 ## Hoe de site gebouwd wordt
 
 `python3 bouw-site.py` leest het Excel-bestand en schrijft alle pagina's opnieuw:
