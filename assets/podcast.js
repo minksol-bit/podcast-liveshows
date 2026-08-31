@@ -1,5 +1,6 @@
 /* Podcastpagina: alle shows van deze podcast, met kaart.
-   Zweven over een datum licht het bijbehorende bolletje op. Leest window.PAGINA. */
+   Eén speldje per zaal (anders vallen datums in dezelfde zaal over elkaar heen).
+   Zweven over een datum licht het bijbehorende speldje op. Leest window.PAGINA. */
 (function () {
   "use strict";
   if (!window.PAGINA || !PAGINA.events.length) return;
@@ -9,60 +10,71 @@
                  "juli","augustus","september","oktober","november","december"];
   var $ = function (id) { return document.getElementById(id); };
 
-  var opKaart = PAGINA.events.filter(function (ev) { return ev.zaal.opkaart; });
-  var markers = {};
-  var kaart = null, laag = null;
+  var zalen = PAGINA.zalen || [];
+  var markerPerZaal = {};   // zaal-id -> marker
+  var zaalVanEvent = {};    // event-id -> zaal-id
+  var kaart = null;
 
-  if (opKaart.length && $("kaart")) {
+  function veilig(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  if (zalen.length && $("kaart")) {
     kaart = L.map("kaart", { scrollWheelZoom: false });
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(kaart);
-    laag = L.layerGroup().addTo(kaart);
+    var laag = L.layerGroup().addTo(kaart);
 
     var punten = [];
-    opKaart.forEach(function (ev) {
-      var icoon = L.divIcon({
-        html: '<div class="speld"><span class="stip"></span>' +
-              ev.dag + " " + MAAND_KORT[ev.maandnr - 1] + "</div>",
-        className: "speldwikkel", iconSize: null, iconAnchor: [16, 14], popupAnchor: [0, -12]
+    zalen.forEach(function (z) {
+      var eerste = z.datums[0];
+      var label = eerste.dag + " " + MAAND_KORT[eerste.maandnr - 1] +
+                  (z.datums.length > 1 ? " +" + (z.datums.length - 1) : "");
+      var m = L.marker([z.lat, z.lon], {
+        icon: L.divIcon({
+          html: '<div class="speld"><span class="stip"></span>' + veilig(label) + "</div>",
+          className: "speldwikkel", iconSize: null, iconAnchor: [16, 14], popupAnchor: [0, -12]
+        })
       });
-      var m = L.marker([ev.zaal.lat, ev.zaal.lon], { icon: icoon });
-      m.bindPopup('<div class="popup-zaal">' + ev.zaal.naam + ", " + ev.zaal.stad + "</div>" +
-                  '<div class="popup-regel">' + ev.dag + " " + MAANDEN[ev.maandnr - 1] + " " + ev.jaar +
-                  (ev.tijd ? " &middot; " + ev.tijd : "") + "</div>");
+      var h = '<div class="popup-zaal">' + veilig(z.naam) + ", " + veilig(z.stad) + "</div>";
+      z.datums.forEach(function (dt) {
+        h += '<div class="popup-regel">' + dt.dag + " " + MAANDEN[dt.maandnr - 1] + " " + dt.jaar +
+             (dt.tijd ? " &middot; " + dt.tijd : "") + "</div>";
+        zaalVanEvent[dt.ev] = z.id;
+      });
+      m.bindPopup(h);
       m.addTo(laag);
-      markers[ev.id] = m;
-      punten.push([ev.zaal.lat, ev.zaal.lon]);
+      markerPerZaal[z.id] = m;
+      punten.push([z.lat, z.lon]);
     });
     kaart.fitBounds(L.latLngBounds(punten).pad(0.25));
     window.addEventListener("resize", function () { kaart.invalidateSize(); });
   }
 
-  function dim(actiefId) {
-    Object.keys(markers).forEach(function (id) {
-      var el = markers[id].getElement();
+  function licht(zaalId) {
+    Object.keys(markerPerZaal).forEach(function (id) {
+      var el = markerPerZaal[id].getElement();
       if (!el) return;
-      el.classList.toggle("gedimd", actiefId !== null && String(id) !== String(actiefId));
-      el.classList.toggle("uitgelicht", String(id) === String(actiefId));
+      el.classList.toggle("gedimd", zaalId !== null && String(id) !== String(zaalId));
+      el.classList.toggle("uitgelicht", zaalId !== null && String(id) === String(zaalId));
     });
   }
 
-  // rijen koppelen aan de kaart
   Array.prototype.forEach.call(document.querySelectorAll(".event[data-ev]"), function (rij) {
     var id = rij.getAttribute("data-ev");
-    var m = markers[id];
-    rij.addEventListener("mouseenter", function () { if (Object.keys(markers).length) dim(id); });
-    rij.addEventListener("mouseleave", function () { dim(null); });
-    if (m) {
+    var zaalId = zaalVanEvent[id];
+    rij.addEventListener("mouseenter", function () { if (zaalId !== undefined) licht(zaalId); });
+    rij.addEventListener("mouseleave", function () { licht(null); });
+    if (zaalId !== undefined) {
       rij.classList.add("klikbaar");
       rij.addEventListener("click", function (ev) {
         if (ev.target.closest("a") || ev.target.closest("button")) return;
+        var m = markerPerZaal[zaalId];
         kaart.setView(m.getLatLng(), Math.max(kaart.getZoom(), 11), { animate: true });
         m.openPopup();
       });
     }
-    // hartje en agendaknop bijplaatsen
     var vak = rij.querySelector(".rechtsblok");
     if (vak && window.FAV) {
       var gegevens = JSON.parse(rij.getAttribute("data-json"));

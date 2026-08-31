@@ -478,9 +478,20 @@ def bouw_podcastpaginas(podcasts, gecheckt):
     gemaakt = 0
     for p in podcasts.values():
         evs = p["events"]
-        data = {"naam": p["naam"], "events": [
+        # Een zaal kan meerdere keren voorkomen. Speldjes op exact dezelfde plek
+        # vallen over elkaar heen, dus we zetten er een per zaal neer en noemen
+        # alle datums in de ballon.
+        zalen = {}
+        for ev in evs:
+            if not ev["zaal"]["opkaart"]: continue
+            z = zalen.setdefault(ev["zaal"]["id"], {
+                "id": ev["zaal"]["id"], "naam": ev["zaal"]["naam"], "stad": ev["zaal"]["stad"],
+                "lat": ev["zaal"]["lat"], "lon": ev["zaal"]["lon"], "datums": []})
+            z["datums"].append({"ev": ev["id"], "dag": ev["d"]["dag"], "maandnr": ev["d"]["maand"],
+                                "jaar": ev["d"]["jaar"], "tijd": ev["tijd"]})
+        data = {"naam": p["naam"], "zalen": list(zalen.values()), "events": [
             {"id": ev["id"], "iso": ev["iso"], "dag": ev["d"]["dag"], "maandnr": ev["d"]["maand"],
-             "jaar": ev["d"]["jaar"], "tijd": ev["tijd"],
+             "jaar": ev["d"]["jaar"], "tijd": ev["tijd"], "zaal_id": ev["zaal"]["id"],
              "zaal": {"naam": ev["zaal"]["naam"], "stad": ev["zaal"]["stad"],
                       "opkaart": ev["zaal"]["opkaart"], "lat": ev["zaal"]["lat"], "lon": ev["zaal"]["lon"]}}
             for ev in evs]}
@@ -517,7 +528,11 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                    prijs, knop))
 
         heeft_kaart = any(ev["zaal"]["opkaart"] for ev in evs)
-        kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div></div>\n'
+        n_zalen = len({ev["zaal"]["id"] for ev in evs if ev["zaal"]["opkaart"]})
+        kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div>'
+                     '<p class="cijfers" style="margin-top:10px">%d show%s in %d zaal%s. Speelt een podcast '
+                     'twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p></div>\n'
+                     % (len(evs), "" if len(evs) == 1 else "s", n_zalen, "" if n_zalen == 1 else "en")
                      if heeft_kaart else
                      '    <div class="kaartkolom"><div class="melding">Nog geen coördinaten voor de zalen '
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
