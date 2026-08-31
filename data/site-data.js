@@ -898,6 +898,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 119,
+   "iso": "2026-10-06",
+   "dag": 6,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:00",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": 13.5,
+   "ticket": "https://www.theateraandeparade.nl/nl/programma/misdaadpodcast-live",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 19,
+    "naam": "Theater aan de Parade",
+    "stad": "Den Bosch",
+    "opkaart": true,
+    "lat": 51.6869348,
+    "lon": 5.3086679
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 24,
    "iso": "2026-10-07",
    "dag": 7,
@@ -2338,6 +2370,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 120,
+   "iso": "2026-11-20",
+   "dag": 20,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "20:00",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": 17.5,
+   "ticket": "https://luxortheater.nl/agenda/de-misdaadpodcast-live-58250",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 38,
+    "naam": "Oude Luxor",
+    "stad": "Rotterdam",
+    "opkaart": true,
+    "lat": 51.9229973,
+    "lon": 4.4770274
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 33,
    "iso": "2026-11-21",
    "dag": 21,
@@ -3106,6 +3170,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 121,
+   "iso": "2026-12-10",
+   "dag": 10,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": "20:15",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": null,
+   "ticket": "",
+   "status": "in verkoop",
+   "provincie": "Groningen",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 61,
+    "naam": "Cultuurhuis De Klinker",
+    "stad": "Winschoten",
+    "opkaart": true,
+    "lat": 53.1472327,
+    "lon": 7.033705
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 39,
    "iso": "2026-12-12",
    "dag": 12,
@@ -3358,6 +3454,38 @@ window.DATA = {
      "naam": "Boekestijn en De Wijk",
      "slug": "boekestijn-en-de-wijk",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 122,
+   "iso": "2027-01-05",
+   "dag": 5,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": "20:00",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": 28.5,
+   "ticket": "https://www.orpheus.nl/voorstellingen/de-misdaadpodcast-live-97vl",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 37,
+    "naam": "Orpheus",
+    "stad": "Apeldoorn",
+    "opkaart": true,
+    "lat": 52.2197051,
+    "lon": 5.9529526
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
     }
    ]
   },
@@ -3714,6 +3842,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 123,
+   "iso": "2027-04-13",
+   "dag": 13,
+   "maandnr": 4,
+   "jaar": 2027,
+   "maand": "2027-04",
+   "tijd": "20:00",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": 25.0,
+   "ticket": "https://www.theateraanhetvrijthof.nl/voorstellingen/theatercollege-en-literair/met-paul-vugts-wouter-laumans-en-corrie-gerritsma-de-misdaadpodcast-live",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 62,
+    "naam": "Theater aan het Vrijthof",
+    "stad": "Maastricht",
+    "opkaart": true,
+    "lat": 50.8502223,
+    "lon": 5.6879791
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 22,
    "iso": "2027-04-21",
    "dag": 21,
@@ -3776,8 +3936,40 @@ window.DATA = {
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
     }
    ]
+  },
+  {
+   "id": 124,
+   "iso": "2027-05-27",
+   "dag": 27,
+   "maandnr": 5,
+   "jaar": 2027,
+   "maand": "2027-05",
+   "tijd": "20:15",
+   "titel": "De Misdaadpodcast Live",
+   "prijs": null,
+   "ticket": "",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "True crime"
+   ],
+   "zaal": {
+    "id": 63,
+    "naam": "Schouwburg Het Park",
+    "stad": "Hoorn",
+    "opkaart": true,
+    "lat": 52.6416444,
+    "lon": 5.0512565
+   },
+   "podcasts": [
+    {
+     "naam": "Parool Misdaadpodcast",
+     "slug": "parool-misdaadpodcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
   }
  ],
- "venues_totaal": 60,
+ "venues_totaal": 63,
  "venues_zonder_coordinaten": 0
 };
