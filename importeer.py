@@ -139,7 +139,8 @@ def main():
         if srij is None:
             srij = T["shows"].voegtoe({"id": T["shows"].nieuw_id(), "titel": s["titel"],
                                        "type": s.get("type", "theatershow"),
-                                       "organisator": s.get("organisator", "")})
+                                       "organisator": s.get("organisator", ""),
+                                       "verwantschap": s.get("verwantschap", "")})
             show_op[sk] = srij
             verslag["show_nieuw"].append(s["titel"])
         show_id = T["shows"].waarde(srij, "id")

@@ -34,6 +34,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 77,
+   "iso": "2026-09-09",
+   "dag": 9,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Utrecht",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 44,
+    "naam": "Theater Lampegiet",
+    "stad": "Veenendaal",
+    "opkaart": true,
+    "lat": 52.0244718,
+    "lon": 5.5529666
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 78,
+   "iso": "2026-09-10",
+   "dag": 10,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Utrecht",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 44,
+    "naam": "Theater Lampegiet",
+    "stad": "Veenendaal",
+    "opkaart": true,
+    "lat": 52.0244718,
+    "lon": 5.5529666
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 46,
    "iso": "2026-09-11",
    "dag": 11,
@@ -62,6 +126,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 79,
+   "iso": "2026-09-12",
+   "dag": 12,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.theateraandeparade.nl/nl/programma/plien-en-bianca-harrekidee-reprise",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 19,
+    "naam": "Theater aan de Parade",
+    "stad": "Den Bosch",
+    "opkaart": true,
+    "lat": 51.6869348,
+    "lon": 5.3086679
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -130,6 +226,102 @@ window.DATA = {
    ]
   },
   {
+   "id": 80,
+   "iso": "2026-09-14",
+   "dag": 14,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://theaterdevest.nl/tickets/seizoen-26-27/plien-bianca-harrekidee-reprise",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 30,
+    "naam": "Theater De Vest",
+    "stad": "Alkmaar",
+    "opkaart": true,
+    "lat": 52.6338681,
+    "lon": 4.7439242
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 81,
+   "iso": "2026-09-15",
+   "dag": 15,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 30,
+    "naam": "Theater De Vest",
+    "stad": "Alkmaar",
+    "opkaart": true,
+    "lat": 52.6338681,
+    "lon": 4.7439242
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "iso": "2026-09-17",
+   "dag": 17,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 7,
+    "naam": "Schouwburg",
+    "stad": "Hengelo",
+    "opkaart": true,
+    "lat": 52.2629142,
+    "lon": 6.7952206
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 49,
    "iso": "2026-09-17",
    "dag": 17,
@@ -194,6 +386,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 83,
+   "iso": "2026-09-21",
+   "dag": 21,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 45,
+    "naam": "Deventer Schouwburg",
+    "stad": "Deventer",
+    "opkaart": true,
+    "lat": 52.2556465,
+    "lon": 6.1615569
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 51,
    "iso": "2026-09-22",
    "dag": 22,
@@ -226,6 +450,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 84,
+   "iso": "2026-09-22",
+   "dag": 22,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 45,
+    "naam": "Deventer Schouwburg",
+    "stad": "Deventer",
+    "opkaart": true,
+    "lat": 52.2556465,
+    "lon": 6.1615569
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 52,
    "iso": "2026-09-23",
    "dag": 23,
@@ -254,6 +510,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 85,
+   "iso": "2026-09-24",
+   "dag": 24,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Gelderland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 26,
+    "naam": "Junushoff",
+    "stad": "Wageningen",
+    "opkaart": true,
+    "lat": 51.9667769,
+    "lon": 5.6614496
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -354,6 +642,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 86,
+   "iso": "2026-09-28",
+   "dag": 28,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 12,
+    "naam": "Theater De Spiegel",
+    "stad": "Zwolle",
+    "opkaart": true,
+    "lat": 52.515985,
+    "lon": 6.0976158
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 87,
+   "iso": "2026-09-29",
+   "dag": 29,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 12,
+    "naam": "Theater De Spiegel",
+    "stad": "Zwolle",
+    "opkaart": true,
+    "lat": 52.515985,
+    "lon": 6.0976158
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 3,
    "iso": "2026-09-29",
    "dag": 29,
@@ -386,6 +738,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 88,
+   "iso": "2026-10-01",
+   "dag": 1,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.hnt.nl/nl/voorstellingen/plien-bianca-7w3w",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 28,
+    "naam": "Koninklijke Schouwburg",
+    "stad": "Den Haag",
+    "opkaart": true,
+    "lat": 52.0818859,
+    "lon": 4.3158207
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 89,
+   "iso": "2026-10-02",
+   "dag": 2,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 46,
+    "naam": "Schouwburg Cuijk",
+    "stad": "Cuijk",
+    "opkaart": true,
+    "lat": 51.7282504,
+    "lon": 5.8819203
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 55,
    "iso": "2026-10-04",
    "dag": 4,
@@ -414,6 +830,70 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 90,
+   "iso": "2026-10-05",
+   "dag": 5,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 2,
+    "naam": "Stadsschouwburg",
+    "stad": "Haarlem",
+    "opkaart": true,
+    "lat": 52.3779947,
+    "lon": 4.625426
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 91,
+   "iso": "2026-10-06",
+   "dag": 6,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 2,
+    "naam": "Stadsschouwburg",
+    "stad": "Haarlem",
+    "opkaart": true,
+    "lat": 52.3779947,
+    "lon": 4.625426
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -478,6 +958,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 92,
+   "iso": "2026-10-08",
+   "dag": 8,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 47,
+    "naam": "De Rijswijkse Schouwburg",
+    "stad": "Rijswijk",
+    "opkaart": true,
+    "lat": 52.0460579,
+    "lon": 4.327609
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -674,6 +1186,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 93,
+   "iso": "2026-10-19",
+   "dag": 19,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.spant.org/voorstellingen/plien-bianca",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 42,
+    "naam": "Spant!",
+    "stad": "Bussum",
+    "opkaart": true,
+    "lat": 52.2700169,
+    "lon": 5.1751674
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "iso": "2026-10-20",
+   "dag": 20,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.theaterroermond.nl/agenda/plien-bianca-reprise",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 48,
+    "naam": "Theater De Oranjerie",
+    "stad": "Roermond",
+    "opkaart": true,
+    "lat": 51.1916778,
+    "lon": 5.9896043
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 61,
    "iso": "2026-10-20",
    "dag": 20,
@@ -702,6 +1278,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "iso": "2026-10-22",
+   "dag": 22,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 20,
+    "naam": "Theater De Lievekamp",
+    "stad": "Oss",
+    "opkaart": true,
+    "lat": 51.7633501,
+    "lon": 5.5213587
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -770,6 +1378,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 96,
+   "iso": "2026-10-26",
+   "dag": 26,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 49,
+    "naam": "Cool Kunst en Cultuur",
+    "stad": "Heerhugowaard",
+    "opkaart": true,
+    "lat": 52.6623256,
+    "lon": 4.82789
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 97,
+   "iso": "2026-10-27",
+   "dag": 27,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Drenthe",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 50,
+    "naam": "Theater De Tamboer",
+    "stad": "Hoogeveen",
+    "opkaart": true,
+    "lat": 52.7273643,
+    "lon": 6.4779898
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 63,
    "iso": "2026-10-27",
    "dag": 27,
@@ -834,6 +1506,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 98,
+   "iso": "2026-10-29",
+   "dag": 29,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 51,
+    "naam": "Zaantheater",
+    "stad": "Zaandam",
+    "opkaart": true,
+    "lat": 52.4382663,
+    "lon": 4.824913
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 64,
    "iso": "2026-10-30",
    "dag": 30,
@@ -894,6 +1598,70 @@ window.DATA = {
      "naam": "Help, ik heb een puber!",
      "slug": "help-ik-heb-een-puber",
      "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "iso": "2026-11-02",
+   "dag": 2,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.spotgroningen.nl/programma/plien-bianca-8/",
+   "status": "in verkoop",
+   "provincie": "Groningen",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 21,
+    "naam": "SPOT Stadsschouwburg",
+    "stad": "Groningen",
+    "opkaart": true,
+    "lat": 53.2208535,
+    "lon": 6.5720279
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "iso": "2026-11-03",
+   "dag": 3,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Groningen",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 21,
+    "naam": "SPOT Stadsschouwburg",
+    "stad": "Groningen",
+    "opkaart": true,
+    "lat": 53.2208535,
+    "lon": 6.5720279
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1026,6 +1794,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 101,
+   "iso": "2026-11-05",
+   "dag": 5,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Drenthe",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 52,
+    "naam": "Theater DNK",
+    "stad": "Assen",
+    "opkaart": true,
+    "lat": 52.9947861,
+    "lon": 6.5582666
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "iso": "2026-11-09",
+   "dag": 9,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.atlastheater.nl/voorstellingen/harrekidee-reprise-plien-en-bianca-09-nov/",
+   "status": "in verkoop",
+   "provincie": "Drenthe",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 53,
+    "naam": "ATLAS Theater",
+    "stad": "Emmen",
+    "opkaart": true,
+    "lat": 52.7830595,
+    "lon": 6.891167
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 30,
    "iso": "2026-11-09",
    "dag": 9,
@@ -1058,6 +1890,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 103,
+   "iso": "2026-11-10",
+   "dag": 10,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.wilminktheater.nl/nl/agenda/harrekidee-herneming-yw51",
+   "status": "in verkoop",
+   "provincie": "Overijssel",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 54,
+    "naam": "Wilminktheater",
+    "stad": "Enschede",
+    "opkaart": true,
+    "lat": 52.2226746,
+    "lon": 6.8947417
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 66,
    "iso": "2026-11-11",
    "dag": 11,
@@ -1086,6 +1950,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 104,
+   "iso": "2026-11-12",
+   "dag": 12,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 55,
+    "naam": "De Blauwe Kei",
+    "stad": "Veghel",
+    "opkaart": true,
+    "lat": 51.6148637,
+    "lon": 5.5298913
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1186,6 +2082,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 105,
+   "iso": "2026-11-16",
+   "dag": 16,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Friesland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 56,
+    "naam": "Schouwburg De Lawei",
+    "stad": "Drachten",
+    "opkaart": true,
+    "lat": 53.1031073,
+    "lon": 6.0985494
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 31,
    "iso": "2026-11-16",
    "dag": 16,
@@ -1214,6 +2142,38 @@ window.DATA = {
      "naam": "Boekestijn en De Wijk",
      "slug": "boekestijn-en-de-wijk",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 106,
+   "iso": "2026-11-17",
+   "dag": 17,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Gelderland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 18,
+    "naam": "Amphion",
+    "stad": "Doetinchem",
+    "opkaart": true,
+    "lat": 51.9685969,
+    "lon": 6.2878967
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1278,6 +2238,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "iso": "2026-11-19",
+   "dag": 19,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.maaspoort.nl/programma/harrekidee-reprise-plien-bianca/19-11-2026-20-15/",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 34,
+    "naam": "Maaspoort",
+    "stad": "Venlo",
+    "opkaart": true,
+    "lat": 51.3703643,
+    "lon": 6.1678835
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1378,6 +2370,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 108,
+   "iso": "2026-11-23",
+   "dag": 23,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.chasse.nl/nl/programma/plien-bianca-l914",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 27,
+    "naam": "Chassé Theater",
+    "stad": "Breda",
+    "opkaart": true,
+    "lat": 51.5874733,
+    "lon": 4.7821816
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "iso": "2026-11-24",
+   "dag": 24,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.zeelandtheaters.nl/programma/plien-bianca-harrekidee-reprise/24-11-2026-20-00",
+   "status": "in verkoop",
+   "provincie": "Zeeland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 57,
+    "naam": "Scheldetheater",
+    "stad": "Terneuzen",
+    "opkaart": true,
+    "lat": 51.3386553,
+    "lon": 3.8231688
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 27,
    "iso": "2026-11-25",
    "dag": 25,
@@ -1438,6 +2494,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "iso": "2026-11-26",
+   "dag": 26,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.demaagd.nl/agenda/plien-en-bianca-t2gz",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 58,
+    "naam": "Theater De Maagd",
+    "stad": "Bergen op Zoom",
+    "opkaart": true,
+    "lat": 51.4942791,
+    "lon": 4.2861736
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1538,6 +2626,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 111,
+   "iso": "2026-11-30",
+   "dag": 30,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 22,
+    "naam": "Theater De Veste",
+    "stad": "Delft",
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "iso": "2026-12-01",
+   "dag": 1,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.theaterdeveste.nl/programma/harrekidee-68ky",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 22,
+    "naam": "Theater De Veste",
+    "stad": "Delft",
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 35,
    "iso": "2026-12-01",
    "dag": 1,
@@ -1634,6 +2786,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 113,
+   "iso": "2026-12-03",
+   "dag": 3,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "",
+   "status": "uitverkocht",
+   "provincie": "Flevoland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 59,
+    "naam": "Agora Theater",
+    "stad": "Lelystad",
+    "opkaart": true,
+    "lat": 52.5108687,
+    "lon": 5.4763167
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 36,
    "iso": "2026-12-03",
    "dag": 3,
@@ -1698,6 +2882,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 114,
+   "iso": "2026-12-07",
+   "dag": 7,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.afastheater.nl/plien-en-bianca",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 60,
+    "naam": "AFAS Theater Leusden",
+    "stad": "Leusden",
+    "opkaart": true,
+    "lat": 52.1419261,
+    "lon": 5.4211143
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 75,
    "iso": "2026-12-08",
    "dag": 8,
@@ -1726,6 +2942,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "iso": "2026-12-08",
+   "dag": 8,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.afastheater.nl/plien-en-bianca",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 60,
+    "naam": "AFAS Theater Leusden",
+    "stad": "Leusden",
+    "opkaart": true,
+    "lat": 52.1419261,
+    "lon": 5.4211143
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1790,6 +3038,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "iso": "2026-12-09",
+   "dag": 9,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://www.afastheater.nl/plien-en-bianca",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 60,
+    "naam": "AFAS Theater Leusden",
+    "stad": "Leusden",
+    "opkaart": true,
+    "lat": 52.1419261,
+    "lon": 5.4211143
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -1886,6 +3166,70 @@ window.DATA = {
      "naam": "Boekestijn en De Wijk",
      "slug": "boekestijn-en-de-wijk",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 117,
+   "iso": "2026-12-15",
+   "dag": 15,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://luxortheater.nl/agenda/plien-bianca-57558",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 38,
+    "naam": "Oude Luxor",
+    "stad": "Rotterdam",
+    "opkaart": true,
+    "lat": 51.9229973,
+    "lon": 4.4770274
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 118,
+   "iso": "2026-12-16",
+   "dag": 16,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Harrekidee! (reprise)",
+   "prijs": null,
+   "ticket": "https://luxortheater.nl/agenda/plien-bianca-57558",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 38,
+    "naam": "Oude Luxor",
+    "stad": "Rotterdam",
+    "opkaart": true,
+    "lat": 51.9229973,
+    "lon": 4.4770274
+   },
+   "podcasts": [
+    {
+     "naam": "Provinfluencers",
+     "slug": "provinfluencers",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
     }
    ]
   },
@@ -2434,6 +3778,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 43,
+ "venues_totaal": 60,
  "venues_zonder_coordinaten": 0
 };

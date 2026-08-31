@@ -105,6 +105,27 @@ keer inlezen levert geen dubbelingen op. Een zaal wordt herkend aan zijn naam of
 aan een alias in de kolom `aliassen`; komt er een nieuwe schrijfwijze langs, zet
 die er dan bij in plaats van een tweede zaalrij te laten ontstaan.
 
+## Wanneer telt een show mee?
+
+De show hoeft niet de podcast zelf te zijn. Hij telt mee als de makers van de
+podcast op het podium staan en de voorstelling enigszins raakt aan het onderwerp of
+de toon van de podcast. De kolom `verwantschap` op het tabblad `shows` legt vast hoe
+nauw dat verband is:
+
+- `podcast live` - de podcast wordt live opgenomen of gespeeld (Hagelslag).
+- `thema-verwant` - andere voorstelling, zelfde onderwerp (Napleiten Live, Veldheren,
+  Boekestijn & De Wijk).
+- `zelfde makers` - de makers staan er, in dezelfde toon maar met een programma dat
+  los van de podcast bestaat (Plien & Bianca met Harrekidee, Aaf en Lies met Over de
+  liefde).
+
+Telt niet mee: de maker staat op het podium in een rol die niets met de podcast te
+maken heeft - een presentator die in een toneelstuk speelt, een muzikant die een
+concert geeft, iemand die een gala van een ander presenteert.
+
+Omdat het verband in de data staat en niet in een wel-of-niet-beslissing, kunnen we
+later alsnog besluiten om alleen `podcast live` en `thema-verwant` te tonen.
+
 ## Bekende beperking: twee voorstellingen op een dag
 
 Een event wordt herkend aan show + zaal + datum. Speelt een voorstelling twee keer
