@@ -272,3 +272,6 @@ footer a { color: var(--grijs); }
   .pkop img { width: 96px; height: 96px; }
 }
 @media (max-width: 620px) { .raster { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
+
+.toprij.onbekend { opacity: .72; }
+.toprij.onbekend .staat { color: var(--grijs); font-style: italic; }

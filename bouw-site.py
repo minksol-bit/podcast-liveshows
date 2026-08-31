@@ -94,6 +94,7 @@ def lees_alles():
     wb = load_workbook(XLSX, data_only=True)
     rauw = {n: tabblad(wb, n) for n in
             ["podcasts", "shows", "show_podcasts", "events", "venues"]}
+    rauw["toplijst"] = tabblad(wb, "toplijst") if "toplijst" in wb.sheetnames else []
 
     podcasts = {}
     for p in rauw["podcasts"]:
@@ -144,7 +145,14 @@ def lees_alles():
     events.sort(key=lambda x: (x["iso"], x["tijd"] or "00:00"))
     for p in podcasts.values():
         p["events"].sort(key=lambda x: (x["iso"], x["tijd"] or "00:00"))
-    return podcasts, shows, venues, events
+
+    status = {}
+    for r in rauw["toplijst"]:
+        status[str(r.get("apple_id") or "")] = {
+            "gecontroleerd": tekst(r.get("gecontroleerd_op")),
+            "bevinding": tekst(r.get("bevinding")),
+            "notitie": tekst(r.get("notitie"))}
+    return podcasts, shows, venues, events, status
 
 # ---------------------------------------------------------------- sjablonen
 
@@ -431,39 +439,43 @@ def bouw_catalogus(podcasts, gecheckt):
                 + voet(gecheckt, '<script src="assets/catalogus.js"></script>' + PARALLAX))
     schrijf("catalogus.html", html_uit)
 
-def bouw_toplijst(podcasts, gecheckt):
+def bouw_toplijst(podcasts, status, gecheckt):
     top = lees_top100()
     if not top:
         print("  (geen apple-top100.json gevonden, toplijst overgeslagen)")
-        return 0
+        return 0, 0
     op_sleutel = {zoeksleutel(p["naam"]): p for p in podcasts.values()}
-    rijen, met_live = [], 0
+    rijen, met_live, nagekeken = [], 0, 0
     for rang, naam, maker, genres, apple_id, beeld in top["lijst"]:
         eigen = op_sleutel.get(zoeksleutel(naam))
         heeft = eigen and eigen["events"]
-        if heeft: met_live += 1
+        st = status.get(str(apple_id), {})
+        if st.get("gecontroleerd"):
+            nagekeken += 1
         beeld_url = top["beeld_basis"] + beeld + "/200x200bb.png"
+        binnen = ('<div class="rang">%d</div>'
+                  '<img src="%s" alt="" loading="lazy">'
+                  '<div class="mid"><div class="naam">%s</div><div class="maker">%s</div></div>'
+                  % (rang, e(beeld_url), e(naam), e(maker)))
         if heeft:
+            met_live += 1
             staat = "%d liveshow%s" % (len(eigen["events"]), "" if len(eigen["events"]) == 1 else "s")
-            rijen.append('    <a class="toprij live" href="podcast/%s.html">'
-                         '<div class="rang">%d</div>'
-                         '<img src="%s" alt="" loading="lazy">'
-                         '<div class="mid"><div class="naam">%s</div><div class="maker">%s</div></div>'
-                         '<div class="staat">%s &rarr;</div></a>'
-                         % (e(eigen["slug"]), rang, e(beeld_url), e(naam), e(maker), e(staat)))
+            rijen.append('    <a class="toprij live" href="podcast/%s.html">%s<div class="staat">%s &rarr;</div></a>'
+                         % (e(eigen["slug"]), binnen, e(staat)))
+        elif st.get("gecontroleerd"):
+            rijen.append('    <div class="toprij stil" title="%s">%s<div class="staat">nagekeken %s '
+                         '&middot; geen liveshow</div></div>'
+                         % (e(st.get("notitie", "")), binnen, e(st["gecontroleerd"])))
         else:
-            rijen.append('    <div class="toprij stil">'
-                         '<div class="rang">%d</div>'
-                         '<img src="%s" alt="" loading="lazy">'
-                         '<div class="mid"><div class="naam">%s</div><div class="maker">%s</div></div>'
-                         '<div class="staat">geen liveshow bekend</div></div>'
-                         % (rang, e(beeld_url), e(naam), e(maker)))
+            rijen.append('    <div class="toprij onbekend">%s<div class="staat">nog niet bekeken</div></div>'
+                         % binnen)
 
     onder = ('<p class="intro">De honderd best beluisterde podcasts van Nederland volgens Apple Podcasts, '
-             'bijgewerkt op %s. Podcasts met een liveshow in onze agenda zijn aanklikbaar; de rest staat '
-             'grijs omdat we er nog geen voorstelling van kennen.</p>'
-             '<p class="cijfers">%d van de %d podcasts in deze lijst spelen live.</p>'
-             % (e(top.get("opgehaald", "")), met_live, len(top["lijst"])))
+             'bijgewerkt op %s. Wie een liveshow in onze agenda heeft is aanklikbaar. De rest is of '
+             'nagekeken zonder dat we een voorstelling vonden, of staat nog op de lijst om uit te zoeken.</p>'
+             '<p class="cijfers">%d van de 100 nagekeken &middot; %d met een liveshow &middot; '
+             '%d nog te doen</p>'
+             % (e(top.get("opgehaald", "")), nagekeken, met_live, 100 - nagekeken))
 
     html_uit = (kop("Toplijst - Podcast Liveshows",
                     "De top 100 podcasts van Nederland volgens Apple Podcasts, met wie er live in het theater staat.",
@@ -472,7 +484,7 @@ def bouw_toplijst(podcasts, gecheckt):
                 + '  <div class="toplijst">\n' + "\n".join(rijen) + "\n  </div>\n"
                 + voet(gecheckt, PARALLAX))
     schrijf("toplijst.html", html_uit)
-    return met_live
+    return met_live, nagekeken
 
 def bouw_podcastpaginas(podcasts, gecheckt):
     gemaakt = 0
@@ -585,7 +597,7 @@ def bouw_sitemap(podcasts):
     return len(paden)
 
 def main():
-    podcasts, shows, venues, events = lees_alles()
+    podcasts, shows, venues, events, status = lees_alles()
 
     top = lees_top100()
     if top:
@@ -600,7 +612,7 @@ def main():
 
     bouw_index(podcasts, venues, events, gecheckt)
     bouw_catalogus(podcasts, gecheckt)
-    met_live = bouw_toplijst(podcasts, gecheckt)
+    met_live, nagekeken = bouw_toplijst(podcasts, status, gecheckt)
     n_pagina = bouw_podcastpaginas(podcasts, gecheckt)
     n_sitemap = bouw_sitemap(podcasts)
 
@@ -610,7 +622,8 @@ def main():
     print("Site gebouwd in", HIER)
     print("  index.html           %d events" % len(events))
     print("  catalogus.html       %d podcasts" % len(podcasts))
-    print("  toplijst.html        %d van de 100 spelen live" % met_live)
+    print("  toplijst.html        %d nagekeken, %d met liveshow, %d te doen"
+          % (nagekeken, met_live, 100 - nagekeken))
     print("  podcast/             %d pagina's" % n_pagina)
     print("  sitemap.xml          %d adressen" % n_sitemap)
     print("  zalen zonder coordinaten: %d van %d" % (zonder, len(venues)))
