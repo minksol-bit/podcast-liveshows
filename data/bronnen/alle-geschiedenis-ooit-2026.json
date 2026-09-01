@@ -1,0 +1,132 @@
+{
+ "bron": "friendlyfire.nl (boekingskantoor) + theaterpaginas, gevonden bij het aflopen van de top-100",
+ "gecheckt": "2026-08-31",
+ "opmerking": "Tijd/prijs alleen ingevuld voor optredens binnen 90 dagen (tot ca. 29 nov 2026). Griffioen 14-11 heeft tijd uit de URL-slug (20:00), geen prijs gevonden.",
+ "shows": [
+  {
+   "podcast": "Alle Geschiedenis Ooit - Grote Namen",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "type": "theatershow",
+   "verwantschap": "thema-verwant",
+   "organisator": "Friendly Fire",
+   "bron_url": "https://friendlyfire.nl/en/artists/detail/alle-geschiedenis-ooit/",
+   "events": [
+    {
+     "datum": "2026-10-06",
+     "tijd": "20:00",
+     "zaal": "Het Postkantoor",
+     "stad": "Bovenkarspel",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 25.0,
+     "ticket_url": "https://www.hetpostkantoor.info/event/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show",
+     "bron_url": "https://www.hetpostkantoor.info/event/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show"
+    },
+    {
+     "datum": "2026-10-16",
+     "tijd": "20:00",
+     "zaal": "Schouwburg Kunstmin",
+     "stad": "Dordrecht",
+     "provincie": "Zuid-Holland",
+     "prijs_vanaf": 21.0,
+     "ticket_url": "https://www.kunstmin.nl/voorstellingen/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show",
+     "bron_url": "https://www.kunstmin.nl/voorstellingen/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show"
+    },
+    {
+     "datum": "2026-10-18",
+     "tijd": "14:30",
+     "zaal": "Theater Heerlen",
+     "stad": "Heerlen",
+     "provincie": "Limburg",
+     "prijs_vanaf": 15.0,
+     "ticket_url": "https://www.plt.nl/programma/alle-geschiedenis-ooit/18-10-2026-14-30",
+     "bron_url": "https://www.plt.nl/programma/alle-geschiedenis-ooit/18-10-2026-14-30"
+    },
+    {
+     "datum": "2026-11-01",
+     "tijd": "19:30",
+     "zaal": "De Kampanje",
+     "stad": "Den Helder",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 24.0,
+     "ticket_url": "https://www.kampanje.nl/voorstellingen/alle-geschiedenis-ooit-74dq",
+     "bron_url": "https://www.kampanje.nl/voorstellingen/alle-geschiedenis-ooit-74dq"
+    },
+    {
+     "datum": "2026-11-10",
+     "tijd": "20:15",
+     "zaal": "Isala Theater",
+     "stad": "Capelle aan den IJssel",
+     "provincie": "Zuid-Holland",
+     "prijs_vanaf": 32.5,
+     "ticket_url": "https://www.isalatheater.nl/agenda/alle-geschiedenis-ooit-m5zv",
+     "bron_url": "https://www.isalatheater.nl/agenda/alle-geschiedenis-ooit-m5zv"
+    },
+    {
+     "datum": "2026-11-14",
+     "tijd": "20:00",
+     "zaal": "Griffioen",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "ticket_url": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-succesoptie-alle-geschiedenis-ooit/14-11-2026-20-00",
+     "bron_url": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-succesoptie-alle-geschiedenis-ooit/14-11-2026-20-00"
+    },
+    {
+     "datum": "2026-11-30",
+     "zaal": "De Kring (EKP-gebouw)",
+     "stad": "Roosendaal",
+     "provincie": "Noord-Brabant",
+     "ticket_url": "https://www.dekringroosendaal.nl/agenda/de-grote-namen-geschiedenis-show-8gmx",
+     "bron_url": "https://www.dekringroosendaal.nl/agenda/de-grote-namen-geschiedenis-show-8gmx"
+    },
+    {
+     "datum": "2026-12-08",
+     "zaal": "Theater Sneek / Poort",
+     "stad": "Sneek",
+     "provincie": "Friesland",
+     "ticket_url": "https://ontdekpoort.nl/programma/2944/alle-geschiedenis-ooit",
+     "bron_url": "https://ontdekpoort.nl/programma/2944/alle-geschiedenis-ooit"
+    },
+    {
+     "datum": "2027-01-11",
+     "zaal": "Flint",
+     "stad": "Amersfoort",
+     "provincie": "Utrecht",
+     "ticket_url": "https://flint.nl/agenda/alle-geschiedenis-ooit-nynke-de-jong-arco-gnocchi-thom-aalmoes-andrea-huntjens",
+     "bron_url": "https://flint.nl/agenda/alle-geschiedenis-ooit-nynke-de-jong-arco-gnocchi-thom-aalmoes-andrea-huntjens"
+    },
+    {
+     "datum": "2027-01-15",
+     "zaal": "Theater de Veste",
+     "stad": "Delft",
+     "provincie": "Zuid-Holland",
+     "ticket_url": "https://www.theaterdeveste.nl/programma/de-grote-namen-geschiedenis-show-68vl",
+     "bron_url": "https://www.theaterdeveste.nl/programma/de-grote-namen-geschiedenis-show-68vl"
+    },
+    {
+     "datum": "2027-01-19",
+     "zaal": "Leidse Schouwburg",
+     "stad": "Leiden",
+     "provincie": "Zuid-Holland",
+     "ticket_url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/nynke-de-jong-arco-gnocchi-thom-aalmoes-en-andrea-huntjens-alle-geschiedenis-ooit",
+     "bron_url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/nynke-de-jong-arco-gnocchi-thom-aalmoes-en-andrea-huntjens-alle-geschiedenis-ooit"
+    },
+    {
+     "datum": "2027-01-25",
+     "zaal": "Schouwburg Odeon",
+     "stad": "Zwolle",
+     "provincie": "Overijssel",
+     "ticket_url": "https://www.zwolsetheaters.nl/programma/2026-2027/alle-geschiedenis-ooit",
+     "bron_url": "https://www.zwolsetheaters.nl/programma/2026-2027/alle-geschiedenis-ooit"
+    },
+    {
+     "datum": "2027-01-26",
+     "zaal": "Griffioen",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "ticket_url": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-alle-geschiedenis-ooit/26-01-2027-20-00",
+     "bron_url": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-alle-geschiedenis-ooit/26-01-2027-20-00"
+    }
+   ]
+  }
+ ]
+}

@@ -962,6 +962,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 133,
+   "iso": "2026-10-06",
+   "dag": 6,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:00",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": 25.0,
+   "ticket": "https://www.hetpostkantoor.info/event/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 66,
+    "naam": "Het Postkantoor",
+    "stad": "Bovenkarspel",
+    "opkaart": true,
+    "lat": 52.6977291,
+    "lon": 5.2357276
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 24,
    "iso": "2026-10-07",
    "dag": 7,
@@ -1186,6 +1218,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 134,
+   "iso": "2026-10-16",
+   "dag": 16,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:00",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": 21.0,
+   "ticket": "https://www.kunstmin.nl/voorstellingen/alle-geschiedenis-ooit-de-grote-namen-geschiedenis-show",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 33,
+    "naam": "Kunstmin",
+    "stad": "Dordrecht",
+    "opkaart": true,
+    "lat": 51.8139254,
+    "lon": 4.6764483
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 59,
    "iso": "2026-10-16",
    "dag": 16,
@@ -1246,6 +1310,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 135,
+   "iso": "2026-10-18",
+   "dag": 18,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "14:30",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": 15.0,
+   "ticket": "https://www.plt.nl/programma/alle-geschiedenis-ooit/18-10-2026-14-30",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 4,
+    "naam": "PLT Theater",
+    "stad": "Heerlen",
+    "opkaart": true,
+    "lat": 50.8867099,
+    "lon": 5.9727811
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
     }
    ]
   },
@@ -1666,6 +1762,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 136,
+   "iso": "2026-11-01",
+   "dag": 1,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "19:30",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": 24.0,
+   "ticket": "https://www.kampanje.nl/voorstellingen/alle-geschiedenis-ooit-74dq",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 8,
+    "naam": "De Kampanje",
+    "stad": "Den Helder",
+    "opkaart": true,
+    "lat": 52.9585736,
+    "lon": 4.7690842
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 99,
    "iso": "2026-11-02",
    "dag": 2,
@@ -1986,6 +2114,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 137,
+   "iso": "2026-11-10",
+   "dag": 10,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "20:15",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": 32.5,
+   "ticket": "https://www.isalatheater.nl/agenda/alle-geschiedenis-ooit-m5zv",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 67,
+    "naam": "Isala Theater",
+    "stad": "Capelle aan den IJssel",
+    "opkaart": true,
+    "lat": 51.9315597,
+    "lon": 4.5882206
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 66,
    "iso": "2026-11-11",
    "dag": 11,
@@ -2110,6 +2270,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 138,
+   "iso": "2026-11-14",
+   "dag": 14,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "20:00",
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-succesoptie-alle-geschiedenis-ooit/14-11-2026-20-00",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 68,
+    "naam": "Griffioen",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3346074,
+    "lon": 4.8636531
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
     }
    ]
   },
@@ -2786,6 +2978,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 139,
+   "iso": "2026-11-30",
+   "dag": 30,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://www.dekringroosendaal.nl/agenda/de-grote-namen-geschiedenis-show-8gmx",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 64,
+    "naam": "De Kring (EKP-gebouw)",
+    "stad": "Roosendaal",
+    "opkaart": true,
+    "lat": 51.534914,
+    "lon": 4.4519129
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 112,
    "iso": "2026-12-01",
    "dag": 1,
@@ -3102,6 +3326,38 @@ window.DATA = {
      "naam": "Provinfluencers",
      "slug": "provinfluencers",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 140,
+   "iso": "2026-12-08",
+   "dag": 8,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://ontdekpoort.nl/programma/2944/alle-geschiedenis-ooit",
+   "status": "in verkoop",
+   "provincie": "Friesland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 69,
+    "naam": "Theater Sneek / Poort",
+    "stad": "Sneek",
+    "opkaart": true,
+    "lat": 53.0317815,
+    "lon": 5.6562252
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
     }
    ]
   },
@@ -3650,6 +3906,166 @@ window.DATA = {
    ]
   },
   {
+   "id": 141,
+   "iso": "2027-01-11",
+   "dag": 11,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://flint.nl/agenda/alle-geschiedenis-ooit-nynke-de-jong-arco-gnocchi-thom-aalmoes-andrea-huntjens",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 40,
+    "naam": "Flint",
+    "stad": "Amersfoort",
+    "opkaart": true,
+    "lat": 52.1595514,
+    "lon": 5.3928003
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 142,
+   "iso": "2027-01-15",
+   "dag": 15,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://www.theaterdeveste.nl/programma/de-grote-namen-geschiedenis-show-68vl",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 22,
+    "naam": "Theater De Veste",
+    "stad": "Delft",
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 143,
+   "iso": "2027-01-19",
+   "dag": 19,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/nynke-de-jong-arco-gnocchi-thom-aalmoes-en-andrea-huntjens-alle-geschiedenis-ooit",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 31,
+    "naam": "Leidse Schouwburg",
+    "stad": "Leiden",
+    "opkaart": true,
+    "lat": 52.1621894,
+    "lon": 4.4891831
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 144,
+   "iso": "2027-01-25",
+   "dag": 25,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://www.zwolsetheaters.nl/programma/2026-2027/alle-geschiedenis-ooit",
+   "status": "in verkoop",
+   "provincie": "Overijssel",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 70,
+    "naam": "Schouwburg Odeon",
+    "stad": "Zwolle",
+    "opkaart": true,
+    "lat": 52.5104825,
+    "lon": 6.0918538
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 145,
+   "iso": "2027-01-26",
+   "dag": 26,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": null,
+   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
+   "prijs": null,
+   "ticket": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-alle-geschiedenis-ooit/26-01-2027-20-00",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Geschiedenis"
+   ],
+   "zaal": {
+    "id": 68,
+    "naam": "Griffioen",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3346074,
+    "lon": 4.8636531
+   },
+   "podcasts": [
+    {
+     "naam": "Alle Geschiedenis Ooit - Grote Namen",
+     "slug": "alle-geschiedenis-ooit-grote-namen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 13,
    "iso": "2027-02-04",
    "dag": 4,
@@ -4066,6 +4482,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 65,
+ "venues_totaal": 70,
  "venues_zonder_coordinaten": 0
 };
