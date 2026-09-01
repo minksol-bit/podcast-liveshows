@@ -274,7 +274,7 @@ h2.maand:first-child { margin-top: 0; }
 .pbanner-vak .maker { color: rgba(255,255,255,.86); margin: 0 0 8px; }
 .pbanner-vak .cijfers { color: rgba(255,255,255,.92); margin: 0; }
 .pbanner-vak .merkje { background: rgba(255,255,255,.25); color: #fff; }
-.pkop-tekst { margin: 18px 0 8px; max-width: 640px; }
+.pbanner-tekst { margin: 10px 0 0; color: rgba(255,255,255,.92); font-size: 14px; line-height: 1.5; }
 .terug { display: inline-block; margin: 20px 0 0; font-size: 14px; text-decoration: none; }
 
 footer { border-top: 1px solid var(--lijn); padding: 18px 0 40px; font-size: 13px; color: var(--grijs); }

@@ -571,6 +571,8 @@ def bouw_podcastpaginas(podcasts, gecheckt):
         maker = ('<p class="maker">%s</p>' % e(p.get("maker", ""))) if p.get("maker") else ""
         aantal = len(evs)
         samenvatting = ("%d liveshow%s gepland" % (aantal, "" if aantal == 1 else "s")) if aantal else "Nog geen liveshows bekend"
+        omschrijving = p["lang"] or p["kort"] or ""
+        tekst = ('<p class="pbanner-tekst">%s</p>' % e(omschrijving)) if omschrijving else ""
 
         ld = json.dumps([jsonld_event(ev, SITE_URL.rstrip("/") + "/podcast/" + p["slug"] + ".html") for ev in evs],
                         ensure_ascii=False, indent=1)
@@ -583,10 +585,8 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                         pad="podcast/%s.html" % p["slug"])
                     + '  <div class="pbanner" style="%s">\n    %s\n'
                       '    <div class="pbanner-vak">\n      %s\n      <h1>%s</h1>\n      %s\n'
-                      '      <p class="cijfers">%s &middot; %s</p>\n    </div>\n  </div>\n'
-                      '  <p class="pkop-tekst">%s</p>\n'
-                      % (e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting),
-                         e(p["lang"] or p["kort"] or ""))
+                      '      <p class="cijfers">%s &middot; %s</p>\n      %s\n    </div>\n  </div>\n'
+                      % (e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"
                        if evs else '  <p class="leeg">Voor deze podcast staan nog geen liveshows in de agenda.</p>\n')
