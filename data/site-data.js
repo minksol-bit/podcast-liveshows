@@ -642,6 +642,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 151,
+   "iso": "2026-09-27",
+   "dag": 27,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "18:30",
+   "titel": "De Rode Lantaarn 10 jaar",
+   "prijs": 25.5,
+   "ticket": "https://www.tivolivredenburg.nl/agenda/67853048/de-rode-lantaarn-10-jaar-27-09-2026",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Sport"
+   ],
+   "zaal": {
+    "id": 1,
+    "naam": "TivoliVredenburg",
+    "stad": "Utrecht",
+    "opkaart": true,
+    "lat": 52.0924542,
+    "lon": 5.1127685
+   },
+   "podcasts": [
+    {
+     "naam": "De Rode Lantaarn",
+     "slug": "de-rode-lantaarn",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6d/cb/e3/6dcbe3fb-9639-003d-18aa-a9ef930a3601/mza_2259557170486475773.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 54,
    "iso": "2026-09-27",
    "dag": 27,

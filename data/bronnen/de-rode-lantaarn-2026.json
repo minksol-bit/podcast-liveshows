@@ -1,0 +1,16 @@
+{
+ "bron": "vriendvandeshow.nl/derodelantaarn (aankondiging) + tivolivredenburg.nl (agenda, tijd/prijs), gevonden bij het nalopen van Dag en Nacht Media als producent-hub",
+ "gecheckt": "2026-09-01",
+ "opmerking": "De Rode Lantaarn is een wielerpodcast van Dag en Nacht Media. Eerdere liveshows (feb/apr 2023 in Utrecht/Gent) zijn verlopen; dit is het jubileum-optreden voor het 10-jarig bestaan.",
+ "shows": [{
+  "podcast": "De Rode Lantaarn",
+  "titel": "De Rode Lantaarn 10 jaar",
+  "type": "theatershow",
+  "verwantschap": "podcast live",
+  "organisator": "",
+  "bron_url": "https://www.tivolivredenburg.nl/agenda/67853048/de-rode-lantaarn-10-jaar-27-09-2026",
+  "events": [
+   {"datum": "2026-09-27", "tijd": "18:30", "zaal": "TivoliVredenburg", "stad": "Utrecht", "provincie": "Utrecht", "prijs_vanaf": 25.50, "ticket_url": "https://www.tivolivredenburg.nl/agenda/67853048/de-rode-lantaarn-10-jaar-27-09-2026"}
+  ]
+ }]
+}
