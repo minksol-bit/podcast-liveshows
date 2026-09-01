@@ -558,8 +558,11 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                      '    <div class="kaartkolom"><div class="melding">Nog geen coördinaten voor de zalen '
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
 
-        beeld = ('<img src="%s" alt="">' % e(p["cover"])) if p["cover"] else ""
-        rang = ('<div class="merkje">#%s in de Apple top 100</div>' % e(p["rang"])) if p["rang"] else ""
+        if p["cover"]:
+            beeldlaag = "<div class=\"pbanner-beeld\" style=\"background-image:url(&#x27;%s&#x27;)\"></div>" % e(p["cover"])
+        else:
+            beeldlaag = "<div class=\"pbanner-beeld pbanner-leeg\"></div>"
+        rang = ('<span class="merkje">#%s in de Apple top 100</span>' % e(p["rang"])) if p["rang"] else ""
         maker = ('<p class="maker">%s</p>' % e(p.get("maker", ""))) if p.get("maker") else ""
         aantal = len(evs)
         samenvatting = ("%d liveshow%s gepland" % (aantal, "" if aantal == 1 else "s")) if aantal else "Nog geen liveshows bekend"
@@ -573,10 +576,11 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                         (p["kort"] or ("Alle liveshows van %s." % p["naam"]))[:180],
                         basis="../", actief="catalogus", extra_head=extra,
                         pad="podcast/%s.html" % p["slug"])
-                    + '  <div class="pkop">\n    %s\n    <div>\n      %s\n      <h1>%s</h1>\n      %s\n'
-                      '      <p class="cijfers">%s &middot; %s</p>\n      <p class="tekst">%s</p>\n'
-                      '    </div>\n  </div>\n'
-                      % (beeld, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting),
+                    + '  <div class="pbanner">\n    %s\n    <div class="pbanner-schaduw"></div>\n'
+                      '    <div class="pbanner-vak">\n      %s\n      <h1>%s</h1>\n      %s\n'
+                      '      <p class="cijfers">%s &middot; %s</p>\n    </div>\n  </div>\n'
+                      '  <p class="pkop-tekst">%s</p>\n'
+                      % (beeldlaag, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting),
                          e(p["lang"] or p["kort"] or ""))
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"

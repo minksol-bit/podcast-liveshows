@@ -249,11 +249,26 @@ h2.maand:first-child { margin-top: 0; }
 .toprij.live .staat { color: var(--wijn); font-weight: 600; }
 
 /* ---------- podcastpagina ---------- */
-.pkop { display: flex; gap: 24px; align-items: flex-start; margin: 26px 0 8px; }
-.pkop img { width: 132px; height: 132px; border-radius: 14px; object-fit: cover; border: 1px solid var(--lijn); }
-.pkop h1 { font-size: 32px; margin: 0 0 6px; letter-spacing: -0.02em; }
-.pkop .maker { color: var(--grijs); margin: 0 0 10px; }
-.pkop .tekst { margin: 10px 0 0; max-width: 640px; }
+.pbanner {
+  position: relative; margin: 24px 0 0; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--lijn); min-height: 230px; display: flex; align-items: flex-end;
+  background: linear-gradient(135deg, var(--wijn) 0%, var(--wijn-donker) 100%);
+}
+.pbanner-beeld {
+  position: absolute; inset: -14px; background-size: cover; background-position: center;
+  filter: blur(16px) brightness(.6) saturate(1.15); transform: scale(1.1);
+}
+.pbanner-beeld.pbanner-leeg { background: none; }
+.pbanner-schaduw {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(15,10,10,.72) 0%, rgba(15,10,10,.15) 65%, rgba(15,10,10,0) 100%);
+}
+.pbanner-vak { position: relative; margin: 22px; padding: 4px 2px; max-width: 640px; }
+.pbanner-vak h1 { font-size: 32px; margin: 4px 0 6px; letter-spacing: -0.02em; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.pbanner-vak .maker { color: rgba(255,255,255,.82); margin: 0 0 8px; }
+.pbanner-vak .cijfers { color: rgba(255,255,255,.88); margin: 0; }
+.pbanner-vak .merkje { background: rgba(255,255,255,.2); color: #fff; }
+.pkop-tekst { margin: 18px 0 8px; max-width: 640px; }
 .terug { display: inline-block; margin: 20px 0 0; font-size: 14px; text-decoration: none; }
 
 footer { border-top: 1px solid var(--lijn); padding: 18px 0 40px; font-size: 13px; color: var(--grijs); }
@@ -274,8 +289,9 @@ footer a { color: var(--grijs); }
   .telling { margin-left: 0; width: 100%; }
   .merk span { display: none; }
   .menu { margin-left: 0; }
-  .pkop { flex-direction: column; gap: 14px; }
-  .pkop img { width: 96px; height: 96px; }
+  .pbanner { min-height: 170px; }
+  .pbanner-vak { margin: 16px; }
+  .pbanner-vak h1 { font-size: 24px; }
 }
 @media (max-width: 620px) { .raster { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
 
