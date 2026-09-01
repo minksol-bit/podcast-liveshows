@@ -138,7 +138,7 @@ h2.maand:first-child { margin-top: 0; }
 .datum .mnd { font-size: 11px; text-transform: uppercase; color: var(--grijs); letter-spacing: .05em; }
 .info { flex: 1; min-width: 0; }
 .minicover {
-  flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; align-self: center;
+  flex: 0 0 34px; width: 34px; height: 34px; border-radius: 50%; align-self: flex-start;
   background: var(--wijn); color: #fff; display: flex; align-items: center; justify-content: center;
   font: 600 11px/1 -apple-system, Helvetica, Arial, sans-serif; overflow: hidden;
 }
