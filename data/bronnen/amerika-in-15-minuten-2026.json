@@ -1,0 +1,67 @@
+{
+ "bron": "raymondmens.nl/theater (eigen site), gevonden bij het aflopen van de top-100",
+ "gecheckt": "2026-08-31",
+ "opmerking": "Alle vijf data liggen binnen 90 dagen, dus tijd en prijs zijn overal ingevuld.",
+ "shows": [
+  {
+   "podcast": "Amerika in 15 minuten",
+   "titel": "De tussenstand in Amerika",
+   "type": "theatershow",
+   "verwantschap": "thema-verwant",
+   "organisator": "",
+   "bron_url": "https://www.raymondmens.nl/theater/",
+   "events": [
+    {
+     "datum": "2026-10-19",
+     "tijd": "21:00",
+     "zaal": "Parktheater Eindhoven",
+     "stad": "Eindhoven",
+     "provincie": "Noord-Brabant",
+     "prijs_vanaf": 29.0,
+     "ticket_url": "https://www.parktheater.nl/programma/de-tussenstand-in-amerika-dh54",
+     "bron_url": "https://www.parktheater.nl/programma/de-tussenstand-in-amerika-dh54"
+    },
+    {
+     "datum": "2026-10-23",
+     "tijd": "21:00",
+     "zaal": "Nieuwe Luxor Theater",
+     "stad": "Rotterdam",
+     "provincie": "Zuid-Holland",
+     "prijs_vanaf": 24.5,
+     "ticket_url": "https://luxortheater.nl/agenda/raymond-mens-59174",
+     "bron_url": "https://luxortheater.nl/agenda/raymond-mens-59174"
+    },
+    {
+     "datum": "2026-10-26",
+     "tijd": "20:30",
+     "zaal": "Stadsschouwburg Utrecht",
+     "stad": "Utrecht",
+     "provincie": "Utrecht",
+     "prijs_vanaf": 27.5,
+     "ticket_url": "https://stadsschouwburg-utrecht.nl/agenda/de-tussenstand-in-amerika-raymond-mens",
+     "bron_url": "https://stadsschouwburg-utrecht.nl/agenda/de-tussenstand-in-amerika-raymond-mens"
+    },
+    {
+     "datum": "2026-10-27",
+     "tijd": "21:00",
+     "zaal": "Musis",
+     "stad": "Arnhem",
+     "provincie": "Gelderland",
+     "prijs_vanaf": 27.5,
+     "ticket_url": "https://www.musisenstadstheater.nl/nl/agenda/raymond-mens-de-tussenstand-in-amerika/10189",
+     "bron_url": "https://www.musisenstadstheater.nl/nl/agenda/raymond-mens-de-tussenstand-in-amerika/10189"
+    },
+    {
+     "datum": "2026-11-29",
+     "tijd": "14:30",
+     "zaal": "DeLaMar",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 19.5,
+     "ticket_url": "https://delamar.nl/voorstellingen/raymond-mens/",
+     "bron_url": "https://delamar.nl/voorstellingen/raymond-mens/"
+    }
+   ]
+  }
+ ]
+}

@@ -1378,6 +1378,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 146,
+   "iso": "2026-10-19",
+   "dag": 19,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "21:00",
+   "titel": "De tussenstand in Amerika",
+   "prijs": 29.0,
+   "ticket": "https://www.parktheater.nl/programma/de-tussenstand-in-amerika-dh54",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Politiek & buitenland"
+   ],
+   "zaal": {
+    "id": 71,
+    "naam": "Parktheater Eindhoven",
+    "stad": "Eindhoven",
+    "opkaart": true,
+    "lat": 51.4288468,
+    "lon": 5.4847037
+   },
+   "podcasts": [
+    {
+     "naam": "Amerika in 15 minuten",
+     "slug": "amerika-in-15-minuten",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 94,
    "iso": "2026-10-20",
    "dag": 20,
@@ -1538,6 +1570,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 147,
+   "iso": "2026-10-23",
+   "dag": 23,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "21:00",
+   "titel": "De tussenstand in Amerika",
+   "prijs": 24.5,
+   "ticket": "https://luxortheater.nl/agenda/raymond-mens-59174",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Politiek & buitenland"
+   ],
+   "zaal": {
+    "id": 6,
+    "naam": "Nieuwe Luxor Theater",
+    "stad": "Rotterdam",
+    "opkaart": true,
+    "lat": 51.9067814,
+    "lon": 4.4911848
+   },
+   "podcasts": [
+    {
+     "naam": "Amerika in 15 minuten",
+     "slug": "amerika-in-15-minuten",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
    "id": 96,
    "iso": "2026-10-26",
    "dag": 26,
@@ -1566,6 +1630,38 @@ window.DATA = {
      "naam": "Provinfluencers",
      "slug": "provinfluencers",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 148,
+   "iso": "2026-10-26",
+   "dag": 26,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:30",
+   "titel": "De tussenstand in Amerika",
+   "prijs": 27.5,
+   "ticket": "https://stadsschouwburg-utrecht.nl/agenda/de-tussenstand-in-amerika-raymond-mens",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Politiek & buitenland"
+   ],
+   "zaal": {
+    "id": 72,
+    "naam": "Stadsschouwburg Utrecht",
+    "stad": "Utrecht",
+    "opkaart": true,
+    "lat": 52.0933912,
+    "lon": 5.1274954
+   },
+   "podcasts": [
+    {
+     "naam": "Amerika in 15 minuten",
+     "slug": "amerika-in-15-minuten",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
     }
    ]
   },
@@ -1630,6 +1726,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 149,
+   "iso": "2026-10-27",
+   "dag": 27,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "21:00",
+   "titel": "De tussenstand in Amerika",
+   "prijs": 27.5,
+   "ticket": "https://www.musisenstadstheater.nl/nl/agenda/raymond-mens-de-tussenstand-in-amerika/10189",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Politiek & buitenland"
+   ],
+   "zaal": {
+    "id": 3,
+    "naam": "Musis",
+    "stad": "Arnhem",
+    "opkaart": true,
+    "lat": 51.982704,
+    "lon": 5.9137995
+   },
+   "podcasts": [
+    {
+     "naam": "Amerika in 15 minuten",
+     "slug": "amerika-in-15-minuten",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
     }
    ]
   },
@@ -2942,6 +3070,38 @@ window.DATA = {
      "naam": "Boekestijn en De Wijk",
      "slug": "boekestijn-en-de-wijk",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 150,
+   "iso": "2026-11-29",
+   "dag": 29,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "14:30",
+   "titel": "De tussenstand in Amerika",
+   "prijs": 19.5,
+   "ticket": "https://delamar.nl/voorstellingen/raymond-mens/",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Politiek & buitenland"
+   ],
+   "zaal": {
+    "id": 14,
+    "naam": "DeLaMar",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3644194,
+    "lon": 4.8806878
+   },
+   "podcasts": [
+    {
+     "naam": "Amerika in 15 minuten",
+     "slug": "amerika-in-15-minuten",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
     }
    ]
   },
@@ -4482,6 +4642,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 70,
+ "venues_totaal": 72,
  "venues_zonder_coordinaten": 0
 };
