@@ -28,7 +28,7 @@ Vijf tabbladen in `data/podcast-liveshows.xlsx`. De koppeltabel is er omdat op e
 podcastfestival meerdere podcasts in één event zitten.
 
 - `podcasts` — id, naam, cover_url, spotify_id, website, thema, omschrijving,
-  omschrijving_lang, apple_id, apple_rang
+  omschrijving_lang, apple_id, apple_rang, bannerkleur_links, bannerkleur_rechts
 - `shows` — id, titel, type, organisator
   (type = theatershow / festivaloptreden / opname met publiek / besloten)
 - `show_podcasts` — koppeltabel tussen shows en podcasts
@@ -187,3 +187,31 @@ Draai het script na elke wijziging in het Excel-bestand.
   wil kunnen zien wanneer een site is veranderd.
 - Neem geen teksten over van theatersites of producenten: die zijn auteursrechtelijk
   beschermd. Omschrijvingen op deze site zijn zelf geschreven.
+
+
+## Bannerkleuren op de podcastpagina
+
+De brede banner bovenaan een podcastpagina toont de cover scherp (als logo) en
+vult de rest van de band met de kleur(en) van de buitenrand van die cover:
+effen als de rand een achtergrondkleur is, een links/rechts-verloop als de
+cover zelf al tweekleurig is (zoals Boekestijn en De Wijk: zwart/geel).
+
+Deze kleuren staan als hex-codes in `bannerkleur_links` en `bannerkleur_rechts`
+in het podcasts-tabblad en worden niet automatisch bepaald tijdens het bouwen
+— `bouw-site.py` leest ze alleen uit. Reden: `device_bash` heeft geen
+netwerktoegang tot de Apple-CDN (mzstatic.com) waar de covers op staan, dus
+ze kunnen niet zomaar met een Python-scriptje gedownload worden. De browser
+(Claude_Browser) kan de afbeelding wel laden; daarmee wordt de kleur bepaald.
+
+Voor een nieuwe podcast met cover, dit stappenplan volgen:
+1. Navigeer in de browser naar de cover_url zelf (dus rechtstreeks naar de
+   afbeelding, niet naar een pagina die 'm toont) — evt. eerst
+   `request_access` voor dat domein.
+2. Voer in de browser (javascript_tool) een script uit dat de afbeelding op
+   een canvas tekent en de dominante kleur bemonstert in een linker- en
+   rechterstrook (zo'n 5% van de breedte), met kleuren gegroepeerd in
+   grovere emmers zodat een paar rand-pixels de uitkomst niet verstoren.
+   Bij een echt uniforme achtergrond komt links en rechts (bijna) hetzelfde
+   uit; bij een bewust tweekleurig ontwerp niet.
+3. Zet de uitkomst in `bannerkleur_links` / `bannerkleur_rechts` voor die
+   podcast in de xlsx, en draai `bouw-site.py` opnieuw.

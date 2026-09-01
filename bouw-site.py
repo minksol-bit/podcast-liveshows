@@ -528,27 +528,29 @@ def bouw_podcastpaginas(podcasts, gecheckt):
             json_ev = json.dumps({"id": ev["id"], "iso": ev["iso"], "tijd": ev["tijd"],
                                   "titel": ev["show"]["titel"], "zaal": ev["zaal"]["naam"],
                                   "stad": ev["zaal"]["stad"], "ticket": ev["ticket"]}, ensure_ascii=False)
-            prijs = ('<span class="prijs">vanaf &euro;%s</span>'
+            prijstekst = ('vanaf &euro;%s'
                      % ("%.2f" % ev["prijs"]).replace(".", ",").replace(",00", ",-")) if ev["prijs"] is not None else ""
+            onder = ('<span class="knop-onder">%s</span>' % prijstekst) if prijstekst else ""
             if ev["status"].lower() == "uitverkocht":
-                knop = '<span class="geen">Uitverkocht</span>'
+                knop = '<span class="geen knop-vorm"><span class="knop-label">Uitverkocht</span>%s</span>' % onder
             elif ev["ticket"]:
-                knop = '<a class="knop" href="%s" target="_blank" rel="noopener">Tickets</a>' % e(ev["ticket"])
+                knop = ('<a class="knop" href="%s" target="_blank" rel="noopener">'
+                        '<span class="knop-label">Tickets</span>%s</a>' % (e(ev["ticket"]), onder))
             else:
-                knop = '<span class="geen">geen link</span>'
+                knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % onder
             rijen.append(
                 '    <div class="event" data-ev="%s" data-json="%s">\n'
                 '      <div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>\n'
                 '      <div class="info"><div class="titel">%s</div>'
                 '<div class="zaal">%s, %s%s</div>'
                 '<div class="bij">%s</div></div>\n'
-                '      <div class="rechtsblok">%s%s</div>\n'
+                '      <div class="rechtsblok">%s</div>\n'
                 '    </div>'
                 % (e(ev["id"]), e(json_ev), ev["d"]["dag"], MAAND_KORT[ev["d"]["maand"] - 1],
                    e(ev["show"]["titel"]), e(ev["zaal"]["naam"]), e(ev["zaal"]["stad"]),
                    (' <span style="opacity:.7">(%s)</span>' % e(ev["provincie"])) if ev["provincie"] else "",
                    ("Aanvang " + ev["tijd"]) if ev["tijd"] else "&nbsp;",
-                   prijs, knop))
+                   knop))
 
         heeft_kaart = any(ev["zaal"]["opkaart"] for ev in evs)
         n_zalen = len({ev["zaal"]["id"] for ev in evs if ev["zaal"]["opkaart"]})

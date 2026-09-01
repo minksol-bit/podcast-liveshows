@@ -201,12 +201,8 @@
         '</div>';
       var rechts = document.createElement("div");
       rechts.className = "rechtsblok";
-      if (ev.prijs !== null && ev.prijs !== undefined) {
-        var pr = document.createElement("span");
-        pr.className = "prijs";
-        pr.textContent = "vanaf €" + String(ev.prijs).replace(".", ",");
-        rechts.appendChild(pr);
-      }
+      var prijstekst = (ev.prijs !== null && ev.prijs !== undefined)
+        ? "vanaf €" + String(ev.prijs).replace(".", ",") : "";
       rechts.appendChild(FAV.knop(ev.id, function () { if (stand.fav) ververs(); else werkTellingBij(); }));
       var kal = document.createElement("button");
       kal.type = "button";
@@ -220,20 +216,22 @@
                           zaal: ev.zaal.naam, stad: ev.zaal.stad, ticket: ev.ticket });
       });
       rechts.appendChild(kal);
+      var onderHtml = prijstekst ? '<span class="knop-onder">' + veiligAttr(prijstekst) + "</span>" : "";
       if (String(ev.status || "").toLowerCase() === "uitverkocht") {
         var uit = document.createElement("span");
-        uit.className = "geen";
-        uit.textContent = "Uitverkocht";
+        uit.className = "geen knop-vorm";
+        uit.innerHTML = '<span class="knop-label">Uitverkocht</span>' + onderHtml;
         rechts.appendChild(uit);
       } else if (ev.ticket) {
         var a = document.createElement("a");
         a.className = "knop"; a.href = ev.ticket; a.target = "_blank"; a.rel = "noopener";
-        a.textContent = "Tickets";
+        a.innerHTML = '<span class="knop-label">Tickets</span>' + onderHtml;
         a.addEventListener("click", function (e3) { e3.stopPropagation(); });
         rechts.appendChild(a);
       } else {
         var g = document.createElement("span");
-        g.className = "geen"; g.textContent = "geen link";
+        g.className = "geen knop-vorm";
+        g.innerHTML = '<span class="knop-label">geen link</span>' + onderHtml;
         rechts.appendChild(g);
       }
       rij.appendChild(rechts);
