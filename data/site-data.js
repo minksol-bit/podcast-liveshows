@@ -994,38 +994,6 @@ window.DATA = {
    ]
   },
   {
-   "id": 125,
-   "iso": "2026-10-07",
-   "dag": 7,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Best of 'Help, ik heb een Puber'",
-   "prijs": 15.0,
-   "ticket": "https://www.lievekamp.nl/programma/met-kluun-yvanka-van-der-zwaan-the-best-of-help-ik-heb-een-puber-07-okt-20-15/",
-   "status": "in verkoop",
-   "provincie": "Noord-Brabant",
-   "themas": [
-    "Opvoeding"
-   ],
-   "zaal": {
-    "id": 20,
-    "naam": "Theater De Lievekamp",
-    "stad": "Oss",
-    "opkaart": true,
-    "lat": 51.7633501,
-    "lon": 5.5213587
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik word volwassen!",
-     "slug": "help-ik-word-volwassen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg"
-    }
-   ]
-  },
-  {
    "id": 92,
    "iso": "2026-10-08",
    "dag": 8,
@@ -1570,38 +1538,6 @@ window.DATA = {
    ]
   },
   {
-   "id": 126,
-   "iso": "2026-10-28",
-   "dag": 28,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:30",
-   "titel": "Best of 'Help, ik heb een Puber'",
-   "prijs": 19.5,
-   "ticket": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Opvoeding"
-   ],
-   "zaal": {
-    "id": 14,
-    "naam": "DeLaMar",
-    "stad": "Amsterdam",
-    "opkaart": true,
-    "lat": 52.3644194,
-    "lon": 4.8806878
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik word volwassen!",
-     "slug": "help-ik-word-volwassen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg"
-    }
-   ]
-  },
-  {
    "id": 98,
    "iso": "2026-10-29",
    "dag": 29,
@@ -1694,38 +1630,6 @@ window.DATA = {
      "naam": "Help, ik heb een puber!",
      "slug": "help-ik-heb-een-puber",
      "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
-    }
-   ]
-  },
-  {
-   "id": 127,
-   "iso": "2026-10-30",
-   "dag": 30,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Best of 'Help, ik heb een Puber'",
-   "prijs": 15.0,
-   "ticket": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/",
-   "status": "in verkoop",
-   "provincie": "Groningen",
-   "themas": [
-    "Opvoeding"
-   ],
-   "zaal": {
-    "id": 21,
-    "naam": "SPOT Stadsschouwburg",
-    "stad": "Groningen",
-    "opkaart": true,
-    "lat": 53.2208535,
-    "lon": 6.5720279
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik word volwassen!",
-     "slug": "help-ik-word-volwassen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -2690,38 +2594,6 @@ window.DATA = {
    ]
   },
   {
-   "id": 128,
-   "iso": "2026-11-25",
-   "dag": 25,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:00",
-   "titel": "Best of 'Help, ik heb een Puber'",
-   "prijs": 24.5,
-   "ticket": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/kluun-help-ik-heb-een-puber",
-   "status": "in verkoop",
-   "provincie": "Noord-Brabant",
-   "themas": [
-    "Opvoeding"
-   ],
-   "zaal": {
-    "id": 16,
-    "naam": "Schouwburg en Concertzaal Tilburg",
-    "stad": "Tilburg",
-    "opkaart": true,
-    "lat": 51.5542257,
-    "lon": 5.082737
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik word volwassen!",
-     "slug": "help-ik-word-volwassen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg"
-    }
-   ]
-  },
-  {
    "id": 110,
    "iso": "2026-11-26",
    "dag": 26,
@@ -2974,38 +2846,6 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
-   "id": 129,
-   "iso": "2026-12-02",
-   "dag": 2,
-   "maandnr": 12,
-   "jaar": 2026,
-   "maand": "2026-12",
-   "tijd": null,
-   "titel": "Best of 'Help, ik heb een Puber'",
-   "prijs": null,
-   "ticket": "https://www.theateraandeparade.nl/nl/programma/the-best-of-help-ik-heb-een-p-kluun",
-   "status": "in verkoop",
-   "provincie": "Noord-Brabant",
-   "themas": [
-    "Opvoeding"
-   ],
-   "zaal": {
-    "id": 19,
-    "naam": "Theater aan de Parade",
-    "stad": "Den Bosch",
-    "opkaart": true,
-    "lat": 51.6869348,
-    "lon": 5.3086679
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik word volwassen!",
-     "slug": "help-ik-word-volwassen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg"
     }
    ]
   },

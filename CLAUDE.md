@@ -105,6 +105,14 @@ keer inlezen levert geen dubbelingen op. Een zaal wordt herkend aan zijn naam of
 aan een alias in de kolom `aliassen`; komt er een nieuwe schrijfwijze langs, zet
 die er dan bij in plaats van een tweede zaalrij te laten ontstaan.
 
+Dezelfde show krijgt van de ene bron soms een titel zonder "Live" en van de
+andere met "Live" of "LIVE" erachter (bijvoorbeeld "Best of 'Help, ik heb een
+puber!'" versus "Best of 'Help, ik heb een puber!' LIVE"). Het woord "live" wordt
+daarom net als de lidwoorden uit de matchsleutel gehaald, anders ontstaat er een
+dubbele podcast + show + events. Dit is precies zo misgegaan bij het inladen van
+Corti Media (augustus 2026) en toen met de hand hersteld; de sleutel-functie is
+sindsdien aangepast zodat het niet opnieuw gebeurt.
+
 ## Wanneer telt een show mee?
 
 De show hoeft niet de podcast zelf te zijn. Hij telt mee als de makers van de

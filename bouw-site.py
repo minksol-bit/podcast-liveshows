@@ -487,6 +487,15 @@ def bouw_toplijst(podcasts, status, gecheckt):
     return met_live, nagekeken
 
 def bouw_podcastpaginas(podcasts, gecheckt):
+    # Verweesde pagina's opruimen: een podcast die samengevoegd of verwijderd is
+    # (zie CLAUDE.md, "live" in de matchsleutel) laat anders een oude pagina achter
+    # die nergens meer naar linkt maar wel online blijft staan.
+    huidige_slugs = {p["slug"] for p in podcasts.values()}
+    podcastmap = os.path.join(HIER, "podcast")
+    if os.path.isdir(podcastmap):
+        for bestand in os.listdir(podcastmap):
+            if bestand.endswith(".html") and bestand[:-5] not in huidige_slugs:
+                os.remove(os.path.join(podcastmap, bestand))
     gemaakt = 0
     for p in podcasts.values():
         evs = p["events"]

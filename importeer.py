@@ -44,6 +44,9 @@ def sleutel(s):
     # ten onrechte op elkaar lijken. Verschillen in schrijfwijze horen in de
     # kolom aliassen, niet in een steeds slimmere normalisatie.
     s = re.sub(r"\b(de|het|een|the|en|and)\b", " ", s)
+    # "live" hoort er ook uit: dezelfde show heet op de ene bron "X" en op de
+    # andere "X Live" of "X LIVE", en dat mag geen dubbele show opleveren.
+    s = re.sub(r"\blive\b", " ", s)
     return re.sub(r"[^a-z0-9]+", "", s)
 
 def leeg(v):
