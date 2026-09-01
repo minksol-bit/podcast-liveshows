@@ -36,6 +36,15 @@ MAAND_KORT = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov",
 def e(s):
     return html.escape("" if s is None else str(s), quote=True)
 
+def helderheid(hexkleur):
+    # Relatieve helderheid van een hex-kleur (0 = zwart, 1 = wit), om te bepalen
+    # of witte of donkere tekst leesbaar is op die achtergrond.
+    h = (hexkleur or "").lstrip("#")
+    if len(h) != 6:
+        return 0.3
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return (0.299 * r + 0.587 * g + 0.114 * b) / 255
+
 def slug(s):
     s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
@@ -563,6 +572,7 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
 
         band_stijl = "background:linear-gradient(90deg,%s,%s)" % (e(p["band_links"]), e(p["band_rechts"]))
+        pbanner_klasse = "pbanner pbanner-licht" if helderheid(p["band_rechts"]) > 0.6 else "pbanner pbanner-donker"
         if p["cover"]:
             logo = '<img class="pbanner-logo" src="%s" alt="">' % e(p["cover"])
         else:
@@ -583,10 +593,10 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                         (p["kort"] or ("Alle liveshows van %s." % p["naam"]))[:180],
                         basis="../", actief="catalogus", extra_head=extra,
                         pad="podcast/%s.html" % p["slug"])
-                    + '  <div class="pbanner" style="%s">\n    %s\n'
+                    + '  <div class="%s" style="%s">\n    %s\n'
                       '    <div class="pbanner-vak">\n      %s\n      <h1>%s</h1>\n      %s\n'
                       '      <p class="cijfers">%s &middot; %s</p>\n      %s\n    </div>\n  </div>\n'
-                      % (e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
+                      % (pbanner_klasse, e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"
                        if evs else '  <p class="leeg">Voor deze podcast staan nog geen liveshows in de agenda.</p>\n')

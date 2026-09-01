@@ -266,15 +266,23 @@ h2.maand:first-child { margin-top: 0; }
   box-shadow: 0 6px 22px rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.5);
 }
 .pbanner-logo.pbanner-logo-leeg { background: rgba(255,255,255,.25); }
-.pbanner-vak {
-  position: relative; padding: 12px 18px; border-radius: 12px; max-width: 640px;
-  background: rgba(15,10,10,.42);
-}
-.pbanner-vak h1 { font-size: 30px; margin: 4px 0 6px; letter-spacing: -0.02em; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
-.pbanner-vak .maker { color: rgba(255,255,255,.86); margin: 0 0 8px; }
-.pbanner-vak .cijfers { color: rgba(255,255,255,.92); margin: 0; }
-.pbanner-vak .merkje { background: rgba(255,255,255,.25); color: #fff; }
-.pbanner-tekst { margin: 10px 0 0; color: rgba(255,255,255,.92); font-size: 14px; line-height: 1.5; }
+.pbanner-vak { position: relative; flex: 1 1 auto; min-width: 0; }
+.pbanner-vak h1 { font-size: 30px; margin: 4px 0 6px; letter-spacing: -0.02em; }
+.pbanner-vak .maker { margin: 0 0 8px; }
+.pbanner-vak .cijfers { margin: 0; }
+.pbanner-tekst { margin: 10px 0 0; font-size: 14px; line-height: 1.5; max-width: 760px; }
+
+.pbanner-donker .pbanner-vak h1 { color: #fff; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
+.pbanner-donker .pbanner-vak .maker { color: rgba(255,255,255,.86); text-shadow: 0 1px 10px rgba(0,0,0,.3); }
+.pbanner-donker .pbanner-vak .cijfers { color: rgba(255,255,255,.92); text-shadow: 0 1px 10px rgba(0,0,0,.3); }
+.pbanner-donker .pbanner-tekst { color: rgba(255,255,255,.92); text-shadow: 0 1px 10px rgba(0,0,0,.3); }
+.pbanner-donker .pbanner-vak .merkje { background: rgba(255,255,255,.25); color: #fff; }
+
+.pbanner-licht .pbanner-vak h1 { color: var(--inkt); }
+.pbanner-licht .pbanner-vak .maker { color: var(--grijs); }
+.pbanner-licht .pbanner-vak .cijfers { color: var(--grijs); }
+.pbanner-licht .pbanner-tekst { color: #423b38; }
+.pbanner-licht .pbanner-vak .merkje { background: rgba(0,0,0,.08); color: var(--wijn); }
 .terug { display: inline-block; margin: 20px 0 0; font-size: 14px; text-decoration: none; }
 
 footer { border-top: 1px solid var(--lijn); padding: 18px 0 40px; font-size: 13px; color: var(--grijs); }
