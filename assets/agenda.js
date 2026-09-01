@@ -118,6 +118,17 @@
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
                     .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
+  function miniCoverHtml(podcasts) {
+    var eerste = (podcasts && podcasts[0]) || null;
+    var cover = eerste ? String(eerste.cover || "") : "";
+    var namen = (podcasts || []).map(function (p) { return p.naam; }).join(", ");
+    var init = String((eerste && eerste.naam) || "?").trim().slice(0, 2).toUpperCase();
+    var binnen = cover
+      ? '<img src="' + veiligAttr(cover) + '" alt="" loading="lazy" onerror="window.__coverFout(this)" data-initialen="' + veiligAttr(init) + '">'
+      : veiligAttr(init);
+    return '<div class="minicover" title="' + veiligAttr(namen) + '">' + binnen + "</div>";
+  }
+
   function bolIcoon(podcast) {
     var cover = podcast ? String(podcast.cover || "") : "";
     var init = String((podcast && podcast.naam) || "?").trim().slice(0, 2).toUpperCase();
@@ -181,6 +192,7 @@
       rij.innerHTML =
         '<div class="datum"><div class="dag">' + ev.dag + '</div>' +
           '<div class="mnd">' + MAAND_KORT[ev.maandnr - 1] + '</div></div>' +
+        miniCoverHtml(ev.podcasts) +
         '<div class="info">' +
           '<div class="titel">' + veiligAttr(ev.titel) + '</div>' +
           '<div class="zaal">' + veiligAttr(ev.zaal.naam) + ", " + veiligAttr(ev.zaal.stad) +
