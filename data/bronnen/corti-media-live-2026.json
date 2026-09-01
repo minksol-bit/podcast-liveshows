@@ -1,0 +1,200 @@
+{
+ "bron": "cortimedia.nl/live (Corti Media eigen overzicht van alle liveshows)",
+ "gecheckt": "2026-08-31",
+ "opmerking": "Gevonden via de nieuwe Tier-1 aanpak: producenten-hubpagina cortimedia.nl/live geeft in 1 keer een overzicht van alle lopende en eerdere Corti Media liveshows. Tijd/prijs alleen ingevuld voor optredens binnen 90 dagen (tot ca. 29 nov 2026), conform beleid.",
+ "shows": [
+  {
+   "podcast": "Help, ik word volwassen!",
+   "podcast_meta": {
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a0/1b/c4/a01bc439-71a8-107c-9d17-d667df42192b/mza_4432722255828391472.jpg/600x600bb.jpg",
+    "website": "https://www.cortimedia.nl/help-ik-heb-een-puber",
+    "thema": "Opvoeding",
+    "apple_id": "1726575117",
+    "omschrijving": "Kluun en Yvanka van der Zwaan bespreken wekelijks de uitdagingen van het opvoeden van pubers - herkenbaar, eerlijk en met humor. De podcast heette eerder 'Help, ik heb een puber!'."
+   },
+   "titel": "Best of 'Help, ik heb een Puber'",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "Corti Media",
+   "bron_url": "https://www.cortimedia.nl/best-of-help-ik-heb-een-puber",
+   "events": [
+    {
+     "datum": "2026-10-07",
+     "tijd": "20:15",
+     "zaal": "Theater De Lievekamp",
+     "stad": "Oss",
+     "provincie": "Noord-Brabant",
+     "prijs_vanaf": 15.0,
+     "ticket_url": "https://www.lievekamp.nl/programma/met-kluun-yvanka-van-der-zwaan-the-best-of-help-ik-heb-een-puber-07-okt-20-15/",
+     "bron_url": "https://www.lievekamp.nl/programma/met-kluun-yvanka-van-der-zwaan-the-best-of-help-ik-heb-een-puber-07-okt-20-15/"
+    },
+    {
+     "datum": "2026-10-28",
+     "tijd": "20:30",
+     "zaal": "DeLaMar",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 19.5,
+     "ticket_url": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/",
+     "bron_url": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/"
+    },
+    {
+     "datum": "2026-10-30",
+     "tijd": "20:15",
+     "zaal": "SPOT Groningen",
+     "stad": "Groningen",
+     "provincie": "Groningen",
+     "prijs_vanaf": 15.0,
+     "ticket_url": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/",
+     "bron_url": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/"
+    },
+    {
+     "datum": "2026-11-25",
+     "tijd": "20:00",
+     "zaal": "Schouwburg Concertzaal Tilburg",
+     "stad": "Tilburg",
+     "provincie": "Noord-Brabant",
+     "prijs_vanaf": 24.5,
+     "ticket_url": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/kluun-help-ik-heb-een-puber",
+     "bron_url": "https://www.schouwburgconcertzaaltilburg.nl/nl/agenda/kluun-help-ik-heb-een-puber"
+    },
+    {
+     "datum": "2026-12-02",
+     "zaal": "Theater aan de Parade",
+     "stad": "Den Bosch",
+     "provincie": "Noord-Brabant",
+     "ticket_url": "https://www.theateraandeparade.nl/nl/programma/the-best-of-help-ik-heb-een-p-kluun",
+     "bron_url": "https://www.theateraandeparade.nl/nl/programma/the-best-of-help-ik-heb-een-p-kluun"
+    }
+   ]
+  },
+  {
+   "podcast": "Boekestijn en De Wijk",
+   "podcast_meta": {
+    "cover_url": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.jpg",
+    "website": "https://www.bnr.nl/podcast/boekestijn-en-de-wijk",
+    "thema": "Nieuws & geopolitiek",
+    "apple_id": "1076289388",
+    "omschrijving": "Arend Jan Boekestijn en Rob de Wijk duiden wekelijks bij BNR Nieuwsradio de actuele geopolitieke ontwikkelingen in de wereld."
+   },
+   "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "Corti Media / BNR",
+   "bron_url": "https://www.cortimedia.nl/boekestijn-en-de-wijk-live-eindejaarsshow",
+   "events": [
+    {
+     "datum": "2026-11-03",
+     "tijd": "20:15",
+     "zaal": "Theater de Veste",
+     "stad": "Delft",
+     "provincie": "Zuid-Holland"
+    },
+    {
+     "datum": "2026-11-09",
+     "tijd": "20:15",
+     "zaal": "Markant Theater Maashorst",
+     "stad": "Uden",
+     "provincie": "Noord-Brabant"
+    },
+    {
+     "datum": "2026-11-16",
+     "tijd": "19:30",
+     "zaal": "De Kring (EKP-gebouw)",
+     "stad": "Roosendaal",
+     "provincie": "Noord-Brabant"
+    },
+    {
+     "datum": "2026-11-19",
+     "tijd": "20:00",
+     "zaal": "Toon Hermans Theater",
+     "stad": "Sittard",
+     "provincie": "Limburg"
+    },
+    {
+     "datum": "2026-11-21",
+     "tijd": "20:15",
+     "zaal": "Stadsschouwburg De Harmonie",
+     "stad": "Leeuwarden",
+     "provincie": "Friesland"
+    },
+    {
+     "datum": "2026-11-29",
+     "tijd": "14:30",
+     "zaal": "Theater De Spiegel",
+     "stad": "Zwolle",
+     "provincie": "Overijssel"
+    },
+    {
+     "datum": "2026-12-01",
+     "tijd": "20:00",
+     "zaal": "Schouwburg Agnietenhof",
+     "stad": "Tiel",
+     "provincie": "Gelderland"
+    },
+    {
+     "datum": "2026-12-03",
+     "tijd": "20:00",
+     "zaal": "Amphion",
+     "stad": "Doetinchem",
+     "provincie": "Gelderland"
+    },
+    {
+     "datum": "2026-12-08",
+     "tijd": "20:15",
+     "zaal": "Leidse Schouwburg",
+     "stad": "Leiden",
+     "provincie": "Zuid-Holland"
+    },
+    {
+     "datum": "2026-12-10",
+     "tijd": "20:15",
+     "zaal": "Junushoff",
+     "stad": "Wageningen",
+     "provincie": "Gelderland"
+    },
+    {
+     "datum": "2026-12-12",
+     "zaal": "Chassé Theater",
+     "stad": "Breda",
+     "provincie": "Noord-Brabant"
+    },
+    {
+     "datum": "2026-12-14",
+     "tijd": "20:00",
+     "zaal": "Goudse Schouwburg",
+     "stad": "Gouda",
+     "provincie": "Zuid-Holland"
+    },
+    {
+     "datum": "2026-12-16",
+     "tijd": "20:15",
+     "zaal": "Meervaart",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland"
+    },
+    {
+     "datum": "2026-12-17",
+     "tijd": "20:00",
+     "zaal": "Nieuwe Luxor Theater",
+     "stad": "Rotterdam",
+     "provincie": "Zuid-Holland"
+    },
+    {
+     "datum": "2026-12-21",
+     "tijd": "20:30",
+     "zaal": "Musis",
+     "stad": "Arnhem",
+     "provincie": "Gelderland"
+    },
+    {
+     "datum": "2026-12-22",
+     "tijd": "20:15",
+     "zaal": "Schouwburg Tilburg",
+     "stad": "Tilburg",
+     "provincie": "Noord-Brabant"
+    }
+   ]
+  }
+ ]
+}

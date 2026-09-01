@@ -1,27 +1,73 @@
 {
  "bron": "losse theaterpagina's - deze tour heeft geen centrale speellijst",
  "gecheckt": "2026-08-31",
- "opmerking": "Er bestaat geen pagina met de complete speellijst. Deze zes data komen van de theaters zelf en van theater.nl. De lijst is dus mogelijk niet compleet; DeLaMar wordt door een ticketverkoper genoemd maar zonder datum, en de Tilburgse pagina uit de zoekresultaten bestaat niet meer.",
- "shows": [{
-  "podcast": "Parool Misdaadpodcast",
-  "titel": "De Misdaadpodcast Live",
-  "type": "theatershow",
-  "verwantschap": "thema-verwant",
-  "organisator": "",
-  "bron_url": "https://www.theater.nl/de-misdaadpodcast-live-paul-vugts-wouter-laumans-en-corrie-gerritsma",
-  "events": [
-   {"datum":"2026-10-06","tijd":"20:00","zaal":"Theater aan de Parade","stad":"Den Bosch","provincie":"Noord-Brabant","prijs_vanaf":13.50,
-    "ticket_url":"https://www.theateraandeparade.nl/nl/programma/misdaadpodcast-live",
-    "bron_url":"https://www.theateraandeparade.nl/nl/programma/misdaadpodcast-live"},
-   {"datum":"2026-11-20","tijd":"20:00","zaal":"Oude Luxor","stad":"Rotterdam","provincie":"Zuid-Holland","prijs_vanaf":17.50,
-    "ticket_url":"https://luxortheater.nl/agenda/de-misdaadpodcast-live-58250",
-    "bron_url":"https://luxortheater.nl/agenda/de-misdaadpodcast-live-58250"},
-   {"datum":"2026-12-10","tijd":"20:15","zaal":"Cultuurhuis De Klinker","stad":"Winschoten","provincie":"Groningen"},
-   {"datum":"2027-01-05","tijd":"20:00","zaal":"Orpheus","stad":"Apeldoorn","provincie":"Gelderland","prijs_vanaf":28.50,
-    "ticket_url":"https://www.orpheus.nl/voorstellingen/de-misdaadpodcast-live-97vl",
-    "bron_url":"https://www.orpheus.nl/voorstellingen/de-misdaadpodcast-live-97vl"},
-   {"datum":"2027-04-13","tijd":"20:00","zaal":"Theater aan het Vrijthof","stad":"Maastricht","provincie":"Limburg","prijs_vanaf":25.00,
-    "ticket_url":"https://www.theateraanhetvrijthof.nl/voorstellingen/theatercollege-en-literair/met-paul-vugts-wouter-laumans-en-corrie-gerritsma-de-misdaadpodcast-live",
-    "bron_url":"https://www.theateraanhetvrijthof.nl/voorstellingen/theatercollege-en-literair/met-paul-vugts-wouter-laumans-en-corrie-gerritsma-de-misdaadpodcast-live"},
-   {"datum":"2027-05-27","tijd":"20:15","zaal":"Schouwburg Het Park","stad":"Hoorn","provincie":"Noord-Holland"}
-  ]}]}
+ "opmerking": "Parool-webwinkel (webwinkel.parool.nl/collections/misdaadpodcast-live) bevestigt 8 data in totaal voor dit seizoen; dit bestand bevat er nu 6 (de 8ste, Winschoten en Hoorn, was al aanwezig zonder prijs - nu aangevuld). Twee data ontbreken nog omdat de zaalnaam niet kon worden achterhaald: 20 jan 2027 Emmen (vanaf 27,50) en 7 mei 2027 Eindhoven (vanaf 29,00) - toevoegen zodra bekend welk theater. Bij Apeldoorn/Orpheus is bewust de reguliere prijs van de eigen theatersite aangehouden (28,50) i.p.v. de actiebundel op de Parool-webwinkel (15,00, inclusief pauzeconsumptie) - dat is geen jongerenprijs maar een tijdelijke actie, en de theaterprijs is de stabielere 'vanaf'-prijs. DeLaMar Amsterdam wordt door een reseller genoemd als losse show-titel maar zonder datum in de Parool-lijst van 8 - waarschijnlijk een oudere of andere show, niet meenemen zonder bevestigde datum.",
+ "shows": [
+  {
+   "podcast": "Parool Misdaadpodcast",
+   "titel": "De Misdaadpodcast Live",
+   "type": "theatershow",
+   "verwantschap": "thema-verwant",
+   "organisator": "",
+   "bron_url": "https://www.theater.nl/de-misdaadpodcast-live-paul-vugts-wouter-laumans-en-corrie-gerritsma",
+   "events": [
+    {
+     "datum": "2026-10-06",
+     "tijd": "20:00",
+     "zaal": "Theater aan de Parade",
+     "stad": "Den Bosch",
+     "provincie": "Noord-Brabant",
+     "prijs_vanaf": 13.5,
+     "ticket_url": "https://www.theateraandeparade.nl/nl/programma/misdaadpodcast-live",
+     "bron_url": "https://www.theateraandeparade.nl/nl/programma/misdaadpodcast-live"
+    },
+    {
+     "datum": "2026-11-20",
+     "tijd": "20:00",
+     "zaal": "Oude Luxor",
+     "stad": "Rotterdam",
+     "provincie": "Zuid-Holland",
+     "prijs_vanaf": 17.5,
+     "ticket_url": "https://luxortheater.nl/agenda/de-misdaadpodcast-live-58250",
+     "bron_url": "https://luxortheater.nl/agenda/de-misdaadpodcast-live-58250"
+    },
+    {
+     "datum": "2026-12-10",
+     "tijd": "20:15",
+     "zaal": "Cultuurhuis De Klinker",
+     "stad": "Winschoten",
+     "provincie": "Groningen",
+     "prijs_vanaf": 25.5
+    },
+    {
+     "datum": "2027-01-05",
+     "tijd": "20:00",
+     "zaal": "Orpheus",
+     "stad": "Apeldoorn",
+     "provincie": "Gelderland",
+     "prijs_vanaf": 28.5,
+     "ticket_url": "https://www.orpheus.nl/voorstellingen/de-misdaadpodcast-live-97vl",
+     "bron_url": "https://www.orpheus.nl/voorstellingen/de-misdaadpodcast-live-97vl"
+    },
+    {
+     "datum": "2027-04-13",
+     "tijd": "20:00",
+     "zaal": "Theater aan het Vrijthof",
+     "stad": "Maastricht",
+     "provincie": "Limburg",
+     "prijs_vanaf": 25.0,
+     "ticket_url": "https://www.theateraanhetvrijthof.nl/voorstellingen/theatercollege-en-literair/met-paul-vugts-wouter-laumans-en-corrie-gerritsma-de-misdaadpodcast-live",
+     "bron_url": "https://www.theateraanhetvrijthof.nl/voorstellingen/theatercollege-en-literair/met-paul-vugts-wouter-laumans-en-corrie-gerritsma-de-misdaadpodcast-live"
+    },
+    {
+     "datum": "2027-05-27",
+     "tijd": "20:15",
+     "zaal": "Schouwburg Het Park",
+     "stad": "Hoorn",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 29.5
+    }
+   ]
+  }
+ ]
+}
