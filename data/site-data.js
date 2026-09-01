@@ -482,6 +482,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 132,
+   "iso": "2026-09-22",
+   "dag": 22,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "20:00",
+   "titel": "Een Podcast over Media Liveshow",
+   "prijs": 15.0,
+   "ticket": "https://rodehoed.nl/programma/een-podcast-over-media-liveshow-2026/",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Media & technologie"
+   ],
+   "zaal": {
+    "id": 65,
+    "naam": "Rode Hoed",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3773438,
+    "lon": 4.8872604
+   },
+   "podcasts": [
+    {
+     "naam": "POM - Een Podcast over Media",
+     "slug": "pom-een-podcast-over-media",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 52,
    "iso": "2026-09-23",
    "dag": 23,
@@ -4034,6 +4066,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 64,
+ "venues_totaal": 65,
  "venues_zonder_coordinaten": 0
 };

@@ -1,0 +1,27 @@
+{
+ "bron": "rodehoed.nl (zoekvondst tijdens producenten-hub verkenning)",
+ "gecheckt": "2026-08-31",
+ "opmerking": "Eenmalige liveshow, geen tour. Podcast heet nu 'POM' maar was lang bekend als 'Een Podcast over Media'.",
+ "shows": [
+  {
+   "podcast": "POM - Een Podcast over Media",
+   "titel": "Een Podcast over Media Liveshow",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "",
+   "bron_url": "https://rodehoed.nl/programma/een-podcast-over-media-liveshow-2026/",
+   "events": [
+    {
+     "datum": "2026-09-22",
+     "tijd": "20:00",
+     "zaal": "Rode Hoed",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 15.0,
+     "ticket_url": "https://rodehoed.nl/programma/een-podcast-over-media-liveshow-2026/",
+     "bron_url": "https://rodehoed.nl/programma/een-podcast-over-media-liveshow-2026/"
+    }
+   ]
+  }
+ ]
+}
