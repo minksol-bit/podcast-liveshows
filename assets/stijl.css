@@ -251,23 +251,22 @@ h2.maand:first-child { margin-top: 0; }
 /* ---------- podcastpagina ---------- */
 .pbanner {
   position: relative; margin: 24px 0 0; border-radius: 16px; overflow: hidden;
-  border: 1px solid var(--lijn); min-height: 230px; display: flex; align-items: flex-end;
-  background: linear-gradient(135deg, var(--wijn) 0%, var(--wijn-donker) 100%);
+  border: 1px solid var(--lijn); min-height: 190px; display: flex; align-items: center;
+  gap: 24px; padding: 24px 28px;
 }
-.pbanner-beeld {
-  position: absolute; inset: -14px; background-size: cover; background-position: center;
-  filter: blur(16px) brightness(.6) saturate(1.15); transform: scale(1.1);
+.pbanner-logo {
+  flex: 0 0 140px; width: 140px; height: 140px; border-radius: 16px; object-fit: cover;
+  box-shadow: 0 6px 22px rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.5);
 }
-.pbanner-beeld.pbanner-leeg { background: none; }
-.pbanner-schaduw {
-  position: absolute; inset: 0;
-  background: linear-gradient(0deg, rgba(15,10,10,.72) 0%, rgba(15,10,10,.15) 65%, rgba(15,10,10,0) 100%);
+.pbanner-logo.pbanner-logo-leeg { background: rgba(255,255,255,.25); }
+.pbanner-vak {
+  position: relative; padding: 12px 18px; border-radius: 12px; max-width: 640px;
+  background: rgba(15,10,10,.42);
 }
-.pbanner-vak { position: relative; margin: 22px; padding: 4px 2px; max-width: 640px; }
-.pbanner-vak h1 { font-size: 32px; margin: 4px 0 6px; letter-spacing: -0.02em; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
-.pbanner-vak .maker { color: rgba(255,255,255,.82); margin: 0 0 8px; }
-.pbanner-vak .cijfers { color: rgba(255,255,255,.88); margin: 0; }
-.pbanner-vak .merkje { background: rgba(255,255,255,.2); color: #fff; }
+.pbanner-vak h1 { font-size: 30px; margin: 4px 0 6px; letter-spacing: -0.02em; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.35); }
+.pbanner-vak .maker { color: rgba(255,255,255,.86); margin: 0 0 8px; }
+.pbanner-vak .cijfers { color: rgba(255,255,255,.92); margin: 0; }
+.pbanner-vak .merkje { background: rgba(255,255,255,.25); color: #fff; }
 .pkop-tekst { margin: 18px 0 8px; max-width: 640px; }
 .terug { display: inline-block; margin: 20px 0 0; font-size: 14px; text-decoration: none; }
 
@@ -289,8 +288,8 @@ footer a { color: var(--grijs); }
   .telling { margin-left: 0; width: 100%; }
   .merk span { display: none; }
   .menu { margin-left: 0; }
-  .pbanner { min-height: 170px; }
-  .pbanner-vak { margin: 16px; }
+  .pbanner { flex-direction: column; align-items: flex-start; padding: 18px; min-height: 0; }
+  .pbanner-logo { width: 84px; height: 84px; flex-basis: 84px; }
   .pbanner-vak h1 { font-size: 24px; }
 }
 @media (max-width: 620px) { .raster { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }

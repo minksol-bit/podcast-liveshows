@@ -104,6 +104,8 @@ def lees_alles():
             "kort": tekst(p.get("omschrijving")), "lang": tekst(p.get("omschrijving_lang")),
             "apple_id": tekst(p.get("apple_id")), "rang": p.get("apple_rang"),
             "website": tekst(p.get("website")),
+            "band_links": tekst(p.get("bannerkleur_links")) or "#8e212e",
+            "band_rechts": tekst(p.get("bannerkleur_rechts")) or "#6d1823",
             "slug": slug(p.get("naam")), "shows": [], "events": [],
         }
 
@@ -558,10 +560,11 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                      '    <div class="kaartkolom"><div class="melding">Nog geen coördinaten voor de zalen '
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
 
+        band_stijl = "background:linear-gradient(90deg,%s,%s)" % (e(p["band_links"]), e(p["band_rechts"]))
         if p["cover"]:
-            beeldlaag = "<div class=\"pbanner-beeld\" style=\"background-image:url(&#x27;%s&#x27;)\"></div>" % e(p["cover"])
+            logo = '<img class="pbanner-logo" src="%s" alt="">' % e(p["cover"])
         else:
-            beeldlaag = "<div class=\"pbanner-beeld pbanner-leeg\"></div>"
+            logo = '<div class="pbanner-logo pbanner-logo-leeg"></div>'
         rang = ('<span class="merkje">#%s in de Apple top 100</span>' % e(p["rang"])) if p["rang"] else ""
         maker = ('<p class="maker">%s</p>' % e(p.get("maker", ""))) if p.get("maker") else ""
         aantal = len(evs)
@@ -576,11 +579,11 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                         (p["kort"] or ("Alle liveshows van %s." % p["naam"]))[:180],
                         basis="../", actief="catalogus", extra_head=extra,
                         pad="podcast/%s.html" % p["slug"])
-                    + '  <div class="pbanner">\n    %s\n    <div class="pbanner-schaduw"></div>\n'
+                    + '  <div class="pbanner" style="%s">\n    %s\n'
                       '    <div class="pbanner-vak">\n      %s\n      <h1>%s</h1>\n      %s\n'
                       '      <p class="cijfers">%s &middot; %s</p>\n    </div>\n  </div>\n'
                       '  <p class="pkop-tekst">%s</p>\n'
-                      % (beeldlaag, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting),
+                      % (e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting),
                          e(p["lang"] or p["kort"] or ""))
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"
