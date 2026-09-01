@@ -1,0 +1,51 @@
+{
+ "bron": "gerichte 'podcast'-zoekopdracht op programmering van grote Nederlandse theaters (Carre, DeLaMar, Chasse, De Doelen, Koninklijke Schouwburg, Musis, Parktheater), i.p.v. generieke categorie-browsing",
+ "gecheckt": "2026-09-01",
+ "opmerking": "Meerdere gevonden liveshows bleken al verlopen (Culturele Bagage jan-jun 2026, De Lesbische Liga en Moeders of Loeders eerdere tourdata, Man man man Koud Zweed uit 2024) en zijn overgeslagen. Alleen echt toekomstige data (vanaf sept 2026) hieronder.",
+ "shows": [
+  {
+   "podcast": "Hagelslag",
+   "titel": "Hagelslag de Podcast",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "",
+   "bron_url": "https://www.dedoelen.nl/nl/agenda/hagelslag-de-podcast-xm31",
+   "events": [
+    {"datum": "2026-10-14", "tijd": "20:15", "zaal": "de Doelen", "stad": "Rotterdam", "provincie": "Zuid-Holland", "prijs_vanaf": 26.00, "ticket_url": "https://www.dedoelen.nl/nl/agenda/hagelslag-de-podcast-xm31"}
+   ]
+  },
+  {
+   "podcast": "Culturele bagage",
+   "titel": "Welkom terug in het patriarchaat",
+   "type": "theatershow",
+   "verwantschap": "thema-verwant",
+   "organisator": "",
+   "bron_url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/de-volkskrant-welkom-terug-in-het-patriarchaat-liveshow-culturele-bagage/",
+   "events": [
+    {"datum": "2027-03-02", "tijd": "20:15", "zaal": "Leidse Schouwburg", "stad": "Leiden", "provincie": "Zuid-Holland", "prijs_vanaf": 29.50, "ticket_url": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/de-volkskrant-welkom-terug-in-het-patriarchaat-liveshow-culturele-bagage/"}
+   ]
+  },
+  {
+   "podcast": "De Lesbische Liga Podcast",
+   "titel": "De Lesbische Liga Live",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "",
+   "bron_url": "https://www.tivolivredenburg.nl/agenda/51777282/de-lesbische-liga-live-11-09-2026",
+   "events": [
+    {"datum": "2026-09-11", "tijd": "20:30", "zaal": "TivoliVredenburg", "stad": "Utrecht", "provincie": "Utrecht", "prijs_vanaf": 32.50, "status": "uitverkocht", "ticket_url": "https://www.tivolivredenburg.nl/agenda/51777282/de-lesbische-liga-live-11-09-2026"}
+   ]
+  },
+  {
+   "podcast": "De Boordradio",
+   "titel": "De Boordradio LIVE",
+   "type": "theatershow",
+   "verwantschap": "podcast live",
+   "organisator": "",
+   "bron_url": "https://www.musisenstadstheater.nl/nl/agenda/podcast-de-boordradio-live/10193",
+   "events": [
+    {"datum": "2026-12-22", "tijd": "20:00", "zaal": "Musis", "stad": "Arnhem", "provincie": "Gelderland", "prijs_vanaf": 26.50, "ticket_url": "https://www.musisenstadstheater.nl/nl/agenda/podcast-de-boordradio-live/10193"}
+   ]
+  }
+ ]
+}

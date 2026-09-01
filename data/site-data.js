@@ -130,6 +130,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 154,
+   "iso": "2026-09-11",
+   "dag": 11,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "20:30",
+   "titel": "De Lesbische Liga Live",
+   "prijs": 32.5,
+   "ticket": "https://www.tivolivredenburg.nl/agenda/51777282/de-lesbische-liga-live-11-09-2026",
+   "status": "uitverkocht",
+   "provincie": "Utrecht",
+   "themas": [
+    "Overig"
+   ],
+   "zaal": {
+    "id": 1,
+    "naam": "TivoliVredenburg",
+    "stad": "Utrecht",
+    "opkaart": true,
+    "lat": 52.0924542,
+    "lon": 5.1127685
+   },
+   "podcasts": [
+    {
+     "naam": "De Lesbische Liga Podcast",
+     "slug": "de-lesbische-liga-podcast",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/35/9c/92/359c92c3-7052-fcaf-802a-333035c7e955/mza_7283539563238062752.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 79,
    "iso": "2026-09-12",
    "dag": 12,
@@ -1214,6 +1246,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 152,
+   "iso": "2026-10-14",
+   "dag": 14,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:15",
+   "titel": "Hagelslag de Podcast",
+   "prijs": 26.0,
+   "ticket": "https://www.dedoelen.nl/nl/agenda/hagelslag-de-podcast-xm31",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 73,
+    "naam": "de Doelen",
+    "stad": "Rotterdam",
+    "opkaart": true,
+    "lat": 51.9220495,
+    "lon": 4.4726898
+   },
+   "podcasts": [
+    {
+     "naam": "Hagelslag",
+     "slug": "hagelslag",
+     "cover": "https://media.tivolivredenburg.nl/h5BDKvCbg3"
     }
    ]
   },
@@ -3970,6 +4034,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 155,
+   "iso": "2026-12-22",
+   "dag": 22,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": "20:00",
+   "titel": "De Boordradio LIVE",
+   "prijs": 26.5,
+   "ticket": "https://www.musisenstadstheater.nl/nl/agenda/podcast-de-boordradio-live/10193",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Sport"
+   ],
+   "zaal": {
+    "id": 3,
+    "naam": "Musis",
+    "stad": "Arnhem",
+    "opkaart": true,
+    "lat": 51.982704,
+    "lon": 5.9137995
+   },
+   "podcasts": [
+    {
+     "naam": "De Boordradio",
+     "slug": "de-boordradio",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/da/94/ec/da94ec1b-573b-883c-141b-dd0c06ea60dd/mza_6876213664597474478.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 44,
    "iso": "2026-12-22",
    "dag": 22,
@@ -4354,6 +4450,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 153,
+   "iso": "2027-03-02",
+   "dag": 2,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Welkom terug in het patriarchaat",
+   "prijs": 29.5,
+   "ticket": "https://leidseschouwburg-stadsgehoorzaal.nl/voorstelling/de-volkskrant-welkom-terug-in-het-patriarchaat-liveshow-culturele-bagage/",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Media & technologie"
+   ],
+   "zaal": {
+    "id": 31,
+    "naam": "Leidse Schouwburg",
+    "stad": "Leiden",
+    "opkaart": true,
+    "lat": 52.1621894,
+    "lon": 4.4891831
+   },
+   "podcasts": [
+    {
+     "naam": "Culturele bagage",
+     "slug": "culturele-bagage",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c2/10/d0/c210d060-0d5d-d3ca-41a8-fe287319c478/mza_7064471614632340840.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 16,
    "iso": "2027-03-04",
    "dag": 4,
@@ -4674,6 +4802,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 72,
+ "venues_totaal": 73,
  "venues_zonder_coordinaten": 0
 };
