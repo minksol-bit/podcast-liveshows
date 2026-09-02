@@ -4565,9 +4565,9 @@ window.DATA = {
     "id": 74,
     "naam": "Theater Cultura",
     "stad": "Ede",
-    "opkaart": false,
-    "lat": null,
-    "lon": null
+    "opkaart": true,
+    "lat": 52.0447,
+    "lon": 5.6603
    },
    "podcasts": [
     {
@@ -4963,5 +4963,5 @@ window.DATA = {
   }
  ],
  "venues_totaal": 74,
- "venues_zonder_coordinaten": 1
+ "venues_zonder_coordinaten": 0
 };
