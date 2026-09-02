@@ -1698,6 +1698,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 156,
+   "iso": "2026-10-25",
+   "dag": 25,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "15:00",
+   "titel": "Hagelslag de Podcast",
+   "prijs": null,
+   "ticket": "",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Comedy"
+   ],
+   "zaal": {
+    "id": 68,
+    "naam": "Griffioen",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3346074,
+    "lon": 4.8636531
+   },
+   "podcasts": [
+    {
+     "naam": "Hagelslag",
+     "slug": "hagelslag",
+     "cover": "https://media.tivolivredenburg.nl/h5BDKvCbg3"
+    }
+   ]
+  },
+  {
    "id": 96,
    "iso": "2026-10-26",
    "dag": 26,

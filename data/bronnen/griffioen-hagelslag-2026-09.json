@@ -1,0 +1,10 @@
+{
+ "bron": "VU Griffioen programma-agenda (griffioen.vu.nl), gevonden tijdens het uitzoeken van de prijs voor Alle Geschiedenis Ooit",
+ "gecheckt": "2026-09-02",
+ "shows": [
+  {"podcast": "Hagelslag", "titel": "Hagelslag de Podcast", "verwantschap": "podcast live",
+   "bron_url": "https://griffioen.vu.nl/",
+   "events": [{"datum": "2026-10-25", "tijd": "15:00", "zaal": "Griffioen", "stad": "Amsterdam",
+               "provincie": "Noord-Holland"}]}
+ ]
+}
