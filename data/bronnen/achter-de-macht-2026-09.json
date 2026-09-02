@@ -1,0 +1,22 @@
+{
+ "bron": "theater.nl/achter-de-macht en officiele theaterpagina's, gevonden tijdens sourcing-ronde",
+ "gecheckt": "2026-09-02",
+ "shows": [
+  {"podcast": "Achter de Macht", "titel": "Achter de Macht", "verwantschap": "podcast live",
+   "bron_url": "https://www.theater.nl/achter-de-macht",
+   "events": [
+    {"datum": "2027-02-09", "tijd": "20:00", "zaal": "Koninklijke Schouwburg", "stad": "Den Haag",
+     "provincie": "Zuid-Holland", "prijs_vanaf": 24.5,
+     "ticket_url": "https://www.hnt.nl/nl/voorstellingen/achter-de-macht-djnv"},
+    {"datum": "2027-02-19", "tijd": "20:00", "zaal": "Stadsschouwburg", "stad": "Haarlem",
+     "provincie": "Noord-Holland", "prijs_vanaf": 18.5,
+     "ticket_url": "https://stadsschouwburghaarlem.nl/agenda/theatercollege-achter-de-macht"},
+    {"datum": "2027-03-01", "tijd": "20:15", "zaal": "Theater Cultura", "stad": "Ede",
+     "provincie": "Gelderland", "prijs_vanaf": 27.75,
+     "ticket_url": "https://cultura-ede.nl/agenda/achter-de-macht-277331/"},
+    {"datum": "2027-03-09", "tijd": "20:15", "zaal": "Stadsgehoorzaal", "stad": "Leiden",
+     "provincie": "Zuid-Holland",
+     "ticket_url": "https://www.theater.nl/achter-de-macht"}
+   ]}
+ ]
+}

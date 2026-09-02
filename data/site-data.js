@@ -4418,6 +4418,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 157,
+   "iso": "2027-02-09",
+   "dag": 9,
+   "maandnr": 2,
+   "jaar": 2027,
+   "maand": "2027-02",
+   "tijd": "20:00",
+   "titel": "Achter de Macht",
+   "prijs": 24.5,
+   "ticket": "https://www.hnt.nl/nl/voorstellingen/achter-de-macht-djnv",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 28,
+    "naam": "Koninklijke Schouwburg",
+    "stad": "Den Haag",
+    "opkaart": true,
+    "lat": 52.0818859,
+    "lon": 4.3158207
+   },
+   "podcasts": [
+    {
+     "naam": "Achter de Macht",
+     "slug": "achter-de-macht",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 14,
    "iso": "2027-02-10",
    "dag": 10,
@@ -4482,6 +4514,70 @@ window.DATA = {
    ]
   },
   {
+   "id": 158,
+   "iso": "2027-02-19",
+   "dag": 19,
+   "maandnr": 2,
+   "jaar": 2027,
+   "maand": "2027-02",
+   "tijd": "20:00",
+   "titel": "Achter de Macht",
+   "prijs": 18.5,
+   "ticket": "https://stadsschouwburghaarlem.nl/agenda/theatercollege-achter-de-macht",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 2,
+    "naam": "Stadsschouwburg",
+    "stad": "Haarlem",
+    "opkaart": true,
+    "lat": 52.3779947,
+    "lon": 4.625426
+   },
+   "podcasts": [
+    {
+     "naam": "Achter de Macht",
+     "slug": "achter-de-macht",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": 159,
+   "iso": "2027-03-01",
+   "dag": 1,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Achter de Macht",
+   "prijs": 27.75,
+   "ticket": "https://cultura-ede.nl/agenda/achter-de-macht-277331/",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 74,
+    "naam": "Theater Cultura",
+    "stad": "Ede",
+    "opkaart": false,
+    "lat": null,
+    "lon": null
+   },
+   "podcasts": [
+    {
+     "naam": "Achter de Macht",
+     "slug": "achter-de-macht",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 153,
    "iso": "2027-03-02",
    "dag": 2,
@@ -4542,6 +4638,38 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 160,
+   "iso": "2027-03-09",
+   "dag": 9,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Achter de Macht",
+   "prijs": null,
+   "ticket": "https://www.theater.nl/achter-de-macht",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 9,
+    "naam": "Stadsgehoorzaal",
+    "stad": "Leiden",
+    "opkaart": true,
+    "lat": 52.1596903,
+    "lon": 4.4890446
+   },
+   "podcasts": [
+    {
+     "naam": "Achter de Macht",
+     "slug": "achter-de-macht",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/600x600bb.jpg"
     }
    ]
   },
@@ -4834,6 +4962,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 73,
- "venues_zonder_coordinaten": 0
+ "venues_totaal": 74,
+ "venues_zonder_coordinaten": 1
 };
