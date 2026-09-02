@@ -245,22 +245,41 @@ In deze device_bash-omgeving kan een git-proces soms een `.git/index.lock`
 `device_request_delete_permission` heeft dit niet altijd opgelost. Normale
 `git add`/`git commit` lopen daar dan op vast.
 
-Workaround die wel werkt (raakt nooit het standaard-indexbestand of het
-lock-bestand zelf, dus permissies zijn geen probleem):
+Workaround die wel werkt (bouwt alles via een los indexbestand elders, en
+schrijft resultaten met een gewone overschrijving in plaats van via git's
+eigen lock-dan-hernoem-mechanisme, dus de kapotte lock-bestanden komen er
+nooit aan te pas):
 
 ```bash
+# 1. Commit maken via een los indexbestand (nooit .git/index zelf aangeraakt)
 export GIT_INDEX_FILE=/tmp/newindex_$$
 git read-tree HEAD
 git add -A
 TREE=$(git write-tree)
 COMMIT=$(git commit-tree "$TREE" -p HEAD -m "commit-boodschap")
-git update-ref refs/heads/master "$COMMIT"
 unset GIT_INDEX_FILE
+
+# 2. De branch-ref bijwerken zonder git update-ref (die maakt zelf ook een
+#    lock-bestand aan, wat kan vastlopen als HEAD.lock/master.lock al
+#    bestaan). Gewoon de commit-hash direct in het ref-bestand schrijven:
+echo "$COMMIT" > .git/refs/heads/master
+
+# 3. Het standaard-indexbestand ook bijwerken (anders denkt git dat er nog
+#    wijzigingen openstaan), weer via kopiëren i.p.v. git's eigen locking:
+export GIT_INDEX_FILE=/tmp/newindex2_$$
+git read-tree HEAD
+unset GIT_INDEX_FILE
+cp /tmp/newindex2_$$ .git/index
+
+# 4. Controle: dit hoort allebei schoon te zijn
+git status --short
+git fsck --no-progress
 ```
 
-Dit maakt een nieuwe commit los van het geblokkeerde indexbestand. Waarschuwingen
-over `unable to unlink tmp_obj_*` tijdens dit proces zijn onschuldig zolang de
-`TREE`/`COMMIT`-hashes wel worden geprint en `git log` de nieuwe commit erna
-laat zien — controleer met `git status` (hoort "clean" te zijn) en `git fsck`.
-Probeer eerst gewoon `git commit`; grijp pas naar deze omweg als die vastloopt
-op het lock-bestand.
+Waarschuwingen over `unable to unlink tmp_obj_*` of `unable to unlink
+...lock` tijdens dit proces zijn onschuldig zolang de `TREE`/`COMMIT`-hashes
+wel worden geprint. `git push` raakt de index/lock-bestanden niet en werkt
+gewoon normaal zodra de commit lokaal klopt.
+
+Probeer altijd eerst gewoon `git add`/`git commit`/`git push`; grijp pas naar
+deze omweg als die vastlopen op een lock-bestand.
