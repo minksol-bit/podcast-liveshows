@@ -215,3 +215,52 @@ Voor een nieuwe podcast met cover, dit stappenplan volgen:
    uit; bij een bewust tweekleurig ontwerp niet.
 3. Zet de uitkomst in `bannerkleur_links` / `bannerkleur_rechts` voor die
    podcast in de xlsx, en draai `bouw-site.py` opnieuw.
+
+
+## De site staat live
+
+De site draait sinds 2 september 2026 op GitHub Pages:
+**https://minksol-bit.github.io/podcast-liveshows/**
+
+- GitHub-repo: `github.com/minksol-bit/podcast-liveshows` (publiek, branch
+  `master`, Pages-bron ingesteld op "Deploy from a branch" / master / root).
+- Verbinding verloopt via SSH met een los sleutelpaar dat alleen op het
+  Mac-account van Mink staat (`~/.ssh/id_ed25519_github` in de device_bash-
+  omgeving, toegevoegd aan Mink's GitHub-account). Er is geen wachtwoord of
+  token ooit door Claude ingevoerd.
+- Om een wijziging live te zetten: na `bouw-site.py` en de tests, gewoon
+  `git add`, `git commit`, `git push origin master` zoals gebruikelijk (zie
+  hieronder voor een bekend addertje). GitHub Pages publiceert een paar
+  minuten na elke push naar master automatisch.
+- SSH werkt alleen via git zelf (dat gebruikt `GIT_SSH_COMMAND`, een socat-
+  tunnel over de bestaande proxy); een kale `ssh -T git@github.com` werkt
+  niet vanuit deze sandbox (DNS-resolutie faalt), dus test connectiviteit
+  met `git ls-remote` in plaats daarvan.
+
+### Bekend probleem: hardnekkige .git/index.lock
+
+In deze device_bash-omgeving kan een git-proces soms een `.git/index.lock`
+(of `.git/objects/*/tmp_obj_*`) achterlaten die niet meer weg te krijgen is
+— `rm`/`find -delete` geeft `Operation not permitted`, en ook
+`device_request_delete_permission` heeft dit niet altijd opgelost. Normale
+`git add`/`git commit` lopen daar dan op vast.
+
+Workaround die wel werkt (raakt nooit het standaard-indexbestand of het
+lock-bestand zelf, dus permissies zijn geen probleem):
+
+```bash
+export GIT_INDEX_FILE=/tmp/newindex_$$
+git read-tree HEAD
+git add -A
+TREE=$(git write-tree)
+COMMIT=$(git commit-tree "$TREE" -p HEAD -m "commit-boodschap")
+git update-ref refs/heads/master "$COMMIT"
+unset GIT_INDEX_FILE
+```
+
+Dit maakt een nieuwe commit los van het geblokkeerde indexbestand. Waarschuwingen
+over `unable to unlink tmp_obj_*` tijdens dit proces zijn onschuldig zolang de
+`TREE`/`COMMIT`-hashes wel worden geprint en `git log` de nieuwe commit erna
+laat zien — controleer met `git status` (hoort "clean" te zijn) en `git fsck`.
+Probeer eerst gewoon `git commit`; grijp pas naar deze omweg als die vastloopt
+op het lock-bestand.
