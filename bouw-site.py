@@ -353,14 +353,10 @@ FILTERBLOK = """
         aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
       <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
     </div>
-    <div class="filter"><label for="f-prijs">Prijs</label>
-      <select id="f-prijs">
-        <option value="">Alle prijzen</option>
-        <option value="20">tot &euro;20</option>
-        <option value="30">tot &euro;30</option>
-        <option value="40">tot &euro;40</option>
-        <option value="50">tot &euro;50</option>
-      </select></div>
+    <div class="filter filter-schuif">
+      <label for="f-prijs">Prijs <span id="f-prijs-label">Alle prijzen</span></label>
+      <input type="range" id="f-prijs" min="10" max="45" step="5" value="45">
+    </div>
     <div class="filter"><label>Snel</label>
       <div class="snel">
         <button type="button" id="snel-vandaag">Vanavond</button>

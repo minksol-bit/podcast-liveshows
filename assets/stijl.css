@@ -91,6 +91,12 @@ a { color: var(--wijn); }
 }
 .filter { display: flex; flex-direction: column; gap: 4px; }
 .filter label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--grijs); }
+.filter-schuif { min-width: 180px; justify-content: flex-end; }
+.filter-schuif label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.filter-schuif label span {
+  text-transform: none; letter-spacing: normal; font-size: 13px; color: var(--inkt); font-weight: 600;
+}
+input[type=range] { width: 100%; accent-color: var(--wijn); margin: 0; height: 34px; }
 select, input[type=search] {
   font: inherit; padding: 7px 10px; border: 1px solid var(--lijn);
   border-radius: 6px; background: var(--papier); color: var(--inkt); min-width: 160px;

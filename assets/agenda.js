@@ -42,7 +42,12 @@
     vkMaand.zet(stand.maand);
     vkProvincie.zet(stand.provincie);
     vkThema.zet(stand.thema);
-    $("f-prijs").value = stand.prijs;
+    $("f-prijs").value = stand.prijs || $("f-prijs").max;
+    werkPrijslabelBij();
+  }
+  function werkPrijslabelBij() {
+    var el = $("f-prijs");
+    $("f-prijs-label").textContent = (el.value === el.max) ? "Alle prijzen" : "tot \u20AC" + el.value;
   }
   function naarLink() {
     var p = new URLSearchParams();
@@ -277,8 +282,10 @@
   vkMaand.onChange(function (w) { stand.maand = w; ververs(); });
   vkProvincie.onChange(function (w) { stand.provincie = w; ververs(); });
   vkThema.onChange(function (w) { stand.thema = w; ververs(); });
-  $("f-prijs").addEventListener("change", function () {
-    stand.prijs = $("f-prijs").value;
+  $("f-prijs").addEventListener("input", function () {
+    var el = $("f-prijs");
+    stand.prijs = (el.value === el.max) ? "" : el.value;
+    werkPrijslabelBij();
     ververs();
   });
   $("snel-vandaag").addEventListener("click", function () {
@@ -291,7 +298,8 @@
   $("wis").addEventListener("click", function () {
     stand = { maand: [], provincie: [], thema: [], prijs: "", snel: "", fav: false };
     vkMaand.wis(); vkProvincie.wis(); vkThema.wis();
-    $("f-prijs").value = "";
+    $("f-prijs").value = $("f-prijs").max;
+    werkPrijslabelBij();
     ververs();
   });
   window.addEventListener("resize", function () { kaart.invalidateSize(); });
