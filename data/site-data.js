@@ -1034,9 +1034,9 @@ window.DATA = {
    "maand": "2026-10",
    "tijd": "20:15",
    "titel": "Over de liefde",
-   "prijs": null,
+   "prijs": 29.5,
    "ticket": "https://www.spotgroningen.nl/programma/aaf-en-lies/",
-   "status": "uitverkocht",
+   "status": "in verkoop",
    "provincie": "Groningen",
    "themas": [
     "Maatschappij"
@@ -3586,38 +3586,6 @@ window.DATA = {
    ]
   },
   {
-   "id": 73,
-   "iso": "2026-12-02",
-   "dag": 2,
-   "maandnr": 12,
-   "jaar": 2026,
-   "maand": "2026-12",
-   "tijd": null,
-   "titel": "Over de liefde",
-   "prijs": null,
-   "ticket": "https://kunstlinie.nl/programma/aaf-brandt-corstius-lies-visschedijk/",
-   "status": "in verkoop",
-   "provincie": "Flevoland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 10,
-    "naam": "Kunstlinie",
-    "stad": "Almere",
-    "opkaart": true,
-    "lat": 52.3669292,
-    "lon": 5.2191822
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 28,
    "iso": "2026-12-02",
    "dag": 2,
@@ -3646,6 +3614,38 @@ window.DATA = {
      "naam": "Help, ik heb een puber!",
      "slug": "help-ik-heb-een-puber",
      "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
+    }
+   ]
+  },
+  {
+   "id": 73,
+   "iso": "2026-12-02",
+   "dag": 2,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": "20:15",
+   "titel": "Over de liefde",
+   "prijs": 29.0,
+   "ticket": "https://kunstlinie.nl/programma/aaf-brandt-corstius-lies-visschedijk/",
+   "status": "in verkoop",
+   "provincie": "Flevoland",
+   "themas": [
+    "Maatschappij"
+   ],
+   "zaal": {
+    "id": 10,
+    "naam": "Kunstlinie",
+    "stad": "Almere",
+    "opkaart": true,
+    "lat": 52.3669292,
+    "lon": 5.2191822
+   },
+   "podcasts": [
+    {
+     "naam": "Aaf en Lies lossen het wel weer op",
+     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
     }
    ]
   },
