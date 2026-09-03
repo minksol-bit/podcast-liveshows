@@ -98,6 +98,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 161,
+   "iso": "2026-09-11",
+   "dag": 11,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": 25.0,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 68,
+    "naam": "Griffioen",
+    "stad": "Amsterdam",
+    "opkaart": true,
+    "lat": 52.3346074,
+    "lon": 4.8636531
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 46,
    "iso": "2026-09-11",
    "dag": 11,
@@ -386,6 +418,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 162,
+   "iso": "2026-09-18",
+   "dag": 18,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 75,
+    "naam": "De Oude Kerk",
+    "stad": "Heemstede",
+    "opkaart": true,
+    "lat": 52.348,
+    "lon": 4.6155
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 50,
    "iso": "2026-09-19",
    "dag": 19,
@@ -574,6 +638,38 @@ window.DATA = {
      "naam": "Aaf en Lies lossen het wel weer op",
      "slug": "aaf-en-lies-lossen-het-wel-weer-op",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 163,
+   "iso": "2026-09-24",
+   "dag": 24,
+   "maandnr": 9,
+   "jaar": 2026,
+   "maand": "2026-09",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 76,
+    "naam": "Dru Industrie Park",
+    "stad": "Ulft",
+    "opkaart": true,
+    "lat": 51.8973,
+    "lon": 6.3898
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -898,6 +994,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 164,
+   "iso": "2026-10-02",
+   "dag": 2,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:30",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 77,
+    "naam": "Theater De Omval",
+    "stad": "Diemen",
+    "opkaart": true,
+    "lat": 52.3382,
+    "lon": 4.9592
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 55,
    "iso": "2026-10-04",
    "dag": 4,
@@ -1214,6 +1342,38 @@ window.DATA = {
      "naam": "Provinfluencers",
      "slug": "provinfluencers",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 165,
+   "iso": "2026-10-08",
+   "dag": 8,
+   "maandnr": 10,
+   "jaar": 2026,
+   "maand": "2026-10",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": 29.5,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Zeeland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 78,
+    "naam": "Ledeltheater",
+    "stad": "Oostburg",
+    "opkaart": true,
+    "lat": 51.3236,
+    "lon": 3.525
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -2530,6 +2690,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 166,
+   "iso": "2026-11-13",
+   "dag": 13,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Overijssel",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 79,
+    "naam": "Reggehof",
+    "stad": "Goor",
+    "opkaart": true,
+    "lat": 52.2506,
+    "lon": 6.5989
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 138,
    "iso": "2026-11-14",
    "dag": 14,
@@ -2910,6 +3102,38 @@ window.DATA = {
      "naam": "Parool Misdaadpodcast",
      "slug": "parool-misdaadpodcast",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 167,
+   "iso": "2026-11-20",
+   "dag": 20,
+   "maandnr": 11,
+   "jaar": 2026,
+   "maand": "2026-11",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": 21.0,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 58,
+    "naam": "Theater De Maagd",
+    "stad": "Bergen op Zoom",
+    "opkaart": true,
+    "lat": 51.4942791,
+    "lon": 4.2861736
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -3778,6 +4002,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 168,
+   "iso": "2026-12-09",
+   "dag": 9,
+   "maandnr": 12,
+   "jaar": 2026,
+   "maand": "2026-12",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": 26.5,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Utrecht",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 44,
+    "naam": "Theater Lampegiet",
+    "stad": "Veenendaal",
+    "opkaart": true,
+    "lat": 52.0244718,
+    "lon": 5.5529666
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 38,
    "iso": "2026-12-10",
    "dag": 10,
@@ -4130,6 +4386,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 169,
+   "iso": "2027-01-03",
+   "dag": 3,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": "15:30",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 22,
+    "naam": "Theater De Veste",
+    "stad": "Delft",
+    "opkaart": true,
+    "lat": 52.0084756,
+    "lon": 4.3627946
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 122,
    "iso": "2027-01-05",
    "dag": 5,
@@ -4258,6 +4546,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 170,
+   "iso": "2027-01-14",
+   "dag": 14,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Flevoland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 80,
+    "naam": "Theater 't Voorhuys",
+    "stad": "Emmeloord",
+    "opkaart": true,
+    "lat": 52.7103,
+    "lon": 5.748
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 142,
    "iso": "2027-01-15",
    "dag": 15,
@@ -4322,6 +4642,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 171,
+   "iso": "2027-01-21",
+   "dag": 21,
+   "maandnr": 1,
+   "jaar": 2027,
+   "maand": "2027-01",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": 28.5,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 81,
+    "naam": "Theater Het Kruispunt",
+    "stad": "Barendrecht",
+    "opkaart": true,
+    "lat": 51.8575,
+    "lon": 4.5326
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 144,
    "iso": "2027-01-25",
    "dag": 25,
@@ -4382,6 +4734,38 @@ window.DATA = {
      "naam": "Alle Geschiedenis Ooit - Grote Namen",
      "slug": "alle-geschiedenis-ooit-grote-namen",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 172,
+   "iso": "2027-02-03",
+   "dag": 3,
+   "maandnr": 2,
+   "jaar": 2027,
+   "maand": "2027-02",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 82,
+    "naam": "Theater 't Speelhuis",
+    "stad": "Helmond",
+    "opkaart": true,
+    "lat": 51.4793,
+    "lon": 5.6567
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -4478,6 +4862,70 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 173,
+   "iso": "2027-02-12",
+   "dag": 12,
+   "maandnr": 2,
+   "jaar": 2027,
+   "maand": "2027-02",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Groningen",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 83,
+    "naam": "Geert Teis Theater",
+    "stad": "Stadskanaal",
+    "opkaart": true,
+    "lat": 52.9926,
+    "lon": 6.9319
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": 174,
+   "iso": "2027-02-17",
+   "dag": 17,
+   "maandnr": 2,
+   "jaar": 2027,
+   "maand": "2027-02",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Zeeland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 57,
+    "naam": "Scheldetheater",
+    "stad": "Terneuzen",
+    "opkaart": true,
+    "lat": 51.3386553,
+    "lon": 3.8231688
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -4642,6 +5090,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 175,
+   "iso": "2027-03-05",
+   "dag": 5,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Friesland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 84,
+    "naam": "Theater De Koornbeurs",
+    "stad": "Franeker",
+    "opkaart": true,
+    "lat": 53.1889,
+    "lon": 5.5406
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 160,
    "iso": "2027-03-09",
    "dag": 9,
@@ -4670,6 +5150,38 @@ window.DATA = {
      "naam": "Achter de Macht",
      "slug": "achter-de-macht",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": 176,
+   "iso": "2027-03-09",
+   "dag": 9,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Noord-Brabant",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 85,
+    "naam": "Theater De Bussel",
+    "stad": "Oosterhout",
+    "opkaart": true,
+    "lat": 51.6453,
+    "lon": 4.8595
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -4734,6 +5246,70 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 177,
+   "iso": "2027-03-19",
+   "dag": 19,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 86,
+    "naam": "Schaffelaartheater",
+    "stad": "Barneveld",
+    "opkaart": true,
+    "lat": 52.1425,
+    "lon": 5.5825
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": 178,
+   "iso": "2027-03-24",
+   "dag": 24,
+   "maandnr": 3,
+   "jaar": 2027,
+   "maand": "2027-03",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Limburg",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 87,
+    "naam": "Schouwburg Venray",
+    "stad": "Venray",
+    "opkaart": true,
+    "lat": 51.5264,
+    "lon": 5.9784
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -4866,6 +5442,38 @@ window.DATA = {
    ]
   },
   {
+   "id": 179,
+   "iso": "2027-04-15",
+   "dag": 15,
+   "maandnr": 4,
+   "jaar": 2027,
+   "maand": "2027-04",
+   "tijd": "20:00",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Zuid-Holland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 47,
+    "naam": "De Rijswijkse Schouwburg",
+    "stad": "Rijswijk",
+    "opkaart": true,
+    "lat": 52.0460579,
+    "lon": 4.327609
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
    "id": 22,
    "iso": "2027-04-21",
    "dag": 21,
@@ -4894,6 +5502,70 @@ window.DATA = {
      "naam": "Napleiten",
      "slug": "napleiten",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
+    }
+   ]
+  },
+  {
+   "id": 180,
+   "iso": "2027-05-13",
+   "dag": 13,
+   "maandnr": 5,
+   "jaar": 2027,
+   "maand": "2027-05",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Friesland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 88,
+    "naam": "Posthuis Theater",
+    "stad": "Heerenveen",
+    "opkaart": true,
+    "lat": 52.9594,
+    "lon": 5.9181
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
+    }
+   ]
+  },
+  {
+   "id": 181,
+   "iso": "2027-05-20",
+   "dag": 20,
+   "maandnr": 5,
+   "jaar": 2027,
+   "maand": "2027-05",
+   "tijd": "20:15",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "prijs": null,
+   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
+   "status": "in verkoop",
+   "provincie": "Gelderland",
+   "themas": [
+    "Nieuws & politiek"
+   ],
+   "zaal": {
+    "id": 89,
+    "naam": "Theater De Storm",
+    "stad": "Winterswijk",
+    "opkaart": true,
+    "lat": 51.9711,
+    "lon": 6.7189
+   },
+   "podcasts": [
+    {
+     "naam": "Maarten van Rossem & Tom Jessen",
+     "slug": "maarten-van-rossem-tom-jessen",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
     }
    ]
   },
@@ -4962,6 +5634,6 @@ window.DATA = {
    ]
   }
  ],
- "venues_totaal": 74,
+ "venues_totaal": 89,
  "venues_zonder_coordinaten": 0
 };

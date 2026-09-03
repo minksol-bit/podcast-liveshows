@@ -1,0 +1,188 @@
+{
+ "bron": "topticketshop.nl/maarten-van-rossem (speellijst) en theater.nl/theaterlezing-maarten-van-rossem (tijd/prijs), gevonden tijdens sourcing-ronde",
+ "gecheckt": "2026-09-03",
+ "shows": [
+  {
+   "podcast": "Maarten van Rossem & Tom Jessen",
+   "titel": "Theaterlezing Maarten van Rossem",
+   "verwantschap": "zelfde makers",
+   "bron_url": "https://www.topticketshop.nl/maarten-van-rossem",
+   "events": [
+    {
+     "datum": "2026-09-11",
+     "tijd": "20:00",
+     "zaal": "Griffioen",
+     "stad": "Amsterdam",
+     "provincie": "Noord-Holland",
+     "prijs_vanaf": 25.0,
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-09-18",
+     "tijd": "20:15",
+     "zaal": "De Oude Kerk",
+     "stad": "Heemstede",
+     "provincie": "Noord-Holland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-09-24",
+     "tijd": "20:00",
+     "zaal": "Dru Industrie Park",
+     "stad": "Ulft",
+     "provincie": "Gelderland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-10-02",
+     "tijd": "20:30",
+     "zaal": "Theater De Omval",
+     "stad": "Diemen",
+     "provincie": "Noord-Holland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-10-08",
+     "tijd": "20:00",
+     "zaal": "Ledeltheater",
+     "stad": "Oostburg",
+     "provincie": "Zeeland",
+     "prijs_vanaf": 29.5,
+     "bron_url": "https://www.theater.nl/theaterlezing-maarten-van-rossem",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-11-13",
+     "tijd": "20:00",
+     "zaal": "Reggehof",
+     "stad": "Goor",
+     "provincie": "Overijssel",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-11-20",
+     "tijd": "20:00",
+     "zaal": "Theater De Maagd",
+     "stad": "Bergen op Zoom",
+     "provincie": "Noord-Brabant",
+     "prijs_vanaf": 21.0,
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2026-12-09",
+     "tijd": "20:00",
+     "zaal": "Theater Lampegiet",
+     "stad": "Veenendaal",
+     "provincie": "Utrecht",
+     "prijs_vanaf": 26.5,
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-01-03",
+     "tijd": "15:30",
+     "zaal": "Theater De Veste",
+     "stad": "Delft",
+     "provincie": "Zuid-Holland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-01-14",
+     "tijd": "20:00",
+     "zaal": "Theater 't Voorhuys",
+     "stad": "Emmeloord",
+     "provincie": "Flevoland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-01-21",
+     "tijd": "20:15",
+     "zaal": "Theater Het Kruispunt",
+     "stad": "Barendrecht",
+     "provincie": "Zuid-Holland",
+     "prijs_vanaf": 28.5,
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-02-03",
+     "tijd": "20:15",
+     "zaal": "Theater 't Speelhuis",
+     "stad": "Helmond",
+     "provincie": "Noord-Brabant",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-02-12",
+     "tijd": "20:00",
+     "zaal": "Geert Teis Theater",
+     "stad": "Stadskanaal",
+     "provincie": "Groningen",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-02-17",
+     "tijd": "20:00",
+     "zaal": "Scheldetheater",
+     "stad": "Terneuzen",
+     "provincie": "Zeeland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-03-05",
+     "tijd": "20:15",
+     "zaal": "Theater De Koornbeurs",
+     "stad": "Franeker",
+     "provincie": "Friesland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-03-09",
+     "tijd": "20:15",
+     "zaal": "Theater De Bussel",
+     "stad": "Oosterhout",
+     "provincie": "Noord-Brabant",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-03-19",
+     "tijd": "20:00",
+     "zaal": "Schaffelaartheater",
+     "stad": "Barneveld",
+     "provincie": "Gelderland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-03-24",
+     "tijd": "20:15",
+     "zaal": "Schouwburg Venray",
+     "stad": "Venray",
+     "provincie": "Limburg",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-04-15",
+     "tijd": "20:00",
+     "zaal": "De Rijswijkse Schouwburg",
+     "stad": "Rijswijk",
+     "provincie": "Zuid-Holland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-05-13",
+     "tijd": "20:15",
+     "zaal": "Posthuis Theater",
+     "stad": "Heerenveen",
+     "provincie": "Friesland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    },
+    {
+     "datum": "2027-05-20",
+     "tijd": "20:15",
+     "zaal": "Theater De Storm",
+     "stad": "Winterswijk",
+     "provincie": "Gelderland",
+     "ticket_url": "https://www.topticketshop.nl/maarten-van-rossem"
+    }
+   ]
+  }
+ ]
+}
