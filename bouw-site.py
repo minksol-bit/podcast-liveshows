@@ -183,6 +183,14 @@ KOP = """<!DOCTYPE html>
 <meta property="og:title" content="{{titel}}">
 <meta property="og:description" content="{{omschrijving}}">
 <meta property="og:type" content="website">
+<meta property="og:url" content="{{canoniek}}">
+<meta property="og:image" content="{{beeld}}">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Podcast Liveshows in Nederland">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{titel}}">
+<meta name="twitter:description" content="{{omschrijving}}">
+<meta name="twitter:image" content="{{beeld}}">
 <link rel="icon" type="image/png" href="{{basis}}assets/favicon.png">
 <link rel="stylesheet" href="{{basis}}assets/stijl.css">
 {{extra_head}}
@@ -220,6 +228,7 @@ VOET = """
 def kop(titel, omschrijving, basis="", actief="", extra_head="", pad=""):
     return render(KOP, titel=e(titel), omschrijving=e(omschrijving), basis=basis,
                   canoniek=e(SITE_URL.rstrip("/") + "/" + pad),
+                  beeld=e(SITE_URL.rstrip("/") + "/assets/og-share.jpg"),
                   extra_head=extra_head,
                   m_agenda="hier" if actief == "agenda" else "",
                   m_catalogus="hier" if actief == "catalogus" else "",
