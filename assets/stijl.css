@@ -111,7 +111,7 @@ button.aan { background: var(--wijn); border-color: var(--wijn); color: #fff; }
   background: var(--papier); color: var(--inkt); cursor: pointer; min-width: 160px;
   max-width: 220px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.veelkeuze-knop.aan { border-color: var(--wijn); color: var(--wijn); font-weight: 600; }
+.veelkeuze-knop.gekozen { background: var(--papier); border-color: var(--wijn); color: var(--wijn); font-weight: 600; }
 .veelkeuze-paneel {
   position: absolute; top: calc(100% + 4px); left: 0; z-index: 950; min-width: 230px; max-height: 280px;
   overflow-y: auto; background: var(--vlak); border: 1px solid var(--lijn); border-radius: 8px;

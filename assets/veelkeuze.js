@@ -34,7 +34,7 @@ var VEELKEUZE = (function () {
     }
     function werkKnopBij() {
       knop.textContent = label();
-      knop.classList.toggle("aan", gekozen.length > 0);
+      knop.classList.toggle("gekozen", gekozen.length > 0);
     }
     function koppel(cb) {
       cb.addEventListener("change", function () {
