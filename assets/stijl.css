@@ -102,22 +102,29 @@ select, input[type=search] {
   border-radius: 6px; background: var(--papier); color: var(--inkt); min-width: 160px;
 }
 button {
-  font: inherit; padding: 8px 13px; border: 1px solid var(--lijn);
-  border-radius: 6px; background: var(--papier); color: var(--inkt); cursor: pointer;
+  font: inherit; padding: 8px 13px; border: 1px solid var(--wijn);
+  border-radius: 6px; background: var(--wijn); color: #fff; cursor: pointer;
 }
-button:hover { border-color: var(--grijs); }
-button.aan { background: var(--wijn); border-color: var(--wijn); color: #fff; }
+button:hover { background: var(--wijn-donker); border-color: var(--wijn-donker); }
+button.aan { background: var(--wijn-donker); border-color: var(--wijn-donker); color: #fff; }
+.wis-knop {
+  align-self: flex-end; background: none; border: none; padding: 8px 4px;
+  color: var(--wijn); font: inherit; font-size: 13px; text-decoration: underline;
+  cursor: pointer; white-space: nowrap;
+}
+.wis-knop:hover { background: none; border: none; color: var(--wijn-donker); }
 .snel { display: flex; gap: 6px; }
 .telling { margin-left: auto; color: var(--grijs); font-size: 14px; }
 
 /* ---------- veelkeuze-dropdown (filters met meerdere waarden tegelijk) ---------- */
 .filter-veelkeuze { position: relative; }
 .veelkeuze-knop {
-  font: inherit; padding: 7px 10px; border: 1px solid var(--lijn); border-radius: 6px;
-  background: var(--papier); color: var(--inkt); cursor: pointer; min-width: 160px;
+  font: inherit; padding: 7px 10px; border: 1px solid var(--wijn); border-radius: 6px;
+  background: var(--wijn); color: #fff; cursor: pointer; min-width: 160px;
   max-width: 220px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.veelkeuze-knop.gekozen { background: var(--papier); border-color: var(--wijn); color: var(--wijn); font-weight: 600; }
+.veelkeuze-knop:hover { background: var(--wijn-donker); border-color: var(--wijn-donker); }
+.veelkeuze-knop.gekozen { background: var(--wijn-donker); border-color: var(--wijn-donker); color: #fff; font-weight: 600; }
 .veelkeuze-paneel {
   position: absolute; top: calc(100% + 4px); left: 0; z-index: 950; min-width: 230px; max-height: 280px;
   overflow-y: auto; background: var(--vlak); border: 1px solid var(--lijn); border-radius: 8px;
