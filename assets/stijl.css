@@ -104,6 +104,26 @@ button.aan { background: var(--wijn); border-color: var(--wijn); color: #fff; }
 .snel { display: flex; gap: 6px; }
 .telling { margin-left: auto; color: var(--grijs); font-size: 14px; }
 
+/* ---------- veelkeuze-dropdown (filters met meerdere waarden tegelijk) ---------- */
+.filter-veelkeuze { position: relative; }
+.veelkeuze-knop {
+  font: inherit; padding: 7px 10px; border: 1px solid var(--lijn); border-radius: 6px;
+  background: var(--papier); color: var(--inkt); cursor: pointer; min-width: 160px;
+  max-width: 220px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.veelkeuze-knop.aan { border-color: var(--wijn); color: var(--wijn); font-weight: 600; }
+.veelkeuze-paneel {
+  position: absolute; top: calc(100% + 4px); left: 0; z-index: 950; min-width: 230px; max-height: 280px;
+  overflow-y: auto; background: var(--vlak); border: 1px solid var(--lijn); border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(36,29,29,.16); padding: 6px;
+}
+.veelkeuze-optie {
+  display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px;
+  font-size: 14px; cursor: pointer; white-space: nowrap;
+}
+.veelkeuze-optie:hover { background: var(--papier); }
+.veelkeuze-optie input { margin: 0; accent-color: var(--wijn); }
+
 /* ---------- twee kolommen ---------- */
 .kolommen {
   display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);

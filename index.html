@@ -2154,12 +2154,24 @@
   </div>
 
   <div class="filters">
-    <div class="filter"><label for="f-maand">Maand</label>
-      <select id="f-maand"><option value="">Alle maanden</option></select></div>
-    <div class="filter"><label for="f-provincie">Provincie</label>
-      <select id="f-provincie"><option value="">Alle provincies</option></select></div>
-    <div class="filter"><label for="f-thema">Thema</label>
-      <select id="f-thema"><option value="">Alle thema's</option></select></div>
+    <div class="filter filter-veelkeuze" id="fm-maand">
+      <label id="fm-maand-label">Maand</label>
+      <button type="button" class="veelkeuze-knop" id="fm-maand-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-maand-label fm-maand-knop">Alle maanden</button>
+      <div class="veelkeuze-paneel" id="fm-maand-paneel" hidden></div>
+    </div>
+    <div class="filter filter-veelkeuze" id="fm-provincie">
+      <label id="fm-provincie-label">Provincie</label>
+      <button type="button" class="veelkeuze-knop" id="fm-provincie-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-provincie-label fm-provincie-knop">Alle provincies</button>
+      <div class="veelkeuze-paneel" id="fm-provincie-paneel" hidden></div>
+    </div>
+    <div class="filter filter-veelkeuze" id="fm-thema">
+      <label id="fm-thema-label">Thema</label>
+      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
+      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
+    </div>
     <div class="filter"><label for="f-prijs">Prijs</label>
       <select id="f-prijs">
         <option value="">Alle prijzen</option>
@@ -2194,6 +2206,7 @@
 <script src="assets/leaflet/leaflet.js"></script>
 <script src="assets/leaflet/leaflet.markercluster.js"></script>
 <script src="assets/favorieten.js"></script>
+<script src="assets/veelkeuze.js"></script>
 <script src="data/site-data.js"></script>
 <script src="assets/agenda.js"></script>
 <script>

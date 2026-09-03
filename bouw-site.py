@@ -335,12 +335,24 @@ def data_voor_agenda(podcasts, venues, events):
 
 FILTERBLOK = """
   <div class="filters">
-    <div class="filter"><label for="f-maand">Maand</label>
-      <select id="f-maand"><option value="">Alle maanden</option></select></div>
-    <div class="filter"><label for="f-provincie">Provincie</label>
-      <select id="f-provincie"><option value="">Alle provincies</option></select></div>
-    <div class="filter"><label for="f-thema">Thema</label>
-      <select id="f-thema"><option value="">Alle thema's</option></select></div>
+    <div class="filter filter-veelkeuze" id="fm-maand">
+      <label id="fm-maand-label">Maand</label>
+      <button type="button" class="veelkeuze-knop" id="fm-maand-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-maand-label fm-maand-knop">Alle maanden</button>
+      <div class="veelkeuze-paneel" id="fm-maand-paneel" hidden></div>
+    </div>
+    <div class="filter filter-veelkeuze" id="fm-provincie">
+      <label id="fm-provincie-label">Provincie</label>
+      <button type="button" class="veelkeuze-knop" id="fm-provincie-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-provincie-label fm-provincie-knop">Alle provincies</button>
+      <div class="veelkeuze-paneel" id="fm-provincie-paneel" hidden></div>
+    </div>
+    <div class="filter filter-veelkeuze" id="fm-thema">
+      <label id="fm-thema-label">Thema</label>
+      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
+      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
+    </div>
     <div class="filter"><label for="f-prijs">Prijs</label>
       <select id="f-prijs">
         <option value="">Alle prijzen</option>
@@ -397,6 +409,7 @@ def bouw_index(podcasts, venues, events, gecheckt):
                 + voet(gecheckt,
                        leaflet_scripts()
                        + '\n<script src="assets/favorieten.js"></script>'
+                       + '\n<script src="assets/veelkeuze.js"></script>'
                        + '\n<script src="data/site-data.js"></script>'
                        + '\n<script src="assets/agenda.js"></script>'
                        + PARALLAX))
@@ -434,11 +447,16 @@ def bouw_catalogus(podcasts, gecheckt):
     filters = ('  <div class="filters">\n'
                '    <div class="filter"><label for="zoek">Zoeken</label>'
                '<input type="search" id="zoek" placeholder="Naam of maker"></div>\n'
-               '    <div class="filter"><label for="f-thema">Thema</label><select id="f-thema">'
-               '<option value="">Alle thema\'s</option>%s</select></div>\n'
+               '    <div class="filter filter-veelkeuze" id="fm-thema">\n'
+               '      <label id="fm-thema-label">Thema</label>\n'
+               '      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true" '
+               'aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema\'s</button>\n'
+               '      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden>%s</div>\n'
+               '    </div>\n'
                '    <div class="telling" id="telling"></div>\n'
                '  </div>\n'
-               % "".join('<option value="%s">%s</option>' % (e(t), e(t)) for t in themas))
+               % "".join('<label class="veelkeuze-optie"><input type="checkbox" value="%s"> %s</label>'
+                         % (e(t), e(t)) for t in themas))
 
     html_uit = (kop("Alle podcasts - Podcast Liveshows",
                     "Overzicht van alle podcasts op deze site, van A tot Z, met hun liveshows.",
@@ -447,7 +465,7 @@ def bouw_catalogus(podcasts, gecheckt):
                        'omschrijving, klik erop voor alle shows en de kaart.</p>', klein=True)
                 + filters
                 + '  <div class="raster">\n' + "\n".join(stukken) + "\n  </div>\n"
-                + voet(gecheckt, '<script src="assets/catalogus.js"></script>' + PARALLAX))
+                + voet(gecheckt, '<script src="assets/veelkeuze.js"></script>\n<script src="assets/catalogus.js"></script>' + PARALLAX))
     schrijf("catalogus.html", html_uit)
 
 def bouw_toplijst(podcasts, status, gecheckt):

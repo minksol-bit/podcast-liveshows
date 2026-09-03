@@ -2,21 +2,23 @@
 (function () {
   "use strict";
   var zoek = document.getElementById("zoek");
-  var thema = document.getElementById("f-thema");
   var blokken = Array.prototype.slice.call(document.querySelectorAll(".blok"));
   var koppen = Array.prototype.slice.call(document.querySelectorAll(".letterkop"));
   var telling = document.getElementById("telling");
   if (!blokken.length) return;
 
+  var vkThema = VEELKEUZE.maak("fm-thema-knop", "fm-thema-paneel", { alles: "Alle thema's" });
+
   function ververs() {
     var q = (zoek.value || "").trim().toLowerCase();
-    var t = thema.value;
+    var gekozen = vkThema.waarden();
     var zichtbaar = 0;
     blokken.forEach(function (b) {
       var naam = (b.getAttribute("data-naam") || "").toLowerCase();
       var maker = (b.getAttribute("data-maker") || "").toLowerCase();
       var bt = b.getAttribute("data-thema") || "";
-      var ok = (!q || naam.indexOf(q) !== -1 || maker.indexOf(q) !== -1) && (!t || bt === t);
+      var ok = (!q || naam.indexOf(q) !== -1 || maker.indexOf(q) !== -1) &&
+        (!gekozen.length || gekozen.indexOf(bt) !== -1);
       b.classList.toggle("verborgen", !ok);
       if (ok) zichtbaar++;
     });
@@ -32,6 +34,6 @@
     telling.textContent = zichtbaar + (zichtbaar === 1 ? " podcast" : " podcasts");
   }
   zoek.addEventListener("input", ververs);
-  thema.addEventListener("change", ververs);
+  vkThema.onChange(ververs);
   ververs();
 })();

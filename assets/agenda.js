@@ -11,47 +11,44 @@
   var $ = function (id) { return document.getElementById(id); };
 
   // ---------- filters vullen ----------
-  function vul(sel, waarden, labelVan) {
-    waarden.forEach(function (w) {
-      var o = document.createElement("option");
-      o.value = w;
-      o.textContent = labelVan ? labelVan(w) : w;
-      sel.appendChild(o);
-    });
-  }
+  var vkMaand = VEELKEUZE.maak("fm-maand-knop", "fm-maand-paneel", { alles: "Alle maanden" });
+  var vkProvincie = VEELKEUZE.maak("fm-provincie-knop", "fm-provincie-paneel", { alles: "Alle provincies" });
+  var vkThema = VEELKEUZE.maak("fm-thema-knop", "fm-thema-paneel", { alles: "Alle thema's" });
+
   var maanden = [], provincies = [], themas = [];
   events.forEach(function (ev) {
     if (maanden.indexOf(ev.maand) === -1) maanden.push(ev.maand);
     if (ev.provincie && provincies.indexOf(ev.provincie) === -1) provincies.push(ev.provincie);
     ev.themas.forEach(function (t) { if (themas.indexOf(t) === -1) themas.push(t); });
   });
-  vul($("f-maand"), maanden.sort(), function (m) {
+  vkMaand.vul(maanden.sort(), function (m) {
     var d = m.split("-"); return MAANDEN[+d[1] - 1] + " " + d[0];
   });
-  vul($("f-provincie"), provincies.sort());
-  vul($("f-thema"), themas.sort());
+  vkProvincie.vul(provincies.sort());
+  vkThema.vul(themas.sort());
 
   // ---------- filterstand, ook in de link ----------
-  var stand = { maand: "", provincie: "", thema: "", prijs: "", snel: "", fav: false };
+  // maand/provincie/thema zijn lijsten: je kunt er meerdere tegelijk kiezen.
+  var stand = { maand: [], provincie: [], thema: [], prijs: "", snel: "", fav: false };
 
   function uitLink() {
     var p = new URLSearchParams(location.search);
-    stand.maand = p.get("maand") || "";
-    stand.provincie = p.get("provincie") || "";
-    stand.thema = p.get("thema") || "";
+    stand.maand = (p.get("maand") || "").split(",").filter(Boolean);
+    stand.provincie = (p.get("provincie") || "").split(",").filter(Boolean);
+    stand.thema = (p.get("thema") || "").split(",").filter(Boolean);
     stand.prijs = p.get("prijs") || "";
     stand.snel = p.get("wanneer") || "";
     stand.fav = p.get("favorieten") === "1";
-    $("f-maand").value = stand.maand;
-    $("f-provincie").value = stand.provincie;
-    $("f-thema").value = stand.thema;
+    vkMaand.zet(stand.maand);
+    vkProvincie.zet(stand.provincie);
+    vkThema.zet(stand.thema);
     $("f-prijs").value = stand.prijs;
   }
   function naarLink() {
     var p = new URLSearchParams();
-    if (stand.maand) p.set("maand", stand.maand);
-    if (stand.provincie) p.set("provincie", stand.provincie);
-    if (stand.thema) p.set("thema", stand.thema);
+    if (stand.maand.length) p.set("maand", stand.maand.join(","));
+    if (stand.provincie.length) p.set("provincie", stand.provincie.join(","));
+    if (stand.thema.length) p.set("thema", stand.thema.join(","));
     if (stand.prijs) p.set("prijs", stand.prijs);
     if (stand.snel) p.set("wanneer", stand.snel);
     if (stand.fav) p.set("favorieten", "1");
@@ -80,9 +77,9 @@
   function selectie() {
     var vandaag = vandaagISO(), weekend = weekendReeks(), favs = FAV.lees();
     return events.filter(function (ev) {
-      if (stand.maand && ev.maand !== stand.maand) return false;
-      if (stand.provincie && ev.provincie !== stand.provincie) return false;
-      if (stand.thema && ev.themas.indexOf(stand.thema) === -1) return false;
+      if (stand.maand.length && stand.maand.indexOf(ev.maand) === -1) return false;
+      if (stand.provincie.length && stand.provincie.indexOf(ev.provincie) === -1) return false;
+      if (stand.thema.length && !ev.themas.some(function (t) { return stand.thema.indexOf(t) !== -1; })) return false;
       if (stand.prijs) {
         if (ev.prijs === null || ev.prijs === undefined) return false;
         if (ev.prijs > parseFloat(stand.prijs)) return false;
@@ -277,14 +274,12 @@
     } else { mel.hidden = true; }
   }
 
-  ["f-maand", "f-provincie", "f-thema", "f-prijs"].forEach(function (id) {
-    $(id).addEventListener("change", function () {
-      stand.maand = $("f-maand").value;
-      stand.provincie = $("f-provincie").value;
-      stand.thema = $("f-thema").value;
-      stand.prijs = $("f-prijs").value;
-      ververs();
-    });
+  vkMaand.onChange(function (w) { stand.maand = w; ververs(); });
+  vkProvincie.onChange(function (w) { stand.provincie = w; ververs(); });
+  vkThema.onChange(function (w) { stand.thema = w; ververs(); });
+  $("f-prijs").addEventListener("change", function () {
+    stand.prijs = $("f-prijs").value;
+    ververs();
   });
   $("snel-vandaag").addEventListener("click", function () {
     stand.snel = stand.snel === "vandaag" ? "" : "vandaag"; ververs();
@@ -294,8 +289,9 @@
   });
   $("snel-fav").addEventListener("click", function () { stand.fav = !stand.fav; ververs(); });
   $("wis").addEventListener("click", function () {
-    stand = { maand: "", provincie: "", thema: "", prijs: "", snel: "", fav: false };
-    $("f-maand").value = ""; $("f-provincie").value = ""; $("f-thema").value = ""; $("f-prijs").value = "";
+    stand = { maand: [], provincie: [], thema: [], prijs: "", snel: "", fav: false };
+    vkMaand.wis(); vkProvincie.wis(); vkThema.wis();
+    $("f-prijs").value = "";
     ververs();
   });
   window.addEventListener("resize", function () { kaart.invalidateSize(); });

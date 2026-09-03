@@ -44,7 +44,11 @@
   </div>
   <div class="filters">
     <div class="filter"><label for="zoek">Zoeken</label><input type="search" id="zoek" placeholder="Naam of maker"></div>
-    <div class="filter"><label for="f-thema">Thema</label><select id="f-thema"><option value="">Alle thema's</option><option value="Comedy">Comedy</option><option value="Geschiedenis">Geschiedenis</option><option value="Kind &amp; gezin">Kind &amp; gezin</option><option value="Maatschappij">Maatschappij</option><option value="Media &amp; technologie">Media &amp; technologie</option><option value="Nieuws &amp; politiek">Nieuws &amp; politiek</option><option value="Overig">Overig</option><option value="Politiek &amp; buitenland">Politiek &amp; buitenland</option><option value="Sport">Sport</option><option value="True crime">True crime</option></select></div>
+    <div class="filter filter-veelkeuze" id="fm-thema">
+      <label id="fm-thema-label">Thema</label>
+      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true" aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
+      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden><label class="veelkeuze-optie"><input type="checkbox" value="Comedy"> Comedy</label><label class="veelkeuze-optie"><input type="checkbox" value="Geschiedenis"> Geschiedenis</label><label class="veelkeuze-optie"><input type="checkbox" value="Kind &amp; gezin"> Kind &amp; gezin</label><label class="veelkeuze-optie"><input type="checkbox" value="Maatschappij"> Maatschappij</label><label class="veelkeuze-optie"><input type="checkbox" value="Media &amp; technologie"> Media &amp; technologie</label><label class="veelkeuze-optie"><input type="checkbox" value="Nieuws &amp; politiek"> Nieuws &amp; politiek</label><label class="veelkeuze-optie"><input type="checkbox" value="Overig"> Overig</label><label class="veelkeuze-optie"><input type="checkbox" value="Politiek &amp; buitenland"> Politiek &amp; buitenland</label><label class="veelkeuze-optie"><input type="checkbox" value="Sport"> Sport</label><label class="veelkeuze-optie"><input type="checkbox" value="True crime"> True crime</label></div>
+    </div>
     <div class="telling" id="telling"></div>
   </div>
   <div class="raster">
@@ -223,6 +227,7 @@
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-09-03.
   </footer>
 </div>
+<script src="assets/veelkeuze.js"></script>
 <script src="assets/catalogus.js"></script>
 <script>
 (function () {
