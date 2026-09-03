@@ -120,7 +120,7 @@ button.aan { background: var(--wijn-donker); border-color: var(--wijn-donker); c
 .filter-veelkeuze { position: relative; }
 .veelkeuze-knop {
   font: inherit; padding: 7px 10px; border: 1px solid var(--wijn); border-radius: 6px;
-  background: var(--wijn); color: #fff; cursor: pointer; min-width: 148px;
+  background: var(--wijn); color: #fff; cursor: pointer; min-width: 136px;
   max-width: 220px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .veelkeuze-knop:hover { background: var(--wijn-donker); border-color: var(--wijn-donker); }
