@@ -85,13 +85,13 @@ a { color: var(--wijn); }
 
 /* ---------- filters ---------- */
 .filters {
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end;
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;
   margin: 24px 0; padding: 14px 16px; background: var(--vlak);
   border: 1px solid var(--lijn); border-radius: 10px;
 }
 .filter { display: flex; flex-direction: column; gap: 4px; }
 .filter label { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--grijs); }
-.filter-schuif { min-width: 180px; justify-content: flex-end; }
+.filter-schuif { min-width: 165px; justify-content: flex-end; }
 .filter-schuif label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .filter-schuif label span {
   text-transform: none; letter-spacing: normal; font-size: 13px; color: var(--inkt); font-weight: 600;
@@ -102,7 +102,7 @@ select, input[type=search] {
   border-radius: 6px; background: var(--papier); color: var(--inkt); min-width: 160px;
 }
 button {
-  font: inherit; padding: 8px 13px; border: 1px solid var(--wijn);
+  font: inherit; padding: 8px 11px; border: 1px solid var(--wijn);
   border-radius: 6px; background: var(--wijn); color: #fff; cursor: pointer;
 }
 button:hover { background: var(--wijn-donker); border-color: var(--wijn-donker); }
@@ -113,14 +113,14 @@ button.aan { background: var(--wijn-donker); border-color: var(--wijn-donker); c
   cursor: pointer; white-space: nowrap;
 }
 .wis-knop:hover { background: none; border: none; color: var(--wijn-donker); }
-.snel { display: flex; gap: 6px; }
+.snel { display: flex; gap: 5px; }
 .telling { margin-left: auto; color: var(--grijs); font-size: 14px; }
 
 /* ---------- veelkeuze-dropdown (filters met meerdere waarden tegelijk) ---------- */
 .filter-veelkeuze { position: relative; }
 .veelkeuze-knop {
   font: inherit; padding: 7px 10px; border: 1px solid var(--wijn); border-radius: 6px;
-  background: var(--wijn); color: #fff; cursor: pointer; min-width: 160px;
+  background: var(--wijn); color: #fff; cursor: pointer; min-width: 148px;
   max-width: 220px; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .veelkeuze-knop:hover { background: var(--wijn-donker); border-color: var(--wijn-donker); }
