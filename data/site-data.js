@@ -2730,7 +2730,7 @@ window.DATA = {
    "maand": "2026-11",
    "tijd": "20:00",
    "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
-   "prijs": null,
+   "prijs": 27.5,
    "ticket": "https://griffioen.vu.nl/voorstellingen/de-grote-namen-geschiedenis-show-succesoptie-alle-geschiedenis-ooit/14-11-2026-20-00",
    "status": "uitverkocht",
    "provincie": "Noord-Holland",
