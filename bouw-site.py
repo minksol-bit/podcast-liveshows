@@ -25,7 +25,7 @@ XLSX = os.path.join(HIER, "data", "podcast-liveshows.xlsx")
 TOP100 = os.path.join(HIER, "data", "apple-top100.json")
 
 # Zet hier het echte webadres zodra de site online staat.
-SITE_URL = "https://podcast-liveshows.nl"
+SITE_URL = "https://podcastliveshows.nl"
 
 MAANDEN = ["januari","februari","maart","april","mei","juni",
            "juli","augustus","september","oktober","november","december"]
