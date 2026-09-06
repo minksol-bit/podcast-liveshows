@@ -140,7 +140,10 @@ body {
   background: var(--hero-waas); mix-blend-mode: color; opacity: .82;
 }
 .sluier { position: absolute; inset: 0; z-index: 1; background: var(--hero-sluier); }
-.hero .wrap { position: relative; z-index: 2; padding-top: calc(var(--balk) + 74px); padding-bottom: 62px; }
+/* Let op: > is hier nodig. De bovenbalk en de tellerstrook zitten ook IN .hero,
+   en met een gewone afstammelingsselector kregen die deze padding er ook bij -
+   waardoor het logo over de kop heen viel. */
+.hero > .wrap { position: relative; z-index: 2; padding-top: calc(var(--balk) + 74px); padding-bottom: 62px; }
 .hero h1 {
   font: 400 clamp(38px, 5.4vw, 68px)/1.06 var(--display);
   margin: 0 0 20px; max-width: 15ch; color: #fff; text-wrap: balance;
