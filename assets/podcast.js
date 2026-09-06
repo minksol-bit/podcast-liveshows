@@ -75,18 +75,5 @@
         m.openPopup();
       });
     }
-    var vak = rij.querySelector(".rechtsblok");
-    if (vak && window.FAV) {
-      var gegevens = JSON.parse(rij.getAttribute("data-json"));
-      vak.insertBefore(FAV.knop(id), vak.firstChild);
-      var kal = document.createElement("button");
-      kal.type = "button";
-      kal.title = "Zet in mijn agenda";
-      kal.setAttribute("aria-label", "Zet in mijn agenda");
-      kal.textContent = "\u{1F4C5}";
-      kal.style.cssText = "border:none;background:none;cursor:pointer;font-size:16px;padding:4px 2px";
-      kal.addEventListener("click", function (e2) { e2.stopPropagation(); AGENDA.download(gegevens); });
-      vak.insertBefore(kal, vak.querySelector("a.knop") || null);
-    }
   });
 })();

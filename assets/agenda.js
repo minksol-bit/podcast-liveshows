@@ -41,7 +41,7 @@
 
   // ---------- filterstand, ook in de link ----------
   // maand/provincie/thema zijn lijsten: je kunt er meerdere tegelijk kiezen.
-  var stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "", fav: false };
+  var stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "" };
 
   function uitLink() {
     var p = new URLSearchParams(location.search);
@@ -51,7 +51,6 @@
     stand.kaarten = (p.get("kaarten") || "").split(",").filter(Boolean);
     stand.prijs = p.get("prijs") || "";
     stand.snel = p.get("wanneer") || "";
-    stand.fav = p.get("favorieten") === "1";
     vkMaand.zet(stand.maand);
     vkProvincie.zet(stand.provincie);
     vkThema.zet(stand.thema);
@@ -71,7 +70,6 @@
     if (stand.kaarten.length) p.set("kaarten", stand.kaarten.join(","));
     if (stand.prijs) p.set("prijs", stand.prijs);
     if (stand.snel) p.set("wanneer", stand.snel);
-    if (stand.fav) p.set("favorieten", "1");
     var vraag = p.toString();
     // Bij een pagina die je met dubbelklikken opent (file://) mag de adresbalk
     // niet worden bijgewerkt; de browser weigert dat. Dan slaan we het over.
@@ -95,7 +93,7 @@
   }
 
   function selectie() {
-    var vandaag = vandaagISO(), weekend = weekendReeks(), favs = FAV.lees();
+    var vandaag = vandaagISO(), weekend = weekendReeks();
     return events.filter(function (ev) {
       if (stand.maand.length && stand.maand.indexOf(ev.maand) === -1) return false;
       if (stand.provincie.length && stand.provincie.indexOf(ev.provincie) === -1) return false;
@@ -107,7 +105,6 @@
       }
       if (stand.snel === "vandaag" && ev.iso !== vandaag) return false;
       if (stand.snel === "weekend" && !(ev.iso >= weekend[0] && ev.iso <= weekend[1])) return false;
-      if (stand.fav && favs.indexOf(String(ev.id)) === -1) return false;
       return true;
     });
   }
@@ -219,21 +216,9 @@
         '</div>';
       var rechts = document.createElement("div");
       rechts.className = "rechtsblok";
+      // Altijd twee decimalen, zodat de bedragen even breed zijn.
       var prijstekst = (ev.prijs !== null && ev.prijs !== undefined)
-        ? "vanaf €" + String(ev.prijs).replace(".", ",") : "";
-      rechts.appendChild(FAV.knop(ev.id, function () { if (stand.fav) ververs(); else werkTellingBij(); }));
-      var kal = document.createElement("button");
-      kal.type = "button";
-      kal.title = "Zet in mijn agenda";
-      kal.setAttribute("aria-label", "Zet in mijn agenda");
-      kal.textContent = "\u{1F4C5}";
-      kal.style.cssText = "border:none;background:none;cursor:pointer;font-size:16px;padding:4px 2px";
-      kal.addEventListener("click", function (e2) {
-        e2.stopPropagation();
-        AGENDA.download({ id: ev.id, iso: ev.iso, tijd: ev.tijd, titel: ev.titel,
-                          zaal: ev.zaal.naam, stad: ev.zaal.stad, ticket: ev.ticket });
-      });
-      rechts.appendChild(kal);
+        ? "vanaf €" + Number(ev.prijs).toFixed(2).replace(".", ",") : "";
       var onderHtml = prijstekst ? '<span class="knop-onder">' + veiligAttr(prijstekst) + "</span>" : "";
       if (String(ev.status || "").toLowerCase() === "uitverkocht") {
         var uit = document.createElement("span");
@@ -271,8 +256,7 @@
     var lijst = selectie();
     var zonder = lijst.filter(function (ev) { return !ev.zaal.opkaart; }).length;
     $("telling").textContent = lijst.length + (lijst.length === 1 ? " show" : " shows") +
-      (zonder ? " · " + zonder + " nog niet op de kaart" : "") +
-      (FAV.aantal() ? " · " + FAV.aantal() + " favoriet" + (FAV.aantal() === 1 ? "" : "en") : "");
+      (zonder ? " · " + zonder + " nog niet op de kaart" : "");
   }
 
   function ververs() {
@@ -284,7 +268,6 @@
     ["vandaag", "weekend"].forEach(function (k) {
       $("snel-" + k).className = stand.snel === k ? "aan" : "";
     });
-    $("snel-fav").className = stand.fav ? "aan" : "";
     var missend = DATA.venues_zonder_coordinaten;
     var mel = $("melding");
     if (missend) {
@@ -311,9 +294,8 @@
   $("snel-weekend").addEventListener("click", function () {
     stand.snel = stand.snel === "weekend" ? "" : "weekend"; ververs();
   });
-  $("snel-fav").addEventListener("click", function () { stand.fav = !stand.fav; ververs(); });
   $("wis").addEventListener("click", function () {
-    stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "", fav: false };
+    stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "" };
     vkMaand.wis(); vkProvincie.wis(); vkThema.wis(); vkKaarten.wis();
     $("f-prijs").value = $("f-prijs").max;
     werkPrijslabelBij();

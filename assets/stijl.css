@@ -236,13 +236,6 @@ h2.maand:first-child { margin-top: 0; }
 }
 .rustig-waarde { font-size: 14.5px; color: var(--inkt); font-weight: 600; }
 
-/* ---------- hartje ---------- */
-.hart {
-  border: none; background: none; cursor: pointer; font-size: 19px; line-height: 1;
-  padding: 4px 2px; color: #cfc7bf; transition: transform .1s, color .12s;
-}
-.hart:hover { transform: scale(1.15); color: var(--pin); }
-.hart.aan { color: var(--pin); }
 
 /* ---------- bolletjes op de kaart ---------- */
 .bol {

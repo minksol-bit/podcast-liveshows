@@ -227,9 +227,29 @@ VOET = """
 </html>
 """
 
+def prijstekst(bedrag):
+    """Beginprijs als tekst, altijd met twee decimalen.
+
+    Zo staan de bedragen onder elkaar even breed (25,00 / 14,50 / 37,50) in plaats
+    van door elkaar (25 / 14,5 / 37,5).
+    """
+    if bedrag is None:
+        return ""
+    return "vanaf &euro;" + ("%.2f" % bedrag).replace(".", ",")
+
+def volledig_adres(pad):
+    """Het canonieke webadres van een pagina.
+
+    De homepagina heet op de server index.html, maar iedereen linkt naar de kale
+    domeinnaam. Twee adressen voor dezelfde pagina verdeelt je zoekresultaat over
+    allebei, dus noemen we consequent alleen de kale variant.
+    """
+    basis = SITE_URL.rstrip("/")
+    return basis + "/" if pad in ("", "index.html") else basis + "/" + pad
+
 def kop(titel, omschrijving, basis="", actief="", extra_head="", pad=""):
     return render(KOP, titel=e(titel), omschrijving=e(omschrijving), basis=basis,
-                  canoniek=e(SITE_URL.rstrip("/") + "/" + pad),
+                  canoniek=e(volledig_adres(pad)),
                   beeld=e(SITE_URL.rstrip("/") + "/assets/og-share.jpg"),
                   extra_head=extra_head,
                   m_agenda="hier" if actief == "agenda" else "",
@@ -303,8 +323,14 @@ def jsonld_event(ev, url):
                                 "latitude": ev["zaal"]["lat"], "longitude": ev["zaal"]["lon"]}
     if ev["show"]["podcasts"]:
         d["performer"] = [{"@type": "PerformingGroup", "name": p["naam"]} for p in ev["show"]["podcasts"]]
+    if ev["show"]["podcasts"] and len(ev["show"]["podcasts"]) == 1:
+        # Wijs naar de pagina die echt over deze show gaat, niet naar de agenda.
+        d["url"] = volledig_adres("podcast/%s.html" % ev["show"]["podcasts"][0]["slug"])
     if ev["ticket"]:
-        aanbod = {"@type": "Offer", "url": ev["ticket"], "availability": "https://schema.org/InStock"}
+        uitverkocht = ev["status"].lower() == "uitverkocht"
+        aanbod = {"@type": "Offer", "url": ev["ticket"],
+                  "availability": "https://schema.org/SoldOut" if uitverkocht
+                                  else "https://schema.org/InStock"}
         if ev["prijs"] is not None:
             aanbod["price"] = "%.2f" % ev["prijs"]
             aanbod["priceCurrency"] = "EUR"
@@ -378,12 +404,68 @@ FILTERBLOK = """
       <div class="snel">
         <button type="button" id="snel-vandaag">Vanavond</button>
         <button type="button" id="snel-weekend">Dit weekend</button>
-        <button type="button" id="snel-fav">Favorieten</button>
       </div></div>
     <button type="button" id="wis" class="wis-knop">Wis filters</button>
     <div class="telling" id="telling"></div>
   </div>
 """
+
+def agenda_html(events):
+    """De agendalijst als gewone HTML, voor zoekmachines en bezoekers zonder JavaScript.
+
+    Waarom dit bestaat: assets/agenda.js bouwt deze lijst normaal op uit
+    data/site-data.js. Dat werkt prima voor een bezoeker, maar in de broncode van
+    de pagina stond dan helemaal niets - geen enkele show, zaal of datum. Zoekmachines
+    kunnen daar weinig mee. Nu staat alles er gewoon in; zodra agenda.js draait
+    vervangt die deze lijst door de filterbare versie.
+    """
+    stukken, vorige_maand = [], None
+    for ev in events:
+        if ev["maand"] != vorige_maand:
+            vorige_maand = ev["maand"]
+            stukken.append('<h2 class="maand">%s %d</h2>'
+                           % (MAANDEN[ev["d"]["maand"] - 1], ev["d"]["jaar"]))
+
+        namen = ", ".join(p["naam"] for p in ev["show"]["podcasts"])
+        if len(ev["show"]["podcasts"]) == 1:
+            pc = ev["show"]["podcasts"][0]
+            podcastlink = '<a href="podcast/%s.html">%s</a>' % (e(pc["slug"]), e(namen))
+        else:
+            podcastlink = e(namen)
+
+        eerste = ev["show"]["podcasts"][0] if ev["show"]["podcasts"] else None
+        if eerste and eerste["cover"]:
+            cover = ('<div class="minicover" title="%s"><img src="%s" alt="" loading="lazy"></div>'
+                     % (e(namen), e(eerste["cover"])))
+        else:
+            cover = '<div class="minicover" title="%s">%s</div>' % (e(namen), e(namen[:2].upper()))
+
+        pt = prijstekst(ev["prijs"])
+        prijs = ('<span class="knop-onder">%s</span>' % pt) if pt else ""
+        if ev["status"].lower() == "uitverkocht":
+            knop = '<span class="geen knop-vorm"><span class="knop-label">Uitverkocht</span>%s</span>' % prijs
+        elif ev["ticket"]:
+            knop = ('<a class="knop" href="%s" target="_blank" rel="noopener">'
+                    '<span class="knop-label">Tickets</span>%s</a>' % (e(ev["ticket"]), prijs))
+        else:
+            knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % prijs
+
+        stukken.append(
+            '<div class="event%s">'
+            '<div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>'
+            '%s'
+            '<div class="info"><div class="titel">%s</div>'
+            '<div class="zaal">%s, %s%s</div>'
+            '<div class="bij">%s%s</div></div>'
+            '<div class="rechtsblok">%s</div>'
+            '</div>'
+            % (" klikbaar" if ev["zaal"]["opkaart"] else "",
+               ev["d"]["dag"], MAAND_KORT[ev["d"]["maand"] - 1], cover,
+               e(ev["show"]["titel"]), e(ev["zaal"]["naam"]), e(ev["zaal"]["stad"]),
+               (' <span style="opacity:.7">(%s)</span>' % e(ev["provincie"])) if ev["provincie"] else "",
+               ("Aanvang " + e(ev["tijd"]) + " &middot; ") if ev["tijd"] else "",
+               podcastlink, knop))
+    return "\n".join(stukken)
 
 def bouw_index(podcasts, venues, events, gecheckt):
     data = data_voor_agenda(podcasts, venues, events)
@@ -412,16 +494,16 @@ def bouw_index(podcasts, venues, events, gecheckt):
                 + FILTERBLOK
                 + """
   <div class="kolommen">
-    <div class="lijstkolom"><div id="lijst"></div></div>
+    <div class="lijstkolom"><div id="lijst">%s</div></div>
     <div class="kaartkolom">
       <div class="kaart" id="kaart"></div>
       <div class="melding" id="melding" hidden></div>
     </div>
   </div>
-"""
+""" % agenda_html(events)
                 + voet(gecheckt,
                        leaflet_scripts()
-                       + '\n<script src="assets/favorieten.js"></script>'
+
                        + '\n<script src="assets/veelkeuze.js"></script>'
                        + '\n<script src="data/site-data.js"></script>'
                        + '\n<script src="assets/agenda.js"></script>'
@@ -578,12 +660,8 @@ def bouw_podcastpaginas(podcasts, gecheckt):
             if ev["maand"] != vorige:
                 vorige = ev["maand"]
                 rijen.append('    <h2 class="maand">%s %d</h2>' % (MAANDEN[ev["d"]["maand"] - 1], ev["d"]["jaar"]))
-            json_ev = json.dumps({"id": ev["id"], "iso": ev["iso"], "tijd": ev["tijd"],
-                                  "titel": ev["show"]["titel"], "zaal": ev["zaal"]["naam"],
-                                  "stad": ev["zaal"]["stad"], "ticket": ev["ticket"]}, ensure_ascii=False)
-            prijstekst = ('vanaf &euro;%s'
-                     % ("%.2f" % ev["prijs"]).replace(".", ",").replace(",00", ",-")) if ev["prijs"] is not None else ""
-            onder = ('<span class="knop-onder">%s</span>' % prijstekst) if prijstekst else ""
+            pt = prijstekst(ev["prijs"])
+            onder = ('<span class="knop-onder">%s</span>' % pt) if pt else ""
             if ev["status"].lower() == "uitverkocht":
                 knop = '<span class="geen knop-vorm"><span class="knop-label">Uitverkocht</span>%s</span>' % onder
             elif ev["ticket"]:
@@ -592,14 +670,14 @@ def bouw_podcastpaginas(podcasts, gecheckt):
             else:
                 knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % onder
             rijen.append(
-                '    <div class="event" data-ev="%s" data-json="%s">\n'
+                '    <div class="event" data-ev="%s">\n'
                 '      <div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>\n'
                 '      <div class="info"><div class="titel">%s</div>'
                 '<div class="zaal">%s, %s%s</div>'
                 '<div class="bij">%s</div></div>\n'
                 '      <div class="rechtsblok">%s</div>\n'
                 '    </div>'
-                % (e(ev["id"]), e(json_ev), ev["d"]["dag"], MAAND_KORT[ev["d"]["maand"] - 1],
+                % (e(ev["id"]), ev["d"]["dag"], MAAND_KORT[ev["d"]["maand"] - 1],
                    e(ev["show"]["titel"]), e(ev["zaal"]["naam"]), e(ev["zaal"]["stad"]),
                    (' <span style="opacity:.7">(%s)</span>' % e(ev["provincie"])) if ev["provincie"] else "",
                    ("Aanvang " + ev["tijd"]) if ev["tijd"] else "&nbsp;",
@@ -654,7 +732,7 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                     + '  <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>\n'
                     + voet(gecheckt,
                            ((leaflet_scripts("../") + "\n") if heeft_kaart else "")
-                           + '<script src="../assets/favorieten.js"></script>\n'
+
                            + '<script>window.PAGINA = ' + json.dumps(data, ensure_ascii=False, default=str) + ';</script>\n'
                            + '<script src="../assets/podcast.js"></script>'))
         schrijf("podcast/%s.html" % p["slug"], html_uit)
@@ -694,8 +772,8 @@ def bouw_sitemap(podcasts):
     regels = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for pad in paden:
-        regels.append("  <url><loc>%s/%s</loc><lastmod>%s</lastmod></url>"
-                      % (SITE_URL.rstrip("/"), pad, vandaag))
+        regels.append("  <url><loc>%s</loc><lastmod>%s</lastmod></url>"
+                      % (volledig_adres(pad), vandaag))
     regels.append("</urlset>")
     schrijf("sitemap.xml", "\n".join(regels) + "\n")
     schrijf("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE_URL.rstrip("/"))
