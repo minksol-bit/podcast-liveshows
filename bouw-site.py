@@ -294,12 +294,17 @@ IC_KAARTJE = ('<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentCo
               'stroke-linecap="round"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2.5 2.5 0 0 0 0 5v2a2 2 '
               '0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2.5 2.5 0 0 0 0-5z"/><path d="M14 5v14" stroke-dasharray="2 3"/></svg>')
 
-def mozaiek_html(podcasts, aantal=40):
-    """Achtergrond van de banner: een raster van covers, dat de CSS roodkleurt."""
+def mozaiek_html(podcasts, aantal=84):
+    """Achtergrond van de banner: een raster van covers, dat de CSS roodkleurt.
+
+    Geen loading="lazy": deze staan bovenaan de pagina en met uitstel bleef de
+    banner bij het openen even leeg. Het zijn steeds dezelfde covers, dus de
+    browser haalt ze maar een paar keer echt op.
+    """
     covers = [p["cover"] for p in podcasts.values() if p["cover"]]
     if not covers:
         return ""
-    beelden = "".join('<img src="%s" alt="" loading="lazy">' % e(covers[i % len(covers)])
+    beelden = "".join('<img src="%s" alt="">' % e(covers[i % len(covers)])
                       for i in range(aantal))
     return '    <div class="mozaiek" aria-hidden="true">%s</div>\n' % beelden
 
@@ -605,7 +610,7 @@ def bouw_catalogus(podcasts, gecheckt):
                     basis="", actief="catalogus", pad="catalogus.html", balk_op_banner=True)
                 + hero("Alle podcasts", '<p class="intro">Van A tot Z. Zweef over een blok voor een korte '
                        'omschrijving, klik erop voor alle shows en de kaart.</p>', klein=True,
-                       mozaiek=mozaiek_html(podcasts, 30))
+                       mozaiek=mozaiek_html(podcasts, 60))
                 + filters
                 + '  <div class="wrap">\n    <div class="raster">\n' + "\n".join(stukken)
                 + "\n    </div>\n  </div>\n"
@@ -660,7 +665,7 @@ def bouw_toplijst(podcasts, status, gecheckt):
                     "De top 100 podcasts van Nederland volgens Apple Podcasts, met wie er live in het theater staat.",
                     basis="", actief="toplijst", pad="toplijst.html", balk_op_banner=True)
                 + hero("De top 100, en wie er<br><span class=\"accent\">live te zien is</span>", onder,
-                       klein=True, mozaiek=mozaiek_html(podcasts, 30))
+                       klein=True, mozaiek=mozaiek_html(podcasts, 60))
                 + '  <div class="wrap">\n    <div class="toplijst">\n' + "\n".join(rijen)
                 + "\n    </div>\n  </div>\n"
                 + voet(gecheckt))
