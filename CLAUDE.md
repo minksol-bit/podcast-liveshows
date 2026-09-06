@@ -28,7 +28,8 @@ Vijf tabbladen in `data/podcast-liveshows.xlsx`. De koppeltabel is er omdat op e
 podcastfestival meerdere podcasts in één event zitten.
 
 - `podcasts` — id, naam, cover_url, spotify_id, website, thema, omschrijving,
-  omschrijving_lang, apple_id, apple_rang, bannerkleur_links, bannerkleur_rechts
+  omschrijving_lang, apple_id, apple_rang, bannerkleur_links, bannerkleur_rechts,
+  liveshow_stand, eerdere_show
 - `shows` — id, titel, type, organisator
   (type = theatershow / festivaloptreden / opname met publiek / besloten)
 - `show_podcasts` — koppeltabel tussen shows en podcasts
@@ -39,6 +40,27 @@ podcastfestival meerdere podcasts in één event zitten.
 `aanvang` is tekst in de vorm `2026-11-03` of `2026-11-03 20:30`.
 `status` is `in verkoop` of `uitverkocht`. `thema` komt uit de Apple-genres en is
 teruggebracht tot een handvol waarden voor het filter.
+
+## Podcasts zonder actuele liveshow
+
+Een podcast mag ook in de database staan zonder dat er events aan hangen, als hij
+eerder wel een liveshow speelde. Daarvoor zijn twee kolommen op `podcasts`:
+
+- `liveshow_stand` — `tussen tours` (speelde eerder, kan terugkomen) of `gestopt`
+  (makers hebben de show afgesloten en niets nieuws aangekondigd). Leeg betekent:
+  we weten van geen enkele liveshow, ooit.
+- `eerdere_show` — in het kort wat er speelde en wanneer, bijvoorbeeld
+  "Rat van Fortuin - 33 speeldata, december 2025 tot en met mei 2026".
+
+Op de site levert dat op: in de catalogus "speelde eerder, nu geen data" (of
+"tour afgesloten") in plaats van "nog geen liveshow bekend", op de podcastpagina
+een blok dat uitlegt wat er eerder speelde, en in de toplijst een aanklikbare
+regel in plaats van een doodlopende "geen liveshow".
+
+Neem alleen podcasts op waarvan een afgelopen liveshow ook echt geverifieerd is -
+niet een show die is afgelast, en niet een festivaloptreden (zie de regel hierboven
+over wanneer een show meetelt). Het toplijst-tabblad is hiervoor de beste bron: de
+kolom `notitie` bevat per gecheckte podcast wat er gevonden is.
 
 Twee regels die belangrijk zijn:
 
