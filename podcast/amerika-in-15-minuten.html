@@ -17,8 +17,18 @@
 <meta name="twitter:title" content="Amerika in 15 minuten live - Podcast Liveshows">
 <meta name="twitter:description" content="Raymond Mens duidt dagelijks in 15 minuten het laatste nieuws uit de Amerikaanse politiek.">
 <meta name="twitter:image" content="https://podcastliveshows.nl/assets/og-share.jpg">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon-a.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-a-32.png">
+<link rel="apple-touch-icon" href="../assets/logo/favicon-a-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/stijl.css">
+<noscript><style>
+  .event.later { display: grid; }
+  h2.maand.later { display: block; }
+  .meer-vak { display: none; }
+</style></noscript>
 <link rel="stylesheet" href="../assets/leaflet/leaflet.css">
 <link rel="stylesheet" href="../assets/leaflet/MarkerCluster.css">
 <script type="application/ld+json">[
@@ -211,10 +221,10 @@
 </head>
 <body>
 
-<div class="balk">
+<div class="balk balk-op-banner">
   <div class="wrap">
     <a class="merk" href="../index.html">
-      <img src="../assets/logo-mark.png" alt="Podcast Liveshows">
+      <img src="../assets/logo/merk-a.svg" alt="" width="34" height="34">
       <span>Podcast Liveshows</span>
     </a>
     <nav class="menu">
@@ -224,18 +234,21 @@
     </nav>
   </div>
 </div>
-
-<div class="wrap">
-  <div class="pbanner pbanner-donker" style="background:linear-gradient(90deg,#085888,#085888)">
-    <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png" alt="">
-    <div class="pbanner-vak">
-      <span class="merkje">#14 in de Apple top 100</span>
-      <h1>Amerika in 15 minuten</h1>
-      <p class="maker">Raymond Mens</p>
-      <p class="cijfers">Politiek &amp; buitenland &middot; 5 liveshows gepland</p>
-      <p class="pbanner-tekst">Amerika in 15 minuten is de dagelijkse podcast van Raymond Mens over de Amerikaanse politiek, waarin hij elke ochtend in een kwartier het belangrijkste nieuws uit Washington duidt. In de theatershow “De tussenstand in Amerika” neemt hij het publiek mee in de actuele stand van zaken, met ruimte voor vragen uit de zaal.</p>
+  <header class="pbanner">
+    <div class="pbanner-achter" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png" alt=""></div>
+    <div class="sluier"></div>
+    <div class="wrap">
+      <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png" alt="">
+      <div class="pbanner-vak">
+        <span class="merkje">#14 in de Apple top 100</span>
+        <h1>Amerika in 15 minuten</h1>
+        <p class="maker">Raymond Mens</p>
+        <p class="cijfers">Politiek &amp; buitenland &middot; 5 liveshows gepland</p>
+        <p class="pbanner-tekst">Amerika in 15 minuten is de dagelijkse podcast van Raymond Mens over de Amerikaanse politiek, waarin hij elke ochtend in een kwartier het belangrijkste nieuws uit Washington duidt. In de theatershow “De tussenstand in Amerika” neemt hij het publiek mee in de actuele stand van zaken, met ruimte voor vragen uit de zaal.</p>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="wrap">
   <div class="kolommen">
     <div class="lijstkolom">
     <h2 class="maand">oktober 2026</h2>
@@ -268,17 +281,19 @@
     </div>
     <div class="kaartkolom"><div class="kaart" id="kaart"></div>
       <div class="kaart-onder">
-        <div class="kaart-cijfers"><span><strong>5</strong> shows</span><span><strong>5</strong> zalen</span></div>
+        <div class="kaart-cijfers"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><strong>5</strong> shows</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><strong>5</strong> zalen</span></div>
         <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p>
       </div></div>
   </div>
   <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>
+  </div>
 
-  <footer>
+<footer>
+  <div class="wrap">
     Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-09-03.
-  </footer>
-</div>
+  </div>
+</footer>
 <script src="../assets/leaflet/leaflet.js"></script>
 <script src="../assets/leaflet/leaflet.markercluster.js"></script>
 <script>window.PAGINA = {"naam": "Amerika in 15 minuten", "zalen": [{"id": 71, "naam": "Parktheater Eindhoven", "stad": "Eindhoven", "lat": 51.4288468, "lon": 5.4847037, "datums": [{"ev": 146, "dag": 19, "maandnr": 10, "jaar": 2026, "tijd": "21:00"}]}, {"id": 6, "naam": "Nieuwe Luxor Theater", "stad": "Rotterdam", "lat": 51.9067814, "lon": 4.4911848, "datums": [{"ev": 147, "dag": 23, "maandnr": 10, "jaar": 2026, "tijd": "21:00"}]}, {"id": 72, "naam": "Stadsschouwburg Utrecht", "stad": "Utrecht", "lat": 52.0933912, "lon": 5.1274954, "datums": [{"ev": 148, "dag": 26, "maandnr": 10, "jaar": 2026, "tijd": "20:30"}]}, {"id": 3, "naam": "Musis", "stad": "Arnhem", "lat": 51.982704, "lon": 5.9137995, "datums": [{"ev": 149, "dag": 27, "maandnr": 10, "jaar": 2026, "tijd": "21:00"}]}, {"id": 14, "naam": "DeLaMar", "stad": "Amsterdam", "lat": 52.3644194, "lon": 4.8806878, "datums": [{"ev": 150, "dag": 29, "maandnr": 11, "jaar": 2026, "tijd": "14:30"}]}], "events": [{"id": 146, "iso": "2026-10-19", "dag": 19, "maandnr": 10, "jaar": 2026, "tijd": "21:00", "zaal_id": 71, "zaal": {"naam": "Parktheater Eindhoven", "stad": "Eindhoven", "opkaart": true, "lat": 51.4288468, "lon": 5.4847037}}, {"id": 147, "iso": "2026-10-23", "dag": 23, "maandnr": 10, "jaar": 2026, "tijd": "21:00", "zaal_id": 6, "zaal": {"naam": "Nieuwe Luxor Theater", "stad": "Rotterdam", "opkaart": true, "lat": 51.9067814, "lon": 4.4911848}}, {"id": 148, "iso": "2026-10-26", "dag": 26, "maandnr": 10, "jaar": 2026, "tijd": "20:30", "zaal_id": 72, "zaal": {"naam": "Stadsschouwburg Utrecht", "stad": "Utrecht", "opkaart": true, "lat": 52.0933912, "lon": 5.1274954}}, {"id": 149, "iso": "2026-10-27", "dag": 27, "maandnr": 10, "jaar": 2026, "tijd": "21:00", "zaal_id": 3, "zaal": {"naam": "Musis", "stad": "Arnhem", "opkaart": true, "lat": 51.982704, "lon": 5.9137995}}, {"id": 150, "iso": "2026-11-29", "dag": 29, "maandnr": 11, "jaar": 2026, "tijd": "14:30", "zaal_id": 14, "zaal": {"naam": "DeLaMar", "stad": "Amsterdam", "opkaart": true, "lat": 52.3644194, "lon": 4.8806878}}]};</script>

@@ -17,8 +17,18 @@
 <meta name="twitter:title" content="Parool Misdaadpodcast live - Podcast Liveshows">
 <meta name="twitter:description" content="Misdaadverslaggevers van Het Parool bespreken de Amsterdamse onderwereld en de strafzaken die daaruit voortkomen.">
 <meta name="twitter:image" content="https://podcastliveshows.nl/assets/og-share.jpg">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon-a.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-a-32.png">
+<link rel="apple-touch-icon" href="../assets/logo/favicon-a-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/stijl.css">
+<noscript><style>
+  .event.later { display: grid; }
+  h2.maand.later { display: block; }
+  .meer-vak { display: none; }
+</style></noscript>
 <link rel="stylesheet" href="../assets/leaflet/leaflet.css">
 <link rel="stylesheet" href="../assets/leaflet/MarkerCluster.css">
 <script type="application/ld+json">[
@@ -234,10 +244,10 @@
 </head>
 <body>
 
-<div class="balk">
+<div class="balk balk-op-banner">
   <div class="wrap">
     <a class="merk" href="../index.html">
-      <img src="../assets/logo-mark.png" alt="Podcast Liveshows">
+      <img src="../assets/logo/merk-a.svg" alt="" width="34" height="34">
       <span>Podcast Liveshows</span>
     </a>
     <nav class="menu">
@@ -247,18 +257,21 @@
     </nav>
   </div>
 </div>
-
-<div class="wrap">
-  <div class="pbanner pbanner-licht" style="background:linear-gradient(90deg,#a8d8c8,#a8d8c8)">
-    <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png" alt="">
-    <div class="pbanner-vak">
-      <span class="merkje">#17 in de Apple top 100</span>
-      <h1>Parool Misdaadpodcast</h1>
-      <p class="maker">Het Parool</p>
-      <p class="cijfers">True crime &middot; 6 liveshows gepland</p>
-      <p class="pbanner-tekst">De Parool Misdaadpodcast wordt gemaakt door misdaadjournalisten van Het Parool en staat in de Nederlandse podcast top 100. In het theater spelen Paul Vugts, Wouter Laumans en Corrie Gerritsma De Misdaadpodcast Live, waarin ze zaken uit hun vakgebied voor publiek uitdiepen. Wouter Laumans staat ook in Napleiten Live. LET OP: deze omschrijving is nog summier en moet worden aangevuld.</p>
+  <header class="pbanner">
+    <div class="pbanner-achter" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png" alt=""></div>
+    <div class="sluier"></div>
+    <div class="wrap">
+      <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/600x600bb.png" alt="">
+      <div class="pbanner-vak">
+        <span class="merkje">#17 in de Apple top 100</span>
+        <h1>Parool Misdaadpodcast</h1>
+        <p class="maker">Het Parool</p>
+        <p class="cijfers">True crime &middot; 6 liveshows gepland</p>
+        <p class="pbanner-tekst">De Parool Misdaadpodcast wordt gemaakt door misdaadjournalisten van Het Parool en staat in de Nederlandse podcast top 100. In het theater spelen Paul Vugts, Wouter Laumans en Corrie Gerritsma De Misdaadpodcast Live, waarin ze zaken uit hun vakgebied voor publiek uitdiepen. Wouter Laumans staat ook in Napleiten Live. LET OP: deze omschrijving is nog summier en moet worden aangevuld.</p>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="wrap">
   <div class="kolommen">
     <div class="lijstkolom">
     <h2 class="maand">oktober 2026</h2>
@@ -300,17 +313,19 @@
     </div>
     <div class="kaartkolom"><div class="kaart" id="kaart"></div>
       <div class="kaart-onder">
-        <div class="kaart-cijfers"><span><strong>6</strong> shows</span><span><strong>6</strong> zalen</span></div>
+        <div class="kaart-cijfers"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><strong>6</strong> shows</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><strong>6</strong> zalen</span></div>
         <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p>
       </div></div>
   </div>
   <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>
+  </div>
 
-  <footer>
+<footer>
+  <div class="wrap">
     Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-09-03.
-  </footer>
-</div>
+  </div>
+</footer>
 <script src="../assets/leaflet/leaflet.js"></script>
 <script src="../assets/leaflet/leaflet.markercluster.js"></script>
 <script>window.PAGINA = {"naam": "Parool Misdaadpodcast", "zalen": [{"id": 19, "naam": "Theater aan de Parade", "stad": "Den Bosch", "lat": 51.6869348, "lon": 5.3086679, "datums": [{"ev": 119, "dag": 6, "maandnr": 10, "jaar": 2026, "tijd": "20:00"}]}, {"id": 38, "naam": "Oude Luxor", "stad": "Rotterdam", "lat": 51.9229973, "lon": 4.4770274, "datums": [{"ev": 120, "dag": 20, "maandnr": 11, "jaar": 2026, "tijd": "20:00"}]}, {"id": 61, "naam": "Cultuurhuis De Klinker", "stad": "Winschoten", "lat": 53.1472327, "lon": 7.033705, "datums": [{"ev": 121, "dag": 10, "maandnr": 12, "jaar": 2026, "tijd": "20:15"}]}, {"id": 37, "naam": "Orpheus", "stad": "Apeldoorn", "lat": 52.2197051, "lon": 5.9529526, "datums": [{"ev": 122, "dag": 5, "maandnr": 1, "jaar": 2027, "tijd": "20:00"}]}, {"id": 62, "naam": "Theater aan het Vrijthof", "stad": "Maastricht", "lat": 50.8502223, "lon": 5.6879791, "datums": [{"ev": 123, "dag": 13, "maandnr": 4, "jaar": 2027, "tijd": "20:00"}]}, {"id": 63, "naam": "Schouwburg Het Park", "stad": "Hoorn", "lat": 52.6416444, "lon": 5.0512565, "datums": [{"ev": 124, "dag": 27, "maandnr": 5, "jaar": 2027, "tijd": "20:15"}]}], "events": [{"id": 119, "iso": "2026-10-06", "dag": 6, "maandnr": 10, "jaar": 2026, "tijd": "20:00", "zaal_id": 19, "zaal": {"naam": "Theater aan de Parade", "stad": "Den Bosch", "opkaart": true, "lat": 51.6869348, "lon": 5.3086679}}, {"id": 120, "iso": "2026-11-20", "dag": 20, "maandnr": 11, "jaar": 2026, "tijd": "20:00", "zaal_id": 38, "zaal": {"naam": "Oude Luxor", "stad": "Rotterdam", "opkaart": true, "lat": 51.9229973, "lon": 4.4770274}}, {"id": 121, "iso": "2026-12-10", "dag": 10, "maandnr": 12, "jaar": 2026, "tijd": "20:15", "zaal_id": 61, "zaal": {"naam": "Cultuurhuis De Klinker", "stad": "Winschoten", "opkaart": true, "lat": 53.1472327, "lon": 7.033705}}, {"id": 122, "iso": "2027-01-05", "dag": 5, "maandnr": 1, "jaar": 2027, "tijd": "20:00", "zaal_id": 37, "zaal": {"naam": "Orpheus", "stad": "Apeldoorn", "opkaart": true, "lat": 52.2197051, "lon": 5.9529526}}, {"id": 123, "iso": "2027-04-13", "dag": 13, "maandnr": 4, "jaar": 2027, "tijd": "20:00", "zaal_id": 62, "zaal": {"naam": "Theater aan het Vrijthof", "stad": "Maastricht", "opkaart": true, "lat": 50.8502223, "lon": 5.6879791}}, {"id": 124, "iso": "2027-05-27", "dag": 27, "maandnr": 5, "jaar": 2027, "tijd": "20:15", "zaal_id": 63, "zaal": {"naam": "Schouwburg Het Park", "stad": "Hoorn", "opkaart": true, "lat": 52.6416444, "lon": 5.0512565}}]};</script>

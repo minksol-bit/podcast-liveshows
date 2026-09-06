@@ -17,8 +17,18 @@
 <meta name="twitter:title" content="Alle Geschiedenis Ooit - Grote Namen live - Podcast Liveshows">
 <meta name="twitter:description" content="Nynke de Jong, Arco Gnocchi, Thom Aalmoes en Andrea Huntjens duiken wekelijks in de grote namen uit de geschiedenis.">
 <meta name="twitter:image" content="https://podcastliveshows.nl/assets/og-share.jpg">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon-a.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-a-32.png">
+<link rel="apple-touch-icon" href="../assets/logo/favicon-a-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/stijl.css">
+<noscript><style>
+  .event.later { display: grid; }
+  h2.maand.later { display: block; }
+  .meer-vak { display: none; }
+</style></noscript>
 <link rel="stylesheet" href="../assets/leaflet/leaflet.css">
 <link rel="stylesheet" href="../assets/leaflet/MarkerCluster.css">
 <script type="application/ld+json">[
@@ -495,10 +505,10 @@
 </head>
 <body>
 
-<div class="balk">
+<div class="balk balk-op-banner">
   <div class="wrap">
     <a class="merk" href="../index.html">
-      <img src="../assets/logo-mark.png" alt="Podcast Liveshows">
+      <img src="../assets/logo/merk-a.svg" alt="" width="34" height="34">
       <span>Podcast Liveshows</span>
     </a>
     <nav class="menu">
@@ -508,18 +518,21 @@
     </nav>
   </div>
 </div>
-
-<div class="wrap">
-  <div class="pbanner pbanner-donker" style="background:linear-gradient(90deg,#3888e8,#3888e8)">
-    <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png" alt="">
-    <div class="pbanner-vak">
-      <span class="merkje">#36 in de Apple top 100</span>
-      <h1>Alle Geschiedenis Ooit - Grote Namen</h1>
-      <p class="maker">Alle Geschiedenis Ooit</p>
-      <p class="cijfers">Geschiedenis &middot; 13 liveshows gepland</p>
-      <p class="pbanner-tekst">Alle Geschiedenis Ooit is de geschiedenispodcast van Nynke de Jong, Arco Gnocchi, Thom Aalmoes en Andrea Huntjens, die elke aflevering een periode of thema uit de geschiedenis induiken. In de theatertour “Grote Namen”, geproduceerd door Friendly Fire, staan spraakmakende historische figuren centraal, verteld met dezelfde nieuwsgierigheid en humor als in de podcast.</p>
+  <header class="pbanner">
+    <div class="pbanner-achter" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png" alt=""></div>
+    <div class="sluier"></div>
+    <div class="wrap">
+      <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png" alt="">
+      <div class="pbanner-vak">
+        <span class="merkje">#36 in de Apple top 100</span>
+        <h1>Alle Geschiedenis Ooit - Grote Namen</h1>
+        <p class="maker">Alle Geschiedenis Ooit</p>
+        <p class="cijfers">Geschiedenis &middot; 13 liveshows gepland</p>
+        <p class="pbanner-tekst">Alle Geschiedenis Ooit is de geschiedenispodcast van Nynke de Jong, Arco Gnocchi, Thom Aalmoes en Andrea Huntjens, die elke aflevering een periode of thema uit de geschiedenis induiken. In de theatertour “Grote Namen”, geproduceerd door Friendly Fire, staan spraakmakende historische figuren centraal, verteld met dezelfde nieuwsgierigheid en humor als in de podcast.</p>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="wrap">
   <div class="kolommen">
     <div class="lijstkolom">
     <h2 class="maand">oktober 2026</h2>
@@ -594,17 +607,19 @@
     </div>
     <div class="kaartkolom"><div class="kaart" id="kaart"></div>
       <div class="kaart-onder">
-        <div class="kaart-cijfers"><span><strong>13</strong> shows</span><span><strong>12</strong> zalen</span></div>
+        <div class="kaart-cijfers"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><strong>13</strong> shows</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><strong>12</strong> zalen</span></div>
         <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p>
       </div></div>
   </div>
   <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>
+  </div>
 
-  <footer>
+<footer>
+  <div class="wrap">
     Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-09-03.
-  </footer>
-</div>
+  </div>
+</footer>
 <script src="../assets/leaflet/leaflet.js"></script>
 <script src="../assets/leaflet/leaflet.markercluster.js"></script>
 <script>window.PAGINA = {"naam": "Alle Geschiedenis Ooit - Grote Namen", "zalen": [{"id": 66, "naam": "Het Postkantoor", "stad": "Bovenkarspel", "lat": 52.6977291, "lon": 5.2357276, "datums": [{"ev": 133, "dag": 6, "maandnr": 10, "jaar": 2026, "tijd": "20:00"}]}, {"id": 33, "naam": "Kunstmin", "stad": "Dordrecht", "lat": 51.8139254, "lon": 4.6764483, "datums": [{"ev": 134, "dag": 16, "maandnr": 10, "jaar": 2026, "tijd": "20:00"}]}, {"id": 4, "naam": "PLT Theater", "stad": "Heerlen", "lat": 50.8867099, "lon": 5.9727811, "datums": [{"ev": 135, "dag": 18, "maandnr": 10, "jaar": 2026, "tijd": "14:30"}]}, {"id": 8, "naam": "De Kampanje", "stad": "Den Helder", "lat": 52.9585736, "lon": 4.7690842, "datums": [{"ev": 136, "dag": 1, "maandnr": 11, "jaar": 2026, "tijd": "19:30"}]}, {"id": 67, "naam": "Isala Theater", "stad": "Capelle aan den IJssel", "lat": 51.9315597, "lon": 4.5882206, "datums": [{"ev": 137, "dag": 10, "maandnr": 11, "jaar": 2026, "tijd": "20:15"}]}, {"id": 68, "naam": "Griffioen", "stad": "Amsterdam", "lat": 52.3346074, "lon": 4.8636531, "datums": [{"ev": 138, "dag": 14, "maandnr": 11, "jaar": 2026, "tijd": "20:00"}, {"ev": 145, "dag": 26, "maandnr": 1, "jaar": 2027, "tijd": null}]}, {"id": 64, "naam": "De Kring (EKP-gebouw)", "stad": "Roosendaal", "lat": 51.534914, "lon": 4.4519129, "datums": [{"ev": 139, "dag": 30, "maandnr": 11, "jaar": 2026, "tijd": "19:30"}]}, {"id": 69, "naam": "Theater Sneek / Poort", "stad": "Sneek", "lat": 53.0317815, "lon": 5.6562252, "datums": [{"ev": 140, "dag": 8, "maandnr": 12, "jaar": 2026, "tijd": null}]}, {"id": 40, "naam": "Flint", "stad": "Amersfoort", "lat": 52.1595514, "lon": 5.3928003, "datums": [{"ev": 141, "dag": 11, "maandnr": 1, "jaar": 2027, "tijd": null}]}, {"id": 22, "naam": "Theater De Veste", "stad": "Delft", "lat": 52.0084756, "lon": 4.3627946, "datums": [{"ev": 142, "dag": 15, "maandnr": 1, "jaar": 2027, "tijd": null}]}, {"id": 31, "naam": "Leidse Schouwburg", "stad": "Leiden", "lat": 52.1621894, "lon": 4.4891831, "datums": [{"ev": 143, "dag": 19, "maandnr": 1, "jaar": 2027, "tijd": null}]}, {"id": 70, "naam": "Schouwburg Odeon", "stad": "Zwolle", "lat": 52.5104825, "lon": 6.0918538, "datums": [{"ev": 144, "dag": 25, "maandnr": 1, "jaar": 2027, "tijd": null}]}], "events": [{"id": 133, "iso": "2026-10-06", "dag": 6, "maandnr": 10, "jaar": 2026, "tijd": "20:00", "zaal_id": 66, "zaal": {"naam": "Het Postkantoor", "stad": "Bovenkarspel", "opkaart": true, "lat": 52.6977291, "lon": 5.2357276}}, {"id": 134, "iso": "2026-10-16", "dag": 16, "maandnr": 10, "jaar": 2026, "tijd": "20:00", "zaal_id": 33, "zaal": {"naam": "Kunstmin", "stad": "Dordrecht", "opkaart": true, "lat": 51.8139254, "lon": 4.6764483}}, {"id": 135, "iso": "2026-10-18", "dag": 18, "maandnr": 10, "jaar": 2026, "tijd": "14:30", "zaal_id": 4, "zaal": {"naam": "PLT Theater", "stad": "Heerlen", "opkaart": true, "lat": 50.8867099, "lon": 5.9727811}}, {"id": 136, "iso": "2026-11-01", "dag": 1, "maandnr": 11, "jaar": 2026, "tijd": "19:30", "zaal_id": 8, "zaal": {"naam": "De Kampanje", "stad": "Den Helder", "opkaart": true, "lat": 52.9585736, "lon": 4.7690842}}, {"id": 137, "iso": "2026-11-10", "dag": 10, "maandnr": 11, "jaar": 2026, "tijd": "20:15", "zaal_id": 67, "zaal": {"naam": "Isala Theater", "stad": "Capelle aan den IJssel", "opkaart": true, "lat": 51.9315597, "lon": 4.5882206}}, {"id": 138, "iso": "2026-11-14", "dag": 14, "maandnr": 11, "jaar": 2026, "tijd": "20:00", "zaal_id": 68, "zaal": {"naam": "Griffioen", "stad": "Amsterdam", "opkaart": true, "lat": 52.3346074, "lon": 4.8636531}}, {"id": 139, "iso": "2026-11-30", "dag": 30, "maandnr": 11, "jaar": 2026, "tijd": "19:30", "zaal_id": 64, "zaal": {"naam": "De Kring (EKP-gebouw)", "stad": "Roosendaal", "opkaart": true, "lat": 51.534914, "lon": 4.4519129}}, {"id": 140, "iso": "2026-12-08", "dag": 8, "maandnr": 12, "jaar": 2026, "tijd": null, "zaal_id": 69, "zaal": {"naam": "Theater Sneek / Poort", "stad": "Sneek", "opkaart": true, "lat": 53.0317815, "lon": 5.6562252}}, {"id": 141, "iso": "2027-01-11", "dag": 11, "maandnr": 1, "jaar": 2027, "tijd": null, "zaal_id": 40, "zaal": {"naam": "Flint", "stad": "Amersfoort", "opkaart": true, "lat": 52.1595514, "lon": 5.3928003}}, {"id": 142, "iso": "2027-01-15", "dag": 15, "maandnr": 1, "jaar": 2027, "tijd": null, "zaal_id": 22, "zaal": {"naam": "Theater De Veste", "stad": "Delft", "opkaart": true, "lat": 52.0084756, "lon": 4.3627946}}, {"id": 143, "iso": "2027-01-19", "dag": 19, "maandnr": 1, "jaar": 2027, "tijd": null, "zaal_id": 31, "zaal": {"naam": "Leidse Schouwburg", "stad": "Leiden", "opkaart": true, "lat": 52.1621894, "lon": 4.4891831}}, {"id": 144, "iso": "2027-01-25", "dag": 25, "maandnr": 1, "jaar": 2027, "tijd": null, "zaal_id": 70, "zaal": {"naam": "Schouwburg Odeon", "stad": "Zwolle", "opkaart": true, "lat": 52.5104825, "lon": 6.0918538}}, {"id": 145, "iso": "2027-01-26", "dag": 26, "maandnr": 1, "jaar": 2027, "tijd": null, "zaal_id": 68, "zaal": {"naam": "Griffioen", "stad": "Amsterdam", "opkaart": true, "lat": 52.3346074, "lon": 4.8636531}}]};</script>

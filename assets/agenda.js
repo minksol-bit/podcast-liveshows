@@ -10,6 +10,12 @@
   var events = DATA.events.slice();
   var $ = function (id) { return document.getElementById(id); };
 
+  // De lijst kan lang zijn (nu 176 shows). We tonen er een deel en laden bij op verzoek.
+  // Let op: de rest staat wel gewoon in de HTML, alleen verborgen - anders zouden
+  // zoekmachines de overige shows niet zien.
+  var PER_KEER = 25;
+  var getoond = PER_KEER;
+
   // ---------- filters vullen ----------
   var vkMaand = VEELKEUZE.maak("fm-maand-knop", "fm-maand-paneel", { alles: "Alle maanden" });
   var vkProvincie = VEELKEUZE.maak("fm-provincie-knop", "fm-provincie-paneel", { alles: "Alle provincies" });
@@ -190,16 +196,17 @@
       return;
     }
     var vorige = null;
-    lijst.forEach(function (ev) {
+    lijst.forEach(function (ev, n) {
+      var later = n >= getoond ? " later" : "";
       if (ev.maand !== vorige) {
         vorige = ev.maand;
         var h = document.createElement("h2");
-        h.className = "maand";
+        h.className = "maand" + later;
         h.textContent = MAANDEN[ev.maandnr - 1] + " " + ev.jaar;
         doel.appendChild(h);
       }
       var rij = document.createElement("div");
-      rij.className = "event" + (ev.zaal.opkaart ? " klikbaar" : "");
+      rij.className = "event" + (ev.zaal.opkaart ? " klikbaar" : "") + later;
       var namen = ev.podcasts.map(function (p) { return p.naam; }).join(", ");
       var podcastLink = ev.podcasts.length === 1
         ? '<a href="podcast/' + veiligAttr(ev.podcasts[0].slug) + '.html">' + veiligAttr(namen) + "</a>"
@@ -252,6 +259,16 @@
     });
   }
 
+  function werkMeerBij(totaal) {
+    var knop = $("meer");
+    if (!knop) return;
+    var over = totaal - getoond;
+    if (over <= 0) { knop.hidden = true; return; }
+    knop.hidden = false;
+    $("meer-tekst").textContent =
+      "Toon " + Math.min(PER_KEER, over) + " shows meer (nog " + over + ")";
+  }
+
   function werkTellingBij() {
     var lijst = selectie();
     var zonder = lijst.filter(function (ev) { return !ev.zaal.opkaart; }).length;
@@ -259,10 +276,12 @@
       (zonder ? " · " + zonder + " nog niet op de kaart" : "");
   }
 
-  function ververs() {
+  function ververs(behoudGetoond) {
+    if (!behoudGetoond) getoond = PER_KEER;   // bij een nieuw filter weer bovenaan beginnen
     var lijst = selectie();
     tekenLijst(lijst);
     tekenKaart(lijst);
+    werkMeerBij(lijst.length);
     werkTellingBij();
     naarLink();
     ["vandaag", "weekend"].forEach(function (k) {
@@ -301,6 +320,12 @@
     werkPrijslabelBij();
     ververs();
   });
+  if ($("meer")) {
+    $("meer").addEventListener("click", function () {
+      getoond += PER_KEER;
+      ververs(true);
+    });
+  }
   window.addEventListener("resize", function () { kaart.invalidateSize(); });
 
   uitLink();

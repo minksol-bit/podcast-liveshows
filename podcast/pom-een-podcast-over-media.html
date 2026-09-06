@@ -17,8 +17,18 @@
 <meta name="twitter:title" content="POM - Een Podcast over Media live - Podcast Liveshows">
 <meta name="twitter:description" content="Alexander Klopping en Ernst-Jan Pfauth bespreken wekelijks het nieuws over media, cultuur, technologie en ondernemen.">
 <meta name="twitter:image" content="https://podcastliveshows.nl/assets/og-share.jpg">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="../assets/logo/favicon-a.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-a-32.png">
+<link rel="apple-touch-icon" href="../assets/logo/favicon-a-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/stijl.css">
+<noscript><style>
+  .event.later { display: grid; }
+  h2.maand.later { display: block; }
+  .meer-vak { display: none; }
+</style></noscript>
 <link rel="stylesheet" href="../assets/leaflet/leaflet.css">
 <link rel="stylesheet" href="../assets/leaflet/MarkerCluster.css">
 <script type="application/ld+json">[
@@ -63,10 +73,10 @@
 </head>
 <body>
 
-<div class="balk">
+<div class="balk balk-op-banner">
   <div class="wrap">
     <a class="merk" href="../index.html">
-      <img src="../assets/logo-mark.png" alt="Podcast Liveshows">
+      <img src="../assets/logo/merk-a.svg" alt="" width="34" height="34">
       <span>Podcast Liveshows</span>
     </a>
     <nav class="menu">
@@ -76,18 +86,21 @@
     </nav>
   </div>
 </div>
-
-<div class="wrap">
-  <div class="pbanner pbanner-donker" style="background:linear-gradient(90deg,#f87848,#f87848)">
-    <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/600x600bb.jpg" alt="">
-    <div class="pbanner-vak">
-      
-      <h1>POM - Een Podcast over Media</h1>
-      
-      <p class="cijfers">Media &amp; technologie &middot; 1 liveshow gepland</p>
-      <p class="pbanner-tekst">POM - Een Podcast over Media is de wekelijkse podcast van Alexander Klopping en Ernst-Jan Pfauth, exclusief bij Podimo, waarin ze het nieuws over media, cultuur, technologie en ondernemen bespreken. In de liveshow in de Rode Hoed nemen ze het publiek mee in hun kijk op de actualiteit, met dezelfde felle meningen en humor als in de podcast.</p>
+  <header class="pbanner">
+    <div class="pbanner-achter" aria-hidden="true"><img src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/600x600bb.jpg" alt=""></div>
+    <div class="sluier"></div>
+    <div class="wrap">
+      <img class="pbanner-logo" src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/600x600bb.jpg" alt="">
+      <div class="pbanner-vak">
+        
+        <h1>POM - Een Podcast over Media</h1>
+        
+        <p class="cijfers">Media &amp; technologie &middot; 1 liveshow gepland</p>
+        <p class="pbanner-tekst">POM - Een Podcast over Media is de wekelijkse podcast van Alexander Klopping en Ernst-Jan Pfauth, exclusief bij Podimo, waarin ze het nieuws over media, cultuur, technologie en ondernemen bespreken. In de liveshow in de Rode Hoed nemen ze het publiek mee in hun kijk op de actualiteit, met dezelfde felle meningen en humor als in de podcast.</p>
+      </div>
     </div>
-  </div>
+  </header>
+  <div class="wrap">
   <div class="kolommen">
     <div class="lijstkolom">
     <h2 class="maand">september 2026</h2>
@@ -99,17 +112,19 @@
     </div>
     <div class="kaartkolom"><div class="kaart" id="kaart"></div>
       <div class="kaart-onder">
-        <div class="kaart-cijfers"><span><strong>1</strong> show</span><span><strong>1</strong> zaal</span></div>
+        <div class="kaart-cijfers"><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><strong>1</strong> show</span><span><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><strong>1</strong> zaal</span></div>
         <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p>
       </div></div>
   </div>
   <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>
+  </div>
 
-  <footer>
+<footer>
+  <div class="wrap">
     Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op 2026-09-03.
-  </footer>
-</div>
+  </div>
+</footer>
 <script src="../assets/leaflet/leaflet.js"></script>
 <script src="../assets/leaflet/leaflet.markercluster.js"></script>
 <script>window.PAGINA = {"naam": "POM - Een Podcast over Media", "zalen": [{"id": 65, "naam": "Rode Hoed", "stad": "Amsterdam", "lat": 52.3773438, "lon": 4.8872604, "datums": [{"ev": 132, "dag": 22, "maandnr": 9, "jaar": 2026, "tijd": "20:00"}]}], "events": [{"id": 132, "iso": "2026-09-22", "dag": 22, "maandnr": 9, "jaar": 2026, "tijd": "20:00", "zaal_id": 65, "zaal": {"naam": "Rode Hoed", "stad": "Amsterdam", "opkaart": true, "lat": 52.3773438, "lon": 4.8872604}}]};</script>

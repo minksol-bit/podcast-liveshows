@@ -26,6 +26,9 @@ TOP100 = os.path.join(HIER, "data", "apple-top100.json")
 
 # Zet hier het echte webadres zodra de site online staat.
 SITE_URL = "https://podcastliveshows.nl"
+# Welk logo de site gebruikt: "a" (speldje), "b" (theaterboog) of "c" (capsule).
+# De drie staan naast elkaar op /ontwerp/logos.html.
+MERK = "a"
 
 MAANDEN = ["januari","februari","maart","april","mei","juni",
            "juli","augustus","september","oktober","november","december"]
@@ -193,16 +196,26 @@ KOP = """<!DOCTYPE html>
 <meta name="twitter:title" content="{{titel}}">
 <meta name="twitter:description" content="{{omschrijving}}">
 <meta name="twitter:image" content="{{beeld}}">
-<link rel="icon" type="image/png" href="{{basis}}assets/favicon.png">
+<link rel="icon" type="image/svg+xml" href="{{basis}}assets/logo/favicon-{{merk}}.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="{{basis}}assets/logo/favicon-{{merk}}-32.png">
+<link rel="apple-touch-icon" href="{{basis}}assets/logo/favicon-{{merk}}-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="{{basis}}assets/stijl.css">
+<noscript><style>
+  .event.later { display: grid; }
+  h2.maand.later { display: block; }
+  .meer-vak { display: none; }
+</style></noscript>
 {{extra_head}}
 </head>
 <body>
 
-<div class="balk">
+<div class="balk {{balkstijl}}">
   <div class="wrap">
     <a class="merk" href="{{basis}}index.html">
-      <img src="{{basis}}assets/logo-mark.png" alt="Podcast Liveshows">
+      <img src="{{basis}}assets/logo/merk-{{merk}}.svg" alt="" width="34" height="34">
       <span>Podcast Liveshows</span>
     </a>
     <nav class="menu">
@@ -212,16 +225,15 @@ KOP = """<!DOCTYPE html>
     </nav>
   </div>
 </div>
-
-<div class="wrap">
 """
 
 VOET = """
-  <footer>
+<footer>
+  <div class="wrap">
     Kaartgegevens van <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>.
     Ranglijst van Apple Podcasts. Agenda voor het laatst gecontroleerd op {{gecheckt}}.
-  </footer>
-</div>
+  </div>
+</footer>
 {{scripts}}
 </body>
 </html>
@@ -247,8 +259,9 @@ def volledig_adres(pad):
     basis = SITE_URL.rstrip("/")
     return basis + "/" if pad in ("", "index.html") else basis + "/" + pad
 
-def kop(titel, omschrijving, basis="", actief="", extra_head="", pad=""):
-    return render(KOP, titel=e(titel), omschrijving=e(omschrijving), basis=basis,
+def kop(titel, omschrijving, basis="", actief="", extra_head="", pad="", balk_op_banner=True):
+    return render(KOP, titel=e(titel), omschrijving=e(omschrijving), basis=basis, merk=MERK,
+                  balkstijl="balk-op-banner" if balk_op_banner else "balk-vast",
                   canoniek=e(volledig_adres(pad)),
                   beeld=e(SITE_URL.rstrip("/") + "/assets/og-share.jpg"),
                   extra_head=extra_head,
@@ -267,44 +280,40 @@ def leaflet_scripts(basis=""):
     return ('<script src="%sassets/leaflet/leaflet.js"></script>\n'
             '<script src="%sassets/leaflet/leaflet.markercluster.js"></script>' % (basis, basis))
 
-HERO = """
-  <div class="hero{{klein}}">
-    <div class="hero-beeld" id="hero-beeld"></div>
-    <div class="hero-glow" id="hero-glow"></div>
-    <div class="ring r1"></div>
-    <div class="ring r2"></div>
-    <div class="hero-fade"></div>
-    <div class="hero-tekst">
-      <h1>{{kopregel}}</h1>
-      {{onder}}
-    </div>
-  </div>
-"""
+# Symbolen bij de tellers. Los gehouden zodat ze op meer plekken herbruikbaar zijn.
+IC_KALENDER = ('<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+               'stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/>'
+               '<path d="M3 10h18M8 3v4M16 3v4"/></svg>')
+IC_MICROFOON = ('<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+                'stroke-linecap="round"><rect x="9" y="2" width="6" height="11" rx="3"/>'
+                '<path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>')
+IC_SPELD = ('<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+            'stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/>'
+            '<circle cx="12" cy="10" r="2.5"/></svg>')
+IC_KAARTJE = ('<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" '
+              'stroke-linecap="round"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2.5 2.5 0 0 0 0 5v2a2 2 '
+              '0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2.5 2.5 0 0 0 0-5z"/><path d="M14 5v14" stroke-dasharray="2 3"/></svg>')
 
-def hero(kopregel, onder="", klein=False):
-    return render(HERO, kopregel=kopregel, onder=onder, klein=" klein" if klein else "")
+def mozaiek_html(podcasts, aantal=40):
+    """Achtergrond van de banner: een raster van covers, dat de CSS roodkleurt."""
+    covers = [p["cover"] for p in podcasts.values() if p["cover"]]
+    if not covers:
+        return ""
+    beelden = "".join('<img src="%s" alt="" loading="lazy">' % e(covers[i % len(covers)])
+                      for i in range(aantal))
+    return '    <div class="mozaiek" aria-hidden="true">%s</div>\n' % beelden
 
-PARALLAX = """
-<script>
-(function () {
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var beeld = document.getElementById("hero-beeld"), glow = document.getElementById("hero-glow"), bezig = false;
-  if (!beeld) return;
-  window.addEventListener("scroll", function () {
-    if (bezig) return;
-    bezig = true;
-    window.requestAnimationFrame(function () {
-      var y = window.pageYOffset || 0;
-      if (y < 900) {
-        beeld.style.transform = "translate3d(0," + (y * 0.22) + "px,0)";
-        if (glow) glow.style.transform = "translate3d(0," + (y * 0.10) + "px,0)";
-      }
-      bezig = false;
-    });
-  }, { passive: true });
-})();
-</script>
-"""
+def tellers_html(paren):
+    """paren: lijst van (symbool, getal, woord)."""
+    return ('    <div class="tellers"><div class="wrap">%s</div></div>\n'
+            % "".join('<span class="teller">%s<b>%s</b> %s</span>' % (ic, e(getal), e(woord))
+                      for ic, getal, woord in paren))
+
+def hero(kopregel, onder="", klein=False, mozaiek="", tellers=""):
+    return ('  <header class="hero%s">\n%s    <div class="sluier"></div>\n'
+            '    <div class="wrap">\n      <h1>%s</h1>\n      %s\n    </div>\n%s  </header>\n'
+            % (" klein" if klein else "", mozaiek, kopregel, onder, tellers))
+
 
 def jsonld_event(ev, url):
     d = {"@context": "https://schema.org", "@type": "Event",
@@ -372,43 +381,44 @@ def data_voor_agenda(podcasts, venues, events):
 
 FILTERBLOK = """
   <div class="filters">
-    <div class="filter filter-veelkeuze" id="fm-maand">
-      <label id="fm-maand-label">Maand</label>
-      <button type="button" class="veelkeuze-knop" id="fm-maand-knop" aria-haspopup="true"
-        aria-expanded="false" aria-labelledby="fm-maand-label fm-maand-knop">Alle maanden</button>
-      <div class="veelkeuze-paneel" id="fm-maand-paneel" hidden></div>
-    </div>
-    <div class="filter filter-veelkeuze" id="fm-provincie">
-      <label id="fm-provincie-label">Provincie</label>
-      <button type="button" class="veelkeuze-knop" id="fm-provincie-knop" aria-haspopup="true"
-        aria-expanded="false" aria-labelledby="fm-provincie-label fm-provincie-knop">Alle provincies</button>
-      <div class="veelkeuze-paneel" id="fm-provincie-paneel" hidden></div>
-    </div>
-    <div class="filter filter-veelkeuze" id="fm-thema">
-      <label id="fm-thema-label">Thema</label>
-      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true"
-        aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
-      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
-    </div>
-    <div class="filter filter-veelkeuze" id="fm-kaarten">
-      <label id="fm-kaarten-label">Kaarten</label>
-      <button type="button" class="veelkeuze-knop" id="fm-kaarten-knop" aria-haspopup="true"
-        aria-expanded="false" aria-labelledby="fm-kaarten-label fm-kaarten-knop">Alle shows</button>
-      <div class="veelkeuze-paneel" id="fm-kaarten-paneel" hidden></div>
-    </div>
-    <div class="filter filter-schuif">
-      <label for="f-prijs">Prijs <span id="f-prijs-label">Alle prijzen</span></label>
-      <input type="range" id="f-prijs" min="10" max="45" step="5" value="45">
-    </div>
-    <div class="filter"><label>Snel</label>
-      <div class="snel">
+    <div class="binnen">
+      <div class="filter filter-veelkeuze" id="fm-maand">
+        <button type="button" class="veelkeuze-knop" id="fm-maand-knop" aria-haspopup="true"
+          aria-expanded="false" aria-label="Filter op maand">Alle maanden</button>
+        <div class="veelkeuze-paneel" id="fm-maand-paneel" hidden></div>
+      </div>
+      <div class="filter filter-veelkeuze" id="fm-provincie">
+        <button type="button" class="veelkeuze-knop" id="fm-provincie-knop" aria-haspopup="true"
+          aria-expanded="false" aria-label="Filter op provincie">Alle provincies</button>
+        <div class="veelkeuze-paneel" id="fm-provincie-paneel" hidden></div>
+      </div>
+      <div class="filter filter-veelkeuze" id="fm-thema">
+        <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true"
+          aria-expanded="false" aria-label="Filter op thema">Alle thema's</button>
+        <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
+      </div>
+      <div class="filter filter-veelkeuze" id="fm-kaarten">
+        <button type="button" class="veelkeuze-knop" id="fm-kaarten-knop" aria-haspopup="true"
+          aria-expanded="false" aria-label="Filter op kaartverkoop">Alle shows</button>
+        <div class="veelkeuze-paneel" id="fm-kaarten-paneel" hidden></div>
+      </div>
+      <span class="scheiding"></span>
+      <div class="filter filter-schuif">
+        <label for="f-prijs">Prijs <span id="f-prijs-label">Alle prijzen</span></label>
+        <input type="range" id="f-prijs" min="10" max="45" step="5" value="45">
+      </div>
+      <span class="scheiding"></span>
+      <div class="filter"><div class="snel">
         <button type="button" id="snel-vandaag">Vanavond</button>
         <button type="button" id="snel-weekend">Dit weekend</button>
       </div></div>
-    <button type="button" id="wis" class="wis-knop">Wis filters</button>
-    <div class="telling" id="telling"></div>
+      <button type="button" id="wis" class="wis-knop">Wis filters</button>
+      <div class="telling" id="telling"></div>
+    </div>
   </div>
 """
+
+TOON_EERST = 25   # hoeveel shows meteen zichtbaar zijn; de rest zit achter "Toon meer"
 
 def agenda_html(events):
     """De agendalijst als gewone HTML, voor zoekmachines en bezoekers zonder JavaScript.
@@ -420,11 +430,12 @@ def agenda_html(events):
     vervangt die deze lijst door de filterbare versie.
     """
     stukken, vorige_maand = [], None
-    for ev in events:
+    for n, ev in enumerate(events):
+        later = " later" if n >= TOON_EERST else ""
         if ev["maand"] != vorige_maand:
             vorige_maand = ev["maand"]
-            stukken.append('<h2 class="maand">%s %d</h2>'
-                           % (MAANDEN[ev["d"]["maand"] - 1], ev["d"]["jaar"]))
+            stukken.append('<h2 class="maand%s">%s %d</h2>'
+                           % (later, MAANDEN[ev["d"]["maand"] - 1], ev["d"]["jaar"]))
 
         namen = ", ".join(p["naam"] for p in ev["show"]["podcasts"])
         if len(ev["show"]["podcasts"]) == 1:
@@ -451,7 +462,7 @@ def agenda_html(events):
             knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % prijs
 
         stukken.append(
-            '<div class="event%s">'
+            '<div class="event%s%s">'
             '<div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>'
             '%s'
             '<div class="info"><div class="titel">%s</div>'
@@ -459,7 +470,7 @@ def agenda_html(events):
             '<div class="bij">%s%s</div></div>'
             '<div class="rechtsblok">%s</div>'
             '</div>'
-            % (" klikbaar" if ev["zaal"]["opkaart"] else "",
+            % (" klikbaar" if ev["zaal"]["opkaart"] else "", later,
                ev["d"]["dag"], MAAND_KORT[ev["d"]["maand"] - 1], cover,
                e(ev["show"]["titel"]), e(ev["zaal"]["naam"]), e(ev["zaal"]["stad"]),
                (' <span style="opacity:.7">(%s)</span>' % e(ev["provincie"])) if ev["provincie"] else "",
@@ -474,40 +485,70 @@ def bouw_index(podcasts, venues, events, gecheckt):
             "window.DATA = " + json.dumps(data, ensure_ascii=False, indent=1, default=str) + ";\n")
 
     komend = [ev for ev in events][:60]
-    ld = json.dumps([jsonld_event(ev, SITE_URL.rstrip("/") + "/index.html") for ev in komend],
+    ld = json.dumps([jsonld_event(ev, volledig_adres("index.html")) for ev in komend],
                     ensure_ascii=False, indent=1)
     extra = '<script type="application/ld+json">%s</script>' % ld
 
+    uitverkocht = sum(1 for ev in events if ev["status"].lower() == "uitverkocht")
     onder = ('<p class="intro">Steeds meer podcasts stappen het theater in. Deze site verzamelt welke '
              'Nederlandse podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link '
-             'naar de kaartverkoop. Filter op maand, provincie of thema om te zien wat er bij jou in de '
-             'buurt te doen is.</p>'
-             '<p class="cijfers">%d liveshows van %d podcasts in %d zalen.</p>'
-             % (len(events), len(podcasts), len(venues)))
+             'naar de kaartverkoop.</p>')
+
+    # Podcasts die eerder speelden en nu geen data hebben, krijgen onderaan een eigen band.
+    eerder = [p for p in sorted(podcasts.values(), key=lambda x: x["naam"].lower())
+              if not p["events"] and p["stand"]][:5]
+    if eerder:
+        tegels = "".join(
+            '<a class="tegel" href="podcast/%s.html">%s<div class="tn">%s</div><div class="tw">%s</div></a>'
+            % (e(p["slug"]),
+               ('<img src="%s" alt="" loading="lazy">' % e(p["cover"])) if p["cover"] else "",
+               e(p["naam"]), e(p["eerder"] or "speelde eerder"))
+            for p in eerder)
+        band = ('  <section class="band">\n    <div class="wrap">\n'
+                '      <div class="band-kop"><h2>Speelden eerder</h2>'
+                '<p>Deze podcasts stonden al eens in het theater. Nieuwe data zetten we hier neer.</p>'
+                '<a href="catalogus.html">Alle podcasts &rarr;</a></div>\n'
+                '      <div class="strook">%s</div>\n    </div>\n  </section>\n' % tegels)
+    else:
+        band = ""
 
     html_uit = (kop("Podcast Liveshows in Nederland",
                     "Welke Nederlandse podcasts spelen een liveshow, wanneer en waar. "
                     "Agenda en kaart met directe link naar de kaartverkoop.",
                     basis="", actief="agenda", extra_head=leaflet_head() + "\n" + extra,
-                    pad="index.html")
-                + hero("Welke podcast staat er<br><span class=\"accent\">bij jou in het theater?</span>", onder)
+                    pad="index.html", balk_op_banner=True)
+                + hero('Welke podcast staat er<br><span class="accent">bij jou in het theater?</span>',
+                       onder,
+                       mozaiek=mozaiek_html(podcasts),
+                       tellers=tellers_html([
+                           (IC_KALENDER, len(events), "liveshows"),
+                           (IC_MICROFOON, len(podcasts), "podcasts"),
+                           (IC_SPELD, len(venues), "zalen"),
+                           (IC_KAARTJE, uitverkocht, "uitverkocht")]))
                 + FILTERBLOK
-                + """
-  <div class="kolommen">
-    <div class="lijstkolom"><div id="lijst">%s</div></div>
-    <div class="kaartkolom">
-      <div class="kaart" id="kaart"></div>
-      <div class="melding" id="melding" hidden></div>
+                + """  <div class="wrap">
+    <div class="kolommen">
+      <div class="lijstkolom">
+        <div id="lijst">%s</div>
+        <div class="meer-vak"><button type="button" class="meer" id="meer">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          <span id="meer-tekst">Toon meer shows</span>
+        </button></div>
+      </div>
+      <div class="kaartkolom">
+        <div class="kaart" id="kaart"></div>
+        <div class="melding" id="melding" hidden></div>
+      </div>
     </div>
   </div>
 """ % agenda_html(events)
+                + band
                 + voet(gecheckt,
                        leaflet_scripts()
-
                        + '\n<script src="assets/veelkeuze.js"></script>'
                        + '\n<script src="data/site-data.js"></script>'
-                       + '\n<script src="assets/agenda.js"></script>'
-                       + PARALLAX))
+                       + '\n<script src="assets/agenda.js"></script>'))
     schrijf("index.html", html_uit)
 
 def bouw_catalogus(podcasts, gecheckt):
@@ -546,28 +587,29 @@ def bouw_catalogus(podcasts, gecheckt):
                beeld, e(p["naam"]), e(p["thema"]), e(p["naam"]),
                e(p["kort"] or "Nog geen omschrijving."), e(regel)))
 
-    filters = ('  <div class="filters">\n'
-               '    <div class="filter"><label for="zoek">Zoeken</label>'
-               '<input type="search" id="zoek" placeholder="Naam of maker"></div>\n'
-               '    <div class="filter filter-veelkeuze" id="fm-thema">\n'
-               '      <label id="fm-thema-label">Thema</label>\n'
-               '      <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true" '
-               'aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema\'s</button>\n'
-               '      <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden>%s</div>\n'
-               '    </div>\n'
-               '    <div class="telling" id="telling"></div>\n'
-               '  </div>\n'
+    filters = ('  <div class="filters">\n    <div class="binnen">\n'
+               '      <div class="filter">'
+               '<input type="search" id="zoek" placeholder="Zoek op naam of maker" aria-label="Zoeken"></div>\n'
+               '      <div class="filter filter-veelkeuze" id="fm-thema">\n'
+               '        <button type="button" class="veelkeuze-knop" id="fm-thema-knop" aria-haspopup="true" '
+               'aria-expanded="false" aria-label="Filter op thema">Alle thema\'s</button>\n'
+               '        <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden>%s</div>\n'
+               '      </div>\n'
+               '      <div class="telling" id="telling"></div>\n'
+               '    </div>\n  </div>\n'
                % "".join('<label class="veelkeuze-optie"><input type="checkbox" value="%s"> %s</label>'
                          % (e(t), e(t)) for t in themas))
 
     html_uit = (kop("Alle podcasts - Podcast Liveshows",
                     "Overzicht van alle podcasts op deze site, van A tot Z, met hun liveshows.",
-                    basis="", actief="catalogus", pad="catalogus.html")
+                    basis="", actief="catalogus", pad="catalogus.html", balk_op_banner=True)
                 + hero("Alle podcasts", '<p class="intro">Van A tot Z. Zweef over een blok voor een korte '
-                       'omschrijving, klik erop voor alle shows en de kaart.</p>', klein=True)
+                       'omschrijving, klik erop voor alle shows en de kaart.</p>', klein=True,
+                       mozaiek=mozaiek_html(podcasts, 30))
                 + filters
-                + '  <div class="raster">\n' + "\n".join(stukken) + "\n  </div>\n"
-                + voet(gecheckt, '<script src="assets/veelkeuze.js"></script>\n<script src="assets/catalogus.js"></script>' + PARALLAX))
+                + '  <div class="wrap">\n    <div class="raster">\n' + "\n".join(stukken)
+                + "\n    </div>\n  </div>\n"
+                + voet(gecheckt, '<script src="assets/veelkeuze.js"></script>\n<script src="assets/catalogus.js"></script>'))
     schrijf("catalogus.html", html_uit)
 
 def bouw_toplijst(podcasts, status, gecheckt):
@@ -616,10 +658,12 @@ def bouw_toplijst(podcasts, status, gecheckt):
 
     html_uit = (kop("Toplijst - Podcast Liveshows",
                     "De top 100 podcasts van Nederland volgens Apple Podcasts, met wie er live in het theater staat.",
-                    basis="", actief="toplijst", pad="toplijst.html")
-                + hero("De top 100, en wie er<br><span class=\"accent\">live te zien is</span>", onder, klein=True)
-                + '  <div class="toplijst">\n' + "\n".join(rijen) + "\n  </div>\n"
-                + voet(gecheckt, PARALLAX))
+                    basis="", actief="toplijst", pad="toplijst.html", balk_op_banner=True)
+                + hero("De top 100, en wie er<br><span class=\"accent\">live te zien is</span>", onder,
+                       klein=True, mozaiek=mozaiek_html(podcasts, 30))
+                + '  <div class="wrap">\n    <div class="toplijst">\n' + "\n".join(rijen)
+                + "\n    </div>\n  </div>\n"
+                + voet(gecheckt))
     schrijf("toplijst.html", html_uit)
     return met_live, nagekeken
 
@@ -688,23 +732,27 @@ def bouw_podcastpaginas(podcasts, gecheckt):
         kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div>\n'
                      '      <div class="kaart-onder">\n'
                      '        <div class="kaart-cijfers">'
-                     '<span><strong>%d</strong> %s</span>'
-                     '<span><strong>%d</strong> %s</span>'
+                     '<span>%s<strong>%d</strong> %s</span>'
+                     '<span>%s<strong>%d</strong> %s</span>'
                      '</div>\n'
                      '        <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, '
                      'dan staan beide datums in hetzelfde speldje.</p>\n'
                      '      </div></div>\n'
-                     % (len(evs), "show" if len(evs) == 1 else "shows",
-                        n_zalen, "zaal" if n_zalen == 1 else "zalen")
+                     % (IC_KALENDER, len(evs), "show" if len(evs) == 1 else "shows",
+                        IC_SPELD, n_zalen, "zaal" if n_zalen == 1 else "zalen")
                      if heeft_kaart else
                      '    <div class="kaartkolom"><div class="melding">Nog geen coördinaten voor de zalen '
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
 
-        band_stijl = "background:linear-gradient(90deg,%s,%s)" % (e(p["band_links"]), e(p["band_rechts"]))
-        pbanner_klasse = "pbanner pbanner-licht" if helderheid(p["band_rechts"]) > 0.6 else "pbanner pbanner-donker"
+        # De achtergrond van de banner is de cover zelf, wazig en door de CSS roodgetint.
+        # Dat houdt elke podcastpagina herkenbaar eigen en toch bij de rest van de site passen -
+        # per podcast een eigen kleurvlak zou tegen het gordijnrood in vechten.
         if p["cover"]:
+            achter = ('    <div class="pbanner-achter" aria-hidden="true"><img src="%s" alt=""></div>\n'
+                      % e(p["cover"]))
             logo = '<img class="pbanner-logo" src="%s" alt="">' % e(p["cover"])
         else:
+            achter = ""
             logo = '<div class="pbanner-logo pbanner-logo-leeg"></div>'
         rang = ('<span class="merkje">#%s in de Apple top 100</span>' % e(p["rang"])) if p["rang"] else ""
         maker = ('<p class="maker">%s</p>' % e(p.get("maker", ""))) if p.get("maker") else ""
@@ -721,15 +769,18 @@ def bouw_podcastpaginas(podcasts, gecheckt):
         html_uit = (kop("%s live - Podcast Liveshows" % p["naam"],
                         (p["kort"] or ("Alle liveshows van %s." % p["naam"]))[:180],
                         basis="../", actief="catalogus", extra_head=extra,
-                        pad="podcast/%s.html" % p["slug"])
-                    + '  <div class="%s" style="%s">\n    %s\n'
-                      '    <div class="pbanner-vak">\n      %s\n      <h1>%s</h1>\n      %s\n'
-                      '      <p class="cijfers">%s &middot; %s</p>\n      %s\n    </div>\n  </div>\n'
-                      % (pbanner_klasse, e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
+                        pad="podcast/%s.html" % p["slug"], balk_op_banner=True)
+                    + '  <header class="pbanner">\n%s    <div class="sluier"></div>\n'
+                      '    <div class="wrap">\n      %s\n'
+                      '      <div class="pbanner-vak">\n        %s\n        <h1>%s</h1>\n        %s\n'
+                      '        <p class="cijfers">%s &middot; %s</p>\n        %s\n      </div>\n'
+                      '    </div>\n  </header>\n'
+                      % (achter, logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
+                    + '  <div class="wrap">\n'
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"
                        if evs else geen_shows_blok(p))
-                    + '  <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>\n'
+                    + '  <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>\n  </div>\n'
                     + voet(gecheckt,
                            ((leaflet_scripts("../") + "\n") if heeft_kaart else "")
 
