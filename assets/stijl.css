@@ -143,6 +143,28 @@ button.aan { background: var(--wijn-donker); border-color: var(--wijn-donker); c
   gap: 36px; align-items: start; padding-bottom: 50px;
 }
 .kaartkolom { position: sticky; top: calc(var(--balk) + 20px); }
+
+/* Bijschrift onder de kaart: eerst de cijfers, daaronder de uitleg. */
+.kaart-onder {
+  margin-top: 12px; padding: 12px 14px; background: var(--vlak);
+  border: 1px solid var(--lijn); border-radius: 10px;
+}
+.kaart-cijfers { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 22px; }
+.kaart-cijfers span { font-size: 13px; color: var(--grijs); }
+.kaart-cijfers strong {
+  font-size: 21px; font-weight: 650; color: var(--inkt);
+  letter-spacing: -0.02em; margin-right: 5px;
+}
+.kaart-noot {
+  display: flex; gap: 8px; margin: 10px 0 0; padding-top: 10px;
+  border-top: 1px solid var(--lijn); font-size: 12.5px; line-height: 1.45; color: var(--grijs);
+}
+.kaart-noot::before {
+  content: "i"; flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center;
+  width: 15px; height: 15px; margin-top: 2px; border-radius: 50%;
+  background: var(--lijn); color: var(--inkt);
+  font-size: 10px; font-weight: 700; font-style: normal; line-height: 1;
+}
 .kaart {
   height: calc(100vh - var(--balk) - 80px); min-height: 440px;
   border: 1px solid var(--lijn); border-radius: 10px; background: var(--vlak);
@@ -304,6 +326,8 @@ h2.maand:first-child { margin-top: 0; }
 .pbanner-vak .maker { margin: 0 0 8px; }
 .pbanner-vak .cijfers { margin: 0; }
 .pbanner-tekst { margin: 10px 0 0; font-size: 14px; line-height: 1.5; max-width: 760px; }
+/* Lucht tussen de banner en de agenda/kaart eronder. */
+.pbanner + .kolommen, .pbanner + .leeg { margin-top: 34px; }
 
 .pbanner-donker .pbanner-vak h1 { color: #fff; text-shadow: 0 1px 14px rgba(0,0,0,.4); }
 .pbanner-donker .pbanner-vak .maker { color: rgba(255,255,255,.86); text-shadow: 0 1px 10px rgba(0,0,0,.3); }
@@ -336,6 +360,7 @@ footer a { color: var(--grijs); }
   .telling { margin-left: 0; width: 100%; }
   .merk span { display: none; }
   .menu { margin-left: 0; }
+  .pbanner + .kolommen, .pbanner + .leeg { margin-top: 24px; }
   .pbanner { flex-direction: column; align-items: flex-start; padding: 18px; min-height: 0; }
   .pbanner-logo { width: 84px; height: 84px; flex-basis: 84px; }
   .pbanner-vak h1 { font-size: 24px; }

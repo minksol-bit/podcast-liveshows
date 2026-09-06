@@ -14,6 +14,13 @@
   var vkMaand = VEELKEUZE.maak("fm-maand-knop", "fm-maand-paneel", { alles: "Alle maanden" });
   var vkProvincie = VEELKEUZE.maak("fm-provincie-knop", "fm-provincie-paneel", { alles: "Alle provincies" });
   var vkThema = VEELKEUZE.maak("fm-thema-knop", "fm-thema-paneel", { alles: "Alle thema's" });
+  var vkKaarten = VEELKEUZE.maak("fm-kaarten-knop", "fm-kaarten-paneel", { alles: "Alle shows" });
+
+  // Kaartverkoop: alles wat niet letterlijk "uitverkocht" is, telt als nog te koop.
+  var KAARTEN_LABEL = { beschikbaar: "Nog kaarten", uitverkocht: "Uitverkocht" };
+  function kaartenVan(ev) {
+    return String(ev.status || "").toLowerCase() === "uitverkocht" ? "uitverkocht" : "beschikbaar";
+  }
 
   var maanden = [], provincies = [], themas = [];
   events.forEach(function (ev) {
@@ -26,22 +33,29 @@
   });
   vkProvincie.vul(provincies.sort());
   vkThema.vul(themas.sort());
+  var kaartsoorten = [];
+  ["beschikbaar", "uitverkocht"].forEach(function (k) {
+    if (events.some(function (ev) { return kaartenVan(ev) === k; })) kaartsoorten.push(k);
+  });
+  vkKaarten.vul(kaartsoorten, function (k) { return KAARTEN_LABEL[k] || k; });
 
   // ---------- filterstand, ook in de link ----------
   // maand/provincie/thema zijn lijsten: je kunt er meerdere tegelijk kiezen.
-  var stand = { maand: [], provincie: [], thema: [], prijs: "", snel: "", fav: false };
+  var stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "", fav: false };
 
   function uitLink() {
     var p = new URLSearchParams(location.search);
     stand.maand = (p.get("maand") || "").split(",").filter(Boolean);
     stand.provincie = (p.get("provincie") || "").split(",").filter(Boolean);
     stand.thema = (p.get("thema") || "").split(",").filter(Boolean);
+    stand.kaarten = (p.get("kaarten") || "").split(",").filter(Boolean);
     stand.prijs = p.get("prijs") || "";
     stand.snel = p.get("wanneer") || "";
     stand.fav = p.get("favorieten") === "1";
     vkMaand.zet(stand.maand);
     vkProvincie.zet(stand.provincie);
     vkThema.zet(stand.thema);
+    vkKaarten.zet(stand.kaarten);
     $("f-prijs").value = stand.prijs || $("f-prijs").max;
     werkPrijslabelBij();
   }
@@ -54,6 +68,7 @@
     if (stand.maand.length) p.set("maand", stand.maand.join(","));
     if (stand.provincie.length) p.set("provincie", stand.provincie.join(","));
     if (stand.thema.length) p.set("thema", stand.thema.join(","));
+    if (stand.kaarten.length) p.set("kaarten", stand.kaarten.join(","));
     if (stand.prijs) p.set("prijs", stand.prijs);
     if (stand.snel) p.set("wanneer", stand.snel);
     if (stand.fav) p.set("favorieten", "1");
@@ -85,6 +100,7 @@
       if (stand.maand.length && stand.maand.indexOf(ev.maand) === -1) return false;
       if (stand.provincie.length && stand.provincie.indexOf(ev.provincie) === -1) return false;
       if (stand.thema.length && !ev.themas.some(function (t) { return stand.thema.indexOf(t) !== -1; })) return false;
+      if (stand.kaarten.length && stand.kaarten.indexOf(kaartenVan(ev)) === -1) return false;
       if (stand.prijs) {
         if (ev.prijs === null || ev.prijs === undefined) return false;
         if (ev.prijs > parseFloat(stand.prijs)) return false;
@@ -282,6 +298,7 @@
   vkMaand.onChange(function (w) { stand.maand = w; ververs(); });
   vkProvincie.onChange(function (w) { stand.provincie = w; ververs(); });
   vkThema.onChange(function (w) { stand.thema = w; ververs(); });
+  vkKaarten.onChange(function (w) { stand.kaarten = w; ververs(); });
   $("f-prijs").addEventListener("input", function () {
     var el = $("f-prijs");
     stand.prijs = (el.value === el.max) ? "" : el.value;
@@ -296,8 +313,8 @@
   });
   $("snel-fav").addEventListener("click", function () { stand.fav = !stand.fav; ververs(); });
   $("wis").addEventListener("click", function () {
-    stand = { maand: [], provincie: [], thema: [], prijs: "", snel: "", fav: false };
-    vkMaand.wis(); vkProvincie.wis(); vkThema.wis();
+    stand = { maand: [], provincie: [], thema: [], kaarten: [], prijs: "", snel: "", fav: false };
+    vkMaand.wis(); vkProvincie.wis(); vkThema.wis(); vkKaarten.wis();
     $("f-prijs").value = $("f-prijs").max;
     werkPrijslabelBij();
     ververs();

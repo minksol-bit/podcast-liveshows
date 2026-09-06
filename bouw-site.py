@@ -362,6 +362,12 @@ FILTERBLOK = """
         aria-expanded="false" aria-labelledby="fm-thema-label fm-thema-knop">Alle thema's</button>
       <div class="veelkeuze-paneel" id="fm-thema-paneel" hidden></div>
     </div>
+    <div class="filter filter-veelkeuze" id="fm-kaarten">
+      <label id="fm-kaarten-label">Kaarten</label>
+      <button type="button" class="veelkeuze-knop" id="fm-kaarten-knop" aria-haspopup="true"
+        aria-expanded="false" aria-labelledby="fm-kaarten-label fm-kaarten-knop">Alle shows</button>
+      <div class="veelkeuze-paneel" id="fm-kaarten-paneel" hidden></div>
+    </div>
     <div class="filter filter-schuif">
       <label for="f-prijs">Prijs <span id="f-prijs-label">Alle prijzen</span></label>
       <input type="range" id="f-prijs" min="10" max="45" step="5" value="45">
@@ -586,10 +592,17 @@ def bouw_podcastpaginas(podcasts, gecheckt):
 
         heeft_kaart = any(ev["zaal"]["opkaart"] for ev in evs)
         n_zalen = len({ev["zaal"]["id"] for ev in evs if ev["zaal"]["opkaart"]})
-        kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div>'
-                     '<p class="cijfers" style="margin-top:10px">%d show%s in %d zaal%s. Speelt een podcast '
-                     'twee keer in dezelfde zaal, dan staan beide datums in hetzelfde speldje.</p></div>\n'
-                     % (len(evs), "" if len(evs) == 1 else "s", n_zalen, "" if n_zalen == 1 else "en")
+        kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div>\n'
+                     '      <div class="kaart-onder">\n'
+                     '        <div class="kaart-cijfers">'
+                     '<span><strong>%d</strong> %s</span>'
+                     '<span><strong>%d</strong> %s</span>'
+                     '</div>\n'
+                     '        <p class="kaart-noot">Speelt een podcast twee keer in dezelfde zaal, '
+                     'dan staan beide datums in hetzelfde speldje.</p>\n'
+                     '      </div></div>\n'
+                     % (len(evs), "show" if len(evs) == 1 else "shows",
+                        n_zalen, "zaal" if n_zalen == 1 else "zalen")
                      if heeft_kaart else
                      '    <div class="kaartkolom"><div class="melding">Nog geen coördinaten voor de zalen '
                      'van deze podcast, dus nog geen kaart.</div></div>\n')
