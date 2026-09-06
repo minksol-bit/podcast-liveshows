@@ -4,282 +4,219 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Ontwerpvoorstellen - Podcast Liveshows</title>
+<title>Rood fluweel - ontwerpvoorstel</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap">
 <style>
-/* ============================================================
-   DRIE RICHTINGEN, EEN OPMAAK.
-   Alleen de kleurtokens hieronder verschillen per richting; de
-   opbouw van de pagina is identiek. Dat is precies hoe het straks
-   ook in de echte site zou werken: een tweede kleurenset, niet
-   een tweede website.
-   ============================================================ */
-
 :root {
-  --display: "Bodoni Moda", "Didot", "Times New Roman", serif;
+  --display: "Bodoni Moda", Didot, "Times New Roman", serif;
   --tekst: "Libre Franklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, sans-serif;
   --breed: 1240px;
   --balk: 68px;
-}
 
-/* ---------- 1. ROOD FLUWEEL ---------- */
-[data-richting="fluweel"] {
   --grond:       #38090F;
-  --grond-2:     #47101A;
+  --grond-2:     #45101A;
   --rand:        #66202A;
+  --rand-zacht:  #55161F;
   --inkt:        #F4EBDD;
   --zacht:       #C6A39C;
-  --accent:      #C9A24A;
-  --accent-inkt: #2B0709;
-  --hero-sluier: linear-gradient(180deg, rgba(56,9,15,.62) 0%, rgba(56,9,15,.80) 55%, rgba(56,9,15,.97) 100%);
-  --hero-waas:   #6E1420;
+  --goud:        #C9A24A;
+  --goud-diep:   #A8873A;
+  --goud-inkt:   #2B0709;
   --uitverkocht: #E0A3A3;
 }
-/* ---------- 2. FILMHUIS ---------- */
-[data-richting="filmhuis"] {
-  --grond:       #121013;
-  --grond-2:     #1B181D;
-  --rand:        #2F2A31;
-  --inkt:        #F4F1EC;
-  --zacht:       #A0989C;
-  --accent:      #E9E0D1;
-  --accent-inkt: #17141A;
-  --hero-sluier: linear-gradient(180deg, rgba(18,16,19,.55) 0%, rgba(18,16,19,.80) 55%, rgba(18,16,19,.98) 100%);
-  --hero-waas:   #241E29;
-  --uitverkocht: #C89B9B;
-}
-/* ---------- 3. FOYER (donkere kop, lichte agenda) ---------- */
-[data-richting="foyer"] {
-  --grond:       #F6F1F1;
-  --grond-2:     #FFFFFF;
-  --rand:        #E2D7D7;
-  --inkt:        #241418;
-  --zacht:       #705458;
-  --accent:      #8E1D28;
-  --accent-inkt: #FFF7F1;
-  --hero-sluier: linear-gradient(180deg, rgba(46,8,14,.60) 0%, rgba(46,8,14,.82) 60%, rgba(46,8,14,.96) 100%);
-  --hero-waas:   #6E1420;
-  --uitverkocht: #8E1D28;
-}
-
 * { box-sizing: border-box; }
 html, body { margin: 0; }
-body {
-  background: var(--grond); color: var(--inkt);
-  font: 400 16px/1.6 var(--tekst);
-  -webkit-font-smoothing: antialiased;
-}
+body { background: var(--grond); color: var(--inkt); font: 400 16px/1.6 var(--tekst); -webkit-font-smoothing: antialiased; }
 .wrap { max-width: var(--breed); margin: 0 auto; padding: 0 28px; }
+svg.ic { width: 1em; height: 1em; flex: none; }
 
-/* ======= mijn eigen bedieningsbalk (hoort NIET bij het ontwerp) ======= */
-.stuur {
-  position: sticky; top: 0; z-index: 999;
-  background: #16171b; color: #e8e6e3; border-bottom: 1px solid #2c2e34;
-  font: 400 13px/1.4 var(--tekst);
-}
-.stuur .binnen {
-  max-width: var(--breed); margin: 0 auto; padding: 10px 28px;
-  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-}
-.stuur strong { font-weight: 600; letter-spacing: .01em; }
-.stuur .keuzes { display: flex; gap: 6px; margin-left: auto; flex-wrap: wrap; }
-.stuur button {
-  font: 500 13px var(--tekst); padding: 7px 14px; cursor: pointer;
-  background: transparent; color: #cfcdc9;
-  border: 1px solid #3a3d45; border-radius: 999px;
-}
-.stuur button:hover { border-color: #6a6e79; color: #fff; }
-.stuur button[aria-pressed="true"] { background: #f0eee9; border-color: #f0eee9; color: #16171b; }
-.stuur .let { color: #9b9894; font-size: 12.5px; }
+/* ===== mijn eigen strook, hoort niet bij het ontwerp ===== */
+.stuur { background: #16171b; color: #cfcdc9; font: 400 13px var(--tekst); border-bottom: 1px solid #2c2e34; }
+.stuur .wrap { padding: 10px 28px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.stuur b { color: #f0eee9; font-weight: 600; }
 
-/* ======= bovenbalk: knoppen zonder randen, over de banner heen ======= */
-.top {
-  position: absolute; top: 0; left: 0; right: 0; z-index: 20; height: var(--balk);
-}
+/* ===== bovenbalk over de banner heen, knoppen zonder randen ===== */
+.top { position: absolute; top: 0; left: 0; right: 0; z-index: 30; height: var(--balk); }
 .top .wrap { height: 100%; display: flex; align-items: center; gap: 30px; }
-.merk {
-  font: 600 19px/1 var(--display); letter-spacing: .01em; color: #fff;
-  text-decoration: none; white-space: nowrap;
-}
-.merk span { display: block; font: 500 10px/1.4 var(--tekst); letter-spacing: .22em;
-  text-transform: uppercase; opacity: .72; margin-top: 4px; }
-.menu { display: flex; gap: 4px; margin-left: 8px; }
+.merk { font: 600 19px/1 var(--display); color: #fff; text-decoration: none; white-space: nowrap; }
+.merk span { display: block; font: 500 10px/1.4 var(--tekst); letter-spacing: .22em; text-transform: uppercase; opacity: .7; margin-top: 4px; }
+.menu { display: flex; gap: 2px; margin-left: 10px; }
 .menu a {
-  color: rgba(255,255,255,.86); text-decoration: none; font-size: 14.5px; font-weight: 500;
-  padding: 9px 14px; border-radius: 4px; position: relative;
-  border: 1px solid transparent; transition: color .15s, border-color .15s, background .15s;
+  color: rgba(255,255,255,.85); text-decoration: none; font-size: 14.5px; font-weight: 500;
+  padding: 10px 14px; position: relative; transition: color .15s;
 }
 .menu a::after {
-  content: ""; position: absolute; left: 14px; right: 14px; bottom: 5px; height: 1.5px;
+  content: ""; position: absolute; left: 14px; right: 14px; bottom: 4px; height: 1.5px;
   background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .18s;
 }
 .menu a:hover { color: #fff; }
 .menu a:hover::after { transform: scaleX(1); }
 .menu a[aria-current] { color: #fff; }
-.menu a[aria-current]::after { transform: scaleX(1); background: var(--accent); }
-.top .zoek {
-  margin-left: auto; display: flex; align-items: center; gap: 9px;
-  color: rgba(255,255,255,.8); font-size: 14px; cursor: pointer;
-  padding: 8px 15px; border: 1px solid rgba(255,255,255,.28); border-radius: 999px;
-  background: rgba(255,255,255,.06); transition: border-color .15s, background .15s;
-}
-.top .zoek:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.13); }
-
-/* ======= de banner: schermvullend, mozaiek van covers + kleursluier ======= */
-.hero { position: relative; overflow: hidden; isolation: isolate; }
-.mozaiek {
-  position: absolute; inset: -6% -2%; z-index: 0;
-  display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px;
-  transform: rotate(-3deg) scale(1.14);
-}
-.mozaiek img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
-.mozaiek::after {
-  content: ""; position: absolute; inset: 0;
-  background: var(--hero-waas); mix-blend-mode: color; opacity: .82;
-}
-.sluier { position: absolute; inset: 0; z-index: 1; background: var(--hero-sluier); }
-/* Let op: > is hier nodig. De bovenbalk en de tellerstrook zitten ook IN .hero,
-   en met een gewone afstammelingsselector kregen die deze padding er ook bij -
-   waardoor het logo over de kop heen viel. */
-.hero > .wrap { position: relative; z-index: 2; padding-top: calc(var(--balk) + 74px); padding-bottom: 62px; }
-.hero h1 {
-  font: 400 clamp(38px, 5.4vw, 68px)/1.06 var(--display);
-  margin: 0 0 20px; max-width: 15ch; color: #fff; text-wrap: balance;
-  letter-spacing: -0.01em;
-}
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero .onder {
-  margin: 0 0 30px; max-width: 52ch; font-size: 17px; line-height: 1.6;
-  color: rgba(255,255,255,.86);
-}
-.hero-knoppen { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-.knop-vol {
-  display: inline-flex; align-items: center; gap: 11px; text-decoration: none;
-  background: var(--accent); color: var(--accent-inkt);
-  font: 600 15px var(--tekst); padding: 14px 26px; border-radius: 2px;
-  transition: transform .15s, filter .15s;
-}
-.knop-vol:hover { filter: brightness(1.09); transform: translateX(2px); }
-.knop-leeg {
-  display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
-  color: #fff; font: 500 15px var(--tekst); padding: 14px 6px;
-  border-bottom: 1px solid rgba(255,255,255,.4); border-radius: 0;
-  transition: border-color .15s;
-}
-.knop-leeg:hover { border-color: #fff; }
-.tel-strip {
-  position: relative; z-index: 2; border-top: 1px solid rgba(255,255,255,.16);
-  background: rgba(0,0,0,.24);
-}
-.tel-strip .wrap { display: flex; gap: 38px; padding-top: 16px; padding-bottom: 16px; flex-wrap: wrap; }
-.tel { display: flex; align-items: baseline; gap: 8px; color: rgba(255,255,255,.72); font-size: 13.5px; }
-.tel b { font: 600 21px var(--display); color: #fff; font-variant-numeric: tabular-nums; }
-
-/* ======= filterband: een band over de breedte, geen los blok ======= */
-.filterband {
-  background: var(--grond-2); border-bottom: 1px solid var(--rand);
-  position: sticky; top: 0; z-index: 15;
-}
-.filterband .wrap {
-  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-  padding-top: 13px; padding-bottom: 13px;
-}
-.fknop {
-  font: 500 14px var(--tekst); color: var(--inkt); cursor: pointer;
-  background: transparent; border: 1px solid var(--rand); border-radius: 999px;
-  padding: 8px 16px; display: inline-flex; align-items: center; gap: 8px;
+.menu a[aria-current]::after { transform: scaleX(1); background: var(--goud); }
+.zoek {
+  margin-left: auto; display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.82);
+  font-size: 14px; cursor: pointer; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.26); background: rgba(255,255,255,.06);
   transition: border-color .15s, background .15s;
 }
-.fknop:hover { border-color: var(--accent); }
-.fknop.aan { background: var(--accent); border-color: var(--accent); color: var(--accent-inkt); font-weight: 600; }
-.fknop .pijl { opacity: .5; font-size: 10px; }
+.zoek:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.13); }
+
+/* ===== banner met slider ===== */
+.hero { position: relative; overflow: hidden; isolation: isolate; }
+.dia { display: none; position: relative; }
+.dia.aan { display: block; }
+.achter { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.mozaiek {
+  position: absolute; inset: -8% -3%;
+  display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px;
+  transform: rotate(-3deg) scale(1.16);
+}
+.mozaiek img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.achter .vul { position: absolute; inset: -14%; width: 128%; height: 128%; object-fit: cover; filter: blur(26px) saturate(1.15); }
+.achter::after { content: ""; position: absolute; inset: 0; background: #6E1420; mix-blend-mode: color; opacity: .84; }
+.sluier {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(56,9,15,.60) 0%, rgba(56,9,15,.80) 52%, rgba(56,9,15,.97) 100%);
+}
+.dia .wrap {
+  position: relative; z-index: 2;
+  padding-top: calc(var(--balk) + 76px); padding-bottom: 64px;
+  min-height: 470px; display: flex; align-items: center; gap: 52px;
+}
+.dia-tekst { flex: 1 1 auto; min-width: 0; }
+.hero h1 {
+  font: 400 clamp(36px, 5vw, 64px)/1.07 var(--display);
+  margin: 0 0 20px; max-width: 15ch; color: #fff; text-wrap: balance; letter-spacing: -.01em;
+}
+.hero h1 em { font-style: italic; color: var(--goud); }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 9px; margin: 0 0 16px;
+  font: 600 11px var(--tekst); letter-spacing: .19em; text-transform: uppercase; color: var(--goud);
+}
+.eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--goud); }
+.dia h2 {
+  font: 400 clamp(32px, 4.4vw, 54px)/1.08 var(--display);
+  margin: 0 0 14px; color: #fff; letter-spacing: -.01em; text-wrap: balance;
+}
+.onder { margin: 0 0 28px; max-width: 50ch; font-size: 17px; color: rgba(255,255,255,.86); }
+.volgende {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 26px;
+  color: rgba(255,255,255,.9); font-size: 15px; flex-wrap: wrap;
+}
+.volgende .pil {
+  display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px; border-radius: 999px;
+  background: rgba(255,255,255,.11); border: 1px solid rgba(255,255,255,.2); font-size: 13.5px;
+}
+.dia-beeld { flex: 0 0 236px; }
+.dia-beeld img {
+  width: 236px; height: 236px; object-fit: cover; display: block;
+  box-shadow: 0 22px 60px rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.16);
+}
+.knop-vol {
+  display: inline-flex; align-items: center; gap: 11px; text-decoration: none;
+  background: var(--goud); color: var(--goud-inkt); font: 600 15px var(--tekst);
+  padding: 14px 26px; border-radius: 2px; transition: filter .15s, transform .15s;
+}
+.knop-vol:hover { filter: brightness(1.09); transform: translateX(2px); }
+
+.pijl {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 25;
+  width: 46px; height: 46px; display: grid; place-items: center; cursor: pointer;
+  background: rgba(0,0,0,.32); border: 1px solid rgba(255,255,255,.26); color: #fff;
+  border-radius: 50%; transition: background .15s, border-color .15s;
+}
+.pijl:hover { background: rgba(0,0,0,.6); border-color: rgba(255,255,255,.7); }
+.pijl.links { left: 18px; }
+.pijl.rechts { right: 18px; }
+.pijl svg { width: 19px; height: 19px; }
+.stippen { position: absolute; left: 0; right: 0; bottom: 84px; z-index: 25; display: flex; justify-content: center; gap: 9px; }
+.stippen button {
+  width: 30px; height: 3px; border: none; padding: 0; cursor: pointer;
+  background: rgba(255,255,255,.32); transition: background .18s;
+}
+.stippen button[aria-current="true"] { background: var(--goud); }
+
+/* ===== tellers met symbolen ===== */
+.tellers { position: relative; z-index: 20; border-top: 1px solid rgba(255,255,255,.15); background: rgba(0,0,0,.26); }
+.tellers .wrap { display: flex; gap: 40px; padding-top: 15px; padding-bottom: 15px; flex-wrap: wrap; }
+.teller { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.74); font-size: 13.5px; }
+.teller svg { color: var(--goud); font-size: 17px; }
+.teller b { font: 600 20px var(--display); color: #fff; font-variant-numeric: tabular-nums; margin-right: 2px; }
+
+/* ===== filterband ===== */
+.filterband { background: var(--grond-2); border-bottom: 1px solid var(--rand); position: sticky; top: 0; z-index: 18; }
+.filterband .wrap { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 13px; padding-bottom: 13px; }
+.fknop {
+  font: 500 14px var(--tekst); color: var(--inkt); cursor: pointer; background: transparent;
+  border: 1px solid var(--rand); border-radius: 999px; padding: 8px 16px;
+  display: inline-flex; align-items: center; gap: 8px; transition: border-color .15s, background .15s;
+}
+.fknop:hover { border-color: var(--goud); }
+.fknop.aan { background: var(--goud); border-color: var(--goud); color: var(--goud-inkt); font-weight: 600; }
+.fknop .kl { opacity: .55; font-size: 10px; }
 .fscheiding { width: 1px; height: 24px; background: var(--rand); margin: 0 6px; }
-.fwis { background: none; border: none; color: var(--zacht); font: 400 13.5px var(--tekst);
-  cursor: pointer; text-decoration: underline; padding: 8px 4px; }
+.fwis { background: none; border: none; color: var(--zacht); font: 400 13.5px var(--tekst); cursor: pointer; text-decoration: underline; padding: 8px 4px; }
 .fwis:hover { color: var(--inkt); }
 .ftelling { margin-left: auto; color: var(--zacht); font-size: 13.5px; }
 
-/* ======= agenda: regels met haarlijnen, geen kaartjes ======= */
-.blad { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 54px;
-  padding-top: 40px; padding-bottom: 60px; align-items: start; }
+/* ===== agenda ===== */
+.blad { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 54px; padding-top: 38px; padding-bottom: 56px; align-items: start; }
 h2.maand {
-  font: 400 13px var(--tekst); letter-spacing: .2em; text-transform: uppercase;
-  color: var(--zacht); margin: 34px 0 4px; padding-bottom: 10px;
-  border-bottom: 1px solid var(--rand);
+  font: 500 12px var(--tekst); letter-spacing: .2em; text-transform: uppercase; color: var(--zacht);
+  margin: 32px 0 2px; padding-bottom: 10px; border-bottom: 1px solid var(--rand);
 }
 h2.maand:first-child { margin-top: 0; }
-.regel {
-  display: grid; grid-template-columns: 52px 46px 1fr auto; gap: 18px; align-items: center;
-  padding: 17px 0; border-bottom: 1px solid var(--rand);
-}
-.regel:hover .rtitel { color: var(--accent); }
+.regel { display: grid; grid-template-columns: 50px 44px 1fr auto; gap: 18px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--rand-zacht); }
+.regel.verborgen { display: none; }
+.regel:hover .rtitel { color: var(--goud); }
 .rdatum { text-align: center; font-variant-numeric: tabular-nums; }
-.rdatum .d { font: 600 25px/1 var(--display); }
-.rdatum .m { font: 500 10.5px var(--tekst); letter-spacing: .16em; text-transform: uppercase;
-  color: var(--zacht); margin-top: 5px; }
-.rcover { width: 46px; height: 46px; object-fit: cover; display: block; }
-.rtitel { font-weight: 600; font-size: 16px; line-height: 1.3; transition: color .15s; }
+.rdatum .d { font: 600 24px/1 var(--display); }
+.rdatum .m { font: 500 10.5px var(--tekst); letter-spacing: .15em; text-transform: uppercase; color: var(--zacht); margin-top: 5px; }
+.rcover { width: 44px; height: 44px; object-fit: cover; display: block; }
+.rtitel { font-weight: 600; font-size: 15.5px; line-height: 1.3; transition: color .15s; }
 .rzaal { color: var(--zacht); font-size: 13.5px; margin-top: 3px; }
-.rzaal .prov { opacity: .62; }
+.rzaal .prov { opacity: .6; }
 .rrechts { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 5px; }
 .tprijs { font-variant-numeric: tabular-nums; font-size: 13px; color: var(--zacht); }
-.tknop {
-  text-decoration: none; font: 600 13.5px var(--tekst);
-  color: var(--accent-inkt); background: var(--accent);
-  padding: 8px 16px; border-radius: 2px; white-space: nowrap;
-}
+.tknop { text-decoration: none; font: 600 13.5px var(--tekst); color: var(--goud-inkt); background: var(--goud); padding: 8px 16px; border-radius: 2px; white-space: nowrap; }
 .tknop:hover { filter: brightness(1.09); }
-.tuit {
-  font: 600 13.5px var(--tekst); color: var(--uitverkocht); white-space: nowrap;
-  padding: 8px 0; letter-spacing: .04em;
+.tuit { font: 600 13.5px var(--tekst); color: var(--uitverkocht); white-space: nowrap; padding: 8px 0; letter-spacing: .03em; }
+.meer-vak { padding: 26px 0 4px; display: flex; justify-content: center; }
+.meer {
+  font: 600 14.5px var(--tekst); color: var(--inkt); background: transparent;
+  border: 1px solid var(--rand); border-radius: 999px; padding: 12px 30px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 10px; transition: border-color .15s, color .15s;
 }
+.meer:hover { border-color: var(--goud); color: var(--goud); }
+.meer[hidden] { display: none; }
 
-/* ======= kaart ======= */
+/* ===== kaart ===== */
 .kaartvak { position: sticky; top: 78px; }
-.kaartbeeld {
-  aspect-ratio: 3 / 4; background: var(--grond-2);
-  border: 1px solid var(--rand); position: relative; overflow: hidden;
-  display: grid; place-items: center;
-}
-.kaartbeeld svg { width: 78%; height: 78%; opacity: .5; }
-.kaartbeeld .stip {
-  position: absolute; width: 30px; height: 30px; border-radius: 50%;
-  border: 2px solid var(--accent); overflow: hidden; background: var(--grond);
-}
-.kaartbeeld .stip img { width: 100%; height: 100%; object-fit: cover; }
-.kaartonder { display: flex; gap: 26px; padding: 15px 2px 0; align-items: baseline; }
-.kaartonder .k { display: flex; align-items: baseline; gap: 7px; font-size: 13px; color: var(--zacht); }
-.kaartonder .k b { font: 600 20px var(--display); color: var(--inkt); font-variant-numeric: tabular-nums; }
+.kaartbeeld { aspect-ratio: 3 / 4; background: var(--grond-2); border: 1px solid var(--rand); position: relative; overflow: hidden; display: grid; place-items: center; }
+.kaartbeeld svg.nl { width: 76%; height: 76%; opacity: .45; }
+.stip { position: absolute; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--goud); overflow: hidden; background: var(--grond); }
+.stip img { width: 100%; height: 100%; object-fit: cover; }
+.kaartonder { display: flex; gap: 26px; padding: 15px 2px 0; align-items: center; flex-wrap: wrap; }
+.kaartonder .k { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--zacht); }
+.kaartonder .k svg { color: var(--goud); font-size: 15px; }
+.kaartonder .k b { font: 600 19px var(--display); color: var(--inkt); font-variant-numeric: tabular-nums; }
 
-/* ======= tweede band over de volle breedte ======= */
-.band {
-  background: var(--grond-2); border-top: 1px solid var(--rand); border-bottom: 1px solid var(--rand);
-  padding: 46px 0;
-}
+/* ===== band 'speelden eerder' ===== */
+.band { background: var(--grond-2); border-top: 1px solid var(--rand); border-bottom: 1px solid var(--rand); padding: 46px 0; }
 .band-kop { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
-.band-kop h2 { font: 400 30px var(--display); margin: 0; letter-spacing: -0.01em; }
+.band-kop h2 { font: 400 30px var(--display); margin: 0; letter-spacing: -.01em; }
 .band-kop p { margin: 0; color: var(--zacht); font-size: 14.5px; }
-.band-kop a { margin-left: auto; color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+.band-kop a { margin-left: auto; color: var(--goud); text-decoration: none; font-weight: 600; font-size: 14px; }
 .band-kop a:hover { text-decoration: underline; }
 .strook { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
 .tegel { text-decoration: none; color: inherit; display: block; }
 .tegel img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
 .tegel .tn { font-weight: 600; font-size: 14px; margin-top: 11px; line-height: 1.3; }
 .tegel .tw { color: var(--zacht); font-size: 12.5px; margin-top: 3px; }
-.tegel:hover .tn { color: var(--accent); }
-
-/* ======= voet ======= */
-.voet { padding: 34px 0 60px; color: var(--zacht); font-size: 13px; }
-
-/* ======= uitleg per richting ======= */
-.uitleg { background: var(--grond-2); border-bottom: 1px solid var(--rand); }
-.uitleg .wrap { padding: 24px 28px; display: flex; gap: 34px; flex-wrap: wrap; }
-.uitleg h3 { font: 600 15px var(--tekst); margin: 0 0 6px; letter-spacing: .01em; }
-.uitleg p { margin: 0; color: var(--zacht); font-size: 14px; max-width: 62ch; line-height: 1.55; }
-.staal { display: flex; gap: 8px; align-items: center; }
-.staal i { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--rand); display: block; }
+.tegel:hover .tn { color: var(--goud); }
+.voet { padding: 34px 0 56px; color: var(--zacht); font-size: 13px; }
 
 @media (max-width: 1000px) {
   .blad { grid-template-columns: 1fr; gap: 34px; }
@@ -288,254 +225,319 @@ h2.maand:first-child { margin-top: 0; }
   .strook { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .menu { display: none; }
   .mozaiek { grid-template-columns: repeat(6, 1fr); }
+  .dia-beeld { display: none; }
+  .pijl.links { left: 8px; } .pijl.rechts { right: 8px; }
 }
 @media (max-width: 620px) {
   .strook { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .regel { grid-template-columns: 44px 1fr; row-gap: 10px; }
+  .regel { grid-template-columns: 42px 1fr; row-gap: 10px; }
   .rcover { display: none; }
   .rrechts { grid-column: 2; align-items: flex-start; }
+  .stippen { bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 </head>
-<body data-richting="fluweel">
+<body>
 
-<div class="stuur">
-  <div class="binnen">
-    <strong>Ontwerpvoorstellen</strong>
-    <span class="let">Dezelfde pagina, drie kleurrichtingen &middot; de echte site is niet gewijzigd</span>
-    <div class="keuzes" role="group" aria-label="Kies een richting">
-      <button type="button" data-kies="fluweel" aria-pressed="true">1 &middot; Rood fluweel</button>
-      <button type="button" data-kies="filmhuis" aria-pressed="false">2 &middot; Filmhuis</button>
-      <button type="button" data-kies="foyer" aria-pressed="false">3 &middot; Foyer</button>
-    </div>
-  </div>
-</div>
-
-<div class="uitleg">
-  <div class="wrap">
-    <div style="flex:1 1 320px">
-      <h3 id="u-titel">Rood fluweel</h3>
-      <p id="u-tekst"></p>
-    </div>
-    <div class="staal" id="u-staal"></div>
-  </div>
-</div>
+<div class="stuur"><div class="wrap">
+  <b>Ontwerpvoorstel &middot; Rood fluweel</b>
+  <span>Voorbeeldpagina &middot; de echte site op podcastliveshows.nl is niet gewijzigd</span>
+</div></div>
 
 <header class="hero">
-  <div class="mozaiek" id="mozaiek" aria-hidden="true"></div>
-  <div class="sluier"></div>
+  <div id="dias"></div>
 
-  <div class="top">
-    <div class="wrap">
-      <a class="merk" href="#">Podcast Liveshows<span>Nederland</span></a>
-      <nav class="menu">
-        <a href="#" aria-current="page">Agenda</a>
-        <a href="#">Podcasts</a>
-        <a href="#">Toplijst</a>
-      </nav>
-      <div class="zoek">Zoek een podcast</div>
-    </div>
-  </div>
+  <button class="pijl links" type="button" id="vorige" aria-label="Vorige">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="pijl rechts" type="button" id="volgende" aria-label="Volgende">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="stippen" id="stippen" role="tablist" aria-label="Kies een dia"></div>
 
-  <div class="wrap">
-    <h1>Welke podcast staat er <em>bij jou</em> in het theater?</h1>
-    <p class="onder">Steeds meer podcasts stappen het theater in. Hier staat wie er speelt,
-      wanneer en in welke zaal &mdash; met een directe link naar de kaartverkoop.</p>
-    <div class="hero-knoppen">
-      <a class="knop-vol" href="#">Bekijk de agenda <span aria-hidden="true">&rarr;</span></a>
-      <a class="knop-leeg" href="#">Wat speelt er deze week?</a>
+  <div class="top"><div class="wrap">
+    <a class="merk" href="#">Podcast Liveshows<span>Nederland</span></a>
+    <nav class="menu">
+      <a href="#" aria-current="page">Agenda</a>
+      <a href="#">Podcasts</a>
+      <a href="#">Toplijst</a>
+    </nav>
+    <div class="zoek">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      Zoek een podcast
     </div>
-  </div>
+  </div></div>
 
-  <div class="tel-strip">
-    <div class="wrap">
-      <span class="tel"><b>176</b> liveshows</span>
-      <span class="tel"><b>25</b> podcasts</span>
-      <span class="tel"><b>89</b> zalen</span>
-      <span class="tel"><b>36</b> uitverkocht</span>
-    </div>
-  </div>
+  <div class="tellers"><div class="wrap">
+    <span class="teller">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+      <b>176</b> liveshows</span>
+    <span class="teller">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
+      <b>25</b> podcasts</span>
+    <span class="teller">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <b>89</b> zalen</span>
+    <span class="teller">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2.5 2.5 0 0 0 0 5v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2.5 2.5 0 0 0 0-5z"/><path d="M14 5v14" stroke-dasharray="2 3"/></svg>
+      <b>36</b> uitverkocht</span>
+  </div></div>
 </header>
 
-<div class="filterband">
-  <div class="wrap">
-    <button class="fknop" type="button">Maand <span class="pijl">&#9660;</span></button>
-    <button class="fknop" type="button">Provincie <span class="pijl">&#9660;</span></button>
-    <button class="fknop" type="button">Thema <span class="pijl">&#9660;</span></button>
-    <button class="fknop aan" type="button">Nog kaarten <span class="pijl">&#9660;</span></button>
-    <span class="fscheiding"></span>
-    <button class="fknop" type="button">Vanavond</button>
-    <button class="fknop" type="button">Dit weekend</button>
-    <button class="fwis" type="button">Wis filters</button>
-    <span class="ftelling">140 shows</span>
-  </div>
-</div>
+<div class="filterband"><div class="wrap">
+  <button class="fknop" type="button">Maand <span class="kl">&#9660;</span></button>
+  <button class="fknop" type="button">Provincie <span class="kl">&#9660;</span></button>
+  <button class="fknop" type="button">Thema <span class="kl">&#9660;</span></button>
+  <button class="fknop aan" type="button">Nog kaarten <span class="kl">&#9660;</span></button>
+  <span class="fscheiding"></span>
+  <button class="fknop" type="button">Vanavond</button>
+  <button class="fknop" type="button">Dit weekend</button>
+  <button class="fwis" type="button">Wis filters</button>
+  <span class="ftelling" id="ftelling"></span>
+</div></div>
 
 <main class="wrap blad">
   <div>
-    <h2 class="maand">September 2026</h2>
     <div id="agenda"></div>
+    <div class="meer-vak">
+      <button class="meer" type="button" id="meer">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        <span id="meer-tekst">Toon meer shows</span>
+      </button>
+    </div>
   </div>
 
   <aside class="kaartvak">
     <div class="kaartbeeld" id="kaartbeeld">
-      <svg viewBox="0 0 100 130" aria-hidden="true">
-        <path d="M50 4 L74 16 L86 44 L80 78 L58 112 L44 124 L28 100 L14 66 L18 34 L34 12 Z"
-              fill="none" stroke="currentColor" stroke-width="1.2" opacity=".55"/>
+      <svg class="nl" viewBox="0 0 100 130" aria-hidden="true">
+        <path d="M50 4 L74 16 L86 44 L80 78 L58 112 L44 124 L28 100 L14 66 L18 34 L34 12 Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
       </svg>
     </div>
     <div class="kaartonder">
-      <span class="k"><b>140</b> shows</span>
-      <span class="k"><b>72</b> zalen</span>
+      <span class="k">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        <b>176</b> shows</span>
+      <span class="k">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <b>89</b> zalen</span>
     </div>
   </aside>
 </main>
 
-<section class="band">
-  <div class="wrap">
-    <div class="band-kop">
-      <h2>Speelden eerder</h2>
-      <p>Deze podcasts stonden al eens in het theater. Nieuwe data zetten we hier neer.</p>
-      <a href="#">Alle podcasts &rarr;</a>
-    </div>
-    <div class="strook" id="strook"></div>
+<section class="band"><div class="wrap">
+  <div class="band-kop">
+    <h2>Speelden eerder</h2>
+    <p>Deze podcasts stonden al eens in het theater. Nieuwe data zetten we hier neer.</p>
+    <a href="#">Alle podcasts &rarr;</a>
   </div>
-</section>
+  <div class="strook" id="strook"></div>
+</div></section>
 
-<footer class="wrap voet">
-  Voorbeeldpagina. De echte site staat ongewijzigd op podcastliveshows.nl
-</footer>
+<footer class="wrap voet">Voorbeeldpagina. De echte site staat ongewijzigd op podcastliveshows.nl</footer>
 
 <script>
 (function () {
   "use strict";
   var C = "https://is1-ssl.mzstatic.com/image/thumb/";
-  var cover = {
-    aaf:        C+"Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/300x300bb.png",
-    provin:     C+"Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/300x300bb.png",
-    rossem:     C+"Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/300x300bb.jpg",
-    liga:       C+"Podcasts211/v4/35/9c/92/359c92c3-7052-fcaf-802a-333035c7e955/mza_7283539563238062752.jpg/300x300bb.jpg",
-    pom:        C+"Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/300x300bb.jpg",
-    napleiten:  C+"Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/300x300bb.png",
-    lantaarn:   C+"Podcasts211/v4/6d/cb/e3/6dcbe3fb-9639-003d-18aa-a9ef930a3601/mza_2259557170486475773.jpg/300x300bb.jpg",
-    parool:     C+"Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/300x300bb.png",
-    geschied:   C+"Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/300x300bb.png",
-    amerika:    C+"Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/300x300bb.png",
-    boekestijn: C+"Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/300x300bb.png",
-    boord:      C+"Podcasts211/v4/da/94/ec/da94ec1b-573b-883c-141b-dd0c06ea60dd/mza_6876213664597474478.jpg/300x300bb.jpg",
-    macht:      C+"Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/300x300bb.jpg",
-    bagage:     C+"Podcasts221/v4/c2/10/d0/c210d060-0d5d-d3ca-41a8-fe287319c478/mza_7064471614632340840.jpg/300x300bb.jpg",
-    jortcast:   C+"Podcasts211/v4/da/fe/91/dafe91fd-8852-5ab2-4fa6-a4132f76d7aa/mza_8550718208685343643.jpg/300x300bb.png",
-    veldheren:  C+"Podcasts221/v4/2b/9d/d7/2b9dd7d5-8c4b-0a78-7609-77a820becd7a/mza_8085319065326219514.jpg/300x300bb.png",
-    podcastlas: C+"Podcasts211/v4/ae/70/58/ae705898-e44c-9e63-4b94-2ae9193815c2/mza_10762742402161117544.jpg/300x300bb.png",
-    echt:       C+"Podcasts211/v4/2e/e1/7f/2ee17f2f-6cf8-da59-505f-98a3307ec82c/mza_15671026658718584064.jpg/300x300bb.png",
-    veroordeeld:C+"Podcasts211/v4/31/b0/bb/31b0bbdc-30eb-fb1c-ccac-76805ea806bd/mza_2487447630942247232.jpg/300x300bb.png",
-    chantal:    C+"Podcasts211/v4/72/87/bf/7287bf1c-4c72-3ad0-fe26-c90b7c59252c/mza_1435136415523713379.jpg/300x300bb.png"
+  var cov = {
+    aaf:C+"Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/",
+    provin:C+"Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/",
+    rossem:C+"Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/",
+    liga:C+"Podcasts211/v4/35/9c/92/359c92c3-7052-fcaf-802a-333035c7e955/mza_7283539563238062752.jpg/",
+    pom:C+"Podcasts211/v4/68/d1/89/68d1893a-0636-4020-0caa-6d530d259745/mza_12575349570025535501.jpg/",
+    napleiten:C+"Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/",
+    lantaarn:C+"Podcasts211/v4/6d/cb/e3/6dcbe3fb-9639-003d-18aa-a9ef930a3601/mza_2259557170486475773.jpg/",
+    parool:C+"Podcasts211/v4/c8/21/b3/c821b3a4-aa7c-2418-0f56-472f093efacd/mza_10406733572000608125.jpg/",
+    geschied:C+"Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/",
+    amerika:C+"Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/",
+    boekestijn:C+"Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/",
+    boord:C+"Podcasts211/v4/da/94/ec/da94ec1b-573b-883c-141b-dd0c06ea60dd/mza_6876213664597474478.jpg/",
+    macht:C+"Podcasts221/v4/b4/ba/47/b4ba474f-9299-3c69-e9ac-5752f8763c92/mza_8587266760542739759.jpeg/",
+    bagage:C+"Podcasts221/v4/c2/10/d0/c210d060-0d5d-d3ca-41a8-fe287319c478/mza_7064471614632340840.jpg/",
+    jortcast:C+"Podcasts211/v4/da/fe/91/dafe91fd-8852-5ab2-4fa6-a4132f76d7aa/mza_8550718208685343643.jpg/",
+    veldheren:C+"Podcasts221/v4/2b/9d/d7/2b9dd7d5-8c4b-0a78-7609-77a820becd7a/mza_8085319065326219514.jpg/",
+    podcastlas:C+"Podcasts211/v4/ae/70/58/ae705898-e44c-9e63-4b94-2ae9193815c2/mza_10762742402161117544.jpg/",
+    echt:C+"Podcasts211/v4/2e/e1/7f/2ee17f2f-6cf8-da59-505f-98a3307ec82c/mza_15671026658718584064.jpg/",
+    veroordeeld:C+"Podcasts211/v4/31/b0/bb/31b0bbdc-30eb-fb1c-ccac-76805ea806bd/mza_2487447630942247232.jpg/",
+    chantal:C+"Podcasts211/v4/72/87/bf/7287bf1c-4c72-3ad0-fe26-c90b7c59252c/mza_1435136415523713379.jpg/"
   };
+  function beeld(sleutel, maat) { return cov[sleutel] + maat + "x" + maat + "bb.png"; }
+  var MND = ["jan","feb","mrt","apr","mei","jun","jul","aug","sep","okt","nov","dec"];
+  var MAAND = ["januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december"];
 
-  // ---- mozaiek in de banner ----
+  // ---------- 1. de dia's in de banner ----------
   var reeks = ["napleiten","aaf","rossem","parool","provin","geschied","liga","boekestijn","pom","macht",
                "lantaarn","amerika","boord","bagage","jortcast","veldheren","podcastlas","echt","veroordeeld","chantal"];
-  var moz = document.getElementById("mozaiek"), h = "";
-  for (var i = 0; i < 40; i++) {
-    h += '<img src="' + cover[reeks[i % reeks.length]] + '" alt="" loading="lazy">';
-  }
-  moz.innerHTML = h;
+  var mozaiekHtml = "";
+  for (var i = 0; i < 40; i++) mozaiekHtml += '<img src="' + beeld(reeks[i % reeks.length], 300) + '" alt="" loading="lazy">';
 
-  // ---- echte shows uit de agenda ----
-  var shows = [
-    {d:8,  m:"sep", t:"Over de liefde",                  z:"Koninklijke Schouwburg", s:"Den Haag",   p:"Zuid-Holland",   pr:"14,50", uit:true,  c:"aaf"},
-    {d:9,  m:"sep", t:"Harrekidee! (reprise)",           z:"Theater Lampegiet",      s:"Veenendaal", p:"Utrecht",        pr:"37,50", uit:true,  c:"provin"},
-    {d:11, m:"sep", t:"Theaterlezing Maarten van Rossem",z:"Griffioen",              s:"Amsterdam",  p:"Noord-Holland",  pr:"25,00", uit:false, c:"rossem"},
-    {d:11, m:"sep", t:"De Lesbische Liga Live",          z:"TivoliVredenburg",       s:"Utrecht",    p:"Utrecht",        pr:"32,50", uit:true,  c:"liga"},
-    {d:13, m:"sep", t:"Over de liefde",                  z:"DeLaMar",                s:"Amsterdam",  p:"Noord-Holland",  pr:"19,50", uit:false, c:"aaf"},
-    {d:26, m:"sep", t:"Napleiten Live",                  z:"Stadsschouwburg",        s:"Haarlem",    p:"Noord-Holland",  pr:"24,50", uit:false, c:"napleiten"},
-    {d:29, m:"sep", t:"Napleiten Live",                  z:"Musis",                  s:"Arnhem",     p:"Gelderland",     pr:"12,50", uit:false, c:"napleiten"}
+  var dias = [
+    { soort: "alles" },
+    { soort: "podcast", sleutel: "aaf",       naam: "Aaf en Lies lossen het wel weer op",
+      show: "Over de liefde", aantal: 32, dag: 8,  mnd: 9, zaal: "Koninklijke Schouwburg", stad: "Den Haag", uit: true },
+    { soort: "podcast", sleutel: "provin",    naam: "Provinfluencers",
+      show: "Harrekidee! (reprise)", aantal: 42, dag: 9, mnd: 9, zaal: "Theater Lampegiet", stad: "Veenendaal", uit: true },
+    { soort: "podcast", sleutel: "rossem",    naam: "Maarten van Rossem & Tom Jessen",
+      show: "Theaterlezing Maarten van Rossem", aantal: 21, dag: 11, mnd: 9, zaal: "Griffioen", stad: "Amsterdam", uit: false }
   ];
-  document.getElementById("agenda").innerHTML = shows.map(function (r) {
-    return '<div class="regel">' +
-      '<div class="rdatum"><div class="d">' + r.d + '</div><div class="m">' + r.m + '</div></div>' +
-      '<img class="rcover" src="' + cover[r.c] + '" alt="" loading="lazy">' +
-      '<div><div class="rtitel">' + r.t + '</div>' +
-      '<div class="rzaal">' + r.z + ', ' + r.s + ' <span class="prov">(' + r.p + ')</span></div></div>' +
-      '<div class="rrechts">' +
-        (r.uit ? '<span class="tuit">Uitverkocht</span>'
-               : '<a class="tknop" href="#">Tickets</a>') +
-        '<span class="tprijs">vanaf &euro;' + r.pr + '</span>' +
-      '</div></div>';
+
+  var kalenderIc = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  var pinIc = '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>';
+
+  document.getElementById("dias").innerHTML = dias.map(function (d, n) {
+    var achter = d.soort === "alles"
+      ? '<div class="achter"><div class="mozaiek">' + mozaiekHtml + '</div></div>'
+      : '<div class="achter"><img class="vul" src="' + beeld(d.sleutel, 600) + '" alt=""></div>';
+    var inhoud;
+    if (d.soort === "alles") {
+      inhoud =
+        '<div class="dia-tekst">' +
+        '<h1>Welke podcast staat er <em>bij jou</em> in het theater?</h1>' +
+        '<p class="onder">Steeds meer podcasts stappen het theater in. Hier staat wie er speelt, ' +
+        'wanneer en in welke zaal &mdash; met een directe link naar de kaartverkoop.</p>' +
+        '<a class="knop-vol" href="#">Alle 25 podcasts <span aria-hidden="true">&rarr;</span></a>' +
+        '</div>';
+    } else {
+      inhoud =
+        '<div class="dia-tekst">' +
+        '<p class="eyebrow">Nu in het theater</p>' +
+        '<h2>' + d.naam + '</h2>' +
+        '<div class="volgende">' +
+          '<span class="pil">' + kalenderIc + d.dag + " " + MAAND[d.mnd - 1] + '</span>' +
+          '<span class="pil">' + pinIc + d.zaal + ", " + d.stad + '</span>' +
+          (d.uit ? '<span class="pil" style="color:var(--uitverkocht)">Uitverkocht</span>' : '') +
+        '</div>' +
+        '<p class="onder">' + d.show + ' &middot; nog ' + d.aantal + ' speeldata in de agenda.</p>' +
+        '<a class="knop-vol" href="#">Bekijk alle ' + d.aantal + ' shows <span aria-hidden="true">&rarr;</span></a>' +
+        '</div>' +
+        '<div class="dia-beeld"><img src="' + beeld(d.sleutel, 600) + '" alt=""></div>';
+    }
+    return '<div class="dia' + (n === 0 ? " aan" : "") + '" data-dia="' + n + '">' +
+      achter + '<div class="sluier"></div><div class="wrap">' + inhoud + '</div></div>';
   }).join("");
 
-  // ---- speldjes op de kaart ----
+  document.getElementById("stippen").innerHTML = dias.map(function (d, n) {
+    return '<button type="button" role="tab" data-naar="' + n + '" aria-current="' + (n === 0) +
+      '" aria-label="Dia ' + (n + 1) + '"></button>';
+  }).join("");
+
+  var huidig = 0;
+  var diaEls = Array.prototype.slice.call(document.querySelectorAll(".dia"));
+  var stipEls = Array.prototype.slice.call(document.querySelectorAll(".stippen button"));
+  function toon(n) {
+    huidig = (n + dias.length) % dias.length;
+    diaEls.forEach(function (el, i) { el.classList.toggle("aan", i === huidig); });
+    stipEls.forEach(function (el, i) { el.setAttribute("aria-current", String(i === huidig)); });
+  }
+  document.getElementById("vorige").addEventListener("click", function () { toon(huidig - 1); });
+  document.getElementById("volgende").addEventListener("click", function () { toon(huidig + 1); });
+  stipEls.forEach(function (b) {
+    b.addEventListener("click", function () { toon(+b.getAttribute("data-naar")); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") toon(huidig - 1);
+    if (e.key === "ArrowRight") toon(huidig + 1);
+  });
+
+  // ---------- 2. agenda: 25 zichtbaar, de rest achter 'toon meer' ----------
+  var A = [
+   [8,9,"Over de liefde","Koninklijke Schouwburg","Den Haag","Zuid-Holland","14,50",1,"aaf"],
+   [9,9,"Harrekidee! (reprise)","Theater Lampegiet","Veenendaal","Utrecht","37,50",1,"provin"],
+   [10,9,"Harrekidee! (reprise)","Theater Lampegiet","Veenendaal","Utrecht","37,50",1,"provin"],
+   [11,9,"Theaterlezing Maarten van Rossem","Griffioen","Amsterdam","Noord-Holland","25,00",0,"rossem"],
+   [11,9,"Over de liefde","DeLaMar","Amsterdam","Noord-Holland","19,50",1,"aaf"],
+   [11,9,"De Lesbische Liga Live","TivoliVredenburg","Utrecht","Utrecht","32,50",1,"liga"],
+   [12,9,"Harrekidee! (reprise)","Theater aan de Parade","Den Bosch","Noord-Brabant","13,50",1,"provin"],
+   [12,9,"Over de liefde","DeLaMar","Amsterdam","Noord-Holland","19,50",1,"aaf"],
+   [13,9,"Over de liefde","DeLaMar","Amsterdam","Noord-Holland","19,50",0,"aaf"],
+   [14,9,"Harrekidee! (reprise)","Theater De Vest","Alkmaar","Noord-Holland","36,00",1,"provin"],
+   [15,9,"Harrekidee! (reprise)","Theater De Vest","Alkmaar","Noord-Holland","36,00",1,"provin"],
+   [17,9,"Harrekidee! (reprise)","Schouwburg","Hengelo","Overijssel","18,00",1,"provin"],
+   [17,9,"Over de liefde","OLT Caprera","Bloemendaal","Noord-Holland","32,50",1,"aaf"],
+   [18,9,"Theaterlezing Maarten van Rossem","De Oude Kerk","Heemstede","Noord-Holland","",0,"rossem"],
+   [19,9,"Over de liefde","Theater De Vest","Alkmaar","Noord-Holland","31,00",0,"aaf"],
+   [21,9,"Harrekidee! (reprise)","Deventer Schouwburg","Deventer","Overijssel","38,00",1,"provin"],
+   [22,9,"Over de liefde","Theater De Spiegel","Zwolle","Overijssel","20,50",0,"aaf"],
+   [22,9,"Harrekidee! (reprise)","Deventer Schouwburg","Deventer","Overijssel","38,00",1,"provin"],
+   [22,9,"Een Podcast over Media Liveshow","Rode Hoed","Amsterdam","Noord-Holland","15,00",0,"pom"],
+   [23,9,"Over de liefde","Leidse Schouwburg","Leiden","Zuid-Holland","29,50",0,"aaf"],
+   [24,9,"Theaterlezing Maarten van Rossem","Dru Industrie Park","Ulft","Gelderland","",0,"rossem"],
+   [24,9,"Harrekidee! (reprise)","Junushoff","Wageningen","Gelderland","36,50",1,"provin"],
+   [25,9,"Over de liefde","Theater De Veste","Delft","Zuid-Holland","27,50",0,"aaf"],
+   [26,9,"Napleiten Live","Stadsschouwburg","Haarlem","Noord-Holland","24,50",0,"napleiten"],
+   [27,9,"De Rode Lantaarn 10 jaar","TivoliVredenburg","Utrecht","Utrecht","25,50",0,"lantaarn"],
+   [27,9,"Over de liefde","Theater aan de Parade","Den Bosch","Noord-Brabant","13,50",0,"aaf"],
+   [28,9,"Harrekidee! (reprise)","Theater De Spiegel","Zwolle","Overijssel","19,00",1,"provin"],
+   [29,9,"Napleiten Live","Musis","Arnhem","Gelderland","12,50",0,"napleiten"],
+   [29,9,"Harrekidee! (reprise)","Theater De Spiegel","Zwolle","Overijssel","19,00",1,"provin"],
+   [1,10,"Harrekidee! (reprise)","Koninklijke Schouwburg","Den Haag","Zuid-Holland","18,00",1,"provin"],
+   [2,10,"Harrekidee! (reprise)","Schouwburg Cuijk","Cuijk","Noord-Brabant","38,50",1,"provin"],
+   [2,10,"Theaterlezing Maarten van Rossem","Theater De Omval","Diemen","Noord-Holland","",0,"rossem"],
+   [4,10,"Over de liefde","SPOT Stadsschouwburg","Groningen","Groningen","29,50",0,"aaf"],
+   [5,10,"Harrekidee! (reprise)","Stadsschouwburg","Haarlem","Noord-Holland","26,50",1,"provin"]
+  ];
+  var TOON = 25;
+  var html = "", vorigeMaand = null;
+  A.forEach(function (r, n) {
+    var maandSleutel = r[1];
+    if (maandSleutel !== vorigeMaand) {
+      vorigeMaand = maandSleutel;
+      html += '<h2 class="maand' + (n >= TOON ? " verborgen" : "") + '" data-n="' + n + '">' +
+              MAAND[maandSleutel - 1] + ' 2026</h2>';
+    }
+    html +=
+      '<div class="regel' + (n >= TOON ? " verborgen" : "") + '" data-n="' + n + '">' +
+        '<div class="rdatum"><div class="d">' + r[0] + '</div><div class="m">' + MND[r[1] - 1] + '</div></div>' +
+        '<img class="rcover" src="' + beeld(r[8], 300) + '" alt="" loading="lazy">' +
+        '<div><div class="rtitel">' + r[2] + '</div>' +
+        '<div class="rzaal">' + r[3] + ', ' + r[4] + ' <span class="prov">(' + r[5] + ')</span></div></div>' +
+        '<div class="rrechts">' +
+          (r[7] ? '<span class="tuit">Uitverkocht</span>' : '<a class="tknop" href="#">Tickets</a>') +
+          (r[6] ? '<span class="tprijs">vanaf &euro;' + r[6] + '</span>' : '') +
+        '</div>' +
+      '</div>';
+  });
+  document.getElementById("agenda").innerHTML = html;
+  document.getElementById("ftelling").textContent = A.length + " shows";
+
+  var getoond = TOON;
+  var meer = document.getElementById("meer");
+  function werkMeerBij() {
+    var over = A.length - getoond;
+    if (over <= 0) { meer.hidden = true; return; }
+    document.getElementById("meer-tekst").textContent =
+      "Toon " + Math.min(25, over) + " shows meer (nog " + over + ")";
+  }
+  meer.addEventListener("click", function () {
+    getoond += 25;
+    Array.prototype.forEach.call(document.querySelectorAll("[data-n]"), function (el) {
+      if (+el.getAttribute("data-n") < getoond) el.classList.remove("verborgen");
+    });
+    werkMeerBij();
+  });
+  werkMeerBij();
+
+  // ---------- 3. speldjes en strook ----------
   var kb = document.getElementById("kaartbeeld");
   [["napleiten",34,26],["aaf",22,40],["provin",48,34],["liga",41,47],["rossem",27,55],["geschied",58,63]]
     .forEach(function (s) {
       var el = document.createElement("div");
-      el.className = "stip";
-      el.style.left = s[1] + "%"; el.style.top = s[2] + "%";
-      el.innerHTML = '<img src="' + cover[s[0]] + '" alt="">';
+      el.className = "stip"; el.style.left = s[1] + "%"; el.style.top = s[2] + "%";
+      el.innerHTML = '<img src="' + beeld(s[0], 300) + '" alt="">';
       kb.appendChild(el);
     });
 
-  // ---- strook 'speelden eerder' ----
-  var eerder = [
-    {c:"jortcast",   n:"De Jortcast",     w:"Rat van Fortuin, t/m mei 2026"},
-    {c:"veldheren",  n:"Veldheren",       w:"Veldheren Live, voorjaar 2026"},
-    {c:"echt",       n:"Echt Gebeurd",    w:"De Parade, zomer 2026"},
-    {c:"veroordeeld",n:"Veroordeeld",     w:"Griffioen, maart 2026"},
-    {c:"podcastlas", n:"De Grote Podcastlas", w:"TivoliVredenburg, maart 2026"}
-  ];
-  document.getElementById("strook").innerHTML = eerder.map(function (p) {
-    return '<a class="tegel" href="#"><img src="' + cover[p.c] + '" alt="" loading="lazy">' +
-      '<div class="tn">' + p.n + '</div><div class="tw">' + p.w + '</div></a>';
+  document.getElementById("strook").innerHTML = [
+    ["jortcast","De Jortcast","Rat van Fortuin, t/m mei 2026"],
+    ["veldheren","Veldheren","Veldheren Live, voorjaar 2026"],
+    ["echt","Echt Gebeurd","De Parade, zomer 2026"],
+    ["veroordeeld","Veroordeeld","Griffioen, maart 2026"],
+    ["podcastlas","De Grote Podcastlas","TivoliVredenburg, maart 2026"]
+  ].map(function (p) {
+    return '<a class="tegel" href="#"><img src="' + beeld(p[0], 300) + '" alt="" loading="lazy">' +
+      '<div class="tn">' + p[1] + '</div><div class="tw">' + p[2] + '</div></a>';
   }).join("");
-
-  // ---- wisselen tussen de richtingen ----
-  var info = {
-    fluweel: {
-      titel: "1 &middot; Rood fluweel",
-      tekst: "Diep gordijnrood als achtergrond van de hele site, met goud als accent en een warme " +
-             "crèmekleur voor de tekst. Het idee: je zit al in de zaal voordat je iets hebt aangeklikt. " +
-             "Goud gebruiken we spaarzaam — alleen voor de ticketknop en het actieve filter, zodat het " +
-             "ergens over gaat.",
-      kleuren: ["#38090F", "#66202A", "#C9A24A", "#F4EBDD"]
-    },
-    filmhuis: {
-      titel: "2 &middot; Filmhuis",
-      tekst: "Bijna zwart, zoals een zaal die net verduisterd is. Er is bewust geen felle accentkleur: " +
-             "de covers van de podcasts zijn het enige dat kleur heeft, en die springen er daardoor uit. " +
-             "Knoppen zijn gebroken wit. Rustiger en neutraler dan rood, en het laat de podcasts zelf " +
-             "het beeld bepalen.",
-      kleuren: ["#121013", "#2F2A31", "#E9E0D1", "#F4F1EC"]
-    },
-    foyer: {
-      titel: "3 &middot; Foyer",
-      tekst: "De donkere theaterbanner blijft, maar daaronder wordt de pagina licht. Reden: onder de " +
-             "banner staan 176 regels agenda, en een lange lijst leest op een lichte ondergrond nu " +
-             "eenmaal makkelijker. Je houdt de theatrale binnenkomst, zonder dat het zoekwerk zwaar wordt. " +
-             "Rood keert terug als accentkleur.",
-      kleuren: ["#F6F1F1", "#E2D7D7", "#8E1D28", "#241418"]
-    }
-  };
-  var knoppen = Array.prototype.slice.call(document.querySelectorAll(".stuur button"));
-  function kies(naam) {
-    document.body.setAttribute("data-richting", naam);
-    knoppen.forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-kies") === naam));
-    });
-    document.getElementById("u-titel").innerHTML = info[naam].titel;
-    document.getElementById("u-tekst").innerHTML = info[naam].tekst;
-    document.getElementById("u-staal").innerHTML =
-      info[naam].kleuren.map(function (k) {
-        return '<i style="background:' + k + '" title="' + k + '"></i>';
-      }).join("");
-    try { history.replaceState(null, "", "?r=" + naam); } catch (e) {}
-  }
-  knoppen.forEach(function (b) {
-    b.addEventListener("click", function () { kies(b.getAttribute("data-kies")); });
-  });
-  var start = (new URLSearchParams(location.search).get("r") || "fluweel");
-  kies(info[start] ? start : "fluweel");
 })();
 </script>
 </body>
