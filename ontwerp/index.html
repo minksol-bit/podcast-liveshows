@@ -64,7 +64,8 @@ svg.ic { width: 1em; height: 1em; flex: none; }
 .zoek:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.13); }
 
 /* ===== banner met slider ===== */
-.hero { position: relative; overflow: hidden; isolation: isolate; }
+.hero { position: relative; isolation: isolate; }
+.slider { position: relative; overflow: hidden; }
 .dia { display: none; position: relative; }
 .dia.aan { display: block; }
 .achter { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
@@ -131,7 +132,7 @@ svg.ic { width: 1em; height: 1em; flex: none; }
 .pijl.links { left: 18px; }
 .pijl.rechts { right: 18px; }
 .pijl svg { width: 19px; height: 19px; }
-.stippen { position: absolute; left: 0; right: 0; bottom: 84px; z-index: 25; display: flex; justify-content: center; gap: 9px; }
+.stippen { position: absolute; left: 0; right: 0; bottom: 24px; z-index: 25; display: flex; justify-content: center; gap: 9px; }
 .stippen button {
   width: 30px; height: 3px; border: none; padding: 0; cursor: pointer;
   background: rgba(255,255,255,.32); transition: background .18s;
@@ -233,7 +234,6 @@ h2.maand:first-child { margin-top: 0; }
   .regel { grid-template-columns: 42px 1fr; row-gap: 10px; }
   .rcover { display: none; }
   .rrechts { grid-column: 2; align-items: flex-start; }
-  .stippen { bottom: 96px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -246,15 +246,16 @@ h2.maand:first-child { margin-top: 0; }
 </div></div>
 
 <header class="hero">
-  <div id="dias"></div>
-
-  <button class="pijl links" type="button" id="vorige" aria-label="Vorige">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-  </button>
-  <button class="pijl rechts" type="button" id="volgende" aria-label="Volgende">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-  </button>
-  <div class="stippen" id="stippen" role="tablist" aria-label="Kies een dia"></div>
+  <div class="slider">
+    <div id="dias"></div>
+    <button class="pijl links" type="button" id="vorige" aria-label="Vorige">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="pijl rechts" type="button" id="volgende" aria-label="Volgende">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <div class="stippen" id="stippen" role="tablist" aria-label="Kies een dia"></div>
+  </div>
 
   <div class="top"><div class="wrap">
     <a class="merk" href="#">Podcast Liveshows<span>Nederland</span></a>
