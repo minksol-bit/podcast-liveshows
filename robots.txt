@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /ontwerp/
 
 Sitemap: https://podcastliveshows.nl/sitemap.xml

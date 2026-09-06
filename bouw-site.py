@@ -776,7 +776,10 @@ def bouw_sitemap(podcasts):
                       % (volledig_adres(pad), vandaag))
     regels.append("</urlset>")
     schrijf("sitemap.xml", "\n".join(regels) + "\n")
-    schrijf("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % SITE_URL.rstrip("/"))
+    # /ontwerp/ bevat voorbeeldpagina's voor Mink, geen echte inhoud - buiten de zoekmachines houden.
+    schrijf("robots.txt",
+            "User-agent: *\nAllow: /\nDisallow: /ontwerp/\n\nSitemap: %s/sitemap.xml\n"
+            % SITE_URL.rstrip("/"))
     return len(paden)
 
 def main():
