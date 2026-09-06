@@ -115,6 +115,8 @@ def lees_alles():
             "website": tekst(p.get("website")),
             "band_links": tekst(p.get("bannerkleur_links")) or "#8e212e",
             "band_rechts": tekst(p.get("bannerkleur_rechts")) or "#6d1823",
+            "stand": tekst(p.get("liveshow_stand")).lower(),
+            "eerder": tekst(p.get("eerdere_show")),
             "slug": slug(p.get("naam")), "shows": [], "events": [],
         }
 
@@ -438,10 +440,17 @@ def bouw_catalogus(podcasts, gecheckt):
             huidige_letter = letter
             stukken.append('    <div class="letterkop">%s</div>' % e(letter))
         aantal = len(p["events"])
-        regel = ("%d liveshow%s" % (aantal, "" if aantal == 1 else "s")) if aantal else "nog geen liveshow bekend"
+        if aantal:
+            regel = "%d liveshow%s" % (aantal, "" if aantal == 1 else "s")
+        elif p["stand"] == "gestopt":
+            regel = "speelde eerder, tour afgesloten"
+        elif p["stand"] == "tussen tours":
+            regel = "speelde eerder, nu geen data"
+        else:
+            regel = "nog geen liveshow bekend"
         beeld = ('<img src="%s" alt="" loading="lazy">' % e(p["cover"])) if p["cover"] else ""
         stukken.append(
-            '    <a class="blok" href="podcast/%s.html" data-naam="%s" data-maker="%s" data-thema="%s">\n'
+            '    <a class="blok%s" href="podcast/%s.html" data-naam="%s" data-maker="%s" data-thema="%s">\n'
             '      %s\n'
             '      <div class="naamplaat">%s</div>\n'
             '      <div class="over">\n'
@@ -451,7 +460,7 @@ def bouw_catalogus(podcasts, gecheckt):
             '        <div class="voet">%s &rarr;</div>\n'
             '      </div>\n'
             '    </a>'
-            % (e(p["slug"]), e(p["naam"]), e(p.get("maker", "")), e(p["thema"]),
+            % ("" if aantal else " stil", e(p["slug"]), e(p["naam"]), e(p.get("maker", "")), e(p["thema"]),
                beeld, e(p["naam"]), e(p["thema"]), e(p["naam"]),
                e(p["kort"] or "Nog geen omschrijving."), e(regel)))
 
@@ -502,6 +511,11 @@ def bouw_toplijst(podcasts, status, gecheckt):
             staat = "%d liveshow%s" % (len(eigen["events"]), "" if len(eigen["events"]) == 1 else "s")
             rijen.append('    <a class="toprij live" href="podcast/%s.html">%s<div class="staat">%s &rarr;</div></a>'
                          % (e(eigen["slug"]), binnen, e(staat)))
+        elif eigen:
+            staat = ("tour afgesloten" if eigen["stand"] == "gestopt" else "speelde eerder")
+            rijen.append('    <a class="toprij eerder" href="podcast/%s.html">%s'
+                         '<div class="staat">%s &rarr;</div></a>'
+                         % (e(eigen["slug"]), binnen, e(staat)))
         elif st.get("gecontroleerd"):
             rijen.append('    <div class="toprij stil" title="%s">%s<div class="staat">nagekeken %s '
                          '&middot; geen liveshow</div></div>'
@@ -511,8 +525,9 @@ def bouw_toplijst(podcasts, status, gecheckt):
                          % binnen)
 
     onder = ('<p class="intro">De honderd best beluisterde podcasts van Nederland volgens Apple Podcasts, '
-             'bijgewerkt op %s. Wie een liveshow in onze agenda heeft is aanklikbaar. De rest is of '
-             'nagekeken zonder dat we een voorstelling vonden, of staat nog op de lijst om uit te zoeken.</p>'
+             'bijgewerkt op %s. Aanklikbaar zijn de podcasts met een eigen pagina: die met een liveshow '
+             'in de agenda, en die eerder speelden maar nu geen data hebben. De rest is nagekeken zonder '
+             'dat we een voorstelling vonden, of staat nog op de lijst om uit te zoeken.</p>'
              '<p class="cijfers">%d van de 100 nagekeken &middot; %d met een liveshow &middot; '
              '%d nog te doen</p>'
              % (e(top.get("opgehaald", "")), nagekeken, met_live, 100 - nagekeken))
@@ -635,7 +650,7 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                       % (pbanner_klasse, e(band_stijl), logo, rang, e(p["naam"]), maker, e(p["thema"]), e(samenvatting), tekst)
                     + ('  <div class="kolommen">\n    <div class="lijstkolom">\n'
                        + "\n".join(rijen) + "\n    </div>\n" + kaartblok + "  </div>\n"
-                       if evs else '  <p class="leeg">Voor deze podcast staan nog geen liveshows in de agenda.</p>\n')
+                       if evs else geen_shows_blok(p))
                     + '  <a class="terug" href="../catalogus.html">&larr; Alle podcasts</a>\n'
                     + voet(gecheckt,
                            ((leaflet_scripts("../") + "\n") if heeft_kaart else "")
@@ -645,6 +660,32 @@ def bouw_podcastpaginas(podcasts, gecheckt):
         schrijf("podcast/%s.html" % p["slug"], html_uit)
         gemaakt += 1
     return gemaakt
+
+def geen_shows_blok(p):
+    """Wat je ziet op de pagina van een podcast die nu geen shows heeft.
+
+    Onderscheid: heeft deze podcast eerder wel gespeeld (dan vertellen we wat,
+    en of we nog iets verwachten), of weten we simpelweg van niets?
+    """
+    if p["stand"] == "gestopt":
+        kop_tekst = "Deze show is afgelopen"
+        uitleg = ("De makers hebben geen nieuwe voorstelling aangekondigd. Komt daar "
+                  "verandering in, dan verschijnt die hier vanzelf.")
+    elif p["stand"] == "tussen tours":
+        kop_tekst = "Nu even niet in het theater"
+        uitleg = ("Er staan op dit moment geen data in de verkoop. Theatertours worden "
+                  "meestal per seizoen aangekondigd, dus er kan zomaar weer iets bij komen. "
+                  "We houden het in de gaten.")
+    else:
+        return '  <p class="leeg">Voor deze podcast staan nog geen liveshows in de agenda.</p>\n'
+
+    eerder = ('      <div class="rustig-eerder"><span class="rustig-label">Speelde eerder</span>'
+              '<span class="rustig-waarde">%s</span></div>\n' % e(p["eerder"])) if p["eerder"] else ""
+    return ('  <div class="rustig">\n'
+            '      <h2>%s</h2>\n'
+            '      <p>%s</p>\n'
+            '%s'
+            '  </div>\n' % (e(kop_tekst), e(uitleg), eerder))
 
 def bouw_sitemap(podcasts):
     paden = ["index.html", "catalogus.html", "toplijst.html"] + \

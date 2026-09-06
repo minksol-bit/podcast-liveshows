@@ -220,6 +220,22 @@ h2.maand:first-child { margin-top: 0; }
 .geen.knop-vorm .knop-onder { color: var(--grijs); opacity: 1; }
 .leeg { padding: 40px 0; color: var(--grijs); text-align: center; }
 
+/* ---------- podcast die nu geen shows heeft ---------- */
+.rustig {
+  margin-top: 34px; padding: 26px 28px; background: var(--vlak);
+  border: 1px solid var(--lijn); border-radius: 12px; max-width: 640px;
+}
+.rustig h2 { margin: 0 0 8px; font-size: 18px; letter-spacing: -0.01em; }
+.rustig p { margin: 0; color: var(--grijs); font-size: 14.5px; line-height: 1.55; }
+.rustig-eerder {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px;
+  margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--lijn);
+}
+.rustig-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--grijs);
+}
+.rustig-waarde { font-size: 14.5px; color: var(--inkt); font-weight: 600; }
+
 /* ---------- hartje ---------- */
 .hart {
   border: none; background: none; cursor: pointer; font-size: 19px; line-height: 1;
@@ -283,6 +299,7 @@ h2.maand:first-child { margin-top: 0; }
 .blok .over .kop { font-weight: 700; font-size: 15px; }
 .blok .over .tekst { font-size: 13px; line-height: 1.45; color: #423b38; }
 .blok .over .voet { font-size: 12px; color: var(--wijn); font-weight: 600; }
+.blok.stil .over .voet { color: var(--grijs); font-weight: 500; }
 .merkje {
   display: inline-block; padding: 2px 8px; border-radius: 999px;
   background: #efe7e2; color: var(--wijn); font-size: 11px; font-weight: 600;
@@ -368,4 +385,5 @@ footer a { color: var(--grijs); }
 @media (max-width: 620px) { .raster { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; } }
 
 .toprij.onbekend { opacity: .72; }
+.toprij.eerder .staat { color: var(--grijs); font-weight: 600; }
 .toprij.onbekend .staat { color: var(--grijs); font-style: italic; }
