@@ -209,9 +209,9 @@ h2.maand, .kolomkop {
 .datum { text-align: center; font-variant-numeric: tabular-nums; }
 .datum .dag { font: 600 24px/1 var(--display); }
 .datum .mnd { font: 500 10.5px var(--tekst); letter-spacing: .15em; text-transform: uppercase; color: var(--zacht); margin-top: 5px; }
-.minicover { width: 44px; height: 44px; overflow: hidden; background: var(--grond-2);
+.minicover { position: relative; width: 44px; height: 44px; overflow: hidden; background: var(--grond-2);
   display: grid; place-items: center; font: 600 13px var(--tekst); color: var(--zacht); }
-.minicover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.minicover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .info { min-width: 0; }
 .info .titel { font-weight: 600; font-size: 15.5px; line-height: 1.3; transition: color .15s; }
 .info .zaal { color: var(--zacht); font-size: 13.5px; margin-top: 3px; }
@@ -243,12 +243,16 @@ h2.maand, .kolomkop {
 
 /* ---------- kaartspeldjes ---------- */
 .bol, .tros {
+  position: relative;
   width: 42px; height: 42px; border-radius: 50%; overflow: hidden;
   border: 2px solid var(--goud); background: var(--grond);
   display: grid; place-items: center; font: 600 13px var(--tekst); color: var(--inkt);
   box-shadow: 0 3px 10px rgba(0,0,0,.5);
 }
-.bol img { width: 100%; height: 100%; object-fit: cover; }
+/* De cover absoluut over het bolletje leggen. Met alleen width/height 100% in een
+   grid met place-items:center krijgt de afbeelding geen betrouwbare hoogte, en dan
+   zie je alleen de achtergrondkleur. Zelfde valkuil als bij het covermozaiek. */
+.bol img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .tros { background: var(--goud); color: var(--goud-inkt); font-size: 15px; }
 .popup-zaal { font-weight: 600; margin-bottom: 5px; }
 .popup-regel { font-size: 13px; color: #4a4a4a; }
