@@ -842,8 +842,45 @@ def bouw_sitemap(podcasts):
             % SITE_URL.rstrip("/"))
     return len(paden)
 
+def peildatum():
+    """De dag waarop de site 'kijkt'. Normaal vandaag.
+
+    Te overschrijven met PEILDATUM=2026-12-01 om te controleren hoe de site er over
+    een tijd uitziet, zonder de klok van de computer te verzetten.
+    """
+    uit = os.environ.get("PEILDATUM", "").strip()
+    return uit if re.match(r"^\d{4}-\d{2}-\d{2}$", uit) else date.today().isoformat()
+
+
+def haal_verleden_eruit(podcasts, events, vandaag):
+    """Shows die al geweest zijn horen niet meer in de agenda.
+
+    Ze blijven wel gewoon in het Excel-bestand staan - dat is de geschiedenis, en we
+    gebruiken hem hieronder om te bepalen dat een podcast 'eerder speelde'. Een show
+    die vandaag is blijft staan: die kan vanavond nog beginnen.
+    """
+    geweest = [ev for ev in events if ev["iso"] < vandaag]
+    komend = [ev for ev in events if ev["iso"] >= vandaag]
+
+    for p in podcasts.values():
+        eerder = [ev for ev in p["events"] if ev["iso"] < vandaag]
+        p["events"] = [ev for ev in p["events"] if ev["iso"] >= vandaag]
+        # Speelde wel, maar heeft nu niks staan? Dan is die podcast tussen tours in.
+        # Zo hoeft niemand dat met de hand bij te houden zodra een tour afloopt.
+        if eerder and not p["events"] and not p["stand"]:
+            laatste = eerder[-1]
+            p["stand"] = "tussen tours"
+            p["eerder"] = "%s - laatste show %d %s %d, %s" % (
+                laatste["show"]["titel"], laatste["d"]["dag"],
+                MAANDEN[laatste["d"]["maand"] - 1], laatste["d"]["jaar"],
+                laatste["zaal"]["stad"])
+    return komend, geweest
+
+
 def main():
     podcasts, shows, venues, events, status = lees_alles()
+    vandaag = peildatum()
+    events, geweest = haal_verleden_eruit(podcasts, events, vandaag)
 
     top = lees_top100()
     if top:
@@ -866,6 +903,9 @@ def main():
     met_prijs = sum(1 for ev in events if ev["prijs"] is not None)
     met_tijd = sum(1 for ev in events if ev["tijd"])
     print("Site gebouwd in", HIER)
+    if geweest:
+        print("  %d show(s) al geweest, niet op de site gezet (peildatum %s)"
+              % (len(geweest), vandaag))
     print("  index.html           %d events" % len(events))
     print("  catalogus.html       %d podcasts" % len(podcasts))
     print("  toplijst.html        %d nagekeken, %d met liveshow, %d te doen"
@@ -879,8 +919,7 @@ def main():
     # Werklijst: alleen wat binnenkort speelt hoeft een tijd en prijs te hebben.
     # Alles verrijken schaalt niet; over een jaar is de prijs toch veranderd.
     from datetime import timedelta
-    grens = (date.today() + timedelta(days=90)).isoformat()
-    vandaag = date.today().isoformat()
+    grens = (datetime.strptime(vandaag, "%Y-%m-%d").date() + timedelta(days=90)).isoformat()
     werk = [ev for ev in events if vandaag <= ev["iso"] <= grens
             and (not ev["tijd"] or ev["prijs"] is None)]
     if werk:
