@@ -314,10 +314,15 @@ def tellers_html(paren):
             % "".join('<span class="teller">%s<b>%s</b> %s</span>' % (ic, e(getal), e(woord))
                       for ic, getal, woord in paren))
 
-def hero(kopregel, onder="", klein=False, mozaiek="", tellers=""):
+def hero(kopregel, onder="", klein=False, mozaiek="", tellers="", actie=""):
     return ('  <header class="hero%s">\n%s    <div class="sluier"></div>\n'
-            '    <div class="wrap">\n      <h1>%s</h1>\n      %s\n    </div>\n%s  </header>\n'
-            % (" klein" if klein else "", mozaiek, kopregel, onder, tellers))
+            '    <div class="wrap">\n'
+            '      <div class="hero-tekst">\n        <h1>%s</h1>\n        %s\n      </div>\n'
+            '%s'
+            '    </div>\n%s  </header>\n'
+            % (" klein" if klein else "", mozaiek, kopregel, onder,
+               ('      <div class="hero-actie">%s</div>\n' % actie) if actie else "",
+               tellers))
 
 
 def jsonld_event(ev, url):
@@ -494,7 +499,6 @@ def bouw_index(podcasts, venues, events, gecheckt):
                     ensure_ascii=False, indent=1)
     extra = '<script type="application/ld+json">%s</script>' % ld
 
-    uitverkocht = sum(1 for ev in events if ev["status"].lower() == "uitverkocht")
     onder = ('<p class="intro">Steeds meer podcasts stappen het theater in. Deze site verzamelt welke '
              'Nederlandse podcasts een liveshow spelen, wanneer en in welke zaal, met een directe link '
              'naar de kaartverkoop.</p>')
@@ -528,8 +532,9 @@ def bouw_index(podcasts, venues, events, gecheckt):
                        tellers=tellers_html([
                            (IC_KALENDER, len(events), "liveshows"),
                            (IC_MICROFOON, len(podcasts), "podcasts"),
-                           (IC_SPELD, len(venues), "zalen"),
-                           (IC_KAARTJE, uitverkocht, "uitverkocht")]))
+                           (IC_SPELD, len(venues), "zalen")]),
+                       actie='<a class="knop-groot" href="catalogus.html">Bekijk alle %d podcasts '
+                             '<span aria-hidden="true">&rarr;</span></a>' % len(podcasts))
                 + FILTERBLOK
                 + """  <div class="wrap">
     <div class="kolommen">
@@ -542,6 +547,7 @@ def bouw_index(podcasts, venues, events, gecheckt):
         </button></div>
       </div>
       <div class="kaartkolom">
+        <h2 class="kolomkop">Waar ze spelen</h2>
         <div class="kaart" id="kaart"></div>
         <div class="melding" id="melding" hidden></div>
       </div>
@@ -719,7 +725,7 @@ def bouw_podcastpaginas(podcasts, gecheckt):
             else:
                 knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % onder
             rijen.append(
-                '    <div class="event" data-ev="%s">\n'
+                '    <div class="event event-kaal" data-ev="%s">\n'
                 '      <div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>\n'
                 '      <div class="info"><div class="titel">%s</div>'
                 '<div class="zaal">%s, %s%s</div>'
@@ -734,7 +740,8 @@ def bouw_podcastpaginas(podcasts, gecheckt):
 
         heeft_kaart = any(ev["zaal"]["opkaart"] for ev in evs)
         n_zalen = len({ev["zaal"]["id"] for ev in evs if ev["zaal"]["opkaart"]})
-        kaartblok = ('    <div class="kaartkolom"><div class="kaart" id="kaart"></div>\n'
+        kaartblok = ('    <div class="kaartkolom"><h2 class="kolomkop">Waar ze spelen</h2>\n'
+                     '      <div class="kaart" id="kaart"></div>\n'
                      '      <div class="kaart-onder">\n'
                      '        <div class="kaart-cijfers">'
                      '<span>%s<strong>%d</strong> %s</span>'

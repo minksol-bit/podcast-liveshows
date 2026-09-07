@@ -86,7 +86,16 @@ svg.ic { width: 1em; height: 1em; flex: none; }
 .hero > .wrap {
   position: relative; z-index: 2;
   padding-top: calc(var(--balk) + 66px); padding-bottom: 56px;
+  display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;
 }
+.hero-tekst { flex: 1 1 auto; min-width: 0; }
+.hero-actie { flex: 0 0 auto; padding-bottom: 4px; }
+.knop-groot {
+  display: inline-flex; align-items: center; gap: 11px; text-decoration: none; white-space: nowrap;
+  background: var(--goud); color: var(--goud-inkt); font: 600 15px var(--tekst);
+  padding: 14px 26px; transition: filter .15s, transform .15s;
+}
+.knop-groot:hover { filter: brightness(1.09); transform: translateX(2px); }
 .hero.klein > .wrap { padding-top: calc(var(--balk) + 40px); padding-bottom: 34px; }
 .hero h1 {
   font: 400 clamp(34px, 4.8vw, 60px)/1.08 var(--display);
@@ -100,9 +109,12 @@ svg.ic { width: 1em; height: 1em; flex: none; }
 /* ---------- tellerbalk met symbolen ---------- */
 .tellers {
   position: relative; z-index: 3;
-  border-top: 1px solid rgba(255,255,255,.14); background: rgba(0,0,0,.26);
+  border-top: 1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.52);
 }
-.tellers .wrap { display: flex; gap: 38px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+.tellers .wrap {
+  display: flex; gap: 22px 52px; padding-top: 15px; padding-bottom: 15px;
+  flex-wrap: wrap; justify-content: center;
+}
 .teller { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.74); font-size: 13.5px; }
 .teller svg { color: var(--goud); font-size: 17px; }
 .teller b { font: 600 20px var(--display); color: #fff; font-variant-numeric: tabular-nums; margin-right: 2px; }
@@ -178,16 +190,20 @@ input[type=search]:focus { border-color: var(--goud); outline: none; }
 .melding code { background: rgba(0,0,0,.3); padding: 1px 5px; }
 
 /* ---------- agenda: regels met haarlijnen, geen kaartjes ---------- */
-h2.maand {
+h2.maand, .kolomkop {
   font: 500 12px var(--tekst); letter-spacing: .2em; text-transform: uppercase; color: var(--zacht);
   margin: 32px 0 2px; padding-bottom: 10px; border-bottom: 1px solid var(--rand);
 }
+.kolomkop { margin: 0 0 14px; }
 #lijst > h2.maand:first-child, .lijstkolom h2.maand:first-child { margin-top: 0; }
 .event {
   display: grid; grid-template-columns: 50px 44px 1fr auto; gap: 18px; align-items: center;
   padding: 16px 0; border-bottom: 1px solid var(--rand-zacht);
 }
 .event.klikbaar { cursor: pointer; }
+/* Op een podcastpagina staat bij elke regel dezelfde cover, dus die laten we weg.
+   Zonder eigen kolomindeling kreeg de titel dan de smalle coverkolom van 44px. */
+.event.event-kaal { grid-template-columns: 50px 1fr auto; }
 .event:hover .titel, .event.actief .titel { color: var(--goud); }
 .event.actief { background: rgba(201,162,74,.06); }
 .datum { text-align: center; font-variant-numeric: tabular-nums; }
@@ -373,6 +389,8 @@ footer a { color: var(--zacht); }
   .kaart { height: 320px; min-height: 0; }
   .strook { grid-template-columns: repeat(3, minmax(0,1fr)); }
   .raster { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .hero > .wrap { flex-direction: column; align-items: flex-start; gap: 26px; }
+  .hero-actie { padding-bottom: 0; }
   .pbanner > .wrap { flex-direction: column; align-items: flex-start; gap: 20px; }
   .pbanner-logo { flex-basis: 96px; width: 96px; height: 96px; }
   .telling { margin-left: 0; width: 100%; }
@@ -383,7 +401,7 @@ footer a { color: var(--zacht); }
 }
 @media (max-width: 620px) {
   .raster, .strook { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .event { grid-template-columns: 42px 1fr; row-gap: 10px; }
+  .event, .event.event-kaal { grid-template-columns: 42px 1fr; row-gap: 10px; }
   .minicover { display: none; }
   .rechtsblok { grid-column: 2; align-items: flex-start; text-align: left; }
   .toprij { grid-template-columns: 32px 44px 1fr; }
