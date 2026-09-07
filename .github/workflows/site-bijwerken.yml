@@ -1,0 +1,61 @@
+# Bouwt de site elke ochtend opnieuw en zet het resultaat live als er iets veranderd is.
+#
+# Waarom dit bestaat: de site is statisch en verandert alleen als bouw-site.py draait.
+# Zonder deze taak blijven voorstellingen die geweest zijn in de agenda staan, en
+# schuiven podcasts niet door naar "Speelden eerder" als hun tour afloopt.
+#
+# Er wordt alleen gecommit als er echt iets anders is. De sitemap gebruikt bewust de
+# datum van de laatste gegevenscontrole en niet de bouwdag, anders zou elke dag een
+# lege wijziging ontstaan.
+
+name: Site bijwerken
+
+on:
+  schedule:
+    - cron: "30 4 * * *"      # 04:30 UTC = 06:30 Nederlandse zomertijd
+  workflow_dispatch:           # en met de hand te starten via het tabblad Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-schrijven
+  cancel-in-progress: false
+
+jobs:
+  bouwen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: openpyxl installeren
+        run: pip install --quiet openpyxl
+
+      - name: Site bouwen
+        run: |
+          echo "### Bouwverslag" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python3 bouw-site.py | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Live zetten als er iets veranderd is
+        run: |
+          git config user.name "podcastliveshows-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Niets veranderd, geen nieuwe versie nodig." | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Gewijzigde bestanden:" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            git diff --cached --name-only | tee -a "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            git commit -m "Site automatisch bijgewerkt
+
+          Dagelijkse bouw: gespeelde shows uit de agenda, tellingen bijgewerkt."
+            git push
+          fi

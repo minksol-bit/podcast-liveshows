@@ -1,0 +1,111 @@
+# Loopt wekelijks de ticketpagina's na en meldt wat er veranderd is.
+#
+# Belangrijk: deze taak SCHRIJFT standaard niets weg. De signaalwoorden in
+# check-beschikbaarheid.py zijn nog niet tegen echte theatersites getest, dus eerst
+# een ronde kijken of het klopt. Zijn de uitkomsten betrouwbaar, dan kan het vinkje
+# "schrijf" bij het handmatig starten aan, of kan die standaard hier aangezet worden.
+#
+# Dit draait op GitHub en niet op een eigen machine, omdat GitHub gewoon bij de
+# theatersites kan; de omgevingen waarin Claude werkt hebben die netwerktoegang niet.
+
+name: Kaartverkoop nalopen
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"        # maandagochtend 05:00 UTC = 07:00 Nederlandse zomertijd
+  workflow_dispatch:
+    inputs:
+      ouder_dan:
+        description: "Alleen shows die zoveel dagen niet gecheckt zijn"
+        default: "6"
+      schrijf:
+        description: "De uitkomst ook echt in het Excel-bestand zetten"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: site-schrijven
+  cancel-in-progress: false
+
+jobs:
+  nalopen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: openpyxl installeren
+        run: pip install --quiet openpyxl
+
+      - name: Ticketpagina's nalopen
+        run: |
+          OUDER="${{ github.event.inputs.ouder_dan || '6' }}"
+          SCHRIJF=""
+          if [ "${{ github.event.inputs.schrijf }}" = "true" ]; then SCHRIJF="--schrijf"; fi
+          echo "### Kaartverkoop nagelopen" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python3 check-beschikbaarheid.py --ouder-dan "$OUDER" $SCHRIJF \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Rapport bewaren
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: beschikbaarheid-rapport
+          path: data/beschikbaarheid-rapport.json
+          if-no-files-found: ignore
+
+      - name: Melding maken als er iets veranderd is
+        if: github.event.inputs.schrijf != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - << 'PY' > /tmp/melding.md
+          import json, pathlib
+          pad = pathlib.Path("data/beschikbaarheid-rapport.json")
+          if not pad.exists():
+              print("LEEG"); raise SystemExit
+          r = json.loads(pad.read_text(encoding="utf-8"))
+          if not r["wijzigingen"]:
+              print("LEEG"); raise SystemExit
+          print("%d van de %d nagelopen shows staan er anders voor dan in het "
+                "Excel-bestand.\n" % (r["wijzigingen"], r["gecheckt"]))
+          print("| datum | show | plaats | nu in de agenda | op de ticketpagina |")
+          print("|---|---|---|---|---|")
+          for x in r["regels"]:
+              if x["verandert"]:
+                  print("| %s | %s | %s | %s | **%s** |"
+                        % (x["datum"], x["titel"][:44], x["stad"], x["status_nu"], x["oordeel"]))
+          print("\nOnzeker: %d &middot; niet te lezen: %d" % (r["onzeker"], r["onleesbaar"]))
+          print("\nKloppen deze? Start dan 'Kaartverkoop nalopen' nog eens met het "
+                "vinkje *schrijf* aan, dan gaat het het Excel-bestand in.")
+          PY
+          if grep -q "^LEEG" /tmp/melding.md; then
+            echo "Geen verschillen gevonden, geen melding nodig."
+          else
+            gh issue create \
+              --title "Kaartverkoop: verschillen gevonden op $(date +%F)" \
+              --body-file /tmp/melding.md
+          fi
+
+      - name: Site opnieuw bouwen en live zetten
+        if: github.event.inputs.schrijf == 'true'
+        run: |
+          python3 bouw-site.py
+          git config user.name "podcastliveshows-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Niets veranderd."
+          else
+            git commit -m "Kaartverkoop bijgewerkt na automatische ronde"
+            git push
+          fi

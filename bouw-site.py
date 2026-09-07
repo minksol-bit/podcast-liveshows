@@ -825,10 +825,16 @@ def geen_shows_blok(p):
             '%s'
             '  </div>\n' % (e(kop_tekst), e(uitleg), eerder))
 
-def bouw_sitemap(podcasts):
+def bouw_sitemap(podcasts, gecheckt):
+    """De sitemap, met als lastmod de dag dat de gegevens voor het laatst zijn nagelopen.
+
+    Bewust NIET de dag van bouwen: dan verandert dit bestand elke dag, ook als er
+    inhoudelijk niets gebeurd is. De site wordt automatisch dagelijks opnieuw
+    gebouwd, en dat zou dan elke dag een lege wijziging opleveren.
+    """
     paden = ["index.html", "catalogus.html", "toplijst.html"] + \
             ["podcast/%s.html" % p["slug"] for p in podcasts.values()]
-    vandaag = date.today().isoformat()
+    vandaag = gecheckt or date.today().isoformat()
     regels = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for pad in paden:
@@ -897,7 +903,7 @@ def main():
     bouw_catalogus(podcasts, gecheckt)
     met_live, nagekeken = bouw_toplijst(podcasts, status, gecheckt)
     n_pagina = bouw_podcastpaginas(podcasts, gecheckt)
-    n_sitemap = bouw_sitemap(podcasts)
+    n_sitemap = bouw_sitemap(podcasts, gecheckt)
 
     zonder = sum(1 for v in venues.values() if not v["opkaart"])
     met_prijs = sum(1 for ev in events if ev["prijs"] is not None)
