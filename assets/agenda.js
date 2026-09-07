@@ -241,7 +241,7 @@
       } else {
         var g = document.createElement("span");
         g.className = "geen knop-vorm";
-        g.innerHTML = '<span class="knop-label">geen link</span>' + onderHtml;
+        g.innerHTML = '<span class="knop-label">Nog geen ticketlink</span>' + onderHtml;
         rechts.appendChild(g);
       }
       rij.appendChild(rechts);
@@ -291,9 +291,9 @@
     var mel = $("melding");
     if (missend) {
       mel.hidden = false;
-      mel.innerHTML = "Van de " + DATA.venues_totaal + " zalen hebben er <strong>" + missend +
-        "</strong> nog geen coördinaten. Vul <code>lat</code> en <code>lon</code> in op het tabblad " +
-        "<code>venues</code> en draai daarna <code>python3 bouw-site.py</code>.";
+      mel.textContent = missend === 1
+        ? "Eén zaal staat nog niet op de kaart."
+        : missend + " zalen staan nog niet op de kaart.";
     } else { mel.hidden = true; }
   }
 

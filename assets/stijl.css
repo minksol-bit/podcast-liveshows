@@ -254,8 +254,20 @@ h2.maand, .kolomkop {
    zie je alleen de achtergrondkleur. Zelfde valkuil als bij het covermozaiek. */
 .bol img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .tros { background: var(--goud); color: var(--goud-inkt); font-size: 15px; }
+/* Speldjes op een podcastpagina: een pil met de eerstvolgende datum erin. */
+.speld {
+  display: flex; align-items: center; gap: 6px; padding: 4px 10px 4px 6px;
+  background: var(--goud); color: var(--goud-inkt); border: 2px solid rgba(255,255,255,.85);
+  border-radius: 999px; font: 600 12px/1 var(--tekst); white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,.45); transition: opacity .15s, transform .15s;
+}
+.speld .stip { width: 8px; height: 8px; border-radius: 50%; background: var(--goud-inkt); opacity: .65; }
+.gedimd .speld { opacity: .3; }
+.uitgelicht .speld { transform: scale(1.16); background: #fff; border-color: var(--goud); }
+
 .popup-zaal { font-weight: 600; margin-bottom: 5px; }
-.popup-regel { font-size: 13px; color: #4a4a4a; }
+.popup-regel { font-size: 13px; color: #4a4a4a; margin: 3px 0; }
+.leaflet-popup-content { margin: 12px 14px; }
 .leaflet-popup-content-wrapper { border-radius: 3px; }
 
 /* ---------- bijschrift onder de kaart ---------- */

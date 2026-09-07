@@ -469,7 +469,7 @@ def agenda_html(events):
             knop = ('<a class="knop" href="%s" target="_blank" rel="noopener">'
                     '<span class="knop-label">Tickets</span>%s</a>' % (e(ev["ticket"]), prijs))
         else:
-            knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % prijs
+            knop = '<span class="geen knop-vorm"><span class="knop-label">Nog geen ticketlink</span>%s</span>' % prijs
 
         stukken.append(
             '<div class="event%s%s">'
@@ -515,7 +515,7 @@ def bouw_index(podcasts, venues, events, gecheckt):
             for p in eerder)
         band = ('  <section class="band">\n    <div class="wrap">\n'
                 '      <div class="band-kop"><h2>Speelden eerder</h2>'
-                '<p>Deze podcasts stonden al eens in het theater. Nieuwe data zetten we hier neer.</p>'
+                '<p>Deze podcasts stonden al eens in het theater, maar hebben nu geen data in de verkoop.</p>'
                 '<a href="catalogus.html">Alle podcasts &rarr;</a></div>\n'
                 '      <div class="strook">%s</div>\n    </div>\n  </section>\n' % tegels)
     else:
@@ -530,9 +530,9 @@ def bouw_index(podcasts, venues, events, gecheckt):
                        onder,
                        mozaiek=mozaiek_html(podcasts),
                        tellers=tellers_html([
-                           (IC_KALENDER, len(events), "liveshows"),
                            (IC_MICROFOON, len(podcasts), "podcasts"),
-                           (IC_SPELD, len(venues), "zalen")]),
+                           (IC_SPELD, len(venues), "zalen"),
+                           (IC_KALENDER, len(events), "liveshows")]),
                        actie='<a class="knop-groot" href="catalogus.html">Bekijk alle %d podcasts '
                              '<span aria-hidden="true">&rarr;</span></a>' % len(podcasts))
                 + FILTERBLOK
@@ -629,7 +629,7 @@ def bouw_toplijst(podcasts, status, gecheckt):
         print("  (geen apple-top100.json gevonden, toplijst overgeslagen)")
         return 0, 0
     op_sleutel = {zoeksleutel(p["naam"]): p for p in podcasts.values()}
-    rijen, met_live, nagekeken = [], 0, 0
+    rijen, met_live, met_eerder, nagekeken = [], 0, 0, 0
     for rang, naam, maker, genres, apple_id, beeld in top["lijst"]:
         eigen = op_sleutel.get(zoeksleutel(naam))
         heeft = eigen and eigen["events"]
@@ -647,25 +647,24 @@ def bouw_toplijst(podcasts, status, gecheckt):
             rijen.append('    <a class="toprij live" href="podcast/%s.html">%s<div class="staat">%s &rarr;</div></a>'
                          % (e(eigen["slug"]), binnen, e(staat)))
         elif eigen:
+            met_eerder += 1
             staat = ("tour afgesloten" if eigen["stand"] == "gestopt" else "speelde eerder")
             rijen.append('    <a class="toprij eerder" href="podcast/%s.html">%s'
                          '<div class="staat">%s &rarr;</div></a>'
                          % (e(eigen["slug"]), binnen, e(staat)))
         elif st.get("gecontroleerd"):
-            rijen.append('    <div class="toprij stil" title="%s">%s<div class="staat">nagekeken %s '
-                         '&middot; geen liveshow</div></div>'
-                         % (e(st.get("notitie", "")), binnen, e(st["gecontroleerd"])))
+            # De kolom notitie is een werkaantekening voor onszelf en hoort niet op de site.
+            rijen.append('    <div class="toprij stil">%s<div class="staat">geen liveshow bekend</div></div>'
+                         % binnen)
         else:
             rijen.append('    <div class="toprij onbekend">%s<div class="staat">nog niet bekeken</div></div>'
                          % binnen)
 
     onder = ('<p class="intro">De honderd best beluisterde podcasts van Nederland volgens Apple Podcasts, '
-             'bijgewerkt op %s. Aanklikbaar zijn de podcasts met een eigen pagina: die met een liveshow '
-             'in de agenda, en die eerder speelden maar nu geen data hebben. De rest is nagekeken zonder '
-             'dat we een voorstelling vonden, of staat nog op de lijst om uit te zoeken.</p>'
-             '<p class="cijfers">%d van de 100 nagekeken &middot; %d met een liveshow &middot; '
-             '%d nog te doen</p>'
-             % (e(top.get("opgehaald", "")), nagekeken, met_live, 100 - nagekeken))
+             'bijgewerkt op %s. De namen die je kunt aanklikken hebben een eigen pagina: die staan nu in '
+             'het theater, of speelden er eerder.</p>'
+             '<p class="cijfers">%d staan nu in het theater &middot; %d speelden eerder</p>'
+             % (e(top.get("opgehaald", "")), met_live, met_eerder))
 
     html_uit = (kop("Toplijst - Podcast Liveshows",
                     "De top 100 podcasts van Nederland volgens Apple Podcasts, met wie er live in het theater staat.",
@@ -723,7 +722,7 @@ def bouw_podcastpaginas(podcasts, gecheckt):
                 knop = ('<a class="knop" href="%s" target="_blank" rel="noopener">'
                         '<span class="knop-label">Tickets</span>%s</a>' % (e(ev["ticket"]), onder))
             else:
-                knop = '<span class="geen knop-vorm"><span class="knop-label">geen link</span>%s</span>' % onder
+                knop = '<span class="geen knop-vorm"><span class="knop-label">Nog geen ticketlink</span>%s</span>' % onder
             rijen.append(
                 '    <div class="event event-kaal" data-ev="%s">\n'
                 '      <div class="datum"><div class="dag">%d</div><div class="mnd">%s</div></div>\n'
@@ -810,13 +809,11 @@ def geen_shows_blok(p):
     """
     if p["stand"] == "gestopt":
         kop_tekst = "Deze show is afgelopen"
-        uitleg = ("De makers hebben geen nieuwe voorstelling aangekondigd. Komt daar "
-                  "verandering in, dan verschijnt die hier vanzelf.")
+        uitleg = "De makers hebben geen nieuwe voorstelling aangekondigd."
     elif p["stand"] == "tussen tours":
         kop_tekst = "Nu even niet in het theater"
-        uitleg = ("Er staan op dit moment geen data in de verkoop. Theatertours worden "
-                  "meestal per seizoen aangekondigd, dus er kan zomaar weer iets bij komen. "
-                  "We houden het in de gaten.")
+        uitleg = ("Er staan op dit moment geen data in de verkoop. Theatertours worden meestal "
+                  "per seizoen aangekondigd, dus er kan later in het seizoen alsnog iets bij komen.")
     else:
         return '  <p class="leeg">Voor deze podcast staan nog geen liveshows in de agenda.</p>\n'
 
