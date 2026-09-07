@@ -123,8 +123,12 @@
   var clusters = L.markerClusterGroup({
     maxClusterRadius: 45, showCoverageOnHover: false,
     iconCreateFunction: function (c) {
-      return L.divIcon({ html: '<div class="tros">' + c.getChildCount() + "</div>",
-                         className: "", iconSize: [42, 42], iconAnchor: [21, 21] });
+      var kinderen = c.getAllChildMarkers();
+      var eerste = kinderen[0] && kinderen[0].options.podcastCover;
+      return L.divIcon({
+        html: speldHtml(eerste && eerste.cover, eerste && eerste.naam, c.getChildCount()),
+        className: "", iconSize: [46, 46], iconAnchor: [23, 23], popupAnchor: [0, -24]
+      });
     }
   });
   kaart.addLayer(clusters);
@@ -150,14 +154,22 @@
     return '<div class="minicover" title="' + veiligAttr(namen) + '">' + binnen + "</div>";
   }
 
-  function bolIcoon(podcast) {
-    var cover = podcast ? String(podcast.cover || "") : "";
-    var init = String((podcast && podcast.naam) || "?").trim().slice(0, 2).toUpperCase();
+  // Een speldje op de kaart: de cover in een rond bolletje, met rechtsonder het
+  // aantal shows als er meer dan een op dezelfde plek staat.
+  function speldHtml(cover, naam, aantal) {
+    var init = String(naam || "?").trim().slice(0, 2).toUpperCase();
     var binnen = cover
-      ? '<img src="' + veiligAttr(cover) + '" alt="" loading="lazy" onerror="window.__coverFout(this)" data-initialen="' + veiligAttr(init) + '">'
+      ? '<img src="' + veiligAttr(cover) + '" alt="" onerror="window.__coverFout(this)" data-initialen="' + veiligAttr(init) + '">'
       : veiligAttr(init);
-    return L.divIcon({ html: '<div class="bol">' + binnen + "</div>",
-                       className: "", iconSize: [42, 42], iconAnchor: [21, 21], popupAnchor: [0, -22] });
+    return '<div class="kaartspeld"><div class="bol">' + binnen + "</div>" +
+           (aantal > 1 ? '<span class="tros-aantal">' + aantal + "</span>" : "") + "</div>";
+  }
+
+  function bolIcoon(podcast, aantal) {
+    return L.divIcon({
+      html: speldHtml(podcast && podcast.cover, podcast && podcast.naam, aantal || 1),
+      className: "", iconSize: [46, 46], iconAnchor: [23, 23], popupAnchor: [0, -24]
+    });
   }
 
   function tekenKaart(lijst) {
@@ -172,7 +184,8 @@
     Object.keys(perZaal).forEach(function (zid) {
       var groep = perZaal[zid], zaal = groep[0].zaal;
       var pos = [zaal.lat, zaal.lon];
-      var m = L.marker(pos, { icon: bolIcoon(groep[0].podcasts[0]) });
+      var m = L.marker(pos, { icon: bolIcoon(groep[0].podcasts[0], groep.length),
+                              podcastCover: groep[0].podcasts[0] });
       var h = '<div class="popup-zaal">' + veiligAttr(zaal.naam) + ", " + veiligAttr(zaal.stad) + "</div>";
       groep.slice(0, 8).forEach(function (ev) {
         h += '<div class="popup-regel">' + ev.dag + " " + MAAND_KORT[ev.maandnr - 1] + " " + ev.jaar +
