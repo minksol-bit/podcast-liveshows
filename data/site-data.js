@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 45,
-   "iso": "2026-09-08",
-   "dag": 8,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:00",
-   "titel": "Over de liefde",
-   "prijs": 14.5,
-   "ticket": "https://www.hnt.nl/nl/voorstellingen/9665/over-de-liefde/aaf-lies",
-   "status": "uitverkocht",
-   "provincie": "Zuid-Holland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 28,
-    "naam": "Koninklijke Schouwburg",
-    "stad": "Den Haag",
-    "opkaart": true,
-    "lat": 52.0818859,
-    "lon": 4.3158207
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 77,
    "iso": "2026-09-09",
    "dag": 9,
