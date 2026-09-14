@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 48,
-   "iso": "2026-09-13",
-   "dag": 13,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "14:30",
-   "titel": "Over de liefde",
-   "prijs": 19.5,
-   "ticket": "https://delamar.nl/voorstellingen/aaf-brandt-corstius-lies-visschedijk/",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 14,
-    "naam": "DeLaMar",
-    "stad": "Amsterdam",
-    "opkaart": true,
-    "lat": 52.3644194,
-    "lon": 4.8806878
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 80,
    "iso": "2026-09-14",
    "dag": 14,
