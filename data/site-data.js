@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 81,
-   "iso": "2026-09-15",
-   "dag": 15,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:15",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 36.0,
-   "ticket": "",
-   "status": "uitverkocht",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 30,
-    "naam": "Theater De Vest",
-    "stad": "Alkmaar",
-    "opkaart": true,
-    "lat": 52.6338681,
-    "lon": 4.7439242
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 82,
    "iso": "2026-09-17",
    "dag": 17,
