@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 162,
-   "iso": "2026-09-18",
-   "dag": 18,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:15",
-   "titel": "Theaterlezing Maarten van Rossem",
-   "prijs": null,
-   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Nieuws & politiek"
-   ],
-   "zaal": {
-    "id": 75,
-    "naam": "De Oude Kerk",
-    "stad": "Heemstede",
-    "opkaart": true,
-    "lat": 52.348,
-    "lon": 4.6155
-   },
-   "podcasts": [
-    {
-     "naam": "Maarten van Rossem & Tom Jessen",
-     "slug": "maarten-van-rossem-tom-jessen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
-    }
-   ]
-  },
-  {
    "id": 50,
    "iso": "2026-09-19",
    "dag": 19,
