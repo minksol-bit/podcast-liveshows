@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 50,
-   "iso": "2026-09-19",
-   "dag": 19,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:15",
-   "titel": "Over de liefde",
-   "prijs": 31.0,
-   "ticket": "https://theaterdevest.nl/tickets/seizoen-26-27/aaf-brandt-corstius-lies-visschedijk-over-de-liefde-reprise",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 30,
-    "naam": "Theater De Vest",
-    "stad": "Alkmaar",
-    "opkaart": true,
-    "lat": 52.6338681,
-    "lon": 4.7439242
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 83,
    "iso": "2026-09-21",
    "dag": 21,
