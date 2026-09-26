@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 53,
-   "iso": "2026-09-25",
-   "dag": 25,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:15",
-   "titel": "Over de liefde",
-   "prijs": 27.5,
-   "ticket": "",
-   "status": "in verkoop",
-   "provincie": "Zuid-Holland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 22,
-    "naam": "Theater De Veste",
-    "stad": "Delft",
-    "opkaart": true,
-    "lat": 52.0084756,
-    "lon": 4.3627946
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 2,
    "iso": "2026-09-26",
    "dag": 26,
