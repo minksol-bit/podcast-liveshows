@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 2,
-   "iso": "2026-09-26",
-   "dag": 26,
-   "maandnr": 9,
-   "jaar": 2026,
-   "maand": "2026-09",
-   "tijd": "20:00",
-   "titel": "Napleiten Live",
-   "prijs": 24.5,
-   "ticket": "https://stadsschouwburghaarlem.nl/en/agenda/theatercollege-napleiten-live-wouter-laumans-en-christian-flokstra",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "True crime"
-   ],
-   "zaal": {
-    "id": 2,
-    "naam": "Stadsschouwburg",
-    "stad": "Haarlem",
-    "opkaart": true,
-    "lat": 52.3779947,
-    "lon": 4.625426
-   },
-   "podcasts": [
-    {
-     "naam": "Napleiten",
-     "slug": "napleiten",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 151,
    "iso": "2026-09-27",
    "dag": 27,
