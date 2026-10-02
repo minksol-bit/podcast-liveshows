@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 88,
-   "iso": "2026-10-01",
-   "dag": 1,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:00",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 18.0,
-   "ticket": "https://www.hnt.nl/nl/voorstellingen/plien-bianca-7w3w",
-   "status": "uitverkocht",
-   "provincie": "Zuid-Holland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 28,
-    "naam": "Koninklijke Schouwburg",
-    "stad": "Den Haag",
-    "opkaart": true,
-    "lat": 52.0818859,
-    "lon": 4.3158207
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 89,
    "iso": "2026-10-02",
    "dag": 2,
