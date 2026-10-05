@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 55,
-   "iso": "2026-10-04",
-   "dag": 4,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Over de liefde",
-   "prijs": 29.5,
-   "ticket": "https://www.spotgroningen.nl/programma/aaf-en-lies/",
-   "status": "in verkoop",
-   "provincie": "Groningen",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 21,
-    "naam": "SPOT Stadsschouwburg",
-    "stad": "Groningen",
-    "opkaart": true,
-    "lat": 53.2208535,
-    "lon": 6.5720279
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 90,
    "iso": "2026-10-05",
    "dag": 5,
