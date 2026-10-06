@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 90,
-   "iso": "2026-10-05",
-   "dag": 5,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:00",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 26.5,
-   "ticket": "",
-   "status": "uitverkocht",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 2,
-    "naam": "Stadsschouwburg",
-    "stad": "Haarlem",
-    "opkaart": true,
-    "lat": 52.3779947,
-    "lon": 4.625426
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 91,
    "iso": "2026-10-06",
    "dag": 6,
