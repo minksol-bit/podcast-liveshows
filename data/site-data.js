@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 5,
-   "iso": "2026-10-13",
-   "dag": 13,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Napleiten Live",
-   "prijs": 22.5,
-   "ticket": "https://meervaart.nl/agenda/napleiten-live",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "True crime"
-   ],
-   "zaal": {
-    "id": 5,
-    "naam": "Meervaart",
-    "stad": "Amsterdam",
-    "opkaart": true,
-    "lat": 52.3589481,
-    "lon": 4.8073957
-   },
-   "podcasts": [
-    {
-     "naam": "Napleiten",
-     "slug": "napleiten",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/53/40/ed/5340ede4-d2b5-6915-eb4b-00598083ea78/mza_11107074210746792588.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 152,
    "iso": "2026-10-14",
    "dag": 14,
