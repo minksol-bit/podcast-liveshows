@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 152,
-   "iso": "2026-10-14",
-   "dag": 14,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Hagelslag de Podcast",
-   "prijs": 26.0,
-   "ticket": "https://www.dedoelen.nl/nl/agenda/hagelslag-de-podcast-xm31",
-   "status": "in verkoop",
-   "provincie": "Zuid-Holland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 73,
-    "naam": "de Doelen",
-    "stad": "Rotterdam",
-    "opkaart": true,
-    "lat": 51.9220495,
-    "lon": 4.4726898
-   },
-   "podcasts": [
-    {
-     "naam": "Hagelslag",
-     "slug": "hagelslag",
-     "cover": "https://media.tivolivredenburg.nl/h5BDKvCbg3"
-    }
-   ]
-  },
-  {
    "id": 58,
    "iso": "2026-10-15",
    "dag": 15,
