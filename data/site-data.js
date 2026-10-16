@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 58,
-   "iso": "2026-10-15",
-   "dag": 15,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:00",
-   "titel": "Over de liefde",
-   "prijs": 18.0,
-   "ticket": "https://www.musisenstadstheater.nl/nl/agenda/aaf-brandt-corstius-lies-visschedijk-over-de-liefde/10183",
-   "status": "in verkoop",
-   "provincie": "Gelderland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 3,
-    "naam": "Musis",
-    "stad": "Arnhem",
-    "opkaart": true,
-    "lat": 51.982704,
-    "lon": 5.9137995
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 134,
    "iso": "2026-10-16",
    "dag": 16,
