@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 60,
-   "iso": "2026-10-17",
-   "dag": 17,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:15",
-   "titel": "Over de liefde",
-   "prijs": 26.0,
-   "ticket": "https://www.maaspoort.nl/programma/over-de-liefde-aaf-brandt-corstius-lies-visschedijk/17-10-2026-20-15/",
-   "status": "in verkoop",
-   "provincie": "Limburg",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 34,
-    "naam": "Maaspoort",
-    "stad": "Venlo",
-    "opkaart": true,
-    "lat": 51.3703643,
-    "lon": 6.1678835
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 135,
    "iso": "2026-10-18",
    "dag": 18,
