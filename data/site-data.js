@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 135,
-   "iso": "2026-10-18",
-   "dag": 18,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "14:30",
-   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
-   "prijs": 15.0,
-   "ticket": "https://www.plt.nl/programma/alle-geschiedenis-ooit/18-10-2026-14-30",
-   "status": "in verkoop",
-   "provincie": "Limburg",
-   "themas": [
-    "Geschiedenis"
-   ],
-   "zaal": {
-    "id": 4,
-    "naam": "PLT Theater",
-    "stad": "Heerlen",
-    "opkaart": true,
-    "lat": 50.8867099,
-    "lon": 5.9727811
-   },
-   "podcasts": [
-    {
-     "naam": "Alle Geschiedenis Ooit - Grote Namen",
-     "slug": "alle-geschiedenis-ooit-grote-namen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 93,
    "iso": "2026-10-19",
    "dag": 19,
