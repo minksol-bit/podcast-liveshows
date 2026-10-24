@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 147,
-   "iso": "2026-10-23",
-   "dag": 23,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "21:00",
-   "titel": "De tussenstand in Amerika",
-   "prijs": 24.5,
-   "ticket": "https://luxortheater.nl/agenda/raymond-mens-59174",
-   "status": "in verkoop",
-   "provincie": "Zuid-Holland",
-   "themas": [
-    "Politiek & buitenland"
-   ],
-   "zaal": {
-    "id": 6,
-    "naam": "Nieuwe Luxor Theater",
-    "stad": "Rotterdam",
-    "opkaart": true,
-    "lat": 51.9067814,
-    "lon": 4.4911848
-   },
-   "podcasts": [
-    {
-     "naam": "Amerika in 15 minuten",
-     "slug": "amerika-in-15-minuten",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/92/cf/9692cfc5-8690-160a-ae98-d6dd41b4a9e4/mza_10414419130369369263.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 156,
    "iso": "2026-10-25",
    "dag": 25,
