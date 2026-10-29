@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 25,
-   "iso": "2026-10-28",
-   "dag": 28,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:30",
-   "titel": "Best of 'Help, ik heb een puber!' LIVE",
-   "prijs": 19.5,
-   "ticket": "https://delamar.nl/voorstellingen/best-of-help-ik-heb-een-puber-live/",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Kind & gezin"
-   ],
-   "zaal": {
-    "id": 14,
-    "naam": "DeLaMar",
-    "stad": "Amsterdam",
-    "opkaart": true,
-    "lat": 52.3644194,
-    "lon": 4.8806878
-   },
-   "podcasts": [
-    {
-     "naam": "Help, ik heb een puber!",
-     "slug": "help-ik-heb-een-puber",
-     "cover": "https://static.wixstatic.com/media/a81d58_00f270219e3849a9a5b09151bc9ac7d8~mv2.png/v1/fill/w_980,h_1385,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Best%20of_campagnebeeld_A0.png"
-    }
-   ]
-  },
-  {
    "id": 98,
    "iso": "2026-10-29",
    "dag": 29,
