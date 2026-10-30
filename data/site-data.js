@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 98,
-   "iso": "2026-10-29",
-   "dag": 29,
-   "maandnr": 10,
-   "jaar": 2026,
-   "maand": "2026-10",
-   "tijd": "20:00",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 22.25,
-   "ticket": "",
-   "status": "uitverkocht",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 51,
-    "naam": "Zaantheater",
-    "stad": "Zaandam",
-    "opkaart": true,
-    "lat": 52.4382663,
-    "lon": 4.824913
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 64,
    "iso": "2026-10-30",
    "dag": 30,
