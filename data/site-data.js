@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 136,
-   "iso": "2026-11-01",
-   "dag": 1,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "19:30",
-   "titel": "Alle Geschiedenis Ooit - De Grote Namen Geschiedenis-show",
-   "prijs": 24.0,
-   "ticket": "https://www.kampanje.nl/voorstellingen/alle-geschiedenis-ooit-74dq",
-   "status": "in verkoop",
-   "provincie": "Noord-Holland",
-   "themas": [
-    "Geschiedenis"
-   ],
-   "zaal": {
-    "id": 8,
-    "naam": "De Kampanje",
-    "stad": "Den Helder",
-    "opkaart": true,
-    "lat": 52.9585736,
-    "lon": 4.7690842
-   },
-   "podcasts": [
-    {
-     "naam": "Alle Geschiedenis Ooit - Grote Namen",
-     "slug": "alle-geschiedenis-ooit-grote-namen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/94/77/71/9477713e-84ee-96d3-2574-91226f446892/mza_11947026339099286329.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 99,
    "iso": "2026-11-02",
    "dag": 2,
