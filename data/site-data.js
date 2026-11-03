@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 99,
-   "iso": "2026-11-02",
-   "dag": 2,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:15",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 18.0,
-   "ticket": "https://www.spotgroningen.nl/programma/plien-bianca-8/",
-   "status": "in verkoop",
-   "provincie": "Groningen",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 21,
-    "naam": "SPOT Stadsschouwburg",
-    "stad": "Groningen",
-    "opkaart": true,
-    "lat": 53.2208535,
-    "lon": 6.5720279
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 29,
    "iso": "2026-11-03",
    "dag": 3,
