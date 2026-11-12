@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 66,
-   "iso": "2026-11-11",
-   "dag": 11,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:15",
-   "titel": "Over de liefde",
-   "prijs": 31.0,
-   "ticket": "https://hanzehof.nl/nl/voorstelling/aaf-brandt-corstius--lies-visschedijk/",
-   "status": "in verkoop",
-   "provincie": "Gelderland",
-   "themas": [
-    "Maatschappij"
-   ],
-   "zaal": {
-    "id": 39,
-    "naam": "Hanzehof",
-    "stad": "Zutphen",
-    "opkaart": true,
-    "lat": 52.148269,
-    "lon": 6.2017651
-   },
-   "podcasts": [
-    {
-     "naam": "Aaf en Lies lossen het wel weer op",
-     "slug": "aaf-en-lies-lossen-het-wel-weer-op",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f5/e9/f2/f5e9f2bb-7a5c-f898-cba3-30643cbb762d/mza_1742018322004028896.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 8,
    "iso": "2026-11-12",
    "dag": 12,
