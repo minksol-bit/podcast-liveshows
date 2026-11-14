@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 166,
-   "iso": "2026-11-13",
-   "dag": 13,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:00",
-   "titel": "Theaterlezing Maarten van Rossem",
-   "prijs": null,
-   "ticket": "https://www.topticketshop.nl/maarten-van-rossem",
-   "status": "in verkoop",
-   "provincie": "Overijssel",
-   "themas": [
-    "Nieuws & politiek"
-   ],
-   "zaal": {
-    "id": 79,
-    "naam": "Reggehof",
-    "stad": "Goor",
-    "opkaart": true,
-    "lat": 52.2506,
-    "lon": 6.5989
-   },
-   "podcasts": [
-    {
-     "naam": "Maarten van Rossem & Tom Jessen",
-     "slug": "maarten-van-rossem-tom-jessen",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/f5/a6/6d/f5a66dbd-6faf-86b6-f43d-2457f288e3b3/mza_5767015447653460511.jpg/600x600bb.jpg"
-    }
-   ]
-  },
-  {
    "id": 138,
    "iso": "2026-11-14",
    "dag": 14,
