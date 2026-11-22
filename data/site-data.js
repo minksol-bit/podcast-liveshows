@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 33,
-   "iso": "2026-11-21",
-   "dag": 21,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:15",
-   "titel": "Boekestijn & De Wijk Live - De Eindejaarsshow van 2026",
-   "prijs": null,
-   "ticket": "",
-   "status": "in verkoop",
-   "provincie": "Friesland",
-   "themas": [
-    "Nieuws & politiek"
-   ],
-   "zaal": {
-    "id": 15,
-    "naam": "Stadsschouwburg De Harmonie",
-    "stad": "Leeuwarden",
-    "opkaart": true,
-    "lat": 53.2001284,
-    "lon": 5.7900791
-   },
-   "podcasts": [
-    {
-     "naam": "Boekestijn en De Wijk",
-     "slug": "boekestijn-en-de-wijk",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts112/v4/7d/f0/e7/7df0e76d-b705-cf2a-94c6-a10ff291497e/mza_16718794314625024290.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 108,
    "iso": "2026-11-23",
    "dag": 23,
