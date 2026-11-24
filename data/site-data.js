@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 108,
-   "iso": "2026-11-23",
-   "dag": 23,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:00",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 22.0,
-   "ticket": "https://www.chasse.nl/nl/programma/plien-bianca-l914",
-   "status": "in verkoop",
-   "provincie": "Noord-Brabant",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 27,
-    "naam": "Chassé Theater",
-    "stad": "Breda",
-    "opkaart": true,
-    "lat": 51.5874733,
-    "lon": 4.7821816
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 109,
    "iso": "2026-11-24",
    "dag": 24,
