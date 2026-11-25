@@ -2,38 +2,6 @@
 window.DATA = {
  "events": [
   {
-   "id": 109,
-   "iso": "2026-11-24",
-   "dag": 24,
-   "maandnr": 11,
-   "jaar": 2026,
-   "maand": "2026-11",
-   "tijd": "20:00",
-   "titel": "Harrekidee! (reprise)",
-   "prijs": 35.0,
-   "ticket": "https://www.zeelandtheaters.nl/programma/plien-bianca-harrekidee-reprise/24-11-2026-20-00",
-   "status": "in verkoop",
-   "provincie": "Zeeland",
-   "themas": [
-    "Comedy"
-   ],
-   "zaal": {
-    "id": 57,
-    "naam": "Scheldetheater",
-    "stad": "Terneuzen",
-    "opkaart": true,
-    "lat": 51.3386553,
-    "lon": 3.8231688
-   },
-   "podcasts": [
-    {
-     "naam": "Provinfluencers",
-     "slug": "provinfluencers",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/91/3d/c2/913dc24a-2ebd-751e-ebd4-72387685e003/mza_5988287602256490768.jpg/600x600bb.png"
-    }
-   ]
-  },
-  {
    "id": 27,
    "iso": "2026-11-25",
    "dag": 25,
